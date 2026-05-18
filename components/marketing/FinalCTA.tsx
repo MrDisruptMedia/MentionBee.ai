@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-mention-dark py-20 md:py-24">
+    <section className="relative overflow-hidden bg-mention-dark py-14 md:py-20">
       <div className="relative z-10 mx-auto max-w-6xl px-4">
         <div className="max-w-2xl">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">

@@ -5,7 +5,6 @@ const competitorRows = [
   { name: "Competitor B", score: 72, barClass: "bg-emerald-500" },
   { name: "YourBrand", score: 63, barClass: "bg-primary" },
   { name: "Competitor C", score: 41, barClass: "bg-zinc-400" },
-  { name: "Competitor D", score: 28, barClass: "bg-zinc-400" },
 ] as const;
 
 function ScoreRing({ score, max = 100 }: { score: number; max?: number }) {

@@ -27,7 +27,7 @@ const blocks = [
 
 export function WhatWeAnalyze() {
   return (
-    <section className="border-b border-zinc-200/80 bg-white py-20 md:py-28">
+    <section className="border-b border-zinc-200/80 bg-white py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
           Was MentionBee analysiert

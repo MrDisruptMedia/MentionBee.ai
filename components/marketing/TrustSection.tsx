@@ -25,7 +25,7 @@ const points = [
 
 export function TrustSection() {
   return (
-    <section className="border-b border-zinc-200/80 bg-mention-light py-20 md:py-28">
+    <section className="border-b border-zinc-200/80 bg-mention-light py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="max-w-3xl font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">

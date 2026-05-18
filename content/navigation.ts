@@ -5,7 +5,7 @@ export type NavItem = {
 
 /** Header-Hauptnavigation (Desktop) */
 export const headerNavigation: NavItem[] = [
-  { label: "Free Report", href: "/free-report" },
+  { label: "Kostenloser Report", href: "/free-report" },
   { label: "Deep-Dive Report", href: "/report" },
   { label: "Beispielreport", href: "/sample-report" },
   { label: "Methodik", href: "/#methodik" },

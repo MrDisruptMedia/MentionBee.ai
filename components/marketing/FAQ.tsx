@@ -10,7 +10,7 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="scroll-mt-24 border-b border-zinc-200/80 bg-white py-20 md:py-28"
+      className="scroll-mt-24 border-b border-zinc-200/80 bg-white py-14 md:py-20"
     >
       <div className="mx-auto max-w-3xl px-4">
         <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
