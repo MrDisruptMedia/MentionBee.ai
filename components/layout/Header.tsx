@@ -16,13 +16,13 @@ export function Header() {
 
         <nav
           aria-label="Hauptnavigation"
-          className="hidden items-center justify-center gap-8 text-sm font-medium text-mention-dark/80 lg:flex"
+          className="hidden items-center justify-center gap-8 text-sm font-medium lg:flex"
         >
           {headerNavigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="transition-colors hover:text-primary"
+              className="text-mention-dark transition-colors hover:text-mention-gray"
             >
               {item.label}
             </Link>

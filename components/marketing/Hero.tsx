@@ -50,7 +50,7 @@ function ScoreRing({ score, max = 100 }: { score: number; max?: number }) {
 export function Hero() {
   return (
     <section className="border-b border-zinc-200/80 bg-white">
-      <div className="mx-auto flex min-h-[85vh] max-w-6xl flex-col justify-center gap-12 px-4 py-16 lg:grid lg:min-h-[85vh] lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-20">
+      <div className="mx-auto flex min-h-[85vh] max-w-6xl flex-col justify-center gap-12 px-4 py-16 max-lg:items-start lg:grid lg:min-h-[85vh] lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-20">
         <div className="flex max-w-xl flex-col gap-6">
           <p className="w-fit rounded-full border border-zinc-200/90 bg-mention-light px-3 py-1 text-xs font-semibold tracking-wide text-mention-dark uppercase">
             KI-Sichtbarkeitsanalyse

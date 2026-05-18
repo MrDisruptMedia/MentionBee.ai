@@ -1,16 +1,15 @@
 import type { Config } from "tailwindcss";
 
 /**
- * MentionBee design palette (Tailwind utilities: bg-primary, text-primary-dark,
- * text-mention-dark, bg-mention-light, etc.)
+ * MentionBee design palette (primary #FFC400, `primary-dark` for hovers, mention-* neutrals).
  */
 export default {
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#F5A623",
-          dark: "#D4891A",
+          DEFAULT: "#FFC400",
+          dark: "#E0AC00",
         },
         mention: {
           dark: "#1A1A2E",
