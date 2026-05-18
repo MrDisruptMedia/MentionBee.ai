@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { SVGProps } from "react";
 
+import { MentionBeeBrand } from "@/components/layout/mention-bee-brand";
+
 type FooterCol = { heading: string; links: { label: string; href: string }[] };
 
 function LinkedInGlyph(props: SVGProps<SVGSVGElement>) {
@@ -39,22 +41,6 @@ const columns: FooterCol[] = [
     ],
   },
   {
-    heading: "Solutions",
-    links: [
-      { label: "Startups", href: "/free-report" },
-      { label: "Agenturen", href: "/free-report" },
-      { label: "B2B SaaS", href: "/free-report" },
-    ],
-  },
-  {
-    heading: "Resources",
-    links: [
-      { label: "FAQ", href: "/#faq" },
-      { label: "Blog", href: "/blog" },
-      { label: "AI Visibility Guide", href: "/sample-report" },
-    ],
-  },
-  {
     heading: "Legal",
     links: [
       { label: "Privacy", href: "/datenschutzerklaerung" },
@@ -86,12 +72,9 @@ export function Footer() {
   return (
     <footer className="mt-auto border-t border-zinc-200 bg-white">
       <div className="mx-auto max-w-6xl px-4 py-14">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_repeat(4,minmax(0,1fr))] lg:gap-8">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-12">
           <div className="max-w-sm">
-            <Link href="/" className="text-base font-bold tracking-tight text-mention-dark">
-              <span aria-hidden>🐝 </span>
-              MentionBee.ai
-            </Link>
+            <MentionBeeBrand />
             <p className="mt-3 text-sm leading-relaxed text-mention-gray">
               AI Visibility für smarte Marken.
             </p>

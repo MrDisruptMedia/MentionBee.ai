@@ -55,7 +55,7 @@ export function Hero() {
             KI-Sichtbarkeitsanalyse
           </p>
 
-          <h1 className="font-heading text-4xl leading-[1.1] font-bold sm:text-5xl lg:text-[2.75rem]">
+          <h1 className="font-heading text-5xl leading-[1.1] font-bold md:text-6xl lg:text-7xl">
             <span className="text-mention-dark">Wirst du von </span>
             <span className="text-primary italic">KI empfohlen?</span>
           </h1>
@@ -68,13 +68,13 @@ export function Hero() {
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/free-report"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white shadow-md transition-colors hover:bg-primary-dark"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark"
             >
               Kostenlosen Report anfordern →
             </Link>
             <Link
               href="/sample-report"
-              className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-6 py-3 text-center text-sm font-semibold text-mention-dark transition-colors hover:border-primary/40 hover:bg-mention-light"
+              className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-6 py-3 text-center text-sm font-semibold text-mention-dark transition-colors duration-200 hover:border-mention-dark hover:bg-mention-dark hover:text-white"
             >
               Beispielreport ansehen
             </Link>

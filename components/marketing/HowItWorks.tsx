@@ -38,7 +38,7 @@ export function HowItWorks() {
           </ol>
           <Link
             href="/report"
-            className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md transition-colors hover:bg-primary-dark"
+            className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark"
           >
             Deep-Dive Report ansehen →
           </Link>

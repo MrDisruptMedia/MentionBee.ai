@@ -15,6 +15,8 @@ const inter = Inter({
 
 const gtmId = "GTM-W25FQX2Z";
 
+// Favicon: `app/icon.png` is served automatically by the App Router (see Next.js metadata files).
+
 export const metadata: Metadata = {
   title: "MentionBee.ai",
   description: "Placeholder: MentionBee.ai Marketing",

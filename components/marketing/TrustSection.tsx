@@ -1,23 +1,24 @@
 import Link from "next/link";
+import { CheckCircle, FileText, Share2, UserX } from "lucide-react";
 
 const points = [
   {
-    icon: "🔍",
+    Icon: FileText,
     title: "Klare Methodik",
     body: "Unser Vorgehen ist öffentlich und nachvollziehbar dokumentiert.",
   },
   {
-    icon: "👤",
+    Icon: UserX,
     title: "Keine Account-Erstellung nötig",
     body: "Du brauchst kein Konto – erhalte deinen Report direkt per E-Mail.",
   },
   {
-    icon: "🔒",
-    title: "DSGVO-bewusste Ergebnisse",
-    body: "Wir verarbeiten nur die Daten, die für die Analyse notwendig sind – ohne Tracking.",
+    Icon: Share2,
+    title: "Mit Kollegen teilbar",
+    body: "Erhalte einen Link zu deinem Report – einfach mit Kollegen oder Vorgesetzten teilen.",
   },
   {
-    icon: "✅",
+    Icon: CheckCircle,
     title: "Nachvollziehbare Ergebnisse",
     body: "Jede Aussage im Report ist belegt und transparent aufbereitet.",
   },
@@ -39,24 +40,20 @@ export function TrustSection() {
           </Link>
         </div>
 
-        <ul
-          className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8"
-          role="list"
-        >
-          {points.map((p) => (
-            <li
-              key={p.title}
-              className="rounded-2xl border border-zinc-200/60 bg-white/90 p-6 shadow-sm"
-            >
-              <span className="text-2xl" aria-hidden>
-                {p.icon}
-              </span>
-              <h3 className="mt-3 font-heading text-base font-semibold text-mention-dark">
-                {p.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-mention-gray">{p.body}</p>
-            </li>
-          ))}
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8" role="list">
+          {points.map((p) => {
+            const Icon = p.Icon;
+            return (
+              <li
+                key={p.title}
+                className="rounded-2xl border border-zinc-200/60 bg-white/90 p-6 shadow-sm"
+              >
+                <Icon className="size-8 shrink-0 text-primary" strokeWidth={1.75} aria-hidden />
+                <h3 className="mt-3 font-heading text-base font-semibold text-mention-dark">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-mention-gray">{p.body}</p>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>
