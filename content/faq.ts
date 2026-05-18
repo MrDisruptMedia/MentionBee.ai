@@ -24,6 +24,12 @@ export const faqEntries: FaqEntry[] = [
       "Wir prüfen relevante, marktführende Assistenz- und Such-KI, die Kauf- und Rechercheentscheidungen beeinflussen – z. B. ChatGPT und Perplexity. Die genaue Auswahl kann sich weiterentwickeln; im Report siehst du transparent, welche Systeme für deine Auswertung herangezogen wurden.",
   },
   {
+    id: "vs-own-chatgpt",
+    question: "Ich nutze bereits ChatGPT oder Claude – was bringt mir der Report mehr?",
+    answer:
+      "Ein AI-Abo zeigt dir, was KI antwortet, wenn du fragst. MentionBee zeigt dir, was KI antwortet, wenn deine potenziellen Kunden fragen – ohne dass du dabei bist. Wir testen 20–50 kaufnahe Prompts deiner Branche, vergleichen dich mit bis zu 3 Wettbewerbern und analysieren strukturiert, warum du empfohlen wirst oder nicht. Das ist kein Chat – das ist ein Audit.",
+  },
+  {
     id: "competitors",
     question: "Kann ich Wettbewerber angeben?",
     answer:
@@ -40,5 +46,11 @@ export const faqEntries: FaqEntry[] = [
     question: "Ist das klassisches SEO?",
     answer:
       "Nein – es geht um AI Visibility: wie KI-Systeme deine Marke in natürlichen Antworten darstellen, ob du empfohlen wirst und wie du im Vergleich zu Wettbewerbern wahrgenommen wirst. Klassisches SEO (Google-Ranking, Metadaten) ist ein anderes Spielfeld; MentionBee ergänzt deine Sichtbarkeit dort, wo Nutzer heute zunehmend fragen: bei KI.",
+  },
+  {
+    id: "ki-antworten-varianz",
+    question: "Wie zuverlässig sind KI-Antworten? Variieren die nicht ständig?",
+    answer:
+      "KI-Antworten variieren tatsächlich – das ist ein bekanntes Phänomen. Deshalb testen wir nicht einmal, sondern mit mehreren Prompts über 4 verschiedene KI-Systeme. Das ergibt ein statistisch stabileres Bild deiner Sichtbarkeit. Kein einzelner Prompt ist repräsentativ – aber 20–50 Prompts über ChatGPT, Perplexity, Gemini und Claude schon.",
   },
 ];

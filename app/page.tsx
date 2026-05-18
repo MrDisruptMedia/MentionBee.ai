@@ -7,6 +7,7 @@ import { ProblemSection } from "@/components/marketing/ProblemSection";
 import { UnsichtbarkeitSection } from "@/components/marketing/UnsichtbarkeitSection";
 import { SampleReportTeaser } from "@/components/marketing/SampleReportTeaser";
 import { TrustSection } from "@/components/marketing/TrustSection";
+import { ValueAnchor } from "@/components/marketing/ValueAnchor";
 import { WhatWeAnalyze } from "@/components/marketing/WhatWeAnalyze";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <ProblemSection />
       <UnsichtbarkeitSection />
       <WhatWeAnalyze />
+      <ValueAnchor />
       <FreeVsPaid />
       <HowItWorks />
       <SampleReportTeaser />

@@ -21,6 +21,8 @@ const deepDiveItems = [
   "Bekommst du einen priorisierten 30-Tage-Maßnahmenplan",
   "Erhältst du konkrete Content- und PR-Empfehlungen",
   "20–50 kaufnahe Prompts deiner Kategorie",
+  "PDF-Report + teilbarer Link für dein Team",
+  "Optional: 30-min Review-Call (+149 €)",
 ] as const;
 
 export function FreeVsPaid() {
@@ -37,9 +39,9 @@ export function FreeVsPaid() {
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2 lg:gap-8">
           <div className="flex flex-col rounded-2xl border border-zinc-200/80 bg-white p-8 shadow-sm">
-            <h3 className="font-heading text-xl font-semibold text-mention-dark">
-              Kostenloser Report
-            </h3>
+            <h3 className="font-heading text-xl font-semibold text-mention-dark">Kostenloser Report</h3>
+            <p className="mt-3 text-2xl font-bold tabular-nums text-mention-dark">0 €</p>
+            <p className="mt-1 text-sm text-mention-gray">Sofort starten · Kein Konto nötig · 0 €</p>
             <ul className="mt-6 flex flex-col gap-4" role="list">
               <CheckItem>Erster Sichtbarkeitscheck</CheckItem>
               <CheckItem>Begrenzte Anzahl Prompts</CheckItem>
@@ -58,9 +60,18 @@ export function FreeVsPaid() {
             <span className="absolute top-4 right-4 rounded-full bg-primary px-3 py-1 text-xs font-bold text-mention-dark sm:top-6 sm:right-6">
               Empfohlen
             </span>
-            <h3 className="pr-24 font-heading text-xl font-semibold text-mention-dark">
-              Deep-Dive Report
-            </h3>
+            <h3 className="pr-24 font-heading text-xl font-semibold text-mention-dark">Deep-Dive Report</h3>
+
+            <div className="mt-4 inline-flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-xl border border-primary/25 bg-primary/5 px-4 py-3">
+              <span className="text-lg font-medium text-mention-gray line-through decoration-mention-gray/80">
+                299 €
+              </span>
+              <span className="text-2xl font-bold text-primary tabular-nums">199 € netto</span>
+            </div>
+            <p className="mt-2 text-xs text-mention-gray">
+              Einführungspreis · Regulär 299 € · Lieferung in 3–5 Werktagen
+            </p>
+
             <ul className="mt-6 flex flex-col gap-3" role="list">
               {deepDiveItems.map((line) => (
                 <CheckItem key={line}>{line}</CheckItem>
