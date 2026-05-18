@@ -14,6 +14,18 @@ function CheckItem({ children }: { children: React.ReactNode }) {
   );
 }
 
+const deepDiveItems = [
+  "Mehr Prompts & Use Cases",
+  "Wettbewerbsvergleich (3 Konkurrenten)",
+  "Ursachenanalyse",
+  "Priorisierter Massnahmenplan",
+  "SEO & Technische Analyse",
+  "UX & Conversion-Bewertung",
+  "Schema & E-E-A-T Check",
+  "Markt & Externsichtbarkeit",
+  "Über 150 strukturierte Checks",
+] as const;
+
 export function FreeVsPaid() {
   return (
     <section className="border-b border-zinc-200/80 bg-mention-light py-20 md:py-28">
@@ -45,15 +57,17 @@ export function FreeVsPaid() {
             </Link>
           </div>
 
-          <div className="flex flex-col rounded-2xl border-2 border-primary bg-white p-8 shadow-md ring-2 ring-primary/10">
-            <h3 className="font-heading text-xl font-semibold text-mention-dark">
+          <div className="relative flex flex-col rounded-2xl border-2 border-primary bg-white p-8 pt-10 shadow-md ring-2 ring-primary/10 sm:pt-8">
+            <span className="absolute top-4 right-4 rounded-full bg-primary px-3 py-1 text-xs font-bold text-mention-dark sm:top-6 sm:right-6">
+              Empfohlen
+            </span>
+            <h3 className="pr-24 font-heading text-xl font-semibold text-mention-dark">
               Deep-Dive Report
             </h3>
-            <ul className="mt-6 flex flex-col gap-4" role="list">
-              <CheckItem>Mehr Prompts &amp; Use Cases</CheckItem>
-              <CheckItem>Wettbewerbsvergleich</CheckItem>
-              <CheckItem>Ursachenanalyse</CheckItem>
-              <CheckItem>Priorisierter Massnahmenplan</CheckItem>
+            <ul className="mt-6 flex flex-col gap-3" role="list">
+              {deepDiveItems.map((line) => (
+                <CheckItem key={line}>{line}</CheckItem>
+              ))}
             </ul>
             <Link
               href="/report"
