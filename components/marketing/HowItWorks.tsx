@@ -1,15 +1,13 @@
 import Link from "next/link";
 
-const freeReportSteps = [
-  { n: 1, title: "Marke & E-Mail eingeben" },
-  { n: 2, title: "MentionBee analysiert 4 KI-Systeme" },
-  { n: 3, title: "Report kommt per E-Mail" },
-] as const;
-
-const deepDiveSteps = [
+const steps = [
   { n: 1, title: "Marke, Wettbewerber & Ziele eingeben" },
-  { n: 2, title: "MentionBee führt 150+ strukturierte Checks durch" },
-  { n: 3, title: "Du erhältst priorisierten Maßnahmenplan" },
+  {
+    n: 2,
+    title:
+      "MentionBee führt 150+ strukturierte Checks durch – inklusive 4 KI-Systeme, Tech SEO, UX und mehr",
+  },
+  { n: 3, title: "Du erhältst einen priorisierten Maßnahmenplan per E-Mail" },
   { n: 4, title: "Optional: Umsetzungs-Support buchen" },
 ] as const;
 
@@ -23,47 +21,32 @@ export function HowItWorks() {
         <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
           So funktioniert&apos;s
         </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-mention-gray">
+          Von der Analyse zur konkreten Maßnahme – in einem strukturierten Report.
+        </p>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:gap-10">
-          <div className="flex h-full flex-col rounded-2xl border border-zinc-200/90 bg-mention-light p-6 shadow-sm ring-1 ring-zinc-100 md:p-8">
-            <p className="font-heading text-lg font-semibold text-mention-dark">Kostenloser Report</p>
-            <ol className="mt-6 flex flex-1 flex-col gap-5" role="list">
-              {freeReportSteps.map((step) => (
-                <li key={step.n} className="flex gap-4">
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-sm">
-                    {step.n}
-                  </span>
-                  <p className="pt-1.5 text-sm font-medium leading-snug text-mention-dark">{step.title}</p>
-                </li>
-              ))}
-            </ol>
-            <Link
-              href="/free-report"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md transition-colors hover:bg-primary-dark"
-            >
-              Jetzt kostenlos starten →
+        <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-zinc-200/90 bg-mention-light p-6 shadow-sm ring-1 ring-zinc-100 md:p-8">
+          <ol className="flex flex-col gap-5" role="list">
+            {steps.map((step) => (
+              <li key={step.n} className="flex gap-4">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-sm">
+                  {step.n}
+                </span>
+                <p className="pt-1.5 text-sm font-medium leading-snug text-mention-dark">{step.title}</p>
+              </li>
+            ))}
+          </ol>
+          <Link
+            href="/report"
+            className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md transition-colors hover:bg-primary-dark"
+          >
+            Deep-Dive Report ansehen →
+          </Link>
+          <p className="mt-5 text-center text-sm text-mention-gray">
+            <Link href="/free-report" className="font-medium text-mention-dark underline-offset-4 hover:underline">
+              Noch nicht sicher? Starte mit dem kostenlosen Report.
             </Link>
-          </div>
-
-          <div className="flex h-full flex-col rounded-2xl bg-mention-dark p-6 shadow-lg ring-1 ring-white/10 md:p-8">
-            <p className="font-heading text-lg font-semibold text-white">Deep-Dive Report</p>
-            <ol className="mt-6 flex flex-1 flex-col gap-5" role="list">
-              {deepDiveSteps.map((step) => (
-                <li key={step.n} className="flex gap-4">
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-mention-dark shadow-sm">
-                    {step.n}
-                  </span>
-                  <p className="pt-1.5 text-sm font-medium leading-snug text-white">{step.title}</p>
-                </li>
-              ))}
-            </ol>
-            <Link
-              href="/report"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
-            >
-              Deep-Dive ansehen →
-            </Link>
-          </div>
+          </p>
         </div>
       </div>
     </section>

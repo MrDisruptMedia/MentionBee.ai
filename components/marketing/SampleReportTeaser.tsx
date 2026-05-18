@@ -1,19 +1,5 @@
 import Link from "next/link";
 
-const aiPills = [
-  { name: "ChatGPT", label: "Direkt empfohlen", className: "bg-emerald-100 text-emerald-900 ring-1 ring-emerald-200" },
-  { name: "Perplexity", label: "Erwähnt", className: "bg-blue-100 text-blue-900 ring-1 ring-blue-200" },
-  { name: "Claude", label: "Nur Marke", className: "bg-amber-100 text-amber-950 ring-1 ring-amber-200" },
-  { name: "Gemini", label: "Nicht erwähnt", className: "bg-zinc-200 text-zinc-700 ring-1 ring-zinc-300" },
-] as const;
-
-const competitorRows = [
-  { name: "Competitor A", score: 82, barClass: "bg-emerald-500" },
-  { name: "Competitor B", score: 71, barClass: "bg-emerald-500" },
-  { name: "Competitor C", score: 55, barClass: "bg-zinc-400" },
-  { name: "YourBrand", score: 63, barClass: "bg-primary" },
-] as const;
-
 const moduleTiles = [
   {
     name: "LLM + ASA",
@@ -136,54 +122,6 @@ export function SampleReportTeaser() {
                 );
               })}
             </ul>
-
-            <div className="mt-6 border-t border-zinc-200/80 pt-5">
-              <p className="text-center text-sm font-medium text-mention-dark">
-                <span className="text-mention-gray">Mentions:</span> 7 / 24 Prompts mit Erwähnung
-              </p>
-            </div>
-
-            <div className="mt-6 border-t border-zinc-200/80 pt-5">
-              <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
-                Status je KI-System
-              </p>
-              <ul className="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-2" role="list">
-                {aiPills.map((p) => (
-                  <li key={p.name}>
-                    <span
-                      className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium ring-1 ${p.className}`}
-                    >
-                      <span className="font-semibold">{p.name}:</span>
-                      {p.label}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mt-6 border-t border-zinc-200/80 pt-5">
-              <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
-                Top Wettbewerber
-              </p>
-              <ul className="mt-3 space-y-2.5" role="list">
-                {competitorRows.map((row) => (
-                  <li key={row.name} className="grid grid-cols-[minmax(0,1fr)_2.5rem] gap-2">
-                    <div className="min-w-0">
-                      <div className="flex h-2 overflow-hidden rounded-full bg-zinc-100">
-                        <div
-                          className={`${row.barClass} rounded-full`}
-                          style={{ width: `${row.score}%` }}
-                        />
-                      </div>
-                      <p className="mt-1 truncate text-xs font-medium text-mention-dark">{row.name}</p>
-                    </div>
-                    <span className="text-right text-xs font-semibold tabular-nums text-mention-dark">
-                      {row.score}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
 
           <Link

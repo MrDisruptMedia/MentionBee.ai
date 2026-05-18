@@ -27,7 +27,7 @@ export const faqEntries: FaqEntry[] = [
     id: "competitors",
     question: "Kann ich Wettbewerber angeben?",
     answer:
-      "Ja. Du kannst Marken definieren, gegen die du verglichen werden möchtest. So wird der Competitor Gap greifbar: wer in den gleichen Themen genannt wird, empfohlen wird oder öfter auftaucht als du.",
+      "Ja. Du kannst Marken definieren, gegen die du verglichen werden möchtest. So wird die Wettbewerbslücke greifbar: wer in den gleichen Themen genannt wird, empfohlen wird oder öfter auftaucht als du.",
   },
   {
     id: "duration",
