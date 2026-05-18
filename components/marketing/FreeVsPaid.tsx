@@ -18,7 +18,7 @@ const deepDiveItems = [
   "Mehr Prompts & Use Cases",
   "Wettbewerbsvergleich (3 Konkurrenten)",
   "Ursachenanalyse",
-  "Priorisierter Massnahmenplan",
+  "Priorisierter Maßnahmenplan",
   "SEO & Technische Analyse",
   "UX & Conversion-Bewertung",
   "Schema & E-E-A-T Check",

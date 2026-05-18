@@ -14,6 +14,51 @@ const competitorRows = [
   { name: "YourBrand", score: 63, barClass: "bg-primary" },
 ] as const;
 
+const moduleTiles = [
+  {
+    name: "LLM + ASA",
+    description: "Erwähnungen bei ChatGPT, Claude, Gemini & Perplexity",
+    score: 0.7,
+    weightPct: 30,
+  },
+  {
+    name: "PKI",
+    description: "Klarheit und Überzeugungskraft deiner Positionierung",
+    score: 4.8,
+    weightPct: 25,
+  },
+  {
+    name: "Tech SEO",
+    description: "Technische Grundlagen für Suchmaschinen & AI-Crawler",
+    score: 4.0,
+    weightPct: 15,
+  },
+  {
+    name: "Schema",
+    description: "Strukturierte Daten und Vertrauenssignale",
+    score: 6.7,
+    weightPct: 10,
+  },
+  {
+    name: "UX",
+    description: "Nutzerfreundlichkeit und Conversion",
+    score: 5.8,
+    weightPct: 10,
+  },
+  {
+    name: "MSS",
+    description: "Externe Signale: Bewertungen, Presse, Social Media",
+    score: 5.0,
+    weightPct: 10,
+  },
+] as const;
+
+function scoreBarColor(score: number): string {
+  if (score < 4) return "bg-red-500";
+  if (score <= 7) return "bg-amber-400";
+  return "bg-emerald-500";
+}
+
 const topMeasures = [
   {
     priority: "Hoch",
@@ -50,63 +95,95 @@ export function SampleReportTeaser() {
 
           <div className="rounded-2xl border border-zinc-200/90 bg-mention-light/50 p-6 shadow-sm ring-1 ring-zinc-100">
             <p className="text-center text-xs font-semibold tracking-wide text-mention-gray uppercase">
-              AI Visibility Score
+              MentionBee Score
             </p>
-            <div className="mt-2 text-center">
-              <p className="font-heading text-6xl font-bold tabular-nums text-primary sm:text-7xl">63</p>
-              <p className="mt-1 text-sm font-medium text-mention-gray">von 100</p>
+            <div className="mt-3 text-center">
+              <p className="font-heading text-5xl font-bold leading-none tabular-nums sm:text-6xl">
+                <span className="text-primary">40</span>
+                <span className="text-lg font-semibold text-mention-gray sm:text-xl"> / 100</span>
+              </p>
               <p className="mt-4 inline-flex rounded-full bg-white px-4 py-1.5 text-xs font-semibold text-mention-dark ring-1 ring-zinc-200">
-                Mittel
+                Verbesserungspotenzial vorhanden
               </p>
             </div>
+
+            <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2" role="list">
+              {moduleTiles.map((mod) => {
+                const barPct = Math.min(100, Math.max(0, (mod.score / 10) * 100));
+                const barColor = scoreBarColor(mod.score);
+                return (
+                  <li
+                    key={mod.name}
+                    className="rounded-xl border border-zinc-200/80 bg-white/90 p-4 shadow-sm"
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className="font-heading text-sm font-semibold text-mention-dark">{mod.name}</h3>
+                      <span className="shrink-0 text-xs font-semibold tabular-nums text-mention-dark">
+                        {mod.score}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-xs leading-relaxed text-mention-gray">{mod.description}</p>
+                    <div className="mt-3 flex h-2 overflow-hidden rounded-full bg-zinc-100">
+                      <div
+                        className={`${barColor} rounded-full transition-all`}
+                        style={{ width: `${barPct}%` }}
+                      />
+                    </div>
+                    <p className="mt-2 text-xs font-medium text-mention-gray">
+                      Gewichtung: {mod.weightPct}%
+                    </p>
+                  </li>
+                );
+              })}
+            </ul>
 
             <div className="mt-6 border-t border-zinc-200/80 pt-5">
               <p className="text-center text-sm font-medium text-mention-dark">
                 <span className="text-mention-gray">Mentions:</span> 7 / 24 Prompts mit Erwähnung
               </p>
             </div>
-          </div>
 
-          <div>
-            <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
-              Status je KI-System
-            </p>
-            <ul className="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-2" role="list">
-              {aiPills.map((p) => (
-                <li key={p.name}>
-                  <span
-                    className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium ring-1 ${p.className}`}
-                  >
-                    <span className="font-semibold">{p.name}:</span>
-                    {p.label}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div className="mt-6 border-t border-zinc-200/80 pt-5">
+              <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
+                Status je KI-System
+              </p>
+              <ul className="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-2" role="list">
+                {aiPills.map((p) => (
+                  <li key={p.name}>
+                    <span
+                      className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium ring-1 ${p.className}`}
+                    >
+                      <span className="font-semibold">{p.name}:</span>
+                      {p.label}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div>
-            <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
-              Top Wettbewerber
-            </p>
-            <ul className="mt-3 space-y-2.5" role="list">
-              {competitorRows.map((row) => (
-                <li key={row.name} className="grid grid-cols-[minmax(0,1fr)_2.5rem] gap-2">
-                  <div className="min-w-0">
-                    <div className="flex h-2 overflow-hidden rounded-full bg-zinc-100">
-                      <div
-                        className={`${row.barClass} rounded-full`}
-                        style={{ width: `${row.score}%` }}
-                      />
+            <div className="mt-6 border-t border-zinc-200/80 pt-5">
+              <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
+                Top Wettbewerber
+              </p>
+              <ul className="mt-3 space-y-2.5" role="list">
+                {competitorRows.map((row) => (
+                  <li key={row.name} className="grid grid-cols-[minmax(0,1fr)_2.5rem] gap-2">
+                    <div className="min-w-0">
+                      <div className="flex h-2 overflow-hidden rounded-full bg-zinc-100">
+                        <div
+                          className={`${row.barClass} rounded-full`}
+                          style={{ width: `${row.score}%` }}
+                        />
+                      </div>
+                      <p className="mt-1 truncate text-xs font-medium text-mention-dark">{row.name}</p>
                     </div>
-                    <p className="mt-1 truncate text-xs font-medium text-mention-dark">{row.name}</p>
-                  </div>
-                  <span className="text-right text-xs font-semibold tabular-nums text-mention-dark">
-                    {row.score}
-                  </span>
-                </li>
-              ))}
-            </ul>
+                    <span className="text-right text-xs font-semibold tabular-nums text-mention-dark">
+                      {row.score}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <Link
@@ -119,7 +196,7 @@ export function SampleReportTeaser() {
 
         <div className="flex flex-col gap-5">
           <h2 className="font-heading text-2xl font-bold tracking-tight text-mention-dark sm:text-3xl">
-            Deine Top-Massnahmen
+            Deine Top-Maßnahmen
           </h2>
 
           <ul className="flex flex-col gap-4" role="list">

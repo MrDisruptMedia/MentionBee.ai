@@ -11,6 +11,9 @@ export function FinalCTA() {
           <p className="mt-4 text-lg text-white/80">
             Ideal für Startups, Agenturen und B2B SaaS.
           </p>
+          <p className="mt-2 text-lg text-white/80">
+            In 2 Minuten anfordern. Ergebnis per E-Mail.
+          </p>
           <Link
             href="/free-report"
             className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-mention-dark shadow-lg transition-colors hover:bg-primary-dark"

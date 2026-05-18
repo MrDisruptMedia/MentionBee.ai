@@ -15,7 +15,7 @@ export const faqEntries: FaqEntry[] = [
     id: "paid-difference",
     question: "Was ist im bezahlten Report anders?",
     answer:
-      "Der Deep-Dive Report geht viel tiefer: mehr Prompts und Use Cases, ein strukturierter Wettbewerbsvergleich, Ursachenanalyse (warum du sichtbar bist oder nicht) und ein priorisierter Massnahmenplan. Du siehst, in welchen Themenfeldern andere Marken dominieren und welche Hebel für dich am wirkungsvollsten sind.",
+      "Der Deep-Dive Report geht viel tiefer: mehr Prompts und Use Cases, ein strukturierter Wettbewerbsvergleich, Ursachenanalyse (warum du sichtbar bist oder nicht) und ein priorisierter Maßnahmenplan. Du siehst, in welchen Themenfeldern andere Marken dominieren und welche Hebel für dich am wirkungsvollsten sind.",
   },
   {
     id: "ai-systems",

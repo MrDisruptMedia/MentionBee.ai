@@ -21,7 +21,7 @@ const blocks = [
     icon: "🎯",
     title: "Action Plan",
     subtitle: "Was kannst du konkret verbessern?",
-    body: "Du erhältst konkrete, priorisierte Empfehlungen und Massnahmen zur gezielten Steigerung.",
+    body: "Du erhältst konkrete, priorisierte Empfehlungen und Maßnahmen zur gezielten Steigerung.",
   },
 ] as const;
 
