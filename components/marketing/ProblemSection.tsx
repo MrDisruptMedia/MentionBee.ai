@@ -25,8 +25,11 @@ export function ProblemSection() {
         <h2 className="mx-auto max-w-3xl text-center font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
           Kunden fragen heute KI. Wirst du genannt?
         </h2>
+        <p className="mx-auto mb-12 max-w-3xl text-center text-lg leading-relaxed text-mention-gray">
+          Wer in KI-Antworten fehlt, ist in einem wachsenden Teil der Customer Journey unsichtbar.
+        </p>
 
-        <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8" role="list">
+        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8" role="list">
           {tiles.map((tile) => {
             const Icon = tile.Icon;
             return (

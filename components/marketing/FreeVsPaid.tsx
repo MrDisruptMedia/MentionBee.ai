@@ -15,15 +15,12 @@ function CheckItem({ children }: { children: React.ReactNode }) {
 }
 
 const deepDiveItems = [
-  "Mehr Prompts & Use Cases",
-  "Wettbewerbsvergleich (3 Konkurrenten)",
-  "Ursachenanalyse",
-  "Priorisierter Maßnahmenplan",
-  "SEO & Technische Analyse",
-  "UX & Conversion-Bewertung",
-  "Schema & E-E-A-T Check",
-  "Markt & Externsichtbarkeit",
-  "Über 150 strukturierte Checks",
+  "Siehst du, bei welchen Kauf-Fragen du nicht auftauchst",
+  "Erkennst du, welche Wettbewerber KI stattdessen empfiehlt",
+  "Verstehst du, welche Quellen und Inhalte dir fehlen",
+  "Bekommst du einen priorisierten 30-Tage-Maßnahmenplan",
+  "Erhältst du konkrete Content- und PR-Empfehlungen",
+  "20–50 kaufnahe Prompts deiner Kategorie",
 ] as const;
 
 export function FreeVsPaid() {
@@ -34,8 +31,8 @@ export function FreeVsPaid() {
           Kostenloser Report vs. Deep-Dive Report
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-mention-gray">
-          Der kostenlose Report zeigt dir, ob ein Problem oder Potenzial besteht. Der Deep-Dive Report
-          zeigt dir, warum – und was du ändern solltest.
+          Der kostenlose Report zeigt dir, ob du sichtbar bist. Der Deep-Dive zeigt dir, warum du gewinnst oder
+          verlierst – und was du als Nächstes ändern solltest.
         </p>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2 lg:gap-8">

@@ -56,13 +56,13 @@ export function Hero() {
           </p>
 
           <h1 className="font-heading text-5xl leading-[1.1] font-bold md:text-6xl lg:text-7xl">
-            <span className="text-mention-dark">Wirst du von </span>
-            <span className="text-primary italic">KI empfohlen?</span>
+            <span className="block text-mention-dark">Deine Kunden fragen KI.</span>
+            <span className="block font-bold text-primary italic">Empfiehlt sie dich?</span>
           </h1>
 
           <p className="text-lg leading-relaxed text-mention-gray">
-            MentionBee zeigt dir, ob ChatGPT, Perplexity &amp; Co. deine Marke nennen, empfehlen oder
-            ignorieren – inklusive Wettbewerbsvergleich und konkreten nächsten Schritten.
+            MentionBee zeigt dir, ob ChatGPT, Perplexity &amp; Co. deine Marke in kaufnahen Fragen nennen,
+            empfehlen oder ignorieren – und welche Wettbewerber stattdessen sichtbar sind.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
