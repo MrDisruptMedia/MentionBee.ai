@@ -11,6 +11,7 @@ import { WhatWeAnalyze } from "@/components/marketing/WhatWeAnalyze";
 export default function Home() {
   return (
     <>
+      {/* Header sitzt im Root-Layout; Startseite: Hero + Folgesektionen */}
       <Hero />
       <ProblemSection />
       <WhatWeAnalyze />

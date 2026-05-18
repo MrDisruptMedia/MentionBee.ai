@@ -3,6 +3,15 @@ export type NavItem = {
   href: string;
 };
 
+/** Header-Hauptnavigation (Desktop) */
+export const headerNavigation: NavItem[] = [
+  { label: "Free Report", href: "/free-report" },
+  { label: "Deep-Dive Report", href: "/report" },
+  { label: "Beispielreport", href: "/sample-report" },
+  { label: "Methodik", href: "/#methodik" },
+  { label: "FAQ", href: "/#faq" },
+];
+
 export const mainNavigation: NavItem[] = [
   { label: "Kostenloser Report", href: "/free-report" },
   { label: "Report", href: "/report" },
