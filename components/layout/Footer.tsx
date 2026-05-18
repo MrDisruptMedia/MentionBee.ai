@@ -1,42 +1,142 @@
 import Link from "next/link";
+import type { SVGProps } from "react";
 
-import { legalNavigation, mainNavigation } from "@/content/navigation";
+type FooterCol = { heading: string; links: { label: string; href: string }[] };
+
+function LinkedInGlyph(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    </svg>
+  );
+}
+
+function XGlyph(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
+function MailGlyph(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden {...props}>
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+      <path d="m22 6-10 7L2 6" />
+    </svg>
+  );
+}
+
+const columns: FooterCol[] = [
+  {
+    heading: "Product",
+    links: [
+      { label: "Free Report", href: "/free-report" },
+      { label: "Deep-Dive Report", href: "/report" },
+      { label: "Beispielreport", href: "/sample-report" },
+      { label: "Methodik", href: "/#methodik" },
+    ],
+  },
+  {
+    heading: "Solutions",
+    links: [
+      { label: "Startups", href: "/free-report" },
+      { label: "Agenturen", href: "/free-report" },
+      { label: "B2B SaaS", href: "/free-report" },
+    ],
+  },
+  {
+    heading: "Resources",
+    links: [
+      { label: "FAQ", href: "/#faq" },
+      { label: "Blog", href: "/blog" },
+      { label: "AI Visibility Guide", href: "/sample-report" },
+    ],
+  },
+  {
+    heading: "Legal",
+    links: [
+      { label: "Privacy", href: "/datenschutzerklaerung" },
+      { label: "AGB", href: "/agb" },
+      { label: "Impressum", href: "/impressum" },
+    ],
+  },
+];
+
+const socialLinks = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/mentionbee",
+    Icon: LinkedInGlyph,
+  },
+  {
+    label: "X (Twitter)",
+    href: "https://x.com/mentionbee",
+    Icon: XGlyph,
+  },
+  {
+    label: "E-Mail",
+    href: "mailto:hello@mentionbee.ai",
+    Icon: MailGlyph,
+  },
+] as const;
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 sm:flex-row sm:justify-between">
-        <div>
-          <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">
-            MentionBee.ai
-          </p>
-          <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-400">
-            Placeholder: Kurzbeschreibung / Footer-Text.
-          </p>
+    <footer className="mt-auto border-t border-zinc-200 bg-white">
+      <div className="mx-auto max-w-6xl px-4 py-14">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_repeat(4,minmax(0,1fr))] lg:gap-8">
+          <div className="max-w-sm">
+            <Link href="/" className="text-base font-bold tracking-tight text-mention-dark">
+              <span aria-hidden>🐝 </span>
+              MentionBee.ai
+            </Link>
+            <p className="mt-3 text-sm leading-relaxed text-mention-gray">
+              AI Visibility für smarte Marken.
+            </p>
+          </div>
+
+          {columns.map((col) => (
+            <div key={col.heading}>
+              <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
+                {col.heading}
+              </p>
+              <nav aria-label={col.heading} className="mt-4 flex flex-col gap-2.5 text-sm">
+                {col.links.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="text-mention-dark/90 transition-colors hover:text-primary"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col gap-6 sm:flex-row sm:gap-12">
-          <nav aria-label="Footer Navigation" className="flex flex-col gap-2 text-sm">
-            {mainNavigation.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-          <nav aria-label="Rechtliches" className="flex flex-col gap-2 text-sm">
-            {legalNavigation.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+
+        <div className="mt-12 flex flex-col gap-6 border-t border-zinc-200 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-mention-gray">© 2026 MentionBee.ai</p>
+          <div className="flex items-center gap-3">
+            {socialLinks.map(({ label, href, Icon }) => {
+              const isWeb = href.startsWith("http");
+              return (
+                <a
+                  key={label}
+                  href={href}
+                  {...(isWeb
+                    ? { target: "_blank", rel: "noopener noreferrer" as const }
+                    : {})}
+                  className="flex size-10 items-center justify-center rounded-full border border-zinc-200 text-mention-dark transition-colors hover:border-primary/40 hover:bg-mention-light hover:text-primary"
+                  aria-label={label}
+                >
+                  <Icon className="size-4" />
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
     </footer>

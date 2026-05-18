@@ -1,18 +1,34 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { faqEntries } from "@/content/faq";
 
 export function FAQ() {
   return (
     <section
       id="faq"
-      className="scroll-mt-24 border-b border-zinc-200 bg-zinc-50 py-16 dark:border-zinc-800 dark:bg-zinc-900/40"
+      className="scroll-mt-24 border-b border-zinc-200/80 bg-white py-20 md:py-28"
     >
-      <div className="mx-auto max-w-5xl px-4">
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">Placeholder: FAQ</p>
-        <ul className="mt-4 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+      <div className="mx-auto max-w-3xl px-4">
+        <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
+          Häufige Fragen
+        </h2>
+
+        <Accordion className="mt-12 rounded-2xl border border-zinc-200/80 bg-mention-light/30 px-2 sm:px-4">
           {faqEntries.map((entry) => (
-            <li key={entry.id}>{entry.question}</li>
+            <AccordionItem key={entry.id} value={entry.id} className="px-2 sm:px-2">
+              <AccordionTrigger className="text-base font-semibold text-mention-dark hover:no-underline">
+                {entry.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-mention-gray">
+                <p>{entry.answer}</p>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </ul>
+        </Accordion>
       </div>
     </section>
   );
