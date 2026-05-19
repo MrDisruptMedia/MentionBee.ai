@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 
-const CHECKOUT_API =
-  "https://ai-visibility-report-tau.vercel.app/api/create-checkout-session";
+const CHECKOUT_API = "/api/create-checkout-session";
 
 export function PaidReportForm() {
   const [email, setEmail] = useState("");
