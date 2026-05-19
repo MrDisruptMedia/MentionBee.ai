@@ -43,7 +43,7 @@ const columns: FooterCol[] = [
   {
     heading: "Legal",
     links: [
-      { label: "Privacy", href: "/datenschutzerklaerung" },
+      { label: "Datenschutzerklärung", href: "/datenschutzerklaerung" },
       { label: "AGB", href: "/agb" },
       { label: "Impressum", href: "/impressum" },
     ],

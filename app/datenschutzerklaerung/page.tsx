@@ -4,7 +4,7 @@ export const metadata = {
 
 export default function DatenschutzerklaerungPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16">
+    <div className="mx-auto max-w-3xl px-4 pt-24 pb-16">
       <h1 className="mb-8 font-heading text-3xl font-bold text-mention-dark">Datenschutzerklärung</h1>
 
       <div className="space-y-6 leading-relaxed text-mention-gray">

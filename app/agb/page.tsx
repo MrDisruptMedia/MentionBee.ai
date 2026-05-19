@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function AgbPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16">
+    <div className="mx-auto max-w-3xl px-4 pt-24 pb-16">
       <h1 className="mb-8 font-heading text-3xl font-bold text-mention-dark">
         Allgemeine Geschäftsbedingungen (AGB)
       </h1>
