@@ -41,7 +41,24 @@ const organizationJsonLd = {
 
 export const metadata: Metadata = {
   title: "MentionBee.ai",
-  description: "Placeholder: MentionBee.ai Marketing",
+  description:
+    "MentionBee analysiert, ob ChatGPT, Perplexity & Co. deine Marke nennen, empfehlen oder ignorieren – inklusive Wettbewerbsvergleich.",
+  openGraph: {
+    title: "MentionBee – Wirst du von KI empfohlen?",
+    description:
+      "MentionBee analysiert, ob ChatGPT, Perplexity & Co. deine Marke nennen, empfehlen oder ignorieren – inklusive Wettbewerbsvergleich.",
+    url: "https://www.mentionbee.ai",
+    siteName: "MentionBee",
+    images: [{ url: "https://www.mentionbee.ai/opengraph-image.png", width: 1200, height: 630 }],
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MentionBee – Wirst du von KI empfohlen?",
+    description: "AI Visibility Reports für smarte Marken im DACH-Raum.",
+    images: ["https://www.mentionbee.ai/opengraph-image.png"],
+  },
 };
 
 export default function RootLayout({
