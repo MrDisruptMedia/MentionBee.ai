@@ -61,6 +61,13 @@ export function FreeReportForm() {
             Wir analysieren gerade deine Website. Du erhältst das Ergebnis in wenigen Minuten per E-Mail.
           </p>
           <p className="mt-4 text-sm text-mention-gray">Bitte prüfe auch deinen Spam-Ordner.</p>
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="mt-3 cursor-pointer border-0 bg-transparent p-0 text-sm text-mention-gray underline"
+          >
+            Weiteren Report anfordern
+          </button>
         </div>
       ) : (
         <>
