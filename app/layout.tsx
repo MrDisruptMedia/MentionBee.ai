@@ -37,12 +37,16 @@ const organizationJsonLd = {
   sameAs: ["https://www.linkedin.com/company/mentionbee"],
 };
 
-// Favicon: `app/icon.png` is served automatically by the App Router (see Next.js metadata files).
+// Favicon: `app/favicon.ico` + `metadata.icons`; `app/icon.png` weiter für hohe Auflösung.
 
 export const metadata: Metadata = {
   title: "MentionBee.ai",
   description:
     "MentionBee analysiert, ob ChatGPT, Perplexity & Co. deine Marke nennen, empfehlen oder ignorieren – inklusive Wettbewerbsvergleich.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/mentionbee-logo-transparent.png",
+  },
   openGraph: {
     title: "MentionBee – Wirst du von KI empfohlen?",
     description:
