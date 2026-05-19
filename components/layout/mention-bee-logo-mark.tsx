@@ -9,7 +9,7 @@ export function MentionBeeLogoMark({ className }: MentionBeeLogoMarkProps) {
     <img
       src="/mentionbee-logo-transparent.png"
       alt="MentionBee"
-      className={className ?? "h-8 w-auto shrink-0"}
+      className={className ?? "h-10 w-auto shrink-0"}
     />
   );
 }

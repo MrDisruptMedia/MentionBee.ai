@@ -2,13 +2,13 @@ import Link from "next/link";
 
 const moduleTiles = [
   {
-    name: "LLM + ASA",
+    name: "KI-Erwähnungen (LLM)",
     description: "Erwähnungen bei ChatGPT, Claude, Gemini & Perplexity",
     score: 0.7,
     weightPct: 30,
   },
   {
-    name: "PKI",
+    name: "Positionierung & Content",
     description: "Klarheit und Überzeugungskraft deiner Positionierung",
     score: 4.8,
     weightPct: 25,
@@ -26,13 +26,13 @@ const moduleTiles = [
     weightPct: 10,
   },
   {
-    name: "UX",
+    name: "UX & Conversion",
     description: "Nutzerfreundlichkeit und Conversion",
     score: 5.8,
     weightPct: 10,
   },
   {
-    name: "MSS",
+    name: "Externe Sichtbarkeit",
     description: "Externe Signale: Bewertungen, Presse, Social Media",
     score: 5.0,
     weightPct: 10,
@@ -77,8 +77,11 @@ export function SampleReportTeaser() {
   return (
     <section className="border-b border-zinc-200/80 bg-white py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
-          Sieh, wie dein Report aussehen könnte
+        <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+          <span className="text-mention-dark">Sieh, wie dein Report aussehen könnte </span>
+          <span className="text-lg font-normal italic text-mention-gray sm:text-xl md:text-2xl">
+            (nur ein kleiner Ausschnitt)
+          </span>
         </h2>
 
         <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-12">
@@ -137,17 +140,20 @@ export function SampleReportTeaser() {
           </div>
 
           <div className="flex flex-col gap-5">
-            <h2 className="font-heading text-2xl font-bold tracking-tight text-mention-dark sm:text-3xl">
-              Deine Top-Maßnahmen
+            <h2 className="font-heading text-base font-semibold tracking-tight text-mention-dark">
+              Deine 10 Top-Maßnahmen
             </h2>
 
             <ul className="flex flex-col gap-4" role="list">
-              {topMeasures.map((m) => (
+              {topMeasures.map((m, index) => (
                 <li
                   key={m.title}
                   className="rounded-2xl border border-zinc-200/90 bg-white p-5 shadow-sm ring-1 ring-zinc-100"
                 >
                   <div className="flex flex-wrap items-center gap-2">
+                    <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-mention-dark">
+                      {index + 1}
+                    </span>
                     <span className="text-base" aria-hidden>
                       {m.emoji}
                     </span>

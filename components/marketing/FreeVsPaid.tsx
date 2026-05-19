@@ -15,14 +15,14 @@ function CheckItem({ children }: { children: React.ReactNode }) {
 }
 
 const deepDiveItems = [
-  "Siehst du, bei welchen Kauf-Fragen du nicht auftauchst",
-  "Erkennst du, welche Wettbewerber KI stattdessen empfiehlt",
-  "Verstehst du, welche Quellen und Inhalte dir fehlen",
-  "Bekommst du einen priorisierten 30-Tage-Maßnahmenplan",
-  "Erhältst du konkrete Content- und PR-Empfehlungen",
-  "20–50 kaufnahe Prompts deiner Kategorie",
-  "PDF-Report + teilbarer Link für dein Team",
-  "Optional: 30-min Review-Call (+149 €)",
+  "siehst du, bei welchen Kauf-Fragen du nicht auftauchst",
+  "erkennst du, welche Wettbewerber KI stattdessen empfiehlt",
+  "verstehst du, welche Quellen und Inhalte dir fehlen",
+  "bekommst du 25 gewichtete Maßnahmen in 3 wichtigen Kategorien",
+  "erhältst du einen priorisierten Maßnahmenplan",
+  "erhältst du konkrete Content- und PR-Empfehlungen",
+  "erfährst du, wie du Maßnahmen in deinem CMS umsetzt",
+  "analysieren wir 5–6 kaufnahe Suchanfragen deiner Branche über 4 KI-Systeme",
 ] as const;
 
 export function FreeVsPaid() {
@@ -69,10 +69,13 @@ export function FreeVsPaid() {
               <span className="text-2xl font-bold text-primary tabular-nums">199 € netto</span>
             </div>
             <p className="mt-2 text-xs text-mention-gray">
-              Einführungspreis · Regulär 299 € · Lieferung in 3–5 Werktagen
+              Einführungspreis · Regulär 299 € · Lieferung in 24–48h
             </p>
 
-            <ul className="mt-6 flex flex-col gap-3" role="list">
+            <p className="mb-3 mt-6 text-sm italic text-mention-gray">
+              Mit diesem Business Audit...
+            </p>
+            <ul className="flex flex-col gap-3" role="list">
               {deepDiveItems.map((line) => (
                 <CheckItem key={line}>{line}</CheckItem>
               ))}

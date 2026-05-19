@@ -30,7 +30,7 @@ export function TrustSection() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="max-w-3xl font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
-            Transparent analysiert. Ohne Login. DSGVO-bewusst.
+            Transparent analysiert. Ohne Login. Jederzeit aufrufbar.
           </h2>
           <Link
             href="/#methodik"
