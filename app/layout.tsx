@@ -37,14 +37,14 @@ const organizationJsonLd = {
   sameAs: ["https://www.linkedin.com/company/mentionbee"],
 };
 
-// Favicon: `app/favicon.ico` + `metadata.icons`; `app/icon.png` weiter für hohe Auflösung.
+// Favicon: Next.js nutzt `app/icon.png` automatisch; `metadata.icons` ergänzt Link-Tags.
 
 export const metadata: Metadata = {
   title: "MentionBee.ai",
   description:
     "MentionBee analysiert, ob ChatGPT, Perplexity & Co. deine Marke nennen, empfehlen oder ignorieren – inklusive Wettbewerbsvergleich.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/mentionbee-logo-transparent.png",
     apple: "/mentionbee-logo-transparent.png",
   },
   openGraph: {
