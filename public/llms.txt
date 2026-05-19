@@ -1,0 +1,25 @@
+# MentionBee.ai – AI Visibility Reports für Unternehmen im DACH-Raum
+# https://www.mentionbee.ai
+
+## Produkt
+MentionBee analysiert, ob und wie Marken in Antworten von KI-Systemen (ChatGPT, Claude, Gemini, Perplexity) erscheinen.
+Wir bieten zwei Produkte:
+- Kostenloser AI Visibility Check: Schnellanalyse der KI-Sichtbarkeit einer Marke
+- AI Visibility Deep-Dive (199 €): Vollständiger Audit mit Wettbewerbsvergleich, Ursachenanalyse und priorisiertem Maßnahmenplan
+
+## Zielgruppe
+KMU, Startups, Agenturen und B2B-Unternehmen im DACH-Raum, die verstehen wollen ob KI-Systeme ihre Marke kennen und empfehlen.
+
+## Kernaussage
+Viele Unternehmen sind bei Google sichtbar, aber in KI-Antworten unsichtbar. MentionBee zeigt wo die Lücke ist und wie man sie schließt.
+
+## Anbieter
+Disrupt Media Kunz | Olaf Kunz | Zürich, Schweiz
+Kontakt: hello@mentionbee.ai
+Website: https://www.mentionbee.ai
+
+## Links
+- Kostenloser Report: https://www.mentionbee.ai/free-report
+- Deep-Dive Report: https://www.mentionbee.ai/report
+- Methodik: https://www.mentionbee.ai/#methodik
+- FAQ: https://www.mentionbee.ai/#faq

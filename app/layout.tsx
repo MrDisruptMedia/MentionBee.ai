@@ -15,6 +15,28 @@ const inter = Inter({
 
 const gtmId = "GTM-W25FQX2Z";
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "MentionBee",
+  url: "https://www.mentionbee.ai",
+  logo: "https://www.mentionbee.ai/mentionbee-logo-transparent.png",
+  description:
+    "MentionBee analysiert die AI-Sichtbarkeit von Unternehmen in ChatGPT, Claude, Gemini und Perplexity – mit Wettbewerbsvergleich und priorisiertem Maßnahmenplan.",
+  email: "hello@mentionbee.ai",
+  foundingLocation: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Wieslergasse 2",
+      addressLocality: "Zürich",
+      postalCode: "8049",
+      addressCountry: "CH",
+    },
+  },
+  sameAs: ["https://www.linkedin.com/company/mentionbee"],
+};
+
 // Favicon: `app/icon.png` is served automatically by the App Router (see Next.js metadata files).
 
 export const metadata: Metadata = {
@@ -41,6 +63,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','${gtmId}');
             `.trim(),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
           }}
         />
         <noscript>
