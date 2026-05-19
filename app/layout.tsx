@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "MentionBee analysiert, ob ChatGPT, Perplexity & Co. deine Marke nennen, empfehlen oder ignorieren – inklusive Wettbewerbsvergleich.",
     url: "https://www.mentionbee.ai",
     siteName: "MentionBee",
-    images: [{ url: "https://www.mentionbee.ai/opengraph-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://www.mentionbee.ai/opengraph-image", width: 1200, height: 630 }],
     locale: "de_DE",
     type: "website",
   },
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MentionBee – Wirst du von KI empfohlen?",
     description: "AI Visibility Reports für smarte Marken im DACH-Raum.",
-    images: ["https://www.mentionbee.ai/opengraph-image.png"],
+    images: ["https://www.mentionbee.ai/opengraph-image"],
   },
 };
 
