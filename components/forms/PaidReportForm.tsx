@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-const CHECKOUT_API = "/api/create-checkout-session";
-
 export function PaidReportForm() {
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
@@ -16,35 +14,28 @@ export function PaidReportForm() {
     setIsLoading(true);
 
     try {
-      const res = await fetch(CHECKOUT_API, {
+      const res = await fetch("/api/create-checkout-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: email.trim(),
-          url: website.trim(),
-        }),
+        body: JSON.stringify({ email: email.trim(), url: website.trim() }),
       });
 
-      let data: { url?: string; error?: string } = {};
-      try {
-        data = (await res.json()) as { url?: string; error?: string };
-      } catch {
-        setError("Ungültige Antwort vom Server. Bitte versuche es erneut.");
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error("Checkout error:", res.status, errorText);
+        setError(`Fehler ${res.status}: ${errorText.slice(0, 200)}`);
         return;
       }
 
-      if (!res.ok || !data.url) {
-        setError(
-          typeof data.error === "string" && data.error.length > 0
-            ? data.error
-            : "Checkout konnte nicht gestartet werden. Bitte versuche es erneut."
-        );
-        return;
+      const data = (await res.json()) as { url?: string };
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        setError("Kein Checkout-Link erhalten. Bitte versuche es erneut.");
       }
-
-      window.location.href = data.url;
-    } catch {
-      setError("Netzwerkfehler. Bitte prüfe deine Verbindung und versuche es erneut.");
+    } catch (err) {
+      console.error("Network error:", err);
+      setError(`Netzwerkfehler: ${err instanceof Error ? err.message : "Unbekannter Fehler"}`);
     } finally {
       setIsLoading(false);
     }
