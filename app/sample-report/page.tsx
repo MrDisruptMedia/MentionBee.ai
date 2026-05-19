@@ -147,7 +147,7 @@ export default function SampleReportPage() {
           📄 Beispielreport – Disrupt Media | So sieht dein vollständiger Report aus
         </p>
         <p className="mt-2 text-sm text-mention-gray">
-          Echte Analyse, echte Daten. Die Umsetzungsdetails sind im kostenlosen Teaser gesperrt.
+          Echte Analyse, echte Daten. Die konkreten Umsetzungsanleitungen sind nur im Deep-Dive Report verfügbar.
         </p>
       </div>
 
@@ -419,24 +419,26 @@ export default function SampleReportPage() {
       </section>
 
       {/* 6. Gesperrte Maßnahmen 4–10 */}
-      <section className="relative mt-10 overflow-hidden rounded-2xl border border-zinc-200/90 bg-mention-light/30 p-6 ring-1 ring-zinc-100">
-        <div className="pointer-events-none select-none space-y-4 blur-sm">
-          {Array.from({ length: 7 }).map((_, i) => (
-            <div key={i} className="rounded-xl border border-zinc-200/80 bg-white/80 p-4">
-              <div className="h-4 w-2/3 rounded bg-zinc-200" />
-              <div className="mt-3 h-3 w-full rounded bg-zinc-100" />
-              <div className="mt-2 h-3 w-5/6 rounded bg-zinc-100" />
-            </div>
-          ))}
+      <section className="relative mt-10 h-48 overflow-hidden rounded-2xl border border-zinc-200/90 bg-mention-light/30 ring-1 ring-zinc-100">
+        <div className="pointer-events-none absolute inset-0 select-none overflow-hidden blur-sm">
+          <div className="space-y-3 p-4">
+            {Array.from({ length: 7 }).map((_, i) => (
+              <div key={i} className="rounded-xl border border-zinc-200/80 bg-white/80 p-3">
+                <div className="h-3 w-2/3 rounded bg-zinc-200" />
+                <div className="mt-2 h-2.5 w-full rounded bg-zinc-100" />
+                <div className="mt-1.5 h-2.5 w-5/6 rounded bg-zinc-100" />
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center bg-white/55 px-6 text-center backdrop-blur-[2px]">
-          <Lock className="size-10 text-mention-dark" strokeWidth={1.75} aria-hidden />
-          <p className="mt-4 max-w-md text-sm font-semibold text-mention-dark sm:text-base">
+        <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center bg-white/55 px-4 py-3 text-center backdrop-blur-[2px]">
+          <Lock className="size-9 text-mention-dark" strokeWidth={1.75} aria-hidden />
+          <p className="mt-2 max-w-md text-sm font-semibold text-mention-dark sm:text-base">
             7 weitere Maßnahmen mit vollständigen Umsetzungsanleitungen im Deep-Dive Report
           </p>
           <Link
             href="/report"
-            className="pointer-events-auto mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md transition hover:bg-primary-dark"
+            className="pointer-events-auto mt-4 inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-mention-dark shadow-md transition hover:bg-primary-dark"
           >
             Deep-Dive Report ansehen →
           </Link>
