@@ -8,6 +8,7 @@ export const metadata = {
       "Bienen sind für unser Ökosystem fundamental. 11 faszinierende Fakten zum Weltbienentag – und warum 1% unserer Einnahmen an Bienen.ch geht.",
     url: "https://mentionbee.ai/weltbienentag",
     type: "article",
+    images: ["/opengraph-image"],
   },
 };
 
