@@ -24,6 +24,11 @@ export default function Home() {
       <TrustSection />
       <FAQ />
       <FinalCTA />
+      <div className="mx-auto max-w-6xl px-4 pb-8">
+        <a href="/llms.txt" className="text-mention-dark/90 transition-colors hover:text-primary">
+          llms.txt
+        </a>
+      </div>
     </>
   );
 }

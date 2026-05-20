@@ -38,7 +38,7 @@ const columns: FooterCol[] = [
       { label: "Datenschutzerklärung", href: "/datenschutzerklaerung" },
       { label: "AGB", href: "/agb" },
       { label: "Impressum", href: "/impressum" },
-      { label: "llms.txt (KI-Crawler)", href: "/llms.txt" },
+      { label: "llms.txt", href: "/llms.txt" },
     ],
   },
 ];
@@ -74,15 +74,25 @@ export function Footer() {
                 {col.heading}
               </p>
               <nav aria-label={col.heading} className="mt-4 flex flex-col gap-2.5 text-sm">
-                {col.links.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className="text-mention-dark/90 transition-colors hover:text-primary"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {col.links.map((item) =>
+                  item.href === "/llms.txt" ? (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="text-mention-dark/90 transition-colors hover:text-primary"
+                    >
+                      llms.txt
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className="text-mention-dark/90 transition-colors hover:text-primary"
+                    >
+                      {item.label}
+                    </Link>
+                  ),
+                )}
               </nav>
             </div>
           ))}
