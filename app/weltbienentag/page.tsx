@@ -10,7 +10,7 @@ export const metadata = {
     type: "article",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/og-weltbienentag.png",
         width: 1200,
         height: 630,
         type: "image/png",
