@@ -1,0 +1,299 @@
+.pageRoot {
+  --amber-deep: #e8a020;
+  --wax-creme: #faf3e0;
+  --anthracite: #1a1a1a;
+  --honey-orange: #c67c1a;
+  --card-shadow: 0 12px 40px rgba(26, 26, 26, 0.08);
+
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-source-serif-4), Georgia, "Times New Roman", serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--anthracite);
+  background: var(--wax-creme);
+}
+
+.pageRoot * {
+  box-sizing: border-box;
+}
+
+:global(html) {
+  scroll-behavior: smooth;
+}
+
+.pageRoot :global(h1),
+.pageRoot :global(h2) {
+  font-family: var(--font-playfair-display), Georgia, serif;
+}
+
+/* Honeycomb background — inline SVG as data URL */
+.bgHoneycomb {
+  background-color: var(--wax-creme);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill='none' stroke='%23C67C1A' stroke-opacity='0.12' stroke-width='1'%3E%3Cpath d='M14 0v21M0 10.5h28M14 28v21M0 38.5h28'/%3E%3Cpath d='M0 10.5L14 0l14 10.5M0 38.5L14 49l14-10.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 28px 49px;
+}
+
+.bgCremeSolid {
+  background: var(--wax-creme);
+}
+
+.wrap {
+  width: 100%;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.siteHeader {
+  padding: 2.5rem 0 3rem;
+  border-bottom: 1px solid rgba(198, 124, 26, 0.25);
+}
+
+.logoRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.logoText {
+  font-family: var(--font-playfair-display), Georgia, serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  color: var(--anthracite);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--wax-creme);
+  background: var(--honey-orange);
+  border-radius: 999px;
+  font-family: var(--font-source-serif-4), serif;
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 5vw, 2.85rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.25rem;
+  max-width: 22ch;
+  color: var(--anthracite);
+}
+
+.intro {
+  max-width: 36rem;
+  margin: 0;
+  font-size: 1.125rem;
+  color: rgba(26, 26, 26, 0.88);
+}
+
+.introHero {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 1.75rem auto 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(26, 26, 26, 0.11);
+}
+
+.factsSection {
+  padding: 3.5rem 0;
+}
+
+.factsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .factsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.factCard {
+  --delay: 0ms;
+  background: #fffef8;
+  border: 1px solid rgba(232, 160, 32, 0.35);
+  border-radius: 0.5rem;
+  padding: 1.35rem 1.5rem;
+  box-shadow: var(--card-shadow);
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition:
+    opacity 0.65s ease var(--delay),
+    transform 0.65s ease var(--delay),
+    box-shadow 0.25s ease;
+}
+
+.factCardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.factCardVisible:hover {
+  box-shadow: 0 18px 48px rgba(26, 26, 26, 0.12);
+  transform: translateY(0) scale(1.02);
+}
+
+.factNum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.65rem;
+  font-family: var(--font-playfair-display), serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--wax-creme);
+  background: var(--anthracite);
+  border-radius: 50%;
+}
+
+.factText {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.pullQuote {
+  margin: 0;
+  padding: 3rem 1.75rem;
+  background: linear-gradient(135deg, var(--amber-deep) 0%, #d4941d 100%);
+  color: var(--anthracite);
+  text-align: center;
+}
+
+.pullQuote blockquote {
+  margin: 0 auto;
+  max-width: 40rem;
+  font-family: var(--font-playfair-display), Georgia, serif;
+  font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.ctaSection {
+  padding: 3.5rem 1.5rem;
+  background: var(--anthracite);
+  color: var(--wax-creme);
+  text-align: center;
+}
+
+.ctaSection p {
+  margin: 0 auto 1.75rem;
+  max-width: 32rem;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  opacity: 0.95;
+}
+
+.ctaBtn {
+  display: inline-block;
+  padding: 0.95rem 2rem;
+  font-family: var(--font-source-serif-4), serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--anthracite);
+  background: var(--amber-deep);
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(232, 160, 32, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.ctaBtn:hover {
+  background: #f0ae2a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(232, 160, 32, 0.5);
+}
+
+.bienenSection {
+  padding: 3.25rem 0;
+  background: var(--wax-creme);
+  border-top: 1px solid rgba(198, 124, 26, 0.2);
+}
+
+.bienenInner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .bienenInner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+.bienenIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.bienenInner p {
+  margin: 0;
+  font-size: 1.0625rem;
+}
+
+.bienenInner a {
+  color: var(--honey-orange);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.bienenInner a:hover {
+  color: var(--anthracite);
+}
+
+.siteFooter {
+  padding: 2rem 1.25rem 2.5rem;
+  text-align: center;
+  background: #151515;
+  color: rgba(250, 243, 224, 0.75);
+  font-size: 0.9rem;
+}
+
+.siteFooter p {
+  margin: 0.35rem 0;
+}
+
+.fine {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
