@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>11 Fakten über Bienen – Weltbienentag 2025 | MentionBee</title>
+  <meta name="description" content="Wer nicht erwähnt wird, existiert nicht. 11 faszinierende Bienen-Fakten + warum 1% unserer Einnahmen an Bienen.ch geht." />
+
+  <meta property="og:title" content="11 Fakten über Bienen – Weltbienentag 2025 | MentionBee" />
+  <meta property="og:description" content="Wer nicht erwähnt wird, existiert nicht. 11 faszinierende Bienen-Fakten + warum 1% unserer Einnahmen an Bienen.ch geht." />
+  <meta property="og:url" content="https://mentionbee.ai/weltbienentag" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="de_DE" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --amber-deep: #e8a020;
+      --wax-creme: #faf3e0;
+      --anthracite: #1a1a1a;
+      --honey-orange: #c67c1a;
+      --card-shadow: 0 12px 40px rgba(26, 26, 26, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--anthracite);
+      background: var(--wax-creme);
+    }
+
+    h1, h2, .font-display {
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    /* Honeycomb background — inline SVG as data URL */
+    .bg-honeycomb {
+      background-color: var(--wax-creme);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill='none' stroke='%23C67C1A' stroke-opacity='0.12' stroke-width='1'%3E%3Cpath d='M14 0v21M0 10.5h28M14 28v21M0 38.5h28'/%3E%3Cpath d='M0 10.5L14 0l14 10.5M0 38.5L14 49l14-10.5'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 28px 49px;
+    }
+
+    .bg-creme-solid {
+      background: var(--wax-creme);
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 68rem;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    header {
+      padding: 2.5rem 0 3rem;
+      border-bottom: 1px solid rgba(198, 124, 26, 0.25);
+    }
+
+    .logo-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-text {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      color: var(--anthracite);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--wax-creme);
+      background: var(--honey-orange);
+      border-radius: 999px;
+      font-family: "Source Serif 4", serif;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 5vw, 2.85rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 1.25rem;
+      max-width: 22ch;
+      color: var(--anthracite);
+    }
+
+    .intro {
+      max-width: 36rem;
+      margin: 0;
+      font-size: 1.125rem;
+      color: rgba(26, 26, 26, 0.88);
+    }
+
+    .intro-hero {
+      display: block;
+      width: 100%;
+      max-width: 900px;
+      margin: 1.75rem auto 0;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(26, 26, 26, 0.11);
+    }
+
+    .facts-section {
+      padding: 3.5rem 0;
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .facts-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    .fact-card {
+      --delay: 0ms;
+      background: #fffef8;
+      border: 1px solid rgba(232, 160, 32, 0.35);
+      border-radius: 0.5rem;
+      padding: 1.35rem 1.5rem;
+      box-shadow: var(--card-shadow);
+      opacity: 0;
+      transform: translateY(1.25rem);
+      transition:
+        opacity 0.65s ease var(--delay),
+        transform 0.65s ease var(--delay),
+        box-shadow 0.25s ease;
+    }
+
+    .fact-card.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fact-card.is-visible:hover {
+      box-shadow: 0 18px 48px rgba(26, 26, 26, 0.12);
+      transform: translateY(0) scale(1.02);
+    }
+
+    .fact-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 0.65rem;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--wax-creme);
+      background: var(--anthracite);
+      border-radius: 50%;
+    }
+
+    .fact-text {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .pull-quote {
+      margin: 0;
+      padding: 3rem 1.75rem;
+      background: linear-gradient(135deg, var(--amber-deep) 0%, #d4941d 100%);
+      color: var(--anthracite);
+      text-align: center;
+    }
+
+    .pull-quote blockquote {
+      margin: 0 auto;
+      max-width: 40rem;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+    }
+
+    .cta-section {
+      padding: 3.5rem 1.5rem;
+      background: var(--anthracite);
+      color: var(--wax-creme);
+      text-align: center;
+    }
+
+    .cta-section p {
+      margin: 0 auto 1.75rem;
+      max-width: 32rem;
+      font-size: 1.125rem;
+      line-height: 1.65;
+      opacity: 0.95;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 0.95rem 2rem;
+      font-family: "Source Serif 4", serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--anthracite);
+      background: var(--amber-deep);
+      border: none;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232, 160, 32, 0.45);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      background: #f0ae2a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(232, 160, 32, 0.5);
+    }
+
+    .bienen-section {
+      padding: 3.25rem 0;
+      background: var(--wax-creme);
+      border-top: 1px solid rgba(198, 124, 26, 0.2);
+    }
+
+    .bienen-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      max-width: 40rem;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    @media (min-width: 640px) {
+      .bienen-inner {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+    }
+
+    .bienen-icon {
+      font-size: 2.5rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .bienen-inner p {
+      margin: 0;
+      font-size: 1.0625rem;
+    }
+
+    .bienen-inner a {
+      color: var(--honey-orange);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .bienen-inner a:hover {
+      color: var(--anthracite);
+    }
+
+    footer {
+      padding: 2rem 1.25rem 2.5rem;
+      text-align: center;
+      background: #151515;
+      color: rgba(250, 243, 224, 0.75);
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 0.35rem 0;
+    }
+
+    footer .fine {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-creme-solid">
+    <div class="wrap">
+      <div class="logo-row">
+        <span class="logo-text">MentionBee 🐝</span>
+        <span class="badge">20. Mai – Weltbienentag</span>
+      </div>
+      <h1>11 Fakten über Bienen, die dich sprachlos machen werden</h1>
+      <p class="intro">
+        Heute ist Weltbienentag – und ein guter Moment, um innezuhalten. Bienen sind für unser Ökosystem fundamental.
+        Hier sind 11 Fakten, die zeigen, wie faszinierend diese kleinen Wesen wirklich sind.
+      </p>
+      <img
+        class="intro-hero"
+        src="/bienen-fakten.png"
+        alt="Bienen-Fakten: 1.000 Blüten pro Ausflug, 40.000 km für 1 kg Honig, 80% der Bestäubung, 5–8 Std. Schlaf"
+      />
+    </div>
+  </header>
+
+  <section class="facts-section bg-honeycomb" aria-labelledby="facts-heading">
+    <div class="wrap">
+      <h2 id="facts-heading" class="sr-only">11 Fakten</h2>
+      <div class="facts-grid">
+        <article class="fact-card" style="--delay: 0ms" data-reveal>
+          <span class="fact-num" aria-hidden="true">1</span>
+          <p class="fact-text">🐝 Eine Biene besucht bis zu 1.000 Blüten pro Ausflug – und fliegt dabei bis zu 3 km weit.</p>
+        </article>
+        <article class="fact-card" style="--delay: 50ms" data-reveal>
+          <span class="fact-num" aria-hidden="true">2</span>
+          <p class="fact-text">🍯 Um 1 kg Honig zu produzieren, legen Bienen gemeinsam rund 40.000 km zurück – das entspricht einmal um die Erde.</p>
+        </article>
+        <article class="fact-card" style="--delay: 100ms" data-reveal>
+          <span class="fact-num" aria-hidden="true">3</span>
+          <p class="fact-text">📡 Bienen kommunizieren durch Tänze. Der «Schwänzeltanz» teilt Richtung, Distanz und Qualität einer Nahrungsquelle mit – mit erstaunlicher Präzision.</p>
+        </article>
+        <article class="fact-card" style="--delay: 150ms" data-reveal>
+          <span class="fact-num" aria-hidden="true">4</span>
+          <p class="fact-text">🧠 Trotz eines Gehirns von der Grösse eines Sesamkorns können Bienen menschliche Gesichter erkennen.</p>
+        </article>
+        <article class="fact-card" style="--delay: 200ms" data-reveal>
+          <span class="fact-num" aria-hidden="true">5</span>
+          <p class="fact-text">⏱️ Eine Arbeiterin produziert in ihrem ganzen Leben (ca. 6 Wochen) nur etwa 1/12 Teelöffel Honig.</p>
+        </article>
+        <article class="fact-card" style="--delay: 250ms" data-reveal>
+          <span class="fact-num" aria-hidden="true">6</span>
+          <p class="fact-text">🌡️ Im Bienenstock herrscht konstant 35°C – die Bienen regulieren die Temperatur durch Fächeln mit ihren Flügeln.</p>
+        </article>
+        <article class="fact-card" style="--delay: 300ms" data-reveal>
+          <span class="fact-num" aria-hidden="true">7</span>
+          <p class="fact-text">🌍 Bienen sind für etwa 80% der Bestäubung von Nutzpflanzen weltweit verantwortlich – ein wirtschaftlicher Wert von über 150 Milliarden Euro jährlich.</p>
+        </article>
+        <article class="fact-card" style="--delay: 350ms" data-reveal>
+          <span class="fact-num" aria-hidden="true">8</span>
+          <p class="fact-text">💤 Bienen schlafen. Forschungen zeigen, dass sie zwischen 5 und 8 Stunden pro Nacht ruhen – oft sogar in der Blüte.</p>
+        </article>
+        <article class="fact-card" style="--delay: 400ms" data-reveal>
+          <span class="fact-num" aria-hidden="true">9</span>
+          <p class="fact-text">👃 Der Geruchssinn einer Biene ist 100x feiner als der eines Menschen. Bienenspürhunde gibt es nicht, weil Bienen schlicht besser riechen.</p>
+        </article>
+        <article class="fact-card" style="--delay: 450ms" data-reveal>
+          <span class="fact-num" aria-hidden="true">10</span>
+          <p class="fact-text">🕐 Bienen haben ein inneres GPS-System und finden dank Sonnenstand, Magnetfeld und Landmarken immer nach Hause.</p>
+        </article>
+        <article class="fact-card" style="--delay: 500ms" data-reveal>
+          <span class="fact-num" aria-hidden="true">11</span>
+          <p class="fact-text">❌ Wenn eine Bienenkönigin stirbt und keine Nachfolgerin da ist, kann das gesamte Volk innerhalb weniger Wochen kollabieren.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <aside class="pull-quote" aria-label="Zitat">
+    <blockquote>
+      „Wie Bienen wissen, wann und wo sie gefragt sind – so hilft MentionBee Unternehmen zu verstehen, ob sie in der Welt der KI-Suche sichtbar sind. Wer nicht erwähnt wird, existiert nicht.“
+    </blockquote>
+  </aside>
+
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="wrap">
+      <h2 id="cta-heading" class="sr-only">MentionBee</h2>
+      <p>
+        MentionBee analysiert, ob dein Unternehmen von ChatGPT, Claude, Gemini und Perplexity empfohlen wird – oder ob die Konkurrenz das Feld übernimmt.
+      </p>
+      <a class="cta-btn" href="https://mentionbee.ai">Kostenlosen Report anfordern</a>
+    </div>
+  </section>
+
+  <section class="bienen-section" aria-labelledby="bienen-heading">
+    <div class="wrap">
+      <h2 id="bienen-heading" class="sr-only">Bienen.ch</h2>
+      <div class="bienen-inner">
+        <span class="bienen-icon" aria-hidden="true">🐝</span>
+        <p>
+          Und weil wir's ernst meinen: 1% aller MentionBee-Einnahmen gehen an Bienen.ch – das Zentrum zur Förderung der Bienengesundheit in der Schweiz.
+          <br /><br />
+          <a href="https://bienen.ch" rel="noopener noreferrer" target="_blank">https://bienen.ch</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MentionBee · mentionbee.ai</p>
+    <p class="fine">Alles Gute zum Weltbienentag 🐝</p>
+  </footer>
+
+  <script>
+    (function () {
+      var cards = document.querySelectorAll("[data-reveal]");
+      if (!("IntersectionObserver" in window)) {
+        cards.forEach(function (el) {
+          el.classList.add("is-visible");
+        });
+        return;
+      }
+      var io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { root: null, rootMargin: "0px 0px -40px 0px", threshold: 0.12 }
+      );
+      cards.forEach(function (el) {
+        io.observe(el);
+      });
+    })();
+  </script>
+</body>
+</html>
