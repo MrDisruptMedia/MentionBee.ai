@@ -1,20 +1,12 @@
 export const metadata = {
-  title: "11 Fakten über Bienen – Weltbienentag 2025 | MentionBee",
+  title: "11 Fakten über Bienen – Weltbienentag 2026 | MentionBee",
   description:
     "Bienen sind für unser Ökosystem fundamental. 11 faszinierende Fakten zum Weltbienentag – und warum 1% unserer Einnahmen an Bienen.ch geht.",
   openGraph: {
-    title: "11 Fakten über Bienen – Weltbienentag 2025 | MentionBee",
+    title: "11 Fakten über Bienen – Weltbienentag 2026 | MentionBee",
     description:
       "Bienen sind für unser Ökosystem fundamental. 11 faszinierende Fakten zum Weltbienentag – und warum 1% unserer Einnahmen an Bienen.ch geht.",
     url: "https://mentionbee.ai/weltbienentag",
-    images: [
-      {
-        url: "https://mentionbee.ai/bienen-fakten.png",
-        width: 1200,
-        height: 630,
-        alt: "Bienen-Fakten zum Weltbienentag",
-      },
-    ],
     type: "article",
   },
 };
