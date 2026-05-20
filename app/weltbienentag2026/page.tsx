@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Weltbienentag2026Body } from "@/components/marketing/Weltbienentag2026Body";
 
 const OG_PAGE_URL = "https://mentionbee.ai/weltbienentag2026";
-const OG_IMAGE = "https://mentionbee.ai/og/weltbienentag-2026.jpg";
+const OG_IMAGE = "https://mentionbee.ai/og/weltbienentag-2026-v3.jpg";
 const OG_TITLE = "11 Fakten über Bienen, die dich sprachlos machen werden";
 const OG_DESCRIPTION =
   "Heute ist Weltbienentag – 11 faszinierende Fakten über Bienen und warum sie für unser Ökosystem fundamental sind.";
