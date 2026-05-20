@@ -38,6 +38,7 @@ const columns: FooterCol[] = [
       { label: "Datenschutzerklärung", href: "/datenschutzerklaerung" },
       { label: "AGB", href: "/agb" },
       { label: "Impressum", href: "/impressum" },
+      { label: "llms.txt (KI-Crawler)", href: "/llms.txt" },
     ],
   },
 ];
