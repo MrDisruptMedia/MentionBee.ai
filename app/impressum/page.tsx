@@ -12,7 +12,17 @@ export default function ImpressumPage() {
 
         <div>
           <p className="font-medium text-mention-dark">Einzelfirma</p>
-          <p>Disrupt Media Kunz</p>
+          <p>
+            <a
+              href="https://disruptmedia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-2"
+            >
+              Disrupt Media
+            </a>{" "}
+            Kunz
+          </p>
           <p>Wieslergasse 2</p>
           <p>8049 Zürich</p>
           <p>Schweiz</p>
