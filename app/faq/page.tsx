@@ -39,7 +39,7 @@ export default function FaqPage() {
       />
 
       <section className="border-b border-zinc-200/80 bg-white pb-12 pt-24 md:pb-16 md:pt-28">
-        <div className="mx-auto max-w-3xl px-4 text-center">
+        <div className="mx-auto w-full max-w-3xl px-4 text-center">
           <h1 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
             Häufige Fragen
           </h1>
@@ -49,29 +49,33 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-3xl space-y-12 px-4 py-14 md:py-20">
+      <div className="mx-auto w-full max-w-3xl space-y-12 px-4 py-14 md:py-20">
         {faqFullPageSections.map((section, sectionIndex) => (
-          <section key={section.heading} aria-labelledby={`faq-section-${sectionIndex}`}>
+          <section
+            key={section.heading}
+            className="w-full"
+            aria-labelledby={`faq-section-${sectionIndex}`}
+          >
             <h2
               id={`faq-section-${sectionIndex}`}
               className="mb-6 font-heading text-xl font-bold text-mention-dark md:text-2xl"
             >
               {section.heading}
             </h2>
-            <Accordion className="rounded-2xl border border-zinc-200/80 bg-mention-light/30 px-2 sm:px-4">
+            <Accordion className="w-full rounded-2xl border border-zinc-200/80 bg-mention-light/30 px-2 sm:px-4">
               {section.items.map((item) => (
-                <AccordionItem key={item.id} value={item.id} className="px-2 sm:px-2">
-                  <AccordionTrigger className="text-base font-semibold text-mention-dark hover:no-underline">
+                <AccordionItem key={item.id} value={item.id} className="w-full px-2 sm:px-2">
+                  <AccordionTrigger className="w-full min-w-0 text-base font-semibold text-mention-dark hover:no-underline">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-mention-gray">
+                  <AccordionContent className="w-full text-mention-gray">
                     {item.answerHtml ? (
                       <div
-                        className="text-sm leading-relaxed md:text-base [&_a]:font-medium [&_a]:text-primary"
+                        className="w-full text-sm leading-relaxed md:text-base [&_a]:font-medium [&_a]:text-primary"
                         dangerouslySetInnerHTML={{ __html: item.answerHtml }}
                       />
                     ) : (
-                      <p className="text-sm leading-relaxed md:text-base">{item.answerText}</p>
+                      <p className="w-full text-sm leading-relaxed md:text-base">{item.answerText}</p>
                     )}
                   </AccordionContent>
                 </AccordionItem>
