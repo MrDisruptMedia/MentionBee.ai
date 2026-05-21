@@ -5,19 +5,30 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { faqEntries } from "@/content/faq";
+import { faqHomepageSchemaExtensions } from "@/content/faq-schema-extensions";
 
 export function FAQ() {
   const faqPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqEntries.map((faq) => ({
-      "@type": "Question" as const,
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer" as const,
-        text: faq.answer,
-      },
-    })),
+    mainEntity: [
+      ...faqEntries.map((faq) => ({
+        "@type": "Question" as const,
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer" as const,
+          text: faq.answer,
+        },
+      })),
+      ...faqHomepageSchemaExtensions.map((faq) => ({
+        "@type": "Question" as const,
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer" as const,
+          text: faq.answer,
+        },
+      })),
+    ],
   };
 
   return (

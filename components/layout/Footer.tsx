@@ -30,6 +30,7 @@ const columns: FooterCol[] = [
       { label: "Deep-Dive Report", href: "/report" },
       { label: "Beispielreport", href: "/sample-report" },
       { label: "Methodik", href: "/#methodik" },
+      { label: "FAQ", href: "/faq" },
     ],
   },
   {
