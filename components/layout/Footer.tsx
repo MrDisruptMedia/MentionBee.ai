@@ -24,9 +24,9 @@ function MailGlyph(props: SVGProps<SVGSVGElement>) {
 
 const columns: FooterCol[] = [
   {
-    heading: "Product",
+    heading: "Produkt",
     links: [
-      { label: "Free Report", href: "/free-report" },
+      { label: "Kostenloser Report", href: "/free-report" },
       { label: "Deep-Dive Report", href: "/report" },
       { label: "Beispielreport", href: "/sample-report" },
       { label: "Methodik", href: "/#methodik" },
@@ -34,7 +34,7 @@ const columns: FooterCol[] = [
     ],
   },
   {
-    heading: "Legal",
+    heading: "Rechtliches",
     links: [
       { label: "Datenschutzerklärung", href: "/datenschutzerklaerung" },
       { label: "AGB", href: "/agb" },
