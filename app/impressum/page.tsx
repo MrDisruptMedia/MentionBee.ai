@@ -11,7 +11,6 @@ export default function ImpressumPage() {
         <p>Angaben gemäss Schweizer Recht (DSG / OR)</p>
 
         <div>
-          <p className="font-medium text-mention-dark">Einzelfirma</p>
           <p>
             <a
               href="https://disruptmedia.com"
