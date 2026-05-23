@@ -8,14 +8,15 @@ export function ValueAnchor() {
 
   return (
     <section className="border-b border-zinc-200/80 bg-primary/10 py-10">
-      <div className="mx-auto max-w-6xl px-4 text-center">
-        <p className="text-sm text-mention-gray">Warum dir dieser Report bares Geld spart</p>
-        {/* Gleiche Typo wie FreeVsPaid h2 „Kostenloser Report vs. Deep-Dive Report“ */}
-        <p className="mx-auto mt-3 max-w-3xl text-center font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
+      <div className="mx-auto max-w-6xl px-4">
+        <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
+          Warum dir dieser Report bares Geld spart
+        </h2>
+        <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-mention-dark">
           Was Agenturen für 2.500–5.000 € als AI- und Website-Audit liefern, erhältst du hier strukturiert,
           transparent und praktikabel innerhalb von 48h für {offer}.
         </p>
-        <p className="mx-auto mt-4 max-w-2xl text-sm text-mention-gray">
+        <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-mention-gray">
           Kein Agentur-Briefing. Kein wochenlanges Warten. Kein generischer Bericht.
         </p>
       </div>
