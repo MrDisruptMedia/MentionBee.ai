@@ -98,8 +98,17 @@ export function FreeVsPaid() {
           </div>
         </div>
 
-        <p className="mx-auto mt-12 max-w-2xl text-center text-xs leading-relaxed text-mention-gray md:text-sm">
-          🐝 1 % des Erlöses geht an bienen.ch – für den Schutz der Wildbienen in der Schweiz.
+        <p className="mx-auto mt-12 max-w-3xl text-center text-base leading-relaxed text-mention-gray md:text-lg">
+          🐝 1 % des Erlöses geht an{" "}
+          <a
+            href="https://www.bienen.ch"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-mention-gray underline decoration-zinc-400/70 underline-offset-3 transition-colors hover:text-mention-dark hover:decoration-mention-dark/40"
+          >
+            bienen.ch
+          </a>{" "}
+          – für den Schutz der Wildbienen in der Schweiz.
         </p>
       </div>
     </section>
