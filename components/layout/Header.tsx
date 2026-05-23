@@ -4,7 +4,7 @@ import { MentionBeeBrand } from "@/components/layout/mention-bee-brand";
 import { headerNavigation } from "@/content/navigation";
 
 const primaryBtn =
-  "inline-flex items-center justify-center rounded-full bg-primary font-semibold text-white shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark";
+  "inline-flex items-center justify-center rounded-full bg-primary font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark";
 
 export function Header() {
   return (

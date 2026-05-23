@@ -54,7 +54,7 @@ export function FinalCTA() {
             <p className="mt-2 text-lg text-white/80">In 2 Minuten anfordern. Ergebnis per E-Mail.</p>
             <Link
               href="/free-report"
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-mention-dark shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark"
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-gray-900 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark"
             >
               Kostenlosen Report anfordern →
             </Link>

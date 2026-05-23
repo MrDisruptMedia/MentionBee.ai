@@ -440,7 +440,7 @@ export default function SampleReportPage() {
           </p>
           <Link
             href="/report"
-            className="pointer-events-auto mt-4 inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-mention-dark shadow-md transition hover:bg-primary-dark"
+            className="pointer-events-auto mt-4 inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-gray-900 shadow-md transition hover:bg-primary-dark"
           >
             Deep-Dive Report ansehen →
           </Link>

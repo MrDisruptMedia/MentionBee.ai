@@ -83,7 +83,7 @@ export function PaidReportForm() {
       <button
         type="submit"
         disabled={isLoading}
-        className="mt-2 w-full rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-mention-dark shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark hover:shadow-lg disabled:pointer-events-none disabled:opacity-60"
+        className="mt-2 w-full rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark hover:shadow-lg disabled:pointer-events-none disabled:opacity-60"
       >
         {isLoading ? "Wird vorbereitet..." : `Jetzt für ${pricing.deepDivePriceFormatted} bestellen →`}
       </button>

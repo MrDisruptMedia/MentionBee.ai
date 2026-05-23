@@ -10,7 +10,7 @@ export function SampleReportDeepDiveCta() {
   return (
     <Link
       href="/report"
-      className="inline-flex flex-1 items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-mention-dark shadow-md transition hover:bg-primary-dark sm:flex-none"
+      className="inline-flex flex-1 items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-gray-900 shadow-md transition hover:bg-primary-dark sm:flex-none"
     >
       {label}
     </Link>

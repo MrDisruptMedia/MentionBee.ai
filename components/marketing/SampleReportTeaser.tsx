@@ -133,7 +133,7 @@ export function SampleReportTeaser() {
 
             <Link
               href="/sample-report"
-              className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark sm:w-auto sm:self-start"
+              className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark sm:w-auto sm:self-start"
             >
               Beispielreport ansehen →
             </Link>
@@ -151,7 +151,7 @@ export function SampleReportTeaser() {
                   className="rounded-2xl border border-zinc-200/90 bg-white p-5 shadow-sm ring-1 ring-zinc-100"
                 >
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-mention-dark">
+                    <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-gray-900">
                       {index + 1}
                     </span>
                     <span className="text-base" aria-hidden>

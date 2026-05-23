@@ -57,14 +57,14 @@ export function FreeVsPaid() {
             </ul>
             <Link
               href="/free-report"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark sm:w-auto sm:self-start"
+              className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-gray-900 transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark sm:w-auto sm:self-start"
             >
               Free Report starten →
             </Link>
           </div>
 
           <div className="relative flex flex-col rounded-2xl border-2 border-primary bg-white p-8 pt-10 shadow-md ring-2 ring-primary/10 sm:pt-8">
-            <span className="absolute top-4 right-4 rounded-full bg-primary px-3 py-1 text-xs font-bold text-mention-dark sm:top-6 sm:right-6">
+            <span className="absolute top-4 right-4 rounded-full bg-primary px-3 py-1 text-xs font-bold text-gray-900 sm:top-6 sm:right-6">
               Empfohlen
             </span>
             <h3 className="pr-24 font-heading text-xl font-semibold text-mention-dark">Deep-Dive Report</h3>

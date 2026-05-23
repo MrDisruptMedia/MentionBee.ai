@@ -57,7 +57,9 @@ export function Hero() {
 
           <h1 className="font-heading text-5xl leading-[1.1] font-bold md:text-6xl lg:text-7xl">
             <span className="block text-mention-dark">Deine Kunden fragen KI.</span>
-            <span className="block font-bold text-primary italic">Empfiehlt sie dich?</span>
+            <span className="block font-bold italic text-amber-900">
+              Empfiehlt sie dich?
+            </span>
           </h1>
 
           <p className="text-lg leading-relaxed text-mention-gray">
@@ -68,7 +70,7 @@ export function Hero() {
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/free-report"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark"
             >
               Kostenlosen Report anfordern →
             </Link>

@@ -164,7 +164,7 @@ export function FreeReportForm() {
             <button
               type="submit"
               disabled={isLoading}
-              className="mt-2 w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark disabled:pointer-events-none disabled:opacity-60"
+              className="mt-2 w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark disabled:pointer-events-none disabled:opacity-60"
             >
               {isLoading ? "Wird analysiert..." : "Kostenlosen Report anfordern →"}
             </button>
