@@ -37,7 +37,7 @@ function ScoreRing({ score, max = 100 }: { score: number; max?: number }) {
           />
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <span className="text-3xl font-bold tabular-nums text-amber-900 sm:text-4xl">{score}</span>
+          <span className="text-3xl font-bold text-primary tabular-nums sm:text-4xl">{score}</span>
           <span className="text-xs font-medium text-mention-gray">von {max}</span>
         </div>
       </div>
@@ -57,9 +57,7 @@ export function Hero() {
 
           <h1 className="font-heading text-5xl leading-[1.1] font-bold md:text-6xl lg:text-7xl">
             <span className="block text-mention-dark">Deine Kunden fragen KI.</span>
-            <span className="block font-bold italic text-amber-900">
-              Empfiehlt sie dich?
-            </span>
+            <span className="block font-bold text-primary italic">Empfiehlt sie dich?</span>
           </h1>
 
           <p className="text-lg leading-relaxed text-mention-gray">
