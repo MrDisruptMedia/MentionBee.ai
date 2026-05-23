@@ -449,7 +449,9 @@ export default function SampleReportPage() {
 
       {/* 7. Finaler CTA */}
       <section className="mt-12 rounded-2xl bg-mention-dark p-8 text-white">
-        <h2 className="font-heading text-2xl font-bold sm:text-3xl">Bereit für deinen eigenen Report?</h2>
+        <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+          Bereit für deinen eigenen Report?
+        </h2>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Link
             href="/free-report"
