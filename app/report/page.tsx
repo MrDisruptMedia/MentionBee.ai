@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BarChart2, Check, ListChecks, Search } from "lucide-react";
 
 import { PaidReportForm } from "@/components/forms/PaidReportForm";
+import { ReportPriceBadges } from "@/components/marketing/ReportPriceBadges";
 
 export const metadata: Metadata = {
   title: "AI Visibility Deep-Dive | MentionBee",
@@ -36,10 +37,7 @@ export default function ReportPage() {
           Der vollständige Audit deiner Sichtbarkeit in KI-Antworten – mit Wettbewerbsvergleich,
           Ursachenanalyse und priorisiertem 30-Tage-Maßnahmenplan.
         </p>
-        <div className="mt-8 flex flex-wrap items-baseline justify-center gap-3">
-          <span className="text-4xl font-bold text-primary">199 €</span>
-          <span className="text-lg text-mention-gray line-through">299 €</span>
-        </div>
+        <ReportPriceBadges variant="hero" />
         <p className="mt-3 text-sm text-mention-gray">
           Einführungspreis · Einmalig · Lieferung in 24–48h
         </p>
@@ -101,10 +99,7 @@ export default function ReportPage() {
 
           <aside className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-zinc-100">
             <h2 className="font-heading text-xl font-semibold text-mention-dark">Jetzt bestellen</h2>
-            <div className="mt-4 flex flex-wrap items-baseline gap-2">
-              <span className="text-3xl font-bold text-primary">199 €</span>
-              <span className="text-base text-mention-gray line-through">299 €</span>
-            </div>
+            <ReportPriceBadges variant="aside" />
             <p className="mt-2 text-sm text-mention-gray">
               Einmalig · Lieferung in 24–48h · Keine Agentur nötig
             </p>

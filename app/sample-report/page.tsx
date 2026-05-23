@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AlertCircle, CheckCircle, Lock, XCircle } from "lucide-react";
 
+import { SampleReportDeepDiveCta } from "@/components/marketing/SampleReportDeepDiveCta";
+
 export const metadata: Metadata = {
   title: "Beispielreport – Disrupt Media | MentionBee",
   description:
@@ -455,12 +457,7 @@ export default function SampleReportPage() {
           >
             Kostenloser Check →
           </Link>
-          <Link
-            href="/report"
-            className="inline-flex flex-1 items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-mention-dark shadow-md transition hover:bg-primary-dark sm:flex-none"
-          >
-            Deep-Dive für 199 € →
-          </Link>
+          <SampleReportDeepDiveCta />
         </div>
       </section>
     </div>

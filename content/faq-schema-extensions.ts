@@ -21,7 +21,7 @@ export const faqHomepageSchemaExtensions = [
       "MentionBee testet strukturierte kaufnahe Prompts aus der jeweiligen Branche über 4 KI-Systeme und klassifiziert jede Erwähnung: direkte Empfehlung, neutrale Erwähnung, Erwähnung im falschen Kontext oder keine Erwähnung. Daraus entsteht der Empfehlungs-Score als Teil des gewichteten Gesamtscores.",
   },
   {
-    question: "Was bekomme ich für CHF 199?",
+    question: "Was bekomme ich für {{DEEP_DIVE_PRICE}}?",
     answer:
       "Der Deep-Dive Report liefert was Agenturen für CHF 2.500–5.000 berechnen: einen vollständigen AI Visibility- und Website-Audit mit 150+ Checks über 6 Module, Wettbewerbsanalyse, 25 gewichtete Massnahmen mit Umsetzungsanleitungen und konkrete Content- und PR-Empfehlungen – in 24–48h, ohne Briefing, ohne Wartezeit.",
   },

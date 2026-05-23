@@ -8,8 +8,14 @@ import {
 } from "@/components/ui/accordion";
 import { faqEntries } from "@/content/faq";
 import { faqHomepageSchemaExtensions } from "@/content/faq-schema-extensions";
+import { applyPricingTemplates } from "@/lib/apply-pricing-templates";
+import type { PublicPricing } from "@/lib/public-pricing";
 
-export function FAQ() {
+type FAQProps = {
+  pricing: PublicPricing;
+};
+
+export function FAQ({ pricing }: FAQProps) {
   const faqPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -24,10 +30,10 @@ export function FAQ() {
       })),
       ...faqHomepageSchemaExtensions.map((faq) => ({
         "@type": "Question" as const,
-        name: faq.question,
+        name: applyPricingTemplates(faq.question, pricing),
         acceptedAnswer: {
           "@type": "Answer" as const,
-          text: faq.answer,
+          text: applyPricingTemplates(faq.answer, pricing),
         },
       })),
     ],

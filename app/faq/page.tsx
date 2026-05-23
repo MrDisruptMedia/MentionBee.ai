@@ -7,6 +7,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { faqFullPageSections, getAllFaqFullPageItems } from "@/content/faq-full-page";
+import { applyPricingTemplates } from "@/lib/apply-pricing-templates";
+import { fetchPublicPricing } from "@/lib/public-pricing";
 
 export const metadata: Metadata = {
   title: "FAQ – Häufige Fragen | MentionBee.ai",
@@ -14,8 +16,16 @@ export const metadata: Metadata = {
     "Alles über MentionBee, AI Visibility, GEO, Reports und Preise – häufig gestellte Fragen mit klaren Antworten.",
 };
 
-export default function FaqPage() {
-  const allItems = getAllFaqFullPageItems();
+export default async function FaqPage() {
+  const pricing = await fetchPublicPricing();
+
+  const allItems = getAllFaqFullPageItems().map((item) => ({
+    ...item,
+    question: applyPricingTemplates(item.question, pricing),
+    answerText: applyPricingTemplates(item.answerText, pricing),
+    answerHtml: item.answerHtml ? applyPricingTemplates(item.answerHtml, pricing) : undefined,
+  }));
+
   const faqPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -63,23 +73,28 @@ export default function FaqPage() {
               {section.heading}
             </h2>
             <Accordion className="w-full rounded-2xl border border-zinc-200/80 bg-mention-light/30 px-2 sm:px-4">
-              {section.items.map((item) => (
-                <AccordionItem key={item.id} value={item.id} className="w-full px-2 sm:px-2">
-                  <AccordionTrigger className="w-full min-w-0 text-base font-semibold text-mention-dark hover:no-underline">
-                    {item.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="w-full text-mention-gray">
-                    {item.answerHtml ? (
-                      <div
-                        className="w-full text-sm leading-relaxed md:text-base [&_a]:font-medium [&_a]:text-primary"
-                        dangerouslySetInnerHTML={{ __html: item.answerHtml }}
-                      />
-                    ) : (
-                      <p className="w-full text-sm leading-relaxed md:text-base">{item.answerText}</p>
-                    )}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
+              {section.items.map((item) => {
+                const q = applyPricingTemplates(item.question, pricing);
+                const text = applyPricingTemplates(item.answerText, pricing);
+                const html = item.answerHtml ? applyPricingTemplates(item.answerHtml, pricing) : undefined;
+                return (
+                  <AccordionItem key={item.id} value={item.id} className="w-full px-2 sm:px-2">
+                    <AccordionTrigger className="w-full min-w-0 text-base font-semibold text-mention-dark hover:no-underline">
+                      {q}
+                    </AccordionTrigger>
+                    <AccordionContent className="w-full text-mention-gray">
+                      {html ? (
+                        <div
+                          className="w-full text-sm leading-relaxed md:text-base [&_a]:font-medium [&_a]:text-primary"
+                          dangerouslySetInnerHTML={{ __html: html }}
+                        />
+                      ) : (
+                        <p className="w-full text-sm leading-relaxed md:text-base">{text}</p>
+                      )}
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
             </Accordion>
           </section>
         ))}

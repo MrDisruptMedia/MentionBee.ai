@@ -101,8 +101,8 @@ export const faqFullPageSections: FaqFullPageSection[] = [
           "Der Deep-Dive Report umfasst 150+ strukturierte Checks über 6 Module: AI Visibility (4 KI-Systeme), Positionierungsklarheit, Tech SEO, Schema & E-E-A-T, UX & Conversion und Market Signals. Das Ergebnis: ein gewichteter Gesamtscore, eine vollständige Wettbewerbsanalyse, 25 gewichtete Massnahmen mit Umsetzungsanleitungen und konkrete Content- und PR-Empfehlungen. Lieferung in 24–48h per E-Mail.",
       },
       {
-        id: "was-fuer-199",
-        question: "Was bekomme ich für CHF 199?",
+        id: "was-fuer-deep-dive-preis",
+        question: "Was bekomme ich für {{DEEP_DIVE_PRICE}}?",
         answerText:
           "Der Deep-Dive Report liefert was Agenturen für CHF 2.500–5.000 berechnen: einen vollständigen AI Visibility- und Website-Audit mit 150+ Checks über 6 Module, Wettbewerbsanalyse, 25 gewichtete Massnahmen mit Umsetzungsanleitungen und konkrete Content- und PR-Empfehlungen – in 24–48h, ohne Briefing, ohne Wartezeit.",
       },

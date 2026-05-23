@@ -9,8 +9,11 @@ import { SampleReportTeaser } from "@/components/marketing/SampleReportTeaser";
 import { TrustSection } from "@/components/marketing/TrustSection";
 import { ValueAnchor } from "@/components/marketing/ValueAnchor";
 import { WhatWeAnalyze } from "@/components/marketing/WhatWeAnalyze";
+import { fetchPublicPricing } from "@/lib/public-pricing";
 
-export default function Home() {
+export default async function Home() {
+  const pricing = await fetchPublicPricing();
+
   return (
     <>
       <Hero />
@@ -22,7 +25,7 @@ export default function Home() {
       <HowItWorks />
       <SampleReportTeaser />
       <TrustSection />
-      <FAQ />
+      <FAQ pricing={pricing} />
       <FinalCTA />
     </>
   );

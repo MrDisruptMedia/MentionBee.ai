@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePublicPricing } from "@/hooks/usePublicPricing";
 
 function CheckItem({ children }: { children: React.ReactNode }) {
   return (
@@ -26,6 +29,10 @@ const deepDiveItems = [
 ] as const;
 
 export function FreeVsPaid() {
+  const { pricing, loading } = usePublicPricing();
+  const sale = loading ? "…" : pricing.deepDivePriceFormatted;
+  const regular = loading ? "…" : pricing.deepDiveRegularPriceFormatted;
+
   return (
     <section className="border-b border-zinc-200/80 bg-mention-light py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
@@ -64,12 +71,14 @@ export function FreeVsPaid() {
 
             <div className="mt-4 inline-flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-xl border border-primary/25 bg-primary/5 px-4 py-3">
               <span className="text-lg font-medium text-mention-gray line-through decoration-mention-gray/80">
-                299 €
+                {regular}
               </span>
-              <span className="text-2xl font-bold text-primary tabular-nums">199 € netto</span>
+              <span className="text-2xl font-bold text-primary tabular-nums">
+                {sale} netto
+              </span>
             </div>
             <p className="mt-2 text-xs text-mention-gray">
-              Einführungspreis · Regulär 299 € · Lieferung in 24–48h
+              Einführungspreis · Regulär {regular} · Lieferung in 24–48h
             </p>
 
             <p className="mb-3 mt-6 text-sm italic text-mention-gray">
