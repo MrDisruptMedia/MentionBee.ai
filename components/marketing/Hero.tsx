@@ -37,7 +37,7 @@ function ScoreRing({ score, max = 100 }: { score: number; max?: number }) {
           />
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <span className="text-3xl font-bold text-primary tabular-nums sm:text-4xl">{score}</span>
+          <span className="text-3xl font-bold tabular-nums text-amber-900 sm:text-4xl">{score}</span>
           <span className="text-xs font-medium text-mention-gray">von {max}</span>
         </div>
       </div>
