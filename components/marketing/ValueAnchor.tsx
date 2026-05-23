@@ -3,8 +3,8 @@
 import { usePublicPricing } from "@/hooks/usePublicPricing";
 
 export function ValueAnchor() {
-  const { pricing, loading } = usePublicPricing();
-  const offer = loading ? "…" : pricing.deepDivePriceFormatted;
+  const { pricing } = usePublicPricing();
+  const offer = pricing.deepDivePriceFormatted;
 
   return (
     <section className="border-b border-zinc-200/80 bg-primary/10 py-10">

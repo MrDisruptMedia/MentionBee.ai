@@ -5,7 +5,7 @@ import { useState } from "react";
 import { usePublicPricing } from "@/hooks/usePublicPricing";
 
 export function PaidReportForm() {
-  const { pricing, loading: pricingLoading } = usePublicPricing();
+  const { pricing } = usePublicPricing();
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -85,11 +85,7 @@ export function PaidReportForm() {
         disabled={isLoading}
         className="mt-2 w-full rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-mention-dark shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark hover:shadow-lg disabled:pointer-events-none disabled:opacity-60"
       >
-        {isLoading
-          ? "Wird vorbereitet..."
-          : pricingLoading
-            ? "Preis laden…"
-            : `Jetzt für ${pricing.deepDivePriceFormatted} bestellen →`}
+        {isLoading ? "Wird vorbereitet..." : `Jetzt für ${pricing.deepDivePriceFormatted} bestellen →`}
       </button>
 
       {error ? (

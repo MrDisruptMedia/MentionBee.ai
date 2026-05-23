@@ -4,8 +4,8 @@ import Link from "next/link";
 import { usePublicPricing } from "@/hooks/usePublicPricing";
 
 export function SampleReportDeepDiveCta() {
-  const { pricing, loading } = usePublicPricing();
-  const label = loading ? "Deep-Dive laden…" : `Deep-Dive für ${pricing.deepDivePriceFormatted} →`;
+  const { pricing } = usePublicPricing();
+  const label = `Deep-Dive für ${pricing.deepDivePriceFormatted} →`;
 
   return (
     <Link

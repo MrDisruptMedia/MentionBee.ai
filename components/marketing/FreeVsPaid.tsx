@@ -29,9 +29,9 @@ const deepDiveItems = [
 ] as const;
 
 export function FreeVsPaid() {
-  const { pricing, loading } = usePublicPricing();
-  const sale = loading ? "…" : pricing.deepDivePriceFormatted;
-  const regular = loading ? "…" : pricing.deepDiveRegularPriceFormatted;
+  const { pricing } = usePublicPricing();
+  const sale = pricing.deepDivePriceFormatted;
+  const regular = pricing.deepDiveRegularPriceFormatted;
 
   return (
     <section className="border-b border-zinc-200/80 bg-mention-light py-14 md:py-20">

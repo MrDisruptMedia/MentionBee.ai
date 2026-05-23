@@ -11,6 +11,18 @@ import {
 export type { PublicPricing };
 
 /**
+ * Erste und Fallback-Anzeige, bis `/api/public/pricing` geantwortet hat.
+ * Bewusst echte Platzhalter-Strings — UI soll immer `pricing` rendern (nicht `loading`).
+ */
+const INITIAL_VISIBLE_PRICING: PublicPricing = {
+  deepDivePrice: 199,
+  deepDivePriceFormatted: "€ 199",
+  deepDiveRegularPrice: 299,
+  deepDiveRegularPriceFormatted: "€ 299",
+  currency: "EUR",
+};
+
+/**
  * Client: Preise von der Haupt-App (Neon `settings`). `NEXT_PUBLIC_APP_URL` = Basis-URL ohne trailing slash.
  */
 export function usePublicPricing(): {
@@ -18,7 +30,7 @@ export function usePublicPricing(): {
   loading: boolean;
   isFallback: boolean;
 } {
-  const [pricing, setPricing] = useState<PublicPricing>(PRICING_FALLBACK);
+  const [pricing, setPricing] = useState<PublicPricing>(INITIAL_VISIBLE_PRICING);
   const [loading, setLoading] = useState(true);
   const [isFallback, setIsFallback] = useState(true);
 
@@ -29,6 +41,7 @@ export function usePublicPricing(): {
       if (process.env.NODE_ENV !== "production") {
         console.warn("[usePublicPricing] NEXT_PUBLIC_APP_URL fehlt; nutze Fallback-Preis.");
       }
+      setPricing((prev) => ({ ...prev, ...PRICING_FALLBACK }));
       setLoading(false);
       setIsFallback(true);
       return;
@@ -43,10 +56,16 @@ export function usePublicPricing(): {
         if (parsed) {
           setPricing(parsed);
           setIsFallback(false);
+        } else {
+          setPricing({ ...INITIAL_VISIBLE_PRICING });
+          setIsFallback(true);
         }
       })
       .catch(() => {
-        if (!cancelled) setIsFallback(true);
+        if (!cancelled) {
+          setPricing({ ...PRICING_FALLBACK });
+          setIsFallback(true);
+        }
       })
       .finally(() => {
         if (!cancelled) setLoading(false);
