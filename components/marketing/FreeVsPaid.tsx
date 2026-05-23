@@ -101,7 +101,7 @@ export function FreeVsPaid() {
         <p className="mx-auto mt-12 max-w-3xl text-center text-base leading-relaxed text-mention-gray md:text-lg">
           🐝 1 % des Erlöses geht an{" "}
           <a
-            href="https://www.bienen.ch"
+            href="https://bienen.ch/spenden/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-mention-gray underline decoration-zinc-400/70 underline-offset-3 transition-colors hover:text-mention-dark hover:decoration-mention-dark/40"
