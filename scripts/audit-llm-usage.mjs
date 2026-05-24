@@ -13,6 +13,7 @@ const ignoredDirectories = new Set([
   "node_modules",
   "out",
 ]);
+const ignoredFiles = new Set(["scripts/audit-llm-usage.mjs"]);
 
 const providerPatterns = [
   {
@@ -55,7 +56,10 @@ function walk(dir, files = []) {
     }
 
     if (sourceExtensions.has(path.extname(entry))) {
-      files.push(fullPath);
+      const normalizedPath = relative(fullPath);
+      if (!ignoredFiles.has(normalizedPath)) {
+        files.push(fullPath);
+      }
     }
   }
 
