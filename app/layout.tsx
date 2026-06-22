@@ -4,6 +4,7 @@ import Script from "next/script";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { MobileStickyCta } from "@/components/layout/MobileStickyCta";
 
 import "./globals.css";
 
@@ -72,7 +73,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${inter.variable} h-full`}>
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full flex-col pb-24 md:pb-0">
         <Script
           id="google-tag-manager"
           strategy="beforeInteractive"
@@ -104,6 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Header />
         <main className="flex flex-1 flex-col">{children}</main>
         <Footer />
+        <MobileStickyCta />
       </body>
     </html>
   );

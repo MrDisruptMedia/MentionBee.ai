@@ -73,12 +73,19 @@ export function Hero() {
               Kostenlosen Report anfordern →
             </Link>
             <Link
-              href="/sample-report"
-              className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-6 py-3 text-center text-sm font-semibold text-mention-dark transition-colors duration-200 hover:border-mention-dark hover:bg-mention-dark hover:text-white"
+              href="/report"
+              className="inline-flex items-center justify-center rounded-full bg-mention-dark px-6 py-3 text-center text-sm font-semibold text-white shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary hover:text-mention-dark"
             >
-              Beispielreport ansehen
+              Deep-Dive bestellen →
             </Link>
           </div>
+
+          <Link
+            href="/sample-report"
+            className="mt-1 inline-block text-sm text-mention-gray underline-offset-4 transition-colors hover:text-mention-dark hover:underline"
+          >
+            Beispielreport ansehen →
+          </Link>
 
           <p className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-mention-gray">
             <span>🔒 Ohne Login</span>
