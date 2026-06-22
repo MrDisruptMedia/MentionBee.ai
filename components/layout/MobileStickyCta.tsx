@@ -19,7 +19,7 @@ export function MobileStickyCta() {
     >
       <Link
         href="/report"
-        className="flex w-full items-center justify-center rounded-full bg-mention-dark px-6 py-3 text-sm font-semibold text-white shadow-md"
+        className="flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md"
       >
         Deep-Dive bestellen →
       </Link>

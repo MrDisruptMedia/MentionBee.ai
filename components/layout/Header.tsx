@@ -4,10 +4,10 @@ import { MentionBeeBrand } from "@/components/layout/mention-bee-brand";
 import { headerNavigation } from "@/content/navigation";
 
 const primaryBtn =
-  "inline-flex items-center justify-center rounded-full bg-primary font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark";
+  "inline-flex items-center justify-center rounded-full bg-primary font-semibold text-mention-dark shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark";
 
-const deepDiveBtn =
-  "inline-flex items-center justify-center rounded-full bg-mention-dark font-semibold text-white shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary hover:text-mention-dark whitespace-nowrap text-xs px-3 py-2 sm:px-5 sm:text-sm";
+const secondaryBtn =
+  "inline-flex items-center justify-center rounded-full bg-mention-dark font-semibold text-white shadow-md transition-all duration-200 hover:scale-105 hover:bg-mention-dark/90 whitespace-nowrap text-xs px-3 py-2 sm:px-5 sm:text-sm";
 
 export function Header() {
   return (
@@ -33,13 +33,13 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2 justify-self-end">
-          <Link href="/report" className={deepDiveBtn}>
+          <Link href="/report" className={`${primaryBtn} text-xs px-3 py-2 sm:px-5 sm:text-sm whitespace-nowrap`}>
             <span className="sm:hidden">Deep-Dive</span>
             <span className="hidden sm:inline">Deep-Dive bestellen</span>
           </Link>
           <Link
             href="/free-report"
-            className={`hidden min-[360px]:inline-flex px-3 py-2 text-center text-xs whitespace-nowrap sm:px-5 sm:text-sm ${primaryBtn}`}
+            className={`hidden min-[360px]:inline-flex px-3 py-2 text-center text-xs whitespace-nowrap sm:px-5 sm:text-sm ${secondaryBtn}`}
           >
             <span className="sm:hidden">Gratis-Report</span>
             <span className="hidden sm:inline">Kostenloser Report</span>

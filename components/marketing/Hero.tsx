@@ -67,16 +67,16 @@ export function Hero() {
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
-              href="/free-report"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark"
-            >
-              Kostenlosen Report anfordern →
-            </Link>
-            <Link
               href="/report"
-              className="inline-flex items-center justify-center rounded-full bg-mention-dark px-6 py-3 text-center text-sm font-semibold text-white shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary hover:text-mention-dark"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-mention-dark shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark"
             >
               Deep-Dive bestellen →
+            </Link>
+            <Link
+              href="/free-report"
+              className="inline-flex items-center justify-center rounded-full bg-mention-dark px-6 py-3 text-center text-sm font-semibold text-white shadow-md transition-all duration-200 hover:scale-105 hover:bg-mention-dark/90"
+            >
+              Kostenlosen Report anfordern →
             </Link>
           </div>
 
