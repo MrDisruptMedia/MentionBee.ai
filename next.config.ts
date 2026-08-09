@@ -19,14 +19,6 @@ const nextConfig: NextConfig = {
         source: "/api/:path*",
         destination: `${BACKEND_APP}/api/:path*`,
       },
-      {
-        source: "/order/complete",
-        destination: `${BACKEND_APP}/order/success`,
-      },
-      {
-        source: "/order/confirmation",
-        destination: `${BACKEND_APP}/order/confirmation`,
-      },
     ];
   },
 };

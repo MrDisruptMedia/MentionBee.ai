@@ -97,7 +97,7 @@
 ## Blockers
 
 - **GTM→GA4 mapping** for Measurement Layer v1 dataLayer events still **EXTERNAL CONFIG REQUIRED** (app fires events; GA4 empty until GTM tags exist)
-- **Deploy required:** Checkout success-flow rewrites + Backend `assetPrefix` must be live on both Vercel projects before E2E purchase validation
+- **Deploy required:** Native post-purchase pages (`/order/complete`, `/order/confirmation`) + API rewrites must be live on mentionbee-website before E2E purchase validation
 - Historical conversion baseline 2026-05-12…2026-08-09 remains **NOT TRACKED**
 - MEMS external usage rights UNKNOWN (Category B)
 - Frontend pricing fallback still €199 (display risk if Backend down) — BACKLOG-009, non-blocking while Backend healthy
@@ -110,7 +110,7 @@
 - **FACT:** Live Backend pricing API returned 199; DB updated to **190**; live API now returns **190**
 - **FACT:** Measurement Layer v1 implemented — App → `dataLayer` funnel events; measurable from deploy / Day 1 intent
 - **FACT:** No in-app Consent CMP; privacy policy mentions Cookie-Banner (gap); GTM already loads unconditionally
-- **FACT:** Checkout success journey refactored — Stripe → `mentionbee.ai/order/success` (purchase) → `/order/complete` → `/order/confirmation`; no hard redirect to Vercel app domain
+- **FACT:** Checkout success journey — Stripe → `mentionbee.ai/order/success` (purchase) → native `/order/complete` → native `/order/confirmation`; no Backend HTML proxy (SUPERSEDED: rewrite + `assetPrefix` pattern)
 
 ---
 

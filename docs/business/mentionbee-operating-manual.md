@@ -351,7 +351,7 @@ Prioritätsprüfung jeder Aufgabe:
 
 **TYPE:** FACT (Website Architecture) + OPEN QUESTION (Performance)
 
-Pfad: Homepage → Sample / Free / `/report` → Checkout (Stripe) → **`/order/success` (mentionbee.ai, purchase)** → **`/order/complete` (onboarding, proxied)** → **`/order/confirmation` (proxied)** → Report per E-Mail.
+Pfad: Homepage → Sample / Free / `/report` → Checkout (Stripe) → **`/order/success` (mentionbee.ai, purchase)** → **`/order/complete` (native onboarding)** → **`/order/confirmation` (native)** → Report per E-Mail.
 
 Bekannte CTA-Spannung (INFERENCE aus Due Diligence): Free erscheint stark; FinalCTA historisch Free-lastig; Paid braucht Proof früher.
 
@@ -823,9 +823,9 @@ Keine manuellen/erfundenen Zahlen. Nicht getrackte Metriken = **NOT TRACKED** (n
 | Paid checkout | `/report` → Stripe | mentionbee.ai | `begin_checkout` on checkout session URL |
 | Stripe `success_url` | `/order/success?session_id&website_url&email` | **mentionbee.ai** | Backend `NEXT_PUBLIC_MENTIONBEE_URL` → canonical `https://mentionbee.ai` |
 | Purchase + Danke | `/order/success` | mentionbee.ai | `purchase` event + sessionStorage dedupe; GTM present |
-| Post-payment onboarding | `/order/complete` (rewrite → Backend `/order/success`) | mentionbee.ai (address bar) | Backend HTML/JS via `assetPrefix`; APIs via `/api/*` rewrite |
-| Report submitted | `/order/confirmation?reportId=…` (rewrite → Backend) | mentionbee.ai (address bar) | Full-page navigation (no client router hop) |
-| Report link | `/report/:uuid` | redirect → Backend | Existing redirect |
+| Post-payment onboarding | `/order/complete` | mentionbee.ai | Native Next.js page; APIs via `/api/*` rewrite to Backend |
+| Report submitted | `/order/confirmation?reportId=…` | mentionbee.ai | Native Next.js page; inherits Layout/GTM |
+| Report link | `/report/:uuid` | redirect → Backend | Existing redirect; native report viewer **BACKLOG** |
 
 **Query params:** Stripe/success pass `website_url`; onboarding accepts `url` **or** `website_url` (canonical write: `website_url`).
 
@@ -1035,6 +1035,7 @@ Keine manuellen/erfundenen Zahlen. Nicht getrackte Metriken = **NOT TRACKED** (n
 | **1.1.1** | **2026-08-09** | Live price verify: Backend was 199 → DB+defaults set to **EUR 190** (API now 190); Website fallbacks unchanged; GA4 readiness inventory (GTM only; funnel events NOT TRACKED) | Live API + repo audit | Finalize operating state |
 | **1.1.2** | **2026-08-09** | Measurement Layer v1: dataLayer funnel events (`view_paid_report`, `view_sample_report`, `free_report_submit`, `begin_checkout`, `purchase` + dedupe) | Measurement gap before Day 1 | Funnel measurable from deploy |
 | **1.1.3** | **2026-08-09** | Checkout success journey stays on mentionbee.ai: `/order/success` → `/order/complete` → `/order/confirmation` via rewrites; Stripe success_url canonical apex | Purchase tracking + public UX | No visible backend domain hop |
+| **1.1.4** | **2026-08-09** | Post-purchase onboarding + confirmation **native in mentionbee-website** (`/order/complete`, `/order/confirmation`); Backend HTML rewrites + `assetPrefix` **SUPERSEDED**; `/api/*` rewrite retained | GTM/Layout on all post-purchase steps | Remove proxied Backend UI dependency |
 
 ---
 
