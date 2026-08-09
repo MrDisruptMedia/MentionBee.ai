@@ -53,6 +53,26 @@ Revenue OS und alle Agents **müssen** Informationen explizit typisieren. Stille
 
 **Regel:** `HYPOTHESIS`/`INFERENCE` dürfen niemals stillschweigend zu `FACT` werden.
 
+### 0.1 UNKNOWN Triage (DECISION — DEC-016)
+
+Jedes relevante `UNKNOWN` wird einer Kategorie zugeordnet. UNKNOWNs werden **nicht** automatisch zu Founder-To-dos.
+
+| Kategorie | Bedeutung | Action |
+|-----------|-----------|--------|
+| **A — AUTONOMOUSLY RESOLVABLE** | Revenue OS kann recherchieren, messen oder aus vorhandenen Systemen beziehen | Revenue OS beschafft selbst |
+| **B — FOUNDER DECISION REQUIRED** | Echte Entscheidung, Freigabe oder Founder Knowledge nötig | Kompakt an Olaf eskalieren |
+| **C — NON-BLOCKING / DEFER** | Aktuell nicht execution-blocking | UNKNOWN belassen; nicht unnötig eskalieren |
+
+### 0.2 Autonomy Loop (DECISION — DEC-015)
+
+Zielmodell:
+
+`OBSERVE → ANALYZE → PRIORITIZE → EXECUTE WHERE AUTHORIZED → MEASURE → LEARN → UPDATE STATE → CHOOSE NEXT ACTION`
+
+Olaf ist primär **Approval Gate** für: finanzielle Folgen, Strategie, Produktänderungen, Preisänderungen, externe Kommunikation in seinem Namen, reputationskritische Claims, wichtige Kundenbeziehungen.
+
+Routine (Recherche, Analyse, Vorbereitung, Drafting, Monitoring, Dokumentation) soll möglichst **nicht** bei Olaf landen.
+
 **Quellen (Master):**
 
 - Strategy: `docs/business/sources/MentionBee_Master_Strategy_Operating_Context_v1_2.docx` (v1.2, 2026-08-09)
@@ -88,7 +108,7 @@ MentionBee reduziert Unsicherheit von CEOs und Marketing-Verantwortlichen in Bez
 
 **Kernproblem (FACT — Kategorie):** Käufer nutzen zunehmend KI-Systeme zur Shortlist; Marken können fehlen, bevor die Website besucht wird.
 
-**Lösung (FACT — aktuelles Offer):** Einmaliger Paid Deep-Dive Report (~CHF/EUR 190) mit Wettbewerbsvergleich, Quellen-/Content-/Tech-Findings und priorisiertem Massnahmenplan.
+**Lösung (FACT — aktuelles Offer):** Einmaliger Paid Deep-Dive Report (**EUR 190**, Backend = Price SoT) mit Wettbewerbsvergleich, Quellen-/Content-/Tech-Findings und priorisiertem Massnahmenplan.
 
 **Nicht-Versprechen (DECISION):** Kein Claim „mehr Website-Traffic aus ChatGPT“ als Primärnutzen — Attribution und Traffic-Evidenz sind dafür zu schwach (siehe Strategy Market Thesis + academic evidence notes).
 
@@ -118,7 +138,7 @@ MentionBee reduziert Unsicherheit von CEOs und Marketing-Verantwortlichen in Bez
 
 **TYPE:** DECISION (Reason to Buy Framework)
 
-Für einen einmaligen Preis um CHF/EUR 190 erhält der Käufer eine tiefe Diagnose statt eines weiteren Recurring-Dashboards: Wettbewerbs-Sichtbarkeit, Quellen, Website-/Content-/Tech-Findings und priorisierte Actions.
+Für einen einmaligen Basispreis von **EUR 190** (Backend SoT) erhält der Käufer eine tiefe Diagnose statt eines weiteren Recurring-Dashboards: Wettbewerbs-Sichtbarkeit, Quellen, Website-/Content-/Tech-Findings und priorisierte Actions.
 
 ### 3.4 Pasta Principle / USP
 
@@ -201,12 +221,37 @@ Enterprise-Teams mit Monitoring-Bedarf; Buyers, die Garantien verlangen; Feature
 |------|------|------|
 | Name | Paid MentionBee Report / AI Visibility Deep-Dive | FACT (Website) |
 | Rolle | Core commercial product (90 days) | DECISION |
-| Preis (Strategy / Prompt) | CHF 190 / CHF/EUR 190 wedge | DECISION |
-| Preis (Code Fallback) | € 199 (`lib/public-pricing.ts` PRICING_FALLBACK) | FACT |
-| **PREIS-KONFLIKT** | Strategy/Prompt = 190; Website-Fallback = 199 EUR. Nicht stillschweigend geändert. Live-API-Preis: UNKNOWN | OPEN QUESTION |
+| **Basispreis** | **EUR 190** | **DECISION (DEC-013)** |
+| Price Source of Truth | **Backend** (öffentliche Pricing-API der Report-App). Frontend darf Preise nicht als fachliche Wahrheit hart codieren | DECISION |
+| Code Fallback (technisch) | `PRICING_FALLBACK` noch €199 in Website `lib/public-pricing.ts` / `hooks/usePublicPricing.ts` — **nicht** fachliche Wahrheit; Implementation debt | FACT / SUPERSEDED as business truth |
+| **Live Backend Verify (2026-08-09)** | `GET https://ai-visibility-report-tau.vercel.app/api/public/pricing` → **deepDivePrice: 190**, currency EUR. DB `settings.price_deep_dive` auf **190** gesetzt; Backend-Code-Defaults auf 190 angeglichen. Website-Fallbacks unverändert (BACKLOG-009). | **FACT / EVIDENCE** |
+| CHF Display | Später: aus EUR-Basis abgeleiteter CHF-Preis für CH-Seitenaufrufe | BACKLOG (nicht jetzt) |
 | Lieferzeit (Website) | 24–48h | FACT (Website Copy) |
-| Checkout | E-Mail + Website → Stripe | FACT (Code) |
+| Checkout | E-Mail + Website → Stripe (via Backend API) | FACT (Code) |
 | Product Freeze | Ja, 90 Tage — siehe DEC-002 | DECISION |
+
+#### 5.1.1 Pricing Inventory (Code — Stand 2026-08-09)
+
+**Regel:** Alle sichtbaren Paid-Preise sollen aus Backend/`fetchPublicPricing` bzw. `usePublicPricing` kommen. Keine Architekturänderung in diesem Schritt — nur Bestandsaufnahme.
+
+| Location | Mechanism | Notes |
+|----------|-----------|-------|
+| `lib/public-pricing.ts` | `fetchPublicPricing()` → `NEXT_PUBLIC_APP_URL/api/public/pricing`; **hardcoded fallback €199 / €299** | SoT path + stale fallback |
+| `hooks/usePublicPricing.ts` | Client fetch + **hardcoded initial/fallback €199** | Same debt |
+| `lib/apply-pricing-templates.ts` | Replaces `{{DEEP_DIVE_PRICE}}` / `{{DEEP_DIVE_REGULAR}}` | Template bridge |
+| `components/marketing/ValueAnchor.tsx` | `pricing.deepDivePriceFormatted` | Homepage |
+| `components/marketing/FreeVsPaid.tsx` | `sale` / `regular` from hook; Free „0 €“ hardcoded (OK) | Homepage |
+| `components/marketing/ReportPriceBadges.tsx` | Hook | `/report` |
+| `components/forms/PaidReportForm.tsx` | Button label from hook | Checkout CTA |
+| `components/marketing/SampleReportDeepDiveCta.tsx` | Hook | Sample page |
+| `components/marketing/FAQ.tsx` | Schema via `applyPricingTemplates` | Homepage FAQ JSON-LD |
+| `app/page.tsx` | `fetchPublicPricing()` → FAQ | Homepage |
+| `app/faq/page.tsx` | `fetchPublicPricing` + templates | FAQ page |
+| `app/report/page.tsx` | Uses `ReportPriceBadges` (no hard price) | Paid page |
+| `content/faq-schema-extensions.ts` | `{{DEEP_DIVE_PRICE}}` placeholder | Good |
+| `content/faq-full-page.ts` | `{{DEEP_DIVE_PRICE}}`; Agency anchor text still „CHF 2.500–5.000“ (comparison, not SKU) | Note |
+| `app/agb/page.tsx` | „Preise … in EUR“ (currency policy text) | Not SKU amount |
+| Stripe Checkout | Created via Backend `/api/create-checkout-session` | Actual charge = Backend |
 
 ### 5.2 Free Report / Signal
 
@@ -258,19 +303,22 @@ Nur Demand-Validation + Distribution + Proof. Product builds nur über Freeze-Au
 
 ### 6.1 90-Day Revenue Contract
 
-**TYPE:** DECISION  
-**Period start:** UNKNOWN (noch nicht formell gestartet in Weekly State)
+**TYPE:** DECISION (DEC-014)  
+**Start / Day 1:** 2026-08-10  
+**Day 90:** 2026-11-07  
 
 | Metric | Minimum | Target | Stretch / Quality |
 |--------|---------|--------|-------------------|
 | New paying customers | 2 | **5** | 10 |
 | Outside founder network | ≥1 | **≥3 of target 5** | Majority |
 | Qualified purchase conversations | 10 | ≥20 | ≥30 |
-| New revenue | CHF/EUR 380 | **≥ CHF/EUR 2,500** | ≥ 5,000 w/ follow-on |
+| New revenue | EUR 380 | **≥ EUR 2,500** | ≥ EUR 5,000 w/ follow-on |
 | Buyers implement ≥1 major rec | Track | ≥60% | Outcome evidence |
 | Case/testimonial candidates | 1 | ≥2 | ≥3 |
 | Repeatable acquisition motion | Signal | 1 credible | 1 scalable + 1 secondary |
 | Founder time | Track | **≤ ~5 h/week avg** | Declining founder time / customer |
+
+**Period-start FACT (2026-08-10):** Paying customers = 0; Free Report submissions = 0; MentionBee report revenue = EUR 0.
 
 **SUPERSEDED:** Frühere Formulierung „2 customers in 90 days“ als Hauptziel (u. a. Executive Summary v1.2 Altpassage).  
 **Aktuell:** 2 = Minimum Proof; 5 = Target; 10 = Stretch.
@@ -324,7 +372,7 @@ Out-market via Research-as-Distribution, Honest Comparisons, Unsolicited Evidenc
 5. Trust and proof beat generic AI claims.
 6. A report is useful only if it changes action.
 7. Do not confuse visibility, traffic, leads and revenue.
-8. Protect unit economics at the CHF/EUR 190 wedge price.
+8. Protect unit economics at the EUR 190 wedge price (Backend SoT).
 9. Use research as distribution, not research as procrastination.
 10. Be radically honest in comparisons and methodology.
 11. Automate preparation and analysis; reserve founder time for judgment, relationships and high-value selling.
@@ -713,13 +761,38 @@ Unvollständige Experimente (ohne Primary KPI / Review Date / Kill Rule) gelten 
 
 - Keine brute-force LLM-Messung nur für Scheinpräzision
 - Frage bei Extra-Compute: „Kann dieses Ergebnis wahrscheinlich eine andere geschäftliche Empfehlung erzeugen?“ Wenn nein → nicht priorisieren
-- Protect wedge price economics (~190)
+- Protect wedge price economics (EUR 190 Backend SoT)
 
 ### 11.3 GA4 Baseline Required
 
-**TYPE:** DECISION / OPEN QUESTION
+**TYPE:** DECISION / P0 Task  
+**Window (pre-period):** **2026-05-12 bis einschließlich 2026-08-09**  
+**Category:** A — AUTONOMOUSLY RESOLVABLE (when GA4 access exists)  
+**Goal:** Belastbarer Vorher-Zustand für die 90-Day-Periode; später möglichst automatisch aus GA4.
 
-Vor Major Site Changes: 60–90 Tage Baseline (Users, Sessions, Source/Medium, Landing Pages, Paid Page Views, Sample Views, Free Submissions, Checkout Starts, Purchases, Conversion Rates).
+Mindestens erfassen:
+
+- Users, Sessions, Source/Medium, Landing Pages, Homepage traffic  
+- Paid Report Page Views, Sample Report Views, Free Report Submissions  
+- Checkout Starts, Purchases, relevante Conversion Rates  
+
+Keine manuellen/erfundenen Zahlen. Nicht getrackte Metriken = **NOT TRACKED** (nicht als 0 werten).
+
+#### 11.3.1 GA4 / Analytics Readiness (Repo — 2026-08-09)
+
+| Item | Finding | Type |
+|------|---------|------|
+| Container in Website | Google Tag Manager **`GTM-W25FQX2Z`** in `app/layout.tsx` | FACT |
+| GA4 Measurement ID in Repo | **Nicht vorhanden** | FACT |
+| Custom Funnel Events in App-Code | **Keine** `dataLayer`/`gtag` Events für Funnel-Steps | FACT |
+| paid report page view | Kein Named Event; Pfad `/report` ggf. nur als Pageview falls GTM→GA4 | **NOT TRACKED** as event; pageviews **UNKNOWN** without GA4 UI |
+| sample report view | idem `/sample-report` | **NOT TRACKED** as event; pageviews **UNKNOWN** |
+| free report submission | `FreeReportForm` ohne Analytics nach Submit | **NOT TRACKED** |
+| checkout start | `PaidReportForm` ohne Analytics vor Stripe | **NOT TRACKED** |
+| purchase | Order success ohne Analytics-Event | **NOT TRACKED** |
+| Users / Sessions / Source/Medium / Landing / Homepage | Nur wenn GA4 hinter GTM konfiguriert | **UNKNOWN** (Container-Inhalt nicht im Repo) |
+
+**Implication:** Baseline für Conversion-Events ist ohne zusätzliche Tracking-Arbeit **nicht zuverlässig** aus dem Repo ableitbar. Page-level Metrics ggf. in GA4 UI prüfbar — Category A wenn Zugang vorhanden.
 
 ---
 
@@ -793,8 +866,17 @@ Vor Major Site Changes: 60–90 Tage Baseline (Users, Sessions, Source/Medium, L
 | Feld | Wert |
 |------|------|
 | Date | 2026-08-09 |
-| Decision | Minimum Proof=2; Target=5; Stretch=10; ≥3 of target 5 outside founder network; Revenue ≥ CHF/EUR 2,500 |
+| Decision | Minimum Proof=2; Target=5; Stretch=10; ≥3 of target 5 outside founder network; Revenue ≥ EUR 2,500 |
 | Supersedes | „2 customers“ as main success criterion |
+| Status | ACTIVE |
+
+### DEC-014 — 90-Day Period Calendar
+
+| Feld | Wert |
+|------|------|
+| Date | 2026-08-09 |
+| Decision | Start/Day 1 = 2026-08-10; Day 90 = 2026-11-07 |
+| Implications | Product Freeze & Revenue Contract clock; GA4 baseline = 2026-05-12…2026-08-09 |
 | Status | ACTIVE |
 
 ### DEC-008 — Founder Time Cap
@@ -821,14 +903,25 @@ Vor Major Site Changes: 60–90 Tage Baseline (Users, Sessions, Source/Medium, L
 | Decision | Position paid product around diagnosis + decisions, not score/dashboard monitoring |
 | Status | ACTIVE |
 
-### DEC-011 — Core Offer Price Frame
+### DEC-011 — Core Offer Price Frame (partially SUPERSEDED)
 
 | Feld | Wert |
 |------|------|
 | Date | 2026-08-09 |
-| Decision | Keep ~CHF/EUR 190 one-off Deep-Dive as wedge; do not build broad SaaS now |
-| Conflict | Website code fallback €199 — unresolved |
-| Status | ACTIVE — price figure needs reconciliation |
+| Decision | Keep ~190 one-off Deep-Dive as wedge; do not build broad SaaS now |
+| Status | ACTIVE (wedge/SaaS part); price currency/source clarified in DEC-013 |
+
+### DEC-013 — Price SoT = Backend EUR 190
+
+| Feld | Wert |
+|------|------|
+| Date | 2026-08-09 |
+| Decision | Basispreis Paid Report = **EUR 190**. Backend is sole Source of Truth. Do not hardcode SKU price in frontend as business truth. All displays (Homepage, Report page, FAQ, Checkout labels, Schema, etc.) must consume Backend pricing. |
+| Context | Resolves prior conflict (Strategy CHF/EUR 190 vs code fallback €199). €199 fallback is **not** fachliche Wahrheit. |
+| Implications | No price architecture rebuild in documentation step; later align fallback/debt. CHF geo-display = BACKLOG. |
+| Revisit Trigger | Price change (Founder-only) or CHF display implementation |
+| Status | ACTIVE |
+| Supersedes | OQ-013 open conflict; „CHF 190“ as current SKU currency; €199 as business truth |
 
 ### DEC-012 — Working Positioning Copy
 
@@ -838,27 +931,43 @@ Vor Major Site Changes: 60–90 Tage Baseline (Users, Sessions, Source/Medium, L
 | Decision | Adopt working commercial promise (competitors recommended / why + plan) as HYPOTHESIS |
 | Status | ACTIVE (working) |
 
+### DEC-015 — Autonomy Level
+
+| Feld | Wert |
+|------|------|
+| Date | 2026-08-09 |
+| Decision | Revenue OS works as autonomously as possible: OBSERVE→ANALYZE→PRIORITIZE→EXECUTE WHERE AUTHORIZED→MEASURE→LEARN→UPDATE STATE→CHOOSE NEXT ACTION. Olaf = approval gate for money/strategy/product/price/external-in-name/reputation/key relationships. |
+| Status | ACTIVE |
+
+### DEC-016 — UNKNOWN Triage A/B/C
+
+| Feld | Wert |
+|------|------|
+| Date | 2026-08-09 |
+| Decision | Every relevant UNKNOWN triaged as A (autonomous), B (Founder decision), or C (defer). UNKNOWNs are not automatic Founder todos. |
+| Status | ACTIVE |
+
 ---
 
 ## 13. Offene Fragen
 
 | ID | Frage | Bereich | Priority | Status |
 |----|-------|---------|----------|--------|
-| OQ-001 | Was ist der tatsächliche GA4-Baseline-Funnel? | Measurement | P0 | OPEN |
-| OQ-002 | Welche Reportteile bewerten Käufer nach Erhalt als besonders wertvoll? | Product | P0 | OPEN |
-| OQ-003 | Welche Empfehlungen setzen Käufer tatsächlich um? | Product / Action | P0 | OPEN |
-| OQ-004 | Welche messbaren Veränderungen folgen der Umsetzung? | Outcomes | P0 | OPEN |
-| OQ-005 | Welcher Acquisition Channel erzeugt den höchsten Paid Intent? | Growth | P0 | OPEN |
-| OQ-006 | Wie hoch sind die tatsächlichen COGS pro Report? | Economics | P0 | OPEN |
-| OQ-007 | Wie viel Follow-on-Demand nach Implementation / Re-check entsteht? | Revenue | P1 | OPEN |
-| OQ-008 | Erzeugt englischer Content qualifizierte Nachfrage? | Language | P1 | OPEN |
-| OQ-009 | Kann Swiss AI Visibility Index externe Distribution erzeugen? | EXP-002 | P0 | OPEN |
-| OQ-010 | Funktioniert Invisible Exporters als PR-/Lead-Story? | EXP-003 | P1 | OPEN |
-| OQ-011 | Welche Purchase Objections wiederholen sich (≥5 Prospects)? | Sales | P0 | OPEN |
-| OQ-012 | Was sollte MentionBee bewusst NICHT mehr tun? | Strategy | P1 | OPEN |
-| OQ-013 | Welcher Live-Preis gilt (CHF 190 vs €199 Fallback vs API)? | Pricing | P0 | OPEN |
-| OQ-014 | MEMS: externe Nutzungsfreigabe Name/Logo/Zitat? | Proof | P0 | OPEN |
-| OQ-015 | Wann startet die 90-Day Period formal? | Governance | P0 | OPEN |
+| OQ-001 | GA4 Baseline 2026-05-12…2026-08-09 — welche Metriken sind in GA4 UI verfügbar vs NOT TRACKED (siehe §11.3.1)? | Measurement | P0 | OPEN — **A** (GA4 UI) / **B** if new event tracking must be approved |
+| OQ-002 | Welche Reportteile bewerten Käufer nach Erhalt als besonders wertvoll? | Product | P0 | OPEN — **A**/B after customers |
+| OQ-003 | Welche Empfehlungen setzen Käufer tatsächlich um? | Product / Action | P0 | OPEN — **B**/A with customers |
+| OQ-004 | Welche messbaren Veränderungen folgen der Umsetzung? | Outcomes | P0 | OPEN — **A**/B |
+| OQ-005 | Welcher Acquisition Channel erzeugt den höchsten Paid Intent? | Growth | P0 | OPEN — **A** |
+| OQ-006 | Wie hoch sind die tatsächlichen COGS pro Report? | Economics | P0 | OPEN — **A** |
+| OQ-007 | Wie viel Follow-on-Demand nach Implementation / Re-check entsteht? | Revenue | P1 | OPEN — **C** until pull |
+| OQ-008 | Erzeugt englischer Content qualifizierte Nachfrage? | Language | P1 | OPEN — **A** after EN assets |
+| OQ-009 | Kann Swiss AI Visibility Index externe Distribution erzeugen? | EXP-002 | P0 | OPEN — **A** via experiment |
+| OQ-010 | Funktioniert Invisible Exporters als PR-/Lead-Story? | EXP-003 | P1 | OPEN — **A** via experiment |
+| OQ-011 | Welche Purchase Objections wiederholen sich (≥5 Prospects)? | Sales | P0 | OPEN — **A**/B |
+| OQ-012 | Was sollte MentionBee bewusst NICHT mehr tun? | Strategy | P1 | OPEN — **B** |
+| OQ-013 | Welcher Live-Preis gilt? | Pricing | — | **RESOLVED** → DEC-013 (EUR 190 Backend SoT). Tech debt: €199 fallback remains in code |
+| OQ-014 | MEMS: externe Nutzungsfreigabe Name/Logo/Zitat? | Proof | P0 | OPEN — **B** |
+| OQ-015 | Wann startet die 90-Day Period formal? | Governance | — | **RESOLVED** → DEC-014 (2026-08-10…2026-11-07) |
 
 ---
 
@@ -873,6 +982,8 @@ Vor Major Site Changes: 60–90 Tage Baseline (Users, Sessions, Source/Medium, L
 | BACKLOG-005 | Major Report Redesign | FROZEN | Report gut genug für Demand Validation | Customer Evidence zeigt relevantes Problem | — |
 | BACKLOG-006 | Large Paid Acquisition | NOT NOW | Conversion/Unit Economics unvalidiert | Offer/Funnel konvertiert; Economics bekannt | — |
 | BACKLOG-007 | Large Recommendation Battles Tool | NOT NOW | Zu viel Build vor Validation | Lightweight Version zeigt Traktion | — |
+| BACKLOG-008 | CHF price display derived from EUR base (CH visitors) | NOT NOW | Demand/UX later; Basispreis bleibt EUR | CH geo pricing needed / Founder priority | — |
+| BACKLOG-009 | Align frontend pricing fallback (€199) to Backend EUR 190 / remove stale hardcodes | TECH DEBT | Documented; no architecture rebuild this step | Authorized small fix / pricing consistency pass | DEC-013 |
 
 ---
 
@@ -881,7 +992,9 @@ Vor Major Site Changes: 60–90 Tage Baseline (Users, Sessions, Source/Medium, L
 | Version | Date | Changes | Source | Reason |
 |---------|------|---------|--------|--------|
 | 0.1.0 | 2026-08-07 | Initial structure (chapters 1–15 empty) | Manual init | Scaffold |
-| **1.0.0** | **2026-08-09** | Revenue OS v1 migration: fill chapters from Strategy v1.2 + explicit decisions; rename ch.10 to Experimente; add Information Types; EXP-001…008; Backlog; Decision Journal; KPI defs; Open Questions | Strategy v1.2 + Revenue OS setup prompt | Brain + Memory + Governance |
+| 1.0.0 | 2026-08-09 | Revenue OS v1 migration: fill chapters from Strategy v1.2 + explicit decisions; rename ch.10 to Experimente; add Information Types; EXP-001…008; Backlog; Decision Journal; KPI defs; Open Questions | Strategy v1.2 + Revenue OS setup prompt | Brain + Memory + Governance |
+| **1.1.0** | **2026-08-09** | DEC-013 EUR 190 Backend SoT + pricing inventory; DEC-014 period calendar; period-start FACTS (0/0/€0); GA4 baseline window; UNKNOWN triage A/B/C; Autonomy loop; resolve OQ-013/OQ-015 | Founder decisions | Price conflict closed; period clock set |
+| **1.1.1** | **2026-08-09** | Live price verify: Backend was 199 → DB+defaults set to **EUR 190** (API now 190); Website fallbacks unchanged; GA4 readiness inventory (GTM only; funnel events NOT TRACKED) | Live API + repo audit | Finalize operating state |
 
 ---
 

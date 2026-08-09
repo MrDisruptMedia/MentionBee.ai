@@ -7,9 +7,11 @@
 ---
 
 **Last updated:** 2026-08-09  
-**90-day period:** UNKNOWN (not formally started)  
-**Current day:** UNKNOWN  
-**Current phase:** Knowledge bootstrap / Revenue OS v1 locked  
+**90-day period:** 2026-08-10 → 2026-11-07  
+**Day 1:** 2026-08-10  
+**Day 90:** 2026-11-07  
+**Current day:** Pre-start (Last updated before Day 1)  
+**Current phase:** 90-Day Revenue Contract locked; baseline + execution prep  
 
 ---
 
@@ -20,14 +22,16 @@
 | Minimum (customers) | 2 |
 | Target (customers) | 5 |
 | Stretch (customers) | 10 |
-| Current paying customers | UNKNOWN |
-| Revenue | UNKNOWN |
-| Outside-network customers | UNKNOWN |
+| Outside-network requirement | ≥3 of target 5 |
+| Revenue target | ≥ EUR 2,500 |
+| Current paying customers | **0** (FACT, period start) |
+| Revenue | **EUR 0** (FACT, MentionBee report sales) |
+| Outside-network customers | 0 |
 | Qualified conversations | UNKNOWN |
 | Case/testimonial candidates | UNKNOWN (MEMS = candidate; external release UNKNOWN) |
 | Implementation rate | UNKNOWN |
 | Founder hours this week | UNKNOWN |
-| Founder Time per New Customer | UNKNOWN |
+| Founder Time per New Customer | UNKNOWN (no customers yet) |
 
 ---
 
@@ -37,12 +41,23 @@
 |--------|-------|
 | Users | UNKNOWN |
 | Sessions | UNKNOWN |
-| Paid report page views | UNKNOWN |
-| Sample report views | UNKNOWN |
-| Free report submissions | UNKNOWN |
-| Checkout starts | UNKNOWN |
-| Purchases | UNKNOWN |
+| Paid report page views | UNKNOWN / **NOT TRACKED** as named event |
+| Sample report views | UNKNOWN / **NOT TRACKED** as named event |
+| Free report submissions | **0** (FACT business count at period start); Analytics event = **NOT TRACKED** |
+| Checkout starts | UNKNOWN / **NOT TRACKED** |
+| Purchases | **0** (FACT); Analytics event = **NOT TRACKED** |
 | Paid conversion rate | UNKNOWN |
+
+---
+
+## Pricing Live Verify
+
+| Item | Value |
+|------|-------|
+| Backend SoT | `settings.price_deep_dive` + `GET /api/public/pricing` on `ai-visibility-report-tau.vercel.app` |
+| Before | deepDivePrice **199** |
+| After | deepDivePrice **190**, currency **EUR** (verified live) |
+| Website fallbacks | Still €199 hardcode — **BACKLOG-009** (unchanged) |
 
 ---
 
@@ -59,82 +74,87 @@
 | EXP-007 Recommendation Battles | PLANNED (WAVE 2) | — | UNKNOWN |
 | EXP-008 AI Language Gap | PLANNED | — | UNKNOWN |
 
-*(No ACTIVE experiments until Founder confirms start.)*
-
 ---
 
 ## Current Top 3 Priorities
 
-1. Lock Revenue OS v1 knowledge layer (this week’s migration) — **in progress / completing**
-2. Capture GA4 60–90 day baseline + funnel events
-3. MEMS evidence interview + implementation inventory (Founder) + Revenue OS prep
+1. **P0 — GA4 Baseline readiness:** Confirm in GA4 UI what page metrics exist for 2026-05-12…2026-08-09; treat conversion events as NOT TRACKED until instrumented
+2. MEMS evidence interview + implementation inventory (Founder) + Revenue OS prep pack
+3. Prepare first Unsolicited Mini-Audits / Target Accounts (EXP-001)
 
 ---
 
 ## Founder Actions Required
 
-| Action | Why Founder Required | Estimated Time | Deadline |
-|--------|----------------------|----------------|----------|
-| Confirm formal 90-day period start date | Governance / North Star clock | 5 min | UNKNOWN |
-| Resolve live price (CHF 190 vs €199 code fallback / API) | Pricing DECISION integrity | 15–30 min | UNKNOWN |
-| MEMS evidence interview (or schedule) | Only Founder has relationship / permission path | 45–90 min | UNKNOWN |
-| Approve first honest comparison thesis before publish | Reputation / public claims | 20–40 min | UNKNOWN |
+| Action | Why Founder Required | Category | Estimated Time | Deadline |
+|--------|----------------------|----------|----------------|----------|
+| MEMS evidence interview (or schedule) | Relationship / Founder Knowledge | B | 45–90 min | UNKNOWN |
+| Approve first honest comparison thesis before publish | Reputation / public claims | B | 20–40 min | UNKNOWN |
+| Approve adding funnel Analytics events (if baseline needs them) | Product/tracking change | B | 15 min | UNKNOWN |
 
 ---
 
 ## Blockers
 
-- No GA4 baseline in Manual/Weekly State yet
-- Price conflict unresolved (Strategy/Prompt 190 vs code fallback €199)
-- MEMS external usage rights UNKNOWN
-- 90-day clock not started
+- GA4 baseline incomplete: GTM present (`GTM-W25FQX2Z`), but **no GA4 ID / no custom funnel events in repo** → free submission, checkout start, purchase = **NOT TRACKED**
+- MEMS external usage rights UNKNOWN (Category B)
+- Frontend pricing fallback still €199 (display risk if Backend down) — BACKLOG-009, non-blocking while Backend healthy
 
 ---
 
 ## New Evidence
 
-- Strategy v1.2 ingested into Operating Manual (2026-08-09)
-- Website due-diligence findings retained as INFERENCE/EVIDENCE in Manual (trust/proof/Free CTA tension)
+- **FACT:** Live Backend pricing API returned 199; DB updated to **190**; live API now returns **190**
+- **FACT:** Analytics = GTM only in code; funnel conversion events **NOT TRACKED** in app
 
 ---
 
 ## Decisions Needed
 
-1. Formal start date of 90-day Revenue Contract  
-2. Canonical commercial price + currency for site/checkout  
-3. Whether MEMS feedback may be used publicly (and in what form)  
+1. Whether MEMS feedback may be used publicly — Category **B**
+2. Whether to authorize explicit GA4/GTM funnel event instrumentation — Category **B**
+
+---
+
+## P0 UNKNOWN Triage (current)
+
+| UNKNOWN | Category | Owner | Notes |
+|---------|----------|-------|-------|
+| GA4 page metrics 2026-05-12…2026-08-09 | **A** | Revenue OS | Pull from GA4 UI if access; else escalate access as B |
+| Funnel conversion events in GA4 | **NOT TRACKED** | — | Do not invent 0; needs instrumentation (B to approve) |
+| MEMS public usage rights | **B** | Founder | Compact decision ask |
+| COGS per report | **A** / **C** short-term | Revenue OS | When production data exists |
+| Founder hours this week | **B** light | Founder | Scorecard only |
 
 ---
 
 ## Revenue OS Autonomous Work Queue
 
-*(Queued — NOT auto-executed in this phase)*
-
 ### P0
 
-1. Operating Manual / Revenue OS v1 finalize — **this migration**
-2. GA4 Baseline 60–90 days: Users, Sessions, Source/Medium, Landing Pages, Paid Report Page Views, Sample Report Views, Free Report Submissions, Checkout Starts, Purchases, Conversion Rates
-3. MEMS Evidence Interview + Implementation Inventory — **prepare question pack** (Founder conducts)
-4. Research 30 Target Accounts with observable AI-Visibility Gap
-5. Prepare first 5 Unsolicited Mini-Audits (EXP-001)
-6. Prepare first Radically Honest Comparison Page draft (EXP-004)
+1. Pull whatever **is** available in GA4 for 2026-05-12…2026-08-09 (Users/Sessions/Source/Landings/page paths) — mark rest NOT TRACKED
+2. MEMS Evidence Interview prep pack (Founder conducts)
+3. Research 30 Target Accounts with observable AI-Visibility Gap
+4. Prepare first 5 Unsolicited Mini-Audits (EXP-001)
+5. Prepare first Radically Honest Comparison Page draft (EXP-004)
 
 ### P1
 
-7. Review/sharpen DE Core Sales Copy package (Founder approves)
-8. Prepare EN Core Commercial Pages
-9. Design Swiss AI Visibility Index Pilot (EXP-002)
-10. Prepare first High-Intent Problem Page draft
+6. DE Core Sales Copy package (Founder approves)
+7. EN Core Commercial Pages
+8. Swiss AI Visibility Index Pilot design (EXP-002)
+9. High-Intent Problem Page draft
+10. BACKLOG-009 when authorized: align Website €199 fallback → 190
 
 ### P2
 
-11. Bounded Anti-Score Experiment plan (EXP-006) — research only, cheap
-12. Invisible Exporters / AI Language Gap small-sample go/no-go (EXP-003 / EXP-008)
+11. Bounded Anti-Score plan (EXP-006)
+12. Invisible Exporters / Language Gap go/no-go (EXP-003 / EXP-008)
 
 ---
 
 ## Notes
 
-- Values marked UNKNOWN must be filled from first-party data — never invented.
-- When an experiment becomes ACTIVE, update this table and keep full definition in Manual §10.
-- When a durable learning appears, write it to the Operating Manual (Decision Journal / Playbook / Experiments Learnings), not only here.
+- Fachliche Preiswahrheit: **EUR 190 Backend** (live verified).
+- NOT TRACKED ≠ 0.
+- Durable knowledge → Operating Manual; live counters → this file.
