@@ -794,6 +794,25 @@ Keine manuellen/erfundenen Zahlen. Nicht getrackte Metriken = **NOT TRACKED** (n
 
 **Implication:** Baseline für Conversion-Events ist ohne zusätzliche Tracking-Arbeit **nicht zuverlässig** aus dem Repo ableitbar. Page-level Metrics ggf. in GA4 UI prüfbar — Category A wenn Zugang vorhanden.
 
+#### 11.3.2 Measurement Layer v1 (App → dataLayer → GTM)
+
+**TYPE:** FACT  
+**Measurable from:** deploy of Measurement Layer v1 (intended **Day 1 = 2026-08-10** once live)
+
+| Event | Trigger in App | Parameters |
+|-------|----------------|------------|
+| `view_paid_report` | Mount `/report` once | `page_path` |
+| `view_sample_report` | Mount `/sample-report` once | `page_path` |
+| `free_report_submit` | After successful Free Report API response | optional `website` |
+| `begin_checkout` | After checkout session URL received (before redirect) | `value`, `currency`, `product` (from Backend pricing) |
+| `purchase` | `/order/success` with `session_id`; sessionStorage dedupe | `transaction_id`, `value`, `currency`, `product` |
+
+**Historical (2026-05-12…2026-08-09):** `free_report_submit`, `begin_checkout`, `purchase` remain **NOT TRACKED**. Business FACTS at period start: 0 customers, EUR 0 revenue, 0 free submissions.
+
+**EXTERNAL CONFIG REQUIRED:** GTM tags/triggers for these `dataLayer` events → GA4. Without GTM mapping, events exist in dataLayer only.
+
+**Consent:** No in-app Consent CMP found. Privacy policy claims Cookie-Banner; GTM already loads unconditionally. Measurement Layer pushes to `dataLayer` (same pattern). GTM Consent Mode gating = EXTERNAL CONFIG / legal follow-up.
+
 ---
 
 ## 12. Decision Journal
@@ -995,6 +1014,7 @@ Keine manuellen/erfundenen Zahlen. Nicht getrackte Metriken = **NOT TRACKED** (n
 | 1.0.0 | 2026-08-09 | Revenue OS v1 migration: fill chapters from Strategy v1.2 + explicit decisions; rename ch.10 to Experimente; add Information Types; EXP-001…008; Backlog; Decision Journal; KPI defs; Open Questions | Strategy v1.2 + Revenue OS setup prompt | Brain + Memory + Governance |
 | **1.1.0** | **2026-08-09** | DEC-013 EUR 190 Backend SoT + pricing inventory; DEC-014 period calendar; period-start FACTS (0/0/€0); GA4 baseline window; UNKNOWN triage A/B/C; Autonomy loop; resolve OQ-013/OQ-015 | Founder decisions | Price conflict closed; period clock set |
 | **1.1.1** | **2026-08-09** | Live price verify: Backend was 199 → DB+defaults set to **EUR 190** (API now 190); Website fallbacks unchanged; GA4 readiness inventory (GTM only; funnel events NOT TRACKED) | Live API + repo audit | Finalize operating state |
+| **1.1.2** | **2026-08-09** | Measurement Layer v1: dataLayer funnel events (`view_paid_report`, `view_sample_report`, `free_report_submit`, `begin_checkout`, `purchase` + dedupe) | Measurement gap before Day 1 | Funnel measurable from deploy |
 
 ---
 

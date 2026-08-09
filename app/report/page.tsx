@@ -4,6 +4,8 @@ import { BarChart2, Check, ListChecks, Search } from "lucide-react";
 
 import { PaidReportForm } from "@/components/forms/PaidReportForm";
 import { ReportPriceBadges } from "@/components/marketing/ReportPriceBadges";
+import { TrackFunnelView } from "@/components/analytics/TrackFunnelView";
+import { FUNNEL_EVENTS } from "@/lib/analytics/data-layer";
 
 export const metadata: Metadata = {
   title: "AI Visibility Deep-Dive | MentionBee",
@@ -25,6 +27,7 @@ const featureBullets = [
 export default function ReportPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 pt-24 pb-16">
+      <TrackFunnelView event={FUNNEL_EVENTS.VIEW_PAID_REPORT} />
       {/* Hero */}
       <header className="mx-auto max-w-3xl text-center">
         <p className="mx-auto mb-6 w-fit rounded-full border border-zinc-200/90 bg-mention-light px-3 py-1 text-xs font-semibold tracking-wide text-mention-dark uppercase">

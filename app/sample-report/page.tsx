@@ -3,6 +3,8 @@ import Link from "next/link";
 import { AlertCircle, CheckCircle, Lock, XCircle } from "lucide-react";
 
 import { SampleReportDeepDiveCta } from "@/components/marketing/SampleReportDeepDiveCta";
+import { TrackFunnelView } from "@/components/analytics/TrackFunnelView";
+import { FUNNEL_EVENTS } from "@/lib/analytics/data-layer";
 
 export const metadata: Metadata = {
   title: "Beispielreport – Disrupt Media | MentionBee",
@@ -143,6 +145,7 @@ function dimensionBarWidth(score: number): number {
 export default function SampleReportPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 pt-24 pb-16">
+      <TrackFunnelView event={FUNNEL_EVENTS.VIEW_SAMPLE_REPORT} />
       {/* 1. Header-Banner */}
       <div className="mb-8 rounded-xl border border-primary bg-primary/20 p-4">
         <p className="font-heading text-lg font-semibold text-mention-dark sm:text-xl">

@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 
+import { trackFreeReportSubmit } from "@/lib/analytics/data-layer";
+
 const FREE_REPORT_API = "https://ai-visibility-report-tau.vercel.app/api/free-report-request";
 
 export function FreeReportForm() {
@@ -41,6 +43,7 @@ export function FreeReportForm() {
         return;
       }
 
+      trackFreeReportSubmit({ website: website.trim() });
       setSuccess(true);
     } catch {
       setError("Netzwerkfehler. Bitte prüfe deine Verbindung und versuche es erneut.");

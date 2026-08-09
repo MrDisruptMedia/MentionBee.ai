@@ -1,9 +1,16 @@
 "use client";
 
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle } from "lucide-react";
+
+import { trackPurchaseOnce } from "@/lib/analytics/data-layer";
+import {
+  getPricingApiBaseUrl,
+  parsePublicPricingFromJson,
+  PRICING_FALLBACK,
+} from "@/lib/public-pricing";
 
 const CORE_ORDER_SUCCESS = "https://ai-visibility-report-tau.vercel.app/order/success";
 
@@ -15,13 +22,47 @@ function buildCoreRedirectUrl(sessionId: string, websiteUrl: string, email: stri
   return u.toString();
 }
 
+async function resolvePurchasePricing(): Promise<{ value: number; currency: string }> {
+  const base = getPricingApiBaseUrl();
+  if (!base) {
+    return { value: PRICING_FALLBACK.deepDivePrice, currency: PRICING_FALLBACK.currency };
+  }
+  try {
+    const res = await fetch(`${base}/api/public/pricing`, { credentials: "omit" });
+    if (!res.ok) {
+      return { value: PRICING_FALLBACK.deepDivePrice, currency: PRICING_FALLBACK.currency };
+    }
+    const parsed = parsePublicPricingFromJson(await res.json());
+    if (parsed) return { value: parsed.deepDivePrice, currency: parsed.currency };
+  } catch {
+    /* fall through */
+  }
+  return { value: PRICING_FALLBACK.deepDivePrice, currency: PRICING_FALLBACK.currency };
+}
+
 function OrderSuccessContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("session_id") ?? "";
   const websiteUrl = searchParams.get("website_url") ?? "";
   const email = searchParams.get("email") ?? "";
+  const purchaseTracked = useRef(false);
 
   const targetUrl = sessionId ? buildCoreRedirectUrl(sessionId, websiteUrl, email) : "";
+
+  useEffect(() => {
+    if (!sessionId || purchaseTracked.current) return;
+    purchaseTracked.current = true;
+
+    void (async () => {
+      const { value, currency } = await resolvePurchasePricing();
+      trackPurchaseOnce({
+        transaction_id: sessionId,
+        value,
+        currency,
+        product: "mentionbee_deep_dive",
+      });
+    })();
+  }, [sessionId]);
 
   useEffect(() => {
     if (!targetUrl) return;

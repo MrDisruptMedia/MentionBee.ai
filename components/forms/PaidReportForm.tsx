@@ -2,7 +2,30 @@
 
 import { useState } from "react";
 
+import { trackBeginCheckout } from "@/lib/analytics/data-layer";
 import { usePublicPricing } from "@/hooks/usePublicPricing";
+import {
+  getPricingApiBaseUrl,
+  parsePublicPricingFromJson,
+  PRICING_FALLBACK,
+} from "@/lib/public-pricing";
+
+async function resolveCheckoutPricing(fallback: {
+  deepDivePrice: number;
+  currency: string;
+}): Promise<{ value: number; currency: string }> {
+  const base = getPricingApiBaseUrl();
+  if (!base) return { value: fallback.deepDivePrice, currency: fallback.currency };
+  try {
+    const res = await fetch(`${base}/api/public/pricing`, { credentials: "omit" });
+    if (!res.ok) return { value: fallback.deepDivePrice, currency: fallback.currency };
+    const parsed = parsePublicPricingFromJson(await res.json());
+    if (parsed) return { value: parsed.deepDivePrice, currency: parsed.currency };
+  } catch {
+    /* use fallback */
+  }
+  return { value: fallback.deepDivePrice, currency: fallback.currency };
+}
 
 export function PaidReportForm() {
   const { pricing } = usePublicPricing();
@@ -32,6 +55,15 @@ export function PaidReportForm() {
 
       const data = (await res.json()) as { url?: string };
       if (data.url) {
+        const { value, currency } = await resolveCheckoutPricing({
+          deepDivePrice: pricing.deepDivePrice || PRICING_FALLBACK.deepDivePrice,
+          currency: pricing.currency || PRICING_FALLBACK.currency,
+        });
+        trackBeginCheckout({
+          value,
+          currency,
+          product: "mentionbee_deep_dive",
+        });
         window.location.href = data.url;
       } else {
         setError("Kein Checkout-Link erhalten. Bitte versuche es erneut.");
