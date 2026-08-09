@@ -12,14 +12,12 @@ import {
   PRICING_FALLBACK,
 } from "@/lib/public-pricing";
 
-const CORE_ORDER_SUCCESS = "https://ai-visibility-report-tau.vercel.app/order/success";
-
-function buildCoreRedirectUrl(sessionId: string, websiteUrl: string, email: string): string {
-  const u = new URL(CORE_ORDER_SUCCESS);
-  u.searchParams.set("session_id", sessionId);
-  if (websiteUrl) u.searchParams.set("website_url", websiteUrl);
-  if (email) u.searchParams.set("email", email);
-  return u.toString();
+function buildCompleteRedirectUrl(sessionId: string, websiteUrl: string, email: string): string {
+  const params = new URLSearchParams();
+  params.set("session_id", sessionId);
+  if (websiteUrl) params.set("website_url", websiteUrl);
+  if (email) params.set("email", email);
+  return `/order/complete?${params.toString()}`;
 }
 
 async function resolvePurchasePricing(): Promise<{ value: number; currency: string }> {
@@ -47,7 +45,7 @@ function OrderSuccessContent() {
   const email = searchParams.get("email") ?? "";
   const purchaseTracked = useRef(false);
 
-  const targetUrl = sessionId ? buildCoreRedirectUrl(sessionId, websiteUrl, email) : "";
+  const targetUrl = sessionId ? buildCompleteRedirectUrl(sessionId, websiteUrl, email) : "";
 
   useEffect(() => {
     if (!sessionId || purchaseTracked.current) return;

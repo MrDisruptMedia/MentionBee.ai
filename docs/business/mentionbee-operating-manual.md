@@ -351,7 +351,7 @@ Prioritätsprüfung jeder Aufgabe:
 
 **TYPE:** FACT (Website Architecture) + OPEN QUESTION (Performance)
 
-Pfad: Homepage → Sample / Free / `/report` → Checkout (Stripe) → Order Success → Backend Details.
+Pfad: Homepage → Sample / Free / `/report` → Checkout (Stripe) → **`/order/success` (mentionbee.ai, purchase)** → **`/order/complete` (onboarding, proxied)** → **`/order/confirmation` (proxied)** → Report per E-Mail.
 
 Bekannte CTA-Spannung (INFERENCE aus Due Diligence): Free erscheint stark; FinalCTA historisch Free-lastig; Paid braucht Proof früher.
 
@@ -813,6 +813,24 @@ Keine manuellen/erfundenen Zahlen. Nicht getrackte Metriken = **NOT TRACKED** (n
 
 **Consent:** No in-app Consent CMP found. Privacy policy claims Cookie-Banner; GTM already loads unconditionally. Measurement Layer pushes to `dataLayer` (same pattern). GTM Consent Mode gating = EXTERNAL CONFIG / legal follow-up.
 
+#### 11.3.3 Checkout / Success Flow (public journey on mentionbee.ai)
+
+**TYPE:** FACT  
+**Updated:** 2026-08-09
+
+| Step | URL | Host | Notes |
+|------|-----|------|-------|
+| Paid checkout | `/report` → Stripe | mentionbee.ai | `begin_checkout` on checkout session URL |
+| Stripe `success_url` | `/order/success?session_id&website_url&email` | **mentionbee.ai** | Backend `NEXT_PUBLIC_MENTIONBEE_URL` → canonical `https://mentionbee.ai` |
+| Purchase + Danke | `/order/success` | mentionbee.ai | `purchase` event + sessionStorage dedupe; GTM present |
+| Post-payment onboarding | `/order/complete` (rewrite → Backend `/order/success`) | mentionbee.ai (address bar) | Backend HTML/JS via `assetPrefix`; APIs via `/api/*` rewrite |
+| Report submitted | `/order/confirmation?reportId=…` (rewrite → Backend) | mentionbee.ai (address bar) | Full-page navigation (no client router hop) |
+| Report link | `/report/:uuid` | redirect → Backend | Existing redirect |
+
+**Query params:** Stripe/success pass `website_url`; onboarding accepts `url` **or** `website_url` (canonical write: `website_url`).
+
+**OPEN QUESTION / BACKLOG-010:** `POST /api/reports` (`paid_v1`) does not verify Stripe `session_id` before report creation — separate security/business-logic item; not part of redirect fix.
+
 ---
 
 ## 12. Decision Journal
@@ -1003,6 +1021,7 @@ Keine manuellen/erfundenen Zahlen. Nicht getrackte Metriken = **NOT TRACKED** (n
 | BACKLOG-007 | Large Recommendation Battles Tool | NOT NOW | Zu viel Build vor Validation | Lightweight Version zeigt Traktion | — |
 | BACKLOG-008 | CHF price display derived from EUR base (CH visitors) | NOT NOW | Demand/UX later; Basispreis bleibt EUR | CH geo pricing needed / Founder priority | — |
 | BACKLOG-009 | Align frontend pricing fallback (€199) to Backend EUR 190 / remove stale hardcodes | TECH DEBT | Documented; no architecture rebuild this step | Authorized small fix / pricing consistency pass | DEC-013 |
+| BACKLOG-010 | Verify Stripe `session_id` before `POST /api/reports` (`paid_v1`) | SECURITY / BUSINESS | Onboarding reachable without payment proof; webhook handles invoice only | Paid report abuse risk; authorize gated report creation | — |
 
 ---
 
@@ -1015,6 +1034,7 @@ Keine manuellen/erfundenen Zahlen. Nicht getrackte Metriken = **NOT TRACKED** (n
 | **1.1.0** | **2026-08-09** | DEC-013 EUR 190 Backend SoT + pricing inventory; DEC-014 period calendar; period-start FACTS (0/0/€0); GA4 baseline window; UNKNOWN triage A/B/C; Autonomy loop; resolve OQ-013/OQ-015 | Founder decisions | Price conflict closed; period clock set |
 | **1.1.1** | **2026-08-09** | Live price verify: Backend was 199 → DB+defaults set to **EUR 190** (API now 190); Website fallbacks unchanged; GA4 readiness inventory (GTM only; funnel events NOT TRACKED) | Live API + repo audit | Finalize operating state |
 | **1.1.2** | **2026-08-09** | Measurement Layer v1: dataLayer funnel events (`view_paid_report`, `view_sample_report`, `free_report_submit`, `begin_checkout`, `purchase` + dedupe) | Measurement gap before Day 1 | Funnel measurable from deploy |
+| **1.1.3** | **2026-08-09** | Checkout success journey stays on mentionbee.ai: `/order/success` → `/order/complete` → `/order/confirmation` via rewrites; Stripe success_url canonical apex | Purchase tracking + public UX | No visible backend domain hop |
 
 ---
 
