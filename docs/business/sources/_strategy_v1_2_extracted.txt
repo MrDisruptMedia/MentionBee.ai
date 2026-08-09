@@ -1,0 +1,1353 @@
+MENTIONBEE
+Master Strategy & Operating Context · v1.2
+From AI Visibility Report to Revenue System
+Single Source of Truth for strategy, positioning, growth, Revenue OS and 90-day execution
+Master operating document · 9 August 2026
+Executive Summary
+MentionBee operates in a market that is real, fast-growing and already heavily financed. That is both the opportunity and the warning. Profound and Peec have demonstrated that brands will pay to understand how they appear in AI answers. They have also raised enough capital to make a head-on feature race unattractive for a bootstrapped entrant.
+Core strategic conclusion: MentionBee should not try to become a smaller Peec or Profound, and it does not need a globally unique feature to deserve a place in the market. The near-term job is simpler: become an unusually useful, trusted and memorable way for SMEs to understand why AI systems recommend competitors and what to do about it. Differentiation matters; absolute uniqueness does not.
+The current paid report is good enough to sell now: it combines competitor comparison, source analysis, technical and content checks, and prioritized recommendations. The next bottleneck is not report quality. It is distribution, trust, proof and sales. Therefore the report enters a 90-day Product Freeze: no major redesign, scoring rewrite, dashboard build or reliability architecture unless customer evidence shows that a specific product change materially affects purchase, implementation or retention.
+The near-term revenue problem is solved by proving demand and building a repeatable acquisition motion, not by adding features. MentionBee must show that people outside the founder's network will pay, that the report causes useful action, and that at least one acquisition path can be repeated without consuming the founder's week.
+The five decisions this paper recommends
+Reposition the paid product around diagnosis and decisions, not around an AI Visibility Score.
+Make external proof - starting with MEMS - the primary trust mechanism on the website.
+Keep the €190 one-off Deep-Dive as the wedge product; do not build a broad SaaS dashboard now.
+Build traffic through research, comparison pages, high-intent problem pages and credible distribution - not through generic GEO content volume.
+Run a 90-day revenue program whose success criterion is two paying new customers and evidence of one repeatable acquisition path.
+What would make the thesis fail
+The strategy is falsifiable. MentionBee should reconsider the product if, after a focused 90-day program, qualified prospects understand the problem but still will not pay €190; if customers repeatedly say the report is interesting but does not change action; or if acquisition requires so much manual education that the economics cannot work at the current price.
+Area
+What we know
+Confidence
+Market
+Well-funded competitors, visible pricing, rapidly expanding AI-search category
+High
+MentionBee website
+Full public site and founder due-diligence review
+High
+Customer value
+Positive MEMS feedback and implementation interest; broader sample still small
+Medium
+Traffic
+Public competitor content/distribution footprint; no first-party competitor analytics
+Medium/Low
+MentionBee funnel
+Architecture and CTA paths known; GA4 baseline still required
+Medium
+1. Market Thesis: Why This Category Exists
+The underlying behavior change is no longer hypothetical: consumers and business buyers increasingly use conversational systems to discover, compare and shortlist products. At the same time, AI answers often resolve information needs without sending a click to the source. This means the commercial value of being represented correctly can grow even when referral traffic remains smaller than traditional search.
+That distinction matters for MentionBee. If the company promises 'more website traffic from ChatGPT', it makes a claim the market evidence does not reliably support. If it promises 'understand and improve whether your brand is considered and recommended inside AI-mediated discovery', the proposition is broader and more defensible.
+Shift
+Implication for buyers
+Implication for MentionBee
+Discovery moves into AI answers
+A brand can be absent before a website visit ever happens
+Measure recommendation presence, not only clicks
+AI answers concentrate sources
+Authority and third-party corroboration become important
+Source-gap analysis belongs in the diagnosis
+Attribution becomes harder
+Visibility can matter without a direct referral
+Do not sell traffic as the primary outcome
+Recent academic work reinforces the caution around traffic claims. A 2026 clickstream study found outbound clicks in only a small minority of ChatGPT information-seeking sessions, while a separate field study found that raw ChatGPT referral growth can substantially overstate the causal effect of optimization because the platform itself is growing quickly. The commercial opportunity is real, but the measurement discipline must be stronger than the hype.
+Market verdict: attractive enough to enter, but too competitive to enter generically. MentionBee needs a sharp wedge, evidence and distribution - not a feature checklist.
+2. The Customer Does Not Buy 'AI Visibility'
+The phrase AI Visibility describes the category, not the purchase. The purchase happens when a manager experiences uncertainty with financial or strategic consequences.
+Trigger
+What the buyer is really asking
+MentionBee job
+Traffic/leads decline while new competitors emerge
+Are we losing discovery share because buyer behavior changed?
+Diagnose whether AI discovery is part of the problem and where the gap sits
+The buyer sees endless GEO advice on LinkedIn
+What should we actually do first?
+Turn a noisy topic into a prioritized action plan
+The buyer personally uses AI but never sees their company
+Why does AI know competitors but not us?
+Compare brand, competitors, sources and evidence
+Product promise: Why do AI systems recommend your competitors - but not you? MentionBee shows you the evidence, the gaps and the three actions that matter first.
+This is deliberately different from 'track your AI visibility'. Tracking is a recurring software job. MentionBee's current strength is a diagnostic job: reduce uncertainty and decide what to change.
+At €190, MentionBee does not need to prove a six-figure ROI before purchase. It needs to make the expected value obvious. If the report prevents even a few hours of unfocused work, redirects one content initiative, identifies one missing authority signal, or gives a CEO confidence about what not to do, the price can be rational. The website should therefore sell avoided waste and better prioritization, not the number of checks.
+3. Competitive Landscape
+The category has bifurcated into enterprise platforms and lightweight trackers. Profound increasingly positions itself as an enterprise operating layer for Answer Engine Optimization, including monitoring, content workflows, agent analytics and integrations. Peec combines accessible AI-search analytics with a rapidly expanding research/content engine. Visibisy offers a simpler weekly visibility-tracking proposition.
+Competitor
+Public position
+Business model
+Strategic strength
+Opening for MentionBee
+Profound
+Enterprise AI-search / AEO platform
+Subscription; Starter $99/mo, Growth $399/mo, Enterprise custom
+Capital, enterprise integrations, breadth, brand
+Too heavy/expensive for many SMEs; decision audit can be simpler
+Peec AI
+AI Search Analytics for marketing teams/agencies
+Subscription, prompt/model tiers
+Strong research brand, accessible UX, growing customer base
+Monitoring-first; one-off diagnosis can target non-tool buyers
+Visibisy
+Does AI recommend your company?
+Free + tracking tiers
+Very simple promise and onboarding
+Less diagnostic depth visible publicly
+MentionBee
+Deep-Dive AI visibility analysis
+€190 one-off report + free report
+Low-friction, broad diagnostic scope, action plan
+Needs proof, differentiation and distribution
+The feature-race trap
+Profound and Peec can continuously add engines, prompt volumes, integrations, dashboards and agents. MentionBee cannot win by matching that roadmap. More importantly, it does not need to. The target buyer for a €190 diagnostic is not necessarily looking for another monthly tool.
+The category gap
+There is room between a free visibility checker and a €99-€399/month monitoring platform: a rigorous, human-readable diagnostic that answers 'what is happening, why, and what should we do next?' This is closer to a productized advisory service than to SaaS.
+Dimension
+Monitoring platforms
+MentionBee target
+Primary question
+How is visibility changing?
+Why are we not being recommended and what should we do?
+Output
+Dashboard, trends, prompt tracking
+Decision-ready diagnosis and prioritized plan
+Commitment
+Recurring subscription
+One-off purchase
+Ideal buyer
+SEO/AEO team already running a program
+CEO/marketing lead trying to decide whether and how to act
+Value proof
+Data coverage and tracking depth
+Quality of diagnosis and resulting decisions
+4. Website & Funnel Due Diligence
+The current site has a strong problem hook - 'Deine Kunden fragen KI. Empfiehlt sie dich?' - and a short checkout. The weakness is that the proof arrives too late and the site gives the free report too much strategic weight.
+What works
+The hero immediately makes the new discovery problem understandable.
+The paid price is low enough for self-serve experimentation and does not require procurement.
+The sample report is the strongest product proof because it shows real structure and depth.
+The FAQ contains one of the strongest differentiators: an AI subscription shows what AI says when you ask; MentionBee tests what potential customers ask without the brand being named.
+The checkout is intentionally short.
+What currently depresses conversion
+Issue
+Why it matters
+Action
+Hero uses generic mock data
+Shows a product UI, not evidence that decisions change
+Replace/augment with real external case proof
+Free report appears throughout the funnel
+Creates a rational reason not to buy now
+Make free secondary; build explicit free-to-paid sequence
+Paid page sells 150+ checks and 25 actions
+Volume is not the desired outcome
+Sell diagnosis, priorities and examples of decisions
+No external customer case in the core journey
+Trust gap at the moment of purchase
+MEMS proof near hero and checkout
+End-of-page CTA points to free
+The longest consideration path ends away from revenue
+End with paid CTA; free as fallback
+Post-purchase process is not fully explained before payment
+Creates uncertainty
+Show exact 4-step process and delivery timing
+Recommended homepage narrative
+Problem: 'Why does AI recommend your competitors - but not you?'
+Proof: MEMS or another external customer, with exact initial state and what changed.
+Diagnosis: what MentionBee investigates - mentions, competitors, sources, technical/content evidence.
+Outcome: three priorities, not 150 checks.
+Sample: let the visitor inspect the actual deliverable.
+Price: €190, one-off, no subscription.
+FAQ: stability, DIY ChatGPT, SEO vs AI visibility, how long changes take.
+Final CTA: buy the Deep-Dive; free check only for people not ready.
+5. MEMS: From Testimonial to Proof
+MEMS is strategically important because it can become the first bridge between 'the report contains useful analysis' and 'the report changes what a real company does'. The case should not overclaim AI-visibility gains until those gains are measured. Its initial value is decision evidence.
+Stage
+Evidence to capture
+Before
+Baseline AI mentions across the agreed questions; website state; known lead/traffic baseline
+Diagnosis
+Which report findings surprised or changed priorities
+Action
+Exactly which recommendations MEMS implemented, when and why
+Intermediate outcome
+Indexation, new pages, citations, third-party mentions, AI-answer changes
+Business outcome
+Qualified inquiries, lead quality, traffic where relevant
+Counterfactual
+What MEMS believes it would not have done, or would have done later, without the report
+Case-study rule: Do not claim 'MentionBee increased leads' unless the evidence supports causality. A credible case that says 'MentionBee changed our priorities; after implementation we observed X' is more valuable than an inflated success story.
+Offer MEMS limited unpaid support as an evidence-building pilot with explicit boundaries: monthly visibility re-check, prioritized recommendations, implementation review, and permission-based documentation. The exchange is learning and case evidence, not indefinite free consulting.
+6. Product Strategy
+The Deep-Dive should remain the core commercial product for the next 90 days. Do not add a broad monitoring dashboard, credit system or freemium SaaS layer until the one-off diagnostic demonstrates repeatable demand.
+Layer
+Purpose
+Now / Later
+Free signal
+Show that a visibility problem may exist
+Keep, but narrow and use as lead capture
+Deep-Dive €190
+Explain why + prioritize action
+Core product now
+Implementation Sprint
+Optional paid help implementing top priorities
+Test manually after demand appears
+Re-check
+Measure change after 30/60/90 days
+Productize once case data exists
+Monitoring SaaS
+Recurring trend tracking
+Later only if customers repeatedly ask for it
+What the paid report should emphasize
+Executive diagnosis in plain business language.
+Competitor recommendation gap: who wins and on which questions.
+Source gap: which external sources corroborate competitors and where the company lacks evidence.
+Three highest-priority actions, with rationale and expected mechanism.
+Evidence level for every conclusion: observed fact, inference or experiment.
+30-day implementation plan.
+The free report should answer 'Should I care?' The paid report should answer 'Why is this happening and what do I do?' If the free report already provides competitor analysis plus actionable recommendations, the boundary is too weak.
+Free = signal. Paid = diagnosis. Implementation = outcome. Re-check = evidence.
+7. Pricing & Monetization
+The €190 price is strategically useful as a wedge: low enough for a marketing manager or founder to buy without a sales process, high enough to test real willingness to pay. The immediate goal should not be to optimize price; it should be to prove purchase intent.
+Hypothesis
+Test
+Decision rule
+€190 is low-friction enough
+Send qualified traffic directly to paid page
+If strong intent traffic still will not buy, investigate trust/value before lowering price
+The report is underpriced once proof exists
+Offer €290 to a subset after 3-5 strong cases
+Raise if conversion remains healthy
+Implementation has higher willingness to pay
+Offer a fixed-scope 30-day sprint after report
+Only productize if at least 3 customers ask/buy
+Subscription is not yet necessary
+Ask every buyer whether ongoing monitoring is needed
+Build only after repeated pull
+At €190, paid acquisition can become uneconomic quickly if conversion is low. That is why organic high-intent traffic, founder-led distribution, partnerships and referral loops matter more than broad paid media at this stage.
+8. Traffic Reverse Engineering
+Important limitation: this is public-footprint reverse engineering, not access to competitor GA4 or server logs. Exact traffic volumes and channel shares cannot be known from public pages alone. What can be observed reliably is the acquisition architecture competitors are building.
+Peec: research as distribution
+Peec's public blog is not a generic SEO blog. It repeatedly publishes proprietary-data studies: 30 million sources, one million citations, 232,000 citations, 65M+ citations across countries, query-fanout analyses and case studies. This creates four loops at once: search demand, citations/backlinks, social discussion and AI-source eligibility.
+Peec also publishes practical guides and case studies, but the distinctive traffic asset is data. The research itself becomes a reason for journalists, SEOs, LinkedIn users and AI systems to reference Peec.
+Profound: category ownership + comparison capture
+Profound combines category education with aggressive comparison content: reviews of Peec, Writesonic, AthenaHQ, SE Visible, Ahrefs Brand Radar and others, plus 'best AI visibility provider' pages. This captures bottom-of-funnel searches from buyers who already know the category. Profound also uses funding announcements, enterprise customer stories and thought leadership to build authority.
+Visibisy: simplicity and product-led entry
+Visibisy's public proposition is much narrower: enter the company and ideal customer, generate realistic prompts, track a weekly score across four LLMs. Its acquisition advantage is likely low-friction product-led discovery rather than a visible research/content moat.
+Competitor pattern
+Copy?
+MentionBee version
+Peec proprietary research
+Yes
+Small, credible DACH datasets: e.g. 100 Swiss SMEs, industry-specific source-gap studies
+Peec high-volume expert blog
+Partly
+Fewer, evidence-heavy pieces; do not try to match volume
+Profound comparison pages
+Yes
+MentionBee vs Peec, Profound, generic monitoring tools; honest fit-based comparisons
+Profound enterprise breadth
+No
+Avoid feature race and enterprise complexity
+Visibisy free tracking
+No/limited
+Use free only as diagnostic signal and lead capture
+Funding as PR engine
+Not yet
+Use original research and customer evidence instead
+Traffic thesis: MentionBee will not win traffic by publishing more definitions of GEO. It can win pockets of high-intent demand by becoming unusually useful at three things: explaining failures, comparing approaches, and publishing original evidence.
+9. Content & Search Architecture
+Tier 1: Problem pages - highest commercial intent
+Page
+Intent
+CTA
+Warum nennt ChatGPT mein Unternehmen nicht?
+Pain/problem
+Deep-Dive
+Warum empfiehlt ChatGPT meine Konkurrenz?
+Competitive anxiety
+Deep-Dive
+Wie werde ich von ChatGPT empfohlen?
+Action intent
+Deep-Dive / sample
+AI Visibility messen
+Solution search
+Deep-Dive
+Warum sinkt unser Website-Traffic trotz guter Rankings?
+Adjacent pain
+Diagnostic content + Deep-Dive
+Tier 2: Comparison pages
+MentionBee vs Peec AI: one-off diagnosis vs ongoing monitoring.
+MentionBee vs Profound: SME diagnostic vs enterprise AEO platform.
+AI Visibility Audit vs AI Visibility Monitoring.
+GEO vs SEO: what changes, what does not.
+ChatGPT selbst testen vs systematische AI-Visibility-Analyse.
+Comparison pages must be fair. The goal is not to declare MentionBee universally better. The strongest conversion message is often 'Choose Peec if you need daily tracking; choose MentionBee if you first need to understand why you are invisible and what to change.'
+Tier 3: Evidence / research
+Which sources do AI systems cite for Swiss B2B companies?
+How often are Swiss SMEs recommended in category questions?
+Does third-party corroboration correlate with recommendation frequency?
+Do self-promotional comparison pages work in DACH B2B?
+What changes after a company implements a 30-day AI-visibility action plan?
+Tier 4: FAQ cluster
+FAQ
+Why it matters
+Warum wird meine Firma von ChatGPT nicht erwähnt?
+Core pain
+Kann man beeinflussen, welche Firmen ChatGPT empfiehlt?
+Control/feasibility
+Wie lange dauert es, bis Änderungen sichtbar werden?
+Expectation setting
+Warum unterscheiden sich ChatGPT, Claude, Gemini und Perplexity?
+Method credibility
+Reicht SEO für AI Visibility?
+Category education
+Brauche ich llms.txt?
+High-noise tactical question
+Welche Quellen nutzen AI-Systeme für Empfehlungen?
+Explains external authority
+Wie stabil sind AI-Empfehlungen?
+Objection
+Was ist wichtiger: Erwähnung, Empfehlung oder Citation?
+Metric clarity
+Wie messe ich Erfolg ohne AI-Referral-Traffic?
+Business measurement
+10. Distribution: PR, LinkedIn, Reddit and Medium
+PR should be earned with data, not with product announcements. A headline such as '72% of 100 Swiss industrial SMEs were never recommended across 20 purchase-intent AI queries' has a chance of being reported; 'MentionBee launches AI Visibility Report' does not.
+The research design must be transparent enough to survive scrutiny: sample definition, prompt set, models, dates, repeated runs and limitations.
+LinkedIn
+Use founder-led learning rather than promotional posts. A useful cadence is one strong observation or experiment per week: a before/after result, a surprising source pattern, a failed hypothesis, or a short teardown of an anonymized company. The goal is to make MentionBee synonymous with evidence, not with GEO hot takes.
+Reddit
+Reddit can influence both human discovery and AI citations, but covert promotion is strategically dangerous. Participate only where there is genuine expertise to contribute. Do not manufacture mentions, sock-puppet discussions or spam comparison threads. The durable asset is reputation.
+Medium and external publishing
+Use Medium or similar platforms for research summaries and essays that can reach audiences outside the owned domain, but keep canonical, evidence-rich versions on MentionBee where possible. External articles should create a path back to a unique dataset, tool or report rather than duplicate generic advice.
+Distribution rule: Every content asset needs a distribution plan before it is produced: who specifically will care, where they already gather, and what makes the asset worth sharing?
+11. Trust Architecture
+Trust is the immediate commercial bottleneck. MentionBee is asking a buyer to pay for a diagnosis in a noisy, hype-heavy category. The website must therefore prove method, people, outcomes and intellectual honesty.
+Real customer: name, logo and permission.
+Real starting condition: the questions and baseline results.
+Real finding: what the report discovered.
+Real action: what the customer changed.
+Real outcome: what changed afterwards, with caveats.
+Transparent method: models, prompt design, dates, variance and limitations.
+Founder credibility: why MentionBee is qualified to interpret the results.
+A useful anti-hype promise: MentionBee does not promise that a schema tag or an llms.txt file will make ChatGPT recommend you. It shows what evidence exists, what is missing, and which interventions are worth testing first.
+That stance is strategically valuable because much of the category overstates causality. Skepticism can become a brand asset.
+12. Measurement Framework
+The Revenue OS should separate leading indicators from business outcomes. AI visibility itself is not revenue; website traffic is not revenue; even a mention is not necessarily a recommendation.
+Layer
+Metric
+Why
+Acquisition
+Qualified sessions by source
+Are we reaching the right people?
+Intent
+Sample-report views, paid-page views
+Are visitors considering the product?
+Conversion
+Paid purchases / qualified paid-page sessions
+Core self-serve conversion
+Lead funnel
+Free report → paid within 30 days
+Does free create or cannibalize revenue?
+Product
+Top-3 recommendation implementation rate
+Does the report cause action?
+Visibility
+Mention/recommendation/citation rate over fixed prompt set
+Does external representation change?
+Business
+Qualified inquiries / revenue where measurable
+Ultimate outcome
+GA4 baseline required
+Before major site changes, capture a 60-90 day baseline: users, sessions, source/medium, landing pages, paid-report page views, sample-report views, free-report submissions, checkout starts, purchases and conversion rates. Without this, later improvement claims will be weak.
+Every experiment should have: hypothesis, change, target audience, primary metric, guardrail metric, start/end date, and a decision rule. The Operating Manual should retain failed experiments as well as wins.
+13. 90-Day Revenue Plan
+Primary objective: 5 paying new customers within 90 days; stretch 10; minimum proof 2. At least 3 of the target 5 must come from outside the founder's existing personal network. Secondary objective: identify one acquisition motion that deserves continued investment while keeping founder operating time at or below roughly five hours per week.
+Days 1-14: Fix proof and measurement
+Action
+Output
+Success criterion
+GA4 baseline + funnel events
+Revenue OS / analytics
+Reliable baseline exists
+MEMS case interview + implementation inventory
+Case evidence
+Case facts documented
+Rewrite hero + paid page around diagnosis
+Website
+Paid value proposition is unambiguous
+Reduce free CTA prominence
+Website
+Paid is primary across core journey
+Publish exact post-purchase process
+Website
+No ambiguity at checkout
+Days 15-35: Build high-intent acquisition assets
+Action
+Output
+3 problem pages
+ChatGPT not mentioning company; competitor recommended; how to get recommended
+2 comparison pages
+MentionBee vs Peec; Audit vs Monitoring
+1 source-gap research article
+Original DACH dataset, even if sample is modest
+MEMS case v1
+Decision-impact case; update as evidence grows
+Founder LinkedIn series
+4 evidence-led posts
+Days 36-60: Distribution and sales
+Directly approach 30 carefully selected companies showing an observable AI recommendation gap.
+Offer the paid report, not a free custom consulting project.
+Ask every buyer and non-buyer the same five purchase questions and log answers.
+Pitch the original research to relevant marketing, SME, digital and industry publications.
+Participate in a small number of relevant Reddit/industry discussions only where genuine expertise is useful.
+Days 61-90: Double down or kill
+Repeat the channel that produced the highest-quality paid intent.
+Test €290 only if trust proof is stronger and €190 converts.
+Offer an implementation sprint to buyers who ask for help.
+Re-check MEMS and any new customer on the original prompt set.
+Make a go/pivot decision based on purchases, action rate and acquisition economics.
+Signal
+Green
+Yellow
+Red
+Paying new customers
+2+
+1
+0
+Qualified conversations
+15+
+8-14
+<8
+Customers implementing recommendations
+60%+
+30-59%
+<30%
+Free→paid evidence
+Clear positive path
+Unclear
+Free strongly cannibalizes
+Repeatable acquisition source
+One identifiable
+Weak signal
+None
+14. Funding & Investor Readiness
+The category is investable. Public competitor funding proves that. But MentionBee should not raise institutional capital merely to discover whether the €190 product has demand. Capital becomes strategically useful after a repeatable signal exists.
+Stage
+When
+Best capital
+Now
+Product exists, limited traction
+Bootstrapping; possibly strategic angel only
+Proof stage
+20-50 paying customers + cases + acquisition signal
+Strategic angel / small pre-seed
+Scale stage
+Repeatable acquisition + recurring expansion path
+Pre-seed/seed if growth economics justify it
+What an investor must believe
+AI-mediated discovery becomes economically important.
+MentionBee owns a distinct wedge rather than copying monitoring platforms.
+The wedge can acquire customers cheaply enough.
+Customers take action because of the diagnosis.
+A larger recurring or implementation revenue layer can emerge from the wedge.
+A strategic angel with distribution into agencies, SME networks, B2B SaaS or digital marketing is likely more valuable than a purely financial investor. At this stage, access to customers is worth more than capital alone.
+15. Risks, Counterarguments and Kill Criteria
+Risk
+Why serious
+Mitigation / test
+AI visibility remains a niche concern
+Interest may not become budget
+Sell to pain triggers, not category curiosity
+Monitoring platforms commoditize audits
+They can add report features easily
+Own simplicity, decision quality and SME fit
+Recommendations do not cause measurable change
+Core product value collapses
+Run re-checks and implementation pilots
+Free report cannibalizes paid
+Current funnel makes this plausible
+Measure cohort conversion; narrow free scope
+AI systems change rapidly
+Results can become stale
+Date-stamp evidence, repeated runs, explain variance
+Traffic from AI remains small
+Traffic-based ROI story weakens
+Measure recommendation presence and business outcomes separately
+Founder attention fragments
+Many parallel ideas/projects
+90-day objective and explicit not-doing list
+MentionBee should not be protected from evidence. If 90 days of focused execution produce no paying customers despite at least 15 qualified conversations and a clear paid offer, revisit the target segment, product format or willingness-to-pay assumption. If customers buy but do not act on the recommendations, redesign the report. If customers act and outcomes improve but acquisition is hard, the problem is distribution rather than product.
+16. Operating Principles
+Revenue before feature breadth.
+Evidence before claims.
+Diagnosis before monitoring.
+One strong case beats ten generic testimonials.
+Original data beats generic thought leadership.
+Free must have a defined job in the paid funnel.
+Every recommendation is tagged as observation, inference or hypothesis.
+Every experiment has a decision rule.
+Do not confuse AI referral traffic with AI influence.
+Do not build recurring software until customers pull for recurring value.
+Things deliberately not being worked on in the next 90 days
+Broad SaaS dashboard.
+Large multi-agent product architecture for customers.
+Enterprise procurement features.
+Mass content production.
+Paid media at scale.
+International expansion beyond the market the current founder can sell into.
+Features added solely because Peec or Profound has them.
+17. Immediate Execution Backlog
+Priority
+Task
+Why now
+P0
+Instrument GA4 funnel and capture baseline
+Without measurement, later learning is weak
+P0
+Complete MEMS evidence interview
+Primary trust asset
+P0
+Rewrite paid page and final CTA
+Direct conversion leverage
+P1
+Narrow free-report promise and add upsell sequence
+Resolve cannibalization risk
+P1
+Publish MentionBee vs Peec
+High-intent comparison demand
+P1
+Publish 'Why does ChatGPT not mention my company?'
+Core problem-intent page
+P1
+Run first DACH source-gap mini-study
+Research/distribution asset
+P2
+Create implementation-sprint offer
+Test expansion revenue
+P2
+Build 30-account founder outreach list
+Direct path to first customers
+P2
+Create monthly re-check template
+Case-study evidence loop
+The single next move: Before adding another feature, obtain the GA4 baseline, finish the MEMS evidence package, and change the website so the paid Deep-Dive is clearly the shortest path from uncertainty to a decision.
+Sources & Evidence Notes
+This paper combines the current MentionBee public website and founder due-diligence material available in the project context, customer information discussed for MEMS, and public competitor/category sources accessed in August 2026. Public competitor pages reveal positioning and acquisition architecture, not exact first-party traffic.
+MentionBee: https://mentionbee.ai/
+Peec AI pricing: https://peec.ai/pricing
+Peec AI blog / research library: https://peec.ai/blog
+Peec AI: Top domains cited by AI search - analysis of 30M sources: https://peec.ai/blog/top-domains-cited-by-ai-search-analysis-based-on-30m-sources
+Peec AI: Source gap analysis guide: https://peec.ai/blog/a-beginners-guide-to-source-gap-analysis-in-ai-search
+Peec AI: Citation-rate benchmarks: https://peec.ai/blog/citation-rate-benckmarks-from-over-1-million-citations
+Profound pricing: https://www.tryprofound.com/pricing
+Profound: Choosing an AI visibility provider: https://www.tryprofound.com/blog/choosing-ai-visibility-provider
+Profound Series B announcement: https://www.tryprofound.com/blog/series-b
+Watanabe & Nakayashiki (2026), AEO and ChatGPT referral traffic: https://arxiv.org/abs/2606.04362
+Shi, Zhu & Gu (2026), Answering Without Referring: https://arxiv.org/abs/2607.07652
+Aral, Li & Zuo (2026), The Rise of AI Search: https://arxiv.org/abs/2602.13415
+Evidence labels
+Observed: directly visible in product/site/public evidence.
+Inference: strategic conclusion derived from observations.
+Hypothesis: plausible but requires a controlled test or customer evidence.
+Unknown: requires first-party analytics, interviews or experiment data.
+Final thesis
+MentionBee has a credible right to exist if a defined customer group repeatedly chooses and pays for it. The goal is not to prove global feature uniqueness. The next 90 days test whether MentionBee can become a useful, trusted and memorable SME option, win customers outside the founder's network, and establish at least one repeatable acquisition motion without a feature race.
+18. Strategy v1.1 - What Changed
+Revised product thesis: MentionBee should become the SME-focused AI Visibility Diagnosis-to-Execution System: FIND → EXPLAIN → FIX → VERIFY, with reliability and multilingual market context built into the measurement layer.
+The deeper competitive scan shows that actionable recommendations, implementation-ready assets and full audit-to-fix loops already exist in the market. The conclusion is not that MentionBee must find a feature nobody else has. The practical opportunity is packaging and marketing: a low-friction one-off entry for SMEs, a useful diagnosis, concrete actions, honest methodology and strong proof - sold and distributed better than the category's many interchangeable audits.
+The investor answer today: MentionBee does not yet have a single feature that can honestly be called unique. The opportunity is the combination and packaging: low-friction one-off entry for SMEs; buyer-intent and competitor diagnosis; execution-ready assets; explicit measurement uncertainty; multilingual testing; and re-measurement after implementation.
+19. Expanded Competitive Due Diligence
+The market is materially more crowded than the first paper suggested. It contains enterprise platforms, cheap one-off audits, deep intelligence reports, implementation agencies, vertical tools and full-loop audit/generate/validate products.
+Competitive conclusion: implementation-ready is useful but not unique. Stop treating white-space discovery as a prerequisite for launch. Use competitive research to clarify buyer alternatives and positioning, then let customer evidence determine which differences actually matter.
+Cluster
+Examples
+What is already common
+Implication
+Enterprise/suite
+Profound, Semrush, Ahrefs, HubSpot
+Monitoring, citations, competitors, recommendations
+No dashboard feature race
+SMB one-off
+VisibAI, Flowblinq, Prismark, VisibilityAudit.ai, BroDop, Mirr, LLMOAudit.ch
+Cheap reports, scores, fix lists
+Report volume is not a USP
+Deep audit
+Loamly, Granite Metrics, Competico, 5W
+Large prompt sets, source maps, robustness/action plans
+Simplify high-end rigor for SMEs
+Audit + implementation
+Storyzee, AppSynth, Monprez, Foundus
+Technical/content execution + rescans
+Implementation is not unique
+Full-loop
+Uygen, Prominara, AMPD, jujuGEO
+Audit → generate → remeasure
+Closest strategic threat
+DACH/CH
+OnlineKI, Digital Creators, LLMOAudit.ch, Tout Marketing
+Local-language audits
+DACH is not empty
+Capability
+Market status
+MentionBee opportunity
+Multi-model checks
+Commodity
+None
+Competitor benchmark
+Commodity
+None
+Action plan
+Commodity
+None
+Schema/technical fixes
+Common/emerging
+Part of execution layer
+Ready-to-publish assets
+Emerging
+Useful, not unique
+Re-measurement
+Emerging
+Necessary closed-loop layer
+Repeated sampling / robustness
+Rare
+Research / brand angle; not a 90-day product build
+Prompt paraphrase robustness
+Rare
+Research / brand angle; validate buyer relevance first
+Multilingual market comparison
+Uncommon in SMB audits
+Strong research/exporter angle; product localization later
+Low-cost deep diagnosis + execution + verification
+Less common combination
+Useful packaging hypothesis, not a uniqueness claim
+20. Measurement Reliability as Research & Brand Stance
+AI visibility is probabilistic. Research in 2026 shows substantial repeated-sample variability and strong paraphrase brittleness. Single-run scores therefore risk false precision.
+Research experiment: run a bounded Reliability Test on a small, publishable sample using natural paraphrases and repeated runs. The purpose is thought leadership and methodological honesty, not a report rewrite. Do not multiply API calls across every paid report unless evidence shows that the extra precision changes customer decisions or recommendations.
+Possible category stance: “Your AI Visibility Score is probably too precise.” This is a marketing/research hypothesis, not yet a product promise. It must be demonstrated empirically before becoming a headline claim.
+21. Multilingual Strategy: DE + EN First
+MentionBee should become bilingual first in its core commercial and research assets, not by rebuilding the report. German remains the initial DACH acquisition language. English opens a larger market and a much bigger citation/distribution surface for original research. Report localization beyond today's capability is backlog until customer demand justifies it.
+Additional marketing-site languages should wait for evidence. Product measurement can be more multilingual: exporters may be visible in German but disappear when international buyers ask in English or French.
+Research opportunity: THE AI LANGUAGE GAP 2026 - How differently do AI systems recommend European companies when the same buying intent is expressed in different languages?
+Asset
+DE
+EN
+Other now?
+Homepage
+Yes
+Yes
+No
+Paid page
+Yes
+Yes
+No
+Report
+Current capability
+No rebuild during freeze
+Backlog / demand-led
+Sample/FAQ/method
+Yes
+Yes
+No
+Studies
+Yes
+Always
+Selective summary
+Blog
+Primary
+Only strongest pieces
+No
+Comparison pages
+DACH set
+International set
+No
+22. Comparison-Page Portfolio
+Direct: MentionBee vs Peec, Profound, Semrush AI Visibility, VisibAI, Prismark and LLMOAudit.ch.
+Alternatives: Best Peec alternatives for SMEs; Best Profound alternatives for SMEs; Best one-off AI visibility audits; AI visibility tools for DACH.
+Jobs: AI Visibility Audit vs Monitoring; Audit vs GEO Agency; DIY ChatGPT vs systematic audit; AI Visibility Score vs Reliability Test.
+Execution: Which AI visibility tools tell you what to fix? Which generate implementation-ready fixes? Audit vs Implementation Blueprint.
+Editorial rule: every comparison states who should NOT buy MentionBee.
+23. Growth Experiments Beyond Best Practice
+70% disciplined GTM, 20% asymmetric experiments, 10% deliberately strange tests. The agency/white-label experiment is parked.
+Active experiments: Unsolicited Report; Swiss AI Visibility Index; AI Recommendation Battles; Anti-Score/Reliability Test; Steal This Report; honest competitor pages; Invisible Exporters; AI Language Gap 2026.
+Experiment
+Primary mechanism
+Owner
+Unsolicited Report
+Evidence first, sales second
+Revenue OS prepares / founder sends
+Swiss AI Visibility Index
+Benchmark → sharing + PR + leads
+Revenue OS + automation
+Recommendation Battles
+Competitive curiosity
+Automation
+Anti-Score Reliability Test
+Challenge false precision
+Product + Revenue OS
+Steal This Report
+Radical transparency
+Revenue OS
+Invisible Exporters
+PR-worthy export visibility gap
+Revenue OS research / founder outreach
+AI Language Gap
+Original multilingual research
+Revenue OS + automation
+24. Revised 90-Day Revenue Contract
+Target: 5 new paying customers in 90 days. Stretch: 10. Minimum proof: 2. At least 3 of the 5 target customers must come from outside the founder’s existing personal network.
+Additional targets: 20+ qualified purchase conversations; ≥60% of buyers implement at least one major recommendation; ≥2 case/testimonial candidates; one credible repeatable acquisition motion; CHF/EUR 2,500+ new MentionBee revenue across entry and follow-on offers.
+Founder-time constraint: ≤5 hours/week average for MentionBee operating work.
+25. Founder-Time Constraint & Revenue OS Operating Model
+MentionBee must operate within approximately five founder hours per week. Revenue OS should not be another advisor that waits for prompts; it should research, prioritize, prepare, measure and maintain the operating knowledge, escalating only work that genuinely needs the founder.
+Desired weekly interface: what changed; what Revenue OS did; what it learned; and the 1–3 actions requiring the founder. Founder Time per New Customer becomes an operating KPI.
+Workstream
+Founder
+Revenue OS / automation
+Competitive monitoring
+Decision only
+Research/classify/summarize
+Studies
+Approve method/headline
+Design, collect, analyze, draft
+Target accounts
+Select edge cases
+Build/score list
+Unsolicited reports
+Personalize/send
+Prepare evidence/report
+Outreach
+Calls/high-value sends
+Draft/prioritize/follow-up prep
+GA4/funnel
+Review decisions
+Weekly analysis
+Experiments
+Choose top bets
+Design/evaluate/log
+Website
+Approve
+Specify; Cursor implements
+Operating Manual
+Approve changes
+Maintain learnings
+26. Revised Revenue Ladder
+SIGNAL → DIAGNOSE → FIX → VERIFY → MONITOR (only when needed).
+Free Signal: “Should I care?” Deep-Dive + Implementation Blueprint: “Why am I losing and exactly what should change?” Implementation Sprint: execute the highest-value fixes. Verification/Re-check: determine what moved. Monitoring: recurring only after customer pull.
+27. Immediate 30-Day Execution Plan
+Week 1: lock v1.2 operating context, capture GA4 baseline, build MEMS evidence package, define 30 target accounts and prepare first five unsolicited-report candidates.
+Week 2: sharpen DE core sales copy, prepare EN core pages, publish first honest comparison page, send five unsolicited mini-audits and start MEMS case production.
+Week 3: launch Swiss AI Visibility Index pilot and first high-intent problem page; run a small Anti-Score/Reliability research experiment only if it can be done cheaply.
+Week 4: evaluate funnel and outreach responses, prepare next ten targets, decide whether Invisible Exporters / Language Gap has enough signal for a public research story, and reallocate effort to the strongest channel.
+28. Evidence & Sources from Competitive Due Diligence
+MentionBee: https://mentionbee.ai/
+VisibAI: https://getvisibai.com/
+Flowblinq: https://www.flowblinq.com/pricing
+Prismark: https://prismark.ai/
+Loamly: https://www.loamly.ai/pricing
+Granite Metrics: https://granitemetrics.com/pricing
+Storyzee: https://www.storyzee.com/pricing/
+Uygen: https://uygen.com/
+AMPD: https://www.ampdaio.com/
+VisibilityAudit.ai: https://www.visibilityaudit.ai/websites
+LLMOAudit.ch: https://llmoaudit.ch/
+OnlineKI.ch: https://onlineki.ch/
+Digital Creators: https://digitalcreators.ch/services/llmo-audit/
+Sielinski - Quantifying Uncertainty: https://arxiv.org/abs/2603.08924
+Sielinski - From Stochastic to Stable: https://arxiv.org/abs/2607.10341
+Jack et al. - Paraphrase Brittleness: https://arxiv.org/abs/2605.27440
+Żatuchin - Language Blind Spot: https://arxiv.org/abs/2606.23165
+Strategy v1.2 thesis: MentionBee does not need a magical USP. It needs a clear reason to buy, strong proof, excellent marketing and a report that is useful enough to act on. The report is frozen for 90 days while Revenue OS focuses on customer acquisition, evidence, research-as-distribution and learning.
+29. v1.2 Strategic Reset: The Pasta Principle
+MentionBee does not need to invent a category or possess a feature that no competitor can reproduce. Thousands of viable businesses sell products with close substitutes. The strategic requirement is a clear reason to buy for a defined customer, plus stronger marketing, proof and distribution than a bootstrapped competitor would normally achieve.
+Operating rule: DIFFERENTIATION MATTERS; UNIQUENESS DOES NOT.
+The competitive scan remains useful as buyer-context intelligence, but it is no longer an open-ended search for a magical white space. We stop researching competitors when additional knowledge is unlikely to change positioning, pricing, acquisition or a concrete product decision.
+What this changes
+No feature race with enterprise platforms.
+No attempt to make statistical reliability the centerpiece of the paid report.
+No major report changes during the 90-day validation window without customer evidence.
+More effort on brand, proof, research-as-distribution, comparison capture and direct selling.
+Real buyer language outranks internal positioning theory.
+30. Product Freeze & Change-Control Policy
+The current paid report is the product for the next 90 days. The objective is to validate demand and distribution with the product that already exists.
+Change type
+Status
+Rule
+Bug / factual error
+Allowed
+Fix immediately.
+Small copy / clarity improvement
+Allowed
+Only if low effort and no architecture change.
+Customer-specific necessity
+Conditional
+Do it only when required to deliver a paid engagement.
+New scoring model
+Frozen
+Backlog unless repeated buyer evidence makes it material.
+Reliability / large repeated-run engine
+Frozen
+Research only; protect API economics.
+Dashboard / SaaS monitoring suite
+Frozen
+Build only after recurring customer pull.
+Major report redesign
+Frozen
+No redesign during validation period.
+Additional report languages
+Backlog
+Commercial pages/research can be bilingual first.
+Product-change trigger: a change enters the active roadmap only when customer interviews, purchase behavior, implementation behavior or retention/re-check demand indicates that it materially improves conversion or value.
+31. Positioning System
+Working commercial promise
+Why does AI recommend your competitors - but not you? MentionBee shows you why and gives you a concrete, prioritized plan to improve it.
+Reason to buy
+For a one-off price around CHF/EUR 190, a buyer gets a deep diagnostic instead of another recurring dashboard: competitive visibility, sources, website/content/technical findings and prioritized actions that can be handed to an internal marketer, developer, agency or implementation partner.
+What MentionBee is not
+Not an enterprise prompt-monitoring dashboard.
+Not a promise that one schema tag or one content edit will cause an AI recommendation.
+Not a generic SEO audit with 'AI' added to the title.
+Not a statistical research product whose precision costs more than the customer value it creates.
+Not an agency retainer disguised as a cheap audit.
+Brand stance
+Useful, evidence-led, skeptical of hype, concrete about uncertainty, generous with methodology, and unusually actionable. The brand should be more memorable than the underlying feature set.
+32. ICP, Buying Jobs & Disqualification
+Segment
+Primary job
+Why MentionBee may fit
+Priority
+DACH SME / B2B company
+Understand why competitors appear in AI recommendations
+One-off price, concrete diagnosis, no platform commitment
+P0
+Export-oriented Swiss SME
+See whether visibility changes by market/language
+Strong Invisible Exporters / Language Gap story
+P0 experiment
+Founder-led startup / scale-up
+Quickly identify visibility gaps and action plan
+Fast, low-friction diagnostic
+P1
+Marketing lead / CMO
+Give team a prioritized implementation agenda
+Forwardable report and evidence
+P0
+Enterprise SEO/AEO team
+Continuous monitoring, governance, many seats
+Better served by enterprise suites
+Deprioritize
+Buyer seeking guaranteed rankings
+Guaranteed AI recommendation
+Promise cannot be made credibly
+Disqualify
+Likely buying triggers
+A competitor is repeatedly recommended by ChatGPT/Perplexity/Gemini while the company is absent.
+Management asks what GEO/AEO means for the business and wants a concrete answer.
+A website relaunch or content program is planned and the team wants AI visibility included.
+An exporter suspects that English-language discovery favors international competitors.
+An agency or internal marketer needs a prioritized backlog rather than another monitoring screen.
+Core objections Revenue OS must learn
+Why should I pay when I can ask ChatGPT myself?
+How reliable are these measurements?
+What will I actually do differently after receiving the report?
+Can you prove that the recommendations improve visibility or leads?
+Why MentionBee rather than Peec, Profound, Semrush, Ahrefs or a cheap one-off audit?
+Why now?
+33. Offer & Revenue Architecture
+Layer
+Status
+Customer question
+Commercial role
+Signal / sample
+Existing / tune carefully
+Should I care?
+Earn attention; must not cannibalize paid.
+Paid Deep-Dive ~190
+Core now
+Why am I losing and what should change?
+Wedge product / proof of willingness to pay.
+Implementation support
+Hypothesis / manual
+Can someone help us execute the top fixes?
+Increase revenue per customer when pulled.
+Verification / re-check
+Hypothesis
+Did the changes move anything?
+Close the learning loop; potential repeat revenue.
+Monitoring
+Not now
+How do we track this continuously?
+Only after recurring customer pull.
+The 90-day program must not optimize for report count alone. Five reports at 190 prove some willingness to pay but not an attractive business. Follow-on demand is therefore measured, without forcing a service that customers do not want.
+34. Growth Operating System: Out-Market the Category
+The working growth thesis is that MentionBee can compete by being more useful, interesting, evidence-led and memorable than larger competitors - not by matching their feature breadth.
+Growth bet
+Mechanism
+Founder load
+Primary success signal
+Kill / scale rule
+Unsolicited Reports
+Show evidence before asking for a sale
+Low
+Replies, calls, paid conversions
+Scale if qualified reply/purchase rate beats generic outreach.
+Swiss AI Visibility Index
+Benchmark + sharing + PR + leads
+Low
+Earned links/mentions, target-company engagement
+Scale if dataset produces external distribution or qualified leads.
+Invisible Exporters
+PR-worthy Swiss export visibility gap
+Low
+Media/association interest + exporter leads
+Kill if no meaningful cross-language gap/story.
+Radically Honest Comparisons
+High-intent search + trust
+Very low
+Organic impressions, AI citations, assisted conversions
+Expand pages that attract qualified intent.
+Open / 'Steal This Report'
+Radical transparency
+Very low
+Sample engagement, paid-page visits, purchases
+Keep if it increases trust without cannibalizing sales.
+Anti-Score Reliability Test
+Contrarian research / thought leadership
+Low if bounded
+Citations, discussion, backlinks
+Keep as research only unless buyers care.
+Recommendation Battles
+Competitive curiosity / shareability
+Medium
+Usage, shares, leads
+Wave 2; build only after simpler bets show traction.
+AI Language Gap
+Original multilingual research
+Medium
+International citations / PR / leads
+Run only with bounded API budget and publishable story.
+Explicitly deprioritized
+White-label agency product as a 90-day growth priority.
+Mass generic AI/GEO blogging.
+Broad paid acquisition before conversion and proof improve.
+Large interactive tools before simpler experiments validate demand.
+35. Search, Comparison & Research Portfolio
+P0 comparison / decision pages
+AI Visibility Audit vs AI Visibility Monitoring
+Best AI Visibility Audits for SMEs
+AI Visibility Tools Without a Subscription
+P1 comparison pages
+MentionBee vs Peec AI
+MentionBee vs Profound
+ChatGPT self-test vs professional AI Visibility Audit
+Comparison-page editorial rule
+MentionBee must not win every comparison. Each page should explicitly state when another product is the better choice. This increases buyer usefulness and supports the brand's anti-hype stance.
+Research franchises
+Swiss AI Visibility Index - recurring benchmark if the pilot earns distribution.
+Invisible Exporters - Swiss companies strong in the real market but weak in English-language AI recommendations.
+The AI Language Gap - how recommendations change by query language.
+Anti-Score / Reliability - demonstrate the limits of false precision without rebuilding the product.
+36. Language Strategy
+Asset
+German
+English
+Other languages
+Homepage / paid page
+P0
+P0 after core DE
+Not now
+Sample report
+P0
+P0
+Demand-led
+FAQ
+P0
+Core subset
+Demand-led
+Case studies
+P0
+Yes for strong cases
+No
+Original research
+Always
+Always
+Only if study requires it
+Comparison pages
+P0
+Selective high-intent
+No
+Blog
+Primary
+Only strongest / internationally relevant
+No
+Paid report engine
+Current capability
+No rebuild during freeze
+Backlog
+English is a distribution and market-expansion decision first. It is not a reason to duplicate every German article or to create a multilingual product architecture before demand exists.
+37. 90-Day Revenue Contract
+North Star: prove that people who do not already know the founder will pay for MentionBee and that at least one acquisition motion deserves repetition.
+Metric
+Minimum
+Target
+Stretch / quality condition
+New paying customers
+2
+5
+10
+Outside founder's existing network
+1
+≥3 of target 5
+Majority of all new customers
+Qualified purchase conversations
+10
+≥20
+≥30
+New MentionBee revenue
+CHF/EUR 380
+≥ CHF/EUR 2,500
+≥ CHF/EUR 5,000 with follow-on demand
+Buyers implementing ≥1 major recommendation
+Track
+≥60%
+Evidence of outcome movement
+Case/testimonial candidates
+1
+≥2
+≥3
+Repeatable acquisition motion
+Signal
+1 credible motion
+1 scalable + 1 secondary motion
+Founder time
+Track
+≤5 h/week avg
+Declining founder time per customer
+Interpretation rules
+Two customers from friends or existing relationships do not validate scalable demand.
+High revenue from one bespoke consulting project does not validate MentionBee as a product.
+Traffic without qualified intent is not success.
+A failed experiment is useful if it produces a clear decision and is logged.
+If five customers buy but none implements anything, product value needs investigation.
+If prospects understand the problem but repeatedly refuse CHF/EUR 190, reconsider offer, proof or market.
+38. Founder-Time Budget & Execution Ownership
+MentionBee must fit around the founder's other obligations. The system is designed around a maximum average of roughly five founder hours per week for MentionBee operating work.
+Workstream
+Founder
+Revenue OS / automation / Cursor
+Competitive monitoring
+Decide only when material
+Research, classify, summarize changes
+Target-account research
+Approve edge cases
+Find, score and prioritize accounts
+Unsolicited reports
+Personalize/send high-value outreach
+Prepare evidence, draft mini-report and message
+Content / comparisons
+Approve thesis and sensitive claims
+Research, outline, draft, update
+Research studies
+Approve method/headline
+Design bounded study, collect/analyze data, draft assets
+GA4 / funnel
+Review decisions
+Weekly analysis and anomaly detection
+Experiments
+Choose among top bets
+Design, track, evaluate, log
+Website
+Approve material changes
+Specify changes; Cursor implements
+Customer calls
+Lead calls
+Prepare questions; summarize and extract evidence
+Operating Manual
+Approve strategic changes
+Maintain facts, decisions, experiments and learnings
+Desired weekly founder interface
+What changed this week?
+What did Revenue OS do without founder involvement?
+What did we learn?
+Which experiments should stop, continue or scale?
+What are the 1-3 actions that genuinely require the founder?
+How many founder hours were consumed and what revenue/progress resulted?
+39. Revenue OS Decision Rights & Guardrails
+Decision
+Revenue OS may do autonomously
+Founder approval required
+Research / monitoring
+Yes
+No, unless strategic conclusion changes
+Draft content / outreach
+Yes
+Before public publishing or high-value personal send
+Experiment analysis
+Yes
+No
+Stop clearly failed low-risk experiment
+Recommend + prepare stop
+Founder confirms if externally visible
+Reallocate research/content effort
+Yes within agreed weekly budget
+If it changes P0 priorities
+Change product/report architecture
+No
+Always
+Change price
+No
+Always
+Spend money / launch paid ads
+No
+Always
+Public claims / statistics
+Prepare and source
+Founder approves
+Contact customers in founder's name
+Prepare only
+Founder sends/approves automation
+Escalation rule
+Revenue OS should escalate only decisions with material strategic, reputational, financial or relationship consequences. It should not ask the founder to perform research, formatting, routine analysis or first-draft work that the system can do itself.
+40. Measurement & Weekly Scorecard
+Layer
+Weekly metrics
+Decision use
+Reach
+Qualified sessions by source; search impressions on P0 pages
+Which distribution surfaces deserve more effort?
+Intent
+Paid-page views; sample views; replies; qualified conversations
+Are we attracting buyers or spectators?
+Conversion
+Purchases; purchase rate; assisted conversions
+Does the offer convert?
+Economics
+Revenue; API/production COGS; founder hours; estimated CAC
+Is growth economically sensible?
+Action
+Top recommendations implemented by buyers
+Does the report cause behavior?
+Evidence
+Cases/testimonials; measured visibility/business changes
+Is trust compounding?
+Experiments
+Active / killed / scaled; cost; result
+Are we learning fast enough?
+Founder Time per New Customer
+Track founder hours spent on MentionBee divided by new paying customers. The absolute number will be noisy early, but the direction matters: the system should reduce founder dependence as repeatable motions emerge.
+41. Unit Economics Guardrails
+The CHF/EUR 190 entry price makes computational and human efficiency a product constraint. A methodologically beautiful audit that consumes thousands of unnecessary model calls or many hours of manual analysis is not a good product at this price.
+Cost driver
+Guardrail
+LLM/API calls
+Use only calls that can plausibly change a finding or recommendation; avoid brute-force reliability sampling.
+Manual founder analysis
+Minimize; founder should not hand-produce standard reports.
+Custom research per prospect
+Bound it; unsolicited work must remain a sales experiment, not free consulting.
+Content production
+Reuse datasets across study, PR, comparison, LinkedIn and outreach assets.
+Software development
+No major build without evidence that it unlocks conversion, delivery efficiency or recurring revenue.
+Economics to capture before scaling
+Actual API and infrastructure COGS per paid report.
+Average non-founder production/review time per report.
+Founder minutes per sale and per customer.
+Gross contribution from the CHF/EUR 190 report.
+Conversion by acquisition source.
+Follow-on revenue rate from implementation / re-check demand.
+Acquisition cost for any paid channel before increasing spend.
+42. Experiment Protocol
+Field
+Required content
+Hypothesis
+What must be true for this experiment to work?
+Audience
+Who exactly is exposed?
+Mechanism
+Why should behavior change?
+Primary metric
+One metric that determines success.
+Guardrail
+What must not deteriorate?
+Founder time budget
+Maximum founder minutes/hours.
+Cash/API budget
+Maximum spend.
+Start / review date
+When evidence is evaluated.
+Scale rule
+What result earns more resources?
+Kill rule
+What result stops the experiment?
+Learning
+What changed in the operating model?
+Revenue OS must retain failed experiments. Re-running a previously failed idea without new evidence is a process failure.
+43. Evidence Model: Fact vs Inference vs Hypothesis
+Label
+Meaning
+Example
+FACT
+Directly observed or documented
+Current price, existing report capability, a customer quote with permission.
+EVIDENCE
+External or internal data supporting a conclusion
+Competitor pricing page; GA4 funnel; repeated customer feedback.
+INFERENCE
+Reasonable interpretation of evidence
+Trust appears to be a larger bottleneck than feature breadth.
+HYPOTHESIS
+Must be tested
+Invisible Exporters will earn PR and qualified exporter leads.
+DECISION
+Chosen operating rule
+Product Freeze for 90 days.
+BACKLOG
+Not active now
+Dashboard, white label, large reliability engine.
+Revenue OS must never silently promote a hypothesis into a fact. Every major recommendation should be traceable to evidence or explicitly labeled as a test.
+44. Strategic Backlog / Not Now
+Item
+Why not now
+Revisit trigger
+White-label agency product
+Not convincing enough and crowded; distracts from direct validation
+Repeated inbound agency demand
+Large reliability engine
+Potential API/complexity cost; unclear buyer value
+Reliability becomes a repeated purchase objection
+Full multilingual report architecture
+Development cost before demand
+Meaningful EN/FR/IT paid demand
+SaaS dashboard / monitoring
+Feature race and recurring complexity
+Customers repeatedly ask to monitor after re-check
+Major report redesign
+Current report is sufficient to test demand
+Customer evidence shows a material usability/value problem
+Broad paid acquisition
+Premature before proof and conversion
+Organic/outbound offer converts and unit economics are known
+Large interactive Recommendation Battles tool
+More build than simpler experiments
+Manual/lightweight version proves engagement
+45. Open Questions Revenue OS Must Resolve
+What is the actual GA4 baseline and paid-report conversion funnel today?
+Which parts of the paid report buyers value most after receiving it?
+Which recommendations do buyers actually implement?
+What measurable changes follow implementation, and on what time horizon?
+Which acquisition source produces the highest-quality paid intent?
+What is actual COGS per report, including API and review time?
+How much follow-on implementation or re-check demand exists without pushing it?
+Does English commercial content create qualified demand or mainly low-value traffic?
+Can the Swiss AI Visibility Index or Invisible Exporters earn external distribution?
+Which comparison queries generate qualified search/AI referral intent?
+What purchase objections recur across at least five prospects?
+What should MentionBee stop doing?
+46. First 30 Days - Revenue OS Execution Queue
+Priority
+Action
+Owner
+Output
+P0
+Lock this master context into Operating Manual
+Revenue OS / Cursor
+Single source of truth
+P0
+Capture GA4 60-90 day baseline and funnel events
+Revenue OS
+Baseline scorecard
+P0
+MEMS evidence interview + implementation inventory
+Founder + Revenue OS prep
+Case evidence package
+P0
+Build 30 target-account list with observable AI visibility gaps
+Revenue OS
+Scored account list
+P0
+Prepare first 5 unsolicited mini-audits
+Revenue OS
+Founder-ready outreach packages
+P0
+Publish / prepare first honest comparison page
+Revenue OS + Cursor
+High-intent acquisition asset
+P1
+Prepare DE core sales-copy refinements
+Revenue OS
+Copy package; founder approves
+P1
+Prepare EN core commercial pages
+Revenue OS
+English market test assets
+P1
+Design Swiss AI Visibility Index pilot with bounded API budget
+Revenue OS
+Pilot method + sample
+P1
+Draft first high-intent problem page
+Revenue OS
+Publishable page
+P2
+Run bounded Anti-Score experiment
+Revenue OS
+Research note only if cheap
+P2
+Test Invisible Exporters / Language Gap story on small sample
+Revenue OS
+Go/no-go evidence
+47. Revenue OS Weekly Brief Template
+Every weekly operating brief should fit on roughly one page and answer the following:
+RESULTS: revenue, customers, qualified conversations, conversion, founder time.
+WHAT CHANGED: material market, competitor, funnel or customer developments.
+WHAT WE DID: work completed autonomously by Revenue OS / automation.
+WHAT WE LEARNED: evidence that strengthens or weakens current hypotheses.
+EXPERIMENT DECISIONS: scale, continue, modify or kill.
+NEXT WEEK: top 3 system priorities.
+FOUNDER NEEDED: maximum 1-3 concrete actions, each with estimated time.
+OPERATING MANUAL UPDATE: decisions or learnings that became durable knowledge.
+48. Canonical Operating Principles
+1. Sell before rebuilding.
+2. Customer evidence before product change.
+3. Differentiation matters; uniqueness does not.
+4. Out-market the category rather than out-feature it.
+5. Trust and proof beat generic AI claims.
+6. A report is useful only if it changes action.
+7. Do not confuse visibility, traffic, leads and revenue.
+8. Protect unit economics at the CHF/EUR 190 wedge price.
+9. Use research as distribution, not research as procrastination.
+10. Be radically honest in comparisons and methodology.
+11. Automate preparation and analysis; reserve founder time for judgment, relationships and high-value selling.
+12. Kill weak experiments and retain the learning.
+13. Do not build recurring software before recurring customer pull.
+14. Keep the founder's average MentionBee workload at or below roughly five hours per week.
+49. Master Thesis for Revenue OS
+MentionBee's immediate challenge is not to invent a technically unique AI-visibility product. It is to turn an already useful CHF/EUR 190 report into a repeatable business. The product is frozen for 90 days while the company focuses on proof, distribution and sales. MentionBee should position itself as a practical, evidence-led way for SMEs to understand why AI systems recommend competitors and what to do next. Growth should come from unusually useful marketing - original research, honest comparisons, targeted unsolicited evidence and strong cases - while Revenue OS performs the majority of research, preparation, measurement and learning. Success after 90 days means at least five paying new customers as the target, at least three outside the founder's existing network, CHF/EUR 2,500+ in new revenue, two credible case/testimonial candidates, one repeatable acquisition motion, and an average founder workload of no more than roughly five hours per week.
+50. v1.2 Decision Log
+Date
+Decision
+Reason
+2026-08-09
+Stop searching for a magical USP
+A viable market does not require global feature uniqueness.
+2026-08-09
+Product Freeze for 90 days
+Distribution, proof and sales are the current bottlenecks.
+2026-08-09
+Reliability becomes research, not a report rebuild
+Protect time and API economics until buyers demand it.
+2026-08-09
+DE + EN commercial/research strategy first
+International distribution without premature product localization.
+2026-08-09
+White-label agency bet deprioritized
+Founder unconvinced; crowded and non-essential to current validation.
+2026-08-09
+Target raised to 5 paying customers; stretch 10
+Two customers is minimum proof, not sufficient traction.
+2026-08-09
+Founder time capped at ~5 h/week
+MentionBee must coexist with other obligations and become operationally leveraged.
+2026-08-09
+Marketing becomes a central moat
+The category can be won through trust, memorability, evidence and distribution, not only features.
+51. Source & Freshness Policy
+Competitive prices, feature sets and market claims are time-sensitive. Revenue OS should verify material competitor claims before publishing them externally. Research papers and competitor pages cited in the strategy are evidence for current thinking, not permanent truth. The Operating Manual should store the date checked and distinguish first-party vendor claims from independent evidence.
