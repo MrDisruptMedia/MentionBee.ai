@@ -18,13 +18,21 @@ export type DataLayerPayload = {
   [key: string]: unknown;
 };
 
+export type PurchaseTrackStatus = "pushed" | "already_tracked" | "invalid";
+
 declare global {
   interface Window {
     dataLayer?: DataLayerPayload[];
   }
 }
 
-const PURCHASE_DEDUP_PREFIX = "mb_purchase_tracked:";
+export const PURCHASE_DEDUP_PREFIX = "mb_purchase_tracked:";
+
+const purchasePushInFlight = new Set<string>();
+
+export function purchaseDedupKey(transactionId: string): string {
+  return `${PURCHASE_DEDUP_PREFIX}${transactionId.trim()}`;
+}
 
 /** Push a business event to the GTM dataLayer. No-op on server. */
 export function pushDataLayerEvent(
@@ -66,9 +74,28 @@ export function trackBeginCheckout(params: {
   });
 }
 
+export function isPurchaseTracked(transactionId: string): boolean {
+  if (typeof window === "undefined") return false;
+  const id = transactionId.trim();
+  if (!id) return false;
+  try {
+    return window.sessionStorage.getItem(purchaseDedupKey(id)) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function markPurchaseTracked(transactionId: string): void {
+  try {
+    window.sessionStorage.setItem(purchaseDedupKey(transactionId), "1");
+  } catch {
+    // Push already happened for this page load; storage unavailable is non-fatal.
+  }
+}
+
 /**
  * Fire purchase once per transaction_id (sessionStorage dedupe).
- * Returns true if the event was pushed, false if skipped (duplicate / missing id).
+ * Returns true only when a new event was pushed.
  */
 export function trackPurchaseOnce(params: {
   transaction_id: string;
@@ -79,20 +106,37 @@ export function trackPurchaseOnce(params: {
   if (typeof window === "undefined") return false;
   const id = params.transaction_id.trim();
   if (!id) return false;
+  if (isPurchaseTracked(id)) return false;
+  if (purchasePushInFlight.has(id)) return false;
 
-  const key = `${PURCHASE_DEDUP_PREFIX}${id}`;
+  purchasePushInFlight.add(id);
   try {
-    if (window.sessionStorage.getItem(key) === "1") return false;
-    window.sessionStorage.setItem(key, "1");
-  } catch {
-    // sessionStorage unavailable — still push once this page load
+    pushDataLayerEvent(FUNNEL_EVENTS.PURCHASE, {
+      transaction_id: id,
+      value: params.value,
+      currency: params.currency,
+      product: params.product ?? "mentionbee_deep_dive",
+    });
+    markPurchaseTracked(id);
+    return true;
+  } finally {
+    purchasePushInFlight.delete(id);
   }
+}
 
-  pushDataLayerEvent(FUNNEL_EVENTS.PURCHASE, {
-    transaction_id: id,
-    value: params.value,
-    currency: params.currency,
-    product: params.product ?? "mentionbee_deep_dive",
-  });
-  return true;
+/**
+ * Idempotent purchase tracking for /order/success.
+ * Safe for React Strict Mode remounts and Stripe success URL reloads.
+ */
+export function ensurePurchaseTracked(params: {
+  transaction_id: string;
+  value: number;
+  currency: string;
+  product?: string;
+}): PurchaseTrackStatus {
+  if (typeof window === "undefined") return "invalid";
+  const id = params.transaction_id.trim();
+  if (!id) return "invalid";
+  if (isPurchaseTracked(id)) return "already_tracked";
+  return trackPurchaseOnce(params) ? "pushed" : "invalid";
 }

@@ -5,12 +5,14 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle } from "lucide-react";
 
-import { trackPurchaseOnce } from "@/lib/analytics/data-layer";
+import { ensurePurchaseTracked } from "@/lib/analytics/data-layer";
 import {
-  getPricingApiBaseUrl,
+  getClientPricingApiUrl,
   parsePublicPricingFromJson,
   PRICING_FALLBACK,
 } from "@/lib/public-pricing";
+
+const SUCCESS_REDIRECT_DELAY_MS = 3000;
 
 function buildCompleteRedirectUrl(sessionId: string, websiteUrl: string, email: string): string {
   const params = new URLSearchParams();
@@ -21,12 +23,12 @@ function buildCompleteRedirectUrl(sessionId: string, websiteUrl: string, email: 
 }
 
 async function resolvePurchasePricing(): Promise<{ value: number; currency: string }> {
-  const base = getPricingApiBaseUrl();
-  if (!base) {
+  const url = getClientPricingApiUrl();
+  if (!url) {
     return { value: PRICING_FALLBACK.deepDivePrice, currency: PRICING_FALLBACK.currency };
   }
   try {
-    const res = await fetch(`${base}/api/public/pricing`, { credentials: "omit" });
+    const res = await fetch(url, { credentials: "omit" });
     if (!res.ok) {
       return { value: PRICING_FALLBACK.deepDivePrice, currency: PRICING_FALLBACK.currency };
     }
@@ -43,32 +45,43 @@ function OrderSuccessContent() {
   const sessionId = searchParams.get("session_id") ?? "";
   const websiteUrl = searchParams.get("website_url") ?? "";
   const email = searchParams.get("email") ?? "";
-  const purchaseTracked = useRef(false);
+  const purchaseFlowStarted = useRef(false);
 
   const targetUrl = sessionId ? buildCompleteRedirectUrl(sessionId, websiteUrl, email) : "";
 
   useEffect(() => {
-    if (!sessionId || purchaseTracked.current) return;
-    purchaseTracked.current = true;
+    if (!sessionId || purchaseFlowStarted.current) return;
+    purchaseFlowStarted.current = true;
+
+    let redirectTimer: number | undefined;
+    let cancelled = false;
 
     void (async () => {
       const { value, currency } = await resolvePurchasePricing();
-      trackPurchaseOnce({
+      if (cancelled) return;
+
+      const status = ensurePurchaseTracked({
         transaction_id: sessionId,
         value,
         currency,
         product: "mentionbee_deep_dive",
       });
-    })();
-  }, [sessionId]);
 
-  useEffect(() => {
-    if (!targetUrl) return;
-    const id = window.setTimeout(() => {
-      window.location.href = targetUrl;
-    }, 3000);
-    return () => window.clearTimeout(id);
-  }, [targetUrl]);
+      if (cancelled) return;
+      if ((status === "pushed" || status === "already_tracked") && targetUrl) {
+        redirectTimer = window.setTimeout(() => {
+          window.location.href = targetUrl;
+        }, SUCCESS_REDIRECT_DELAY_MS);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+      if (redirectTimer !== undefined) {
+        window.clearTimeout(redirectTimer);
+      }
+    };
+  }, [sessionId, targetUrl]);
 
   return (
     <div className="mx-auto max-w-lg px-4 pt-24 pb-16 text-center">

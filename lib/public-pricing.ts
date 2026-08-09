@@ -7,17 +7,27 @@ export type PublicPricing = {
   currency: string;
 };
 
-/** Entspricht dem API-Fehlerfallback der Haupt-App. */
+/** Entspricht dem API-Fehlerfallback der Haupt-App (Backend-SoT: EUR 190). */
 export const PRICING_FALLBACK: PublicPricing = {
-  deepDivePrice: 199,
-  deepDivePriceFormatted: "€ 199",
-  deepDiveRegularPrice: 299,
-  deepDiveRegularPriceFormatted: "€ 299",
+  deepDivePrice: 190,
+  deepDivePriceFormatted: "€ 190",
+  deepDiveRegularPrice: 249,
+  deepDiveRegularPriceFormatted: "€ 249",
   currency: "EUR",
 };
 
 export function getPricingApiBaseUrl(): string {
   return process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/$/, "") ?? "";
+}
+
+/** Client: `/api/public/pricing` — same-origin rewrite when `NEXT_PUBLIC_APP_URL` is unset. */
+export function getClientPricingApiUrl(): string {
+  const base = getPricingApiBaseUrl();
+  if (base) return `${base}/api/public/pricing`;
+  if (typeof window !== "undefined") {
+    return `${window.location.origin}/api/public/pricing`;
+  }
+  return "";
 }
 
 /** Parst das JSON eines erfolgreichen Pricing-Calls. Gibt bei ungültigem Body `null`. */
