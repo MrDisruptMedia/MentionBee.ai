@@ -78,9 +78,9 @@
 
 ## Current Top 3 Priorities
 
-1. **EXTERNAL:** Configure GTM tags for Measurement Layer v1 events → GA4 (before/on Day 1)
-2. MEMS evidence interview + implementation inventory (Founder) + Revenue OS prep pack
-3. Prepare first Unsolicited Mini-Audits / Target Accounts (EXP-001)
+1. **EXTERNAL:** Google + GitHub credentials for Execution Engine v1
+2. **EXTERNAL:** GTM tags for Measurement Layer v1 events → GA4
+3. First controlled production content run (single comparison page via Action API)
 
 ---
 
@@ -96,8 +96,10 @@
 
 ## Blockers
 
-- **GTM→GA4 mapping** for Measurement Layer v1 dataLayer events still **EXTERNAL CONFIG REQUIRED** (app fires events; GA4 empty until GTM tags exist)
-- **Deploy required:** Native post-purchase pages (`/order/complete`, `/order/confirmation`) + API rewrites must be live on mentionbee-website before E2E purchase validation
+- **GOOGLE SETUP REQUIRED:** GA4 Data API + Search Console service account (`GOOGLE_SERVICE_ACCOUNT_JSON`, `GA4_PROPERTY_ID`, `GSC_SITE_URL`)
+- **GITHUB SETUP REQUIRED:** Autonomous publish (`GITHUB_TOKEN`, `GITHUB_WEBSITE_REPO`)
+- **REVENUE_OS_API_SECRET** required on backend before Action API usable
+- **GTM→GA4 mapping** for Measurement Layer v1 dataLayer events still **EXTERNAL CONFIG REQUIRED**
 - Historical conversion baseline 2026-05-12…2026-08-09 remains **NOT TRACKED**
 - MEMS external usage rights UNKNOWN (Category B)
 - Frontend pricing fallback still €199 (display risk if Backend down) — BACKLOG-009, non-blocking while Backend healthy

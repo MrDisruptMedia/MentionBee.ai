@@ -831,6 +831,26 @@ Keine manuellen/erfundenen Zahlen. Nicht getrackte Metriken = **NOT TRACKED** (n
 
 **OPEN QUESTION / BACKLOG-010:** `POST /api/reports` (`paid_v1`) does not verify Stripe `session_id` before report creation — separate security/business-logic item; not part of redirect fix.
 
+#### 11.3.4 Revenue OS Execution Engine v1
+
+**TYPE:** FACT  
+**Implemented:** 2026-08-09 (code; requires env + deploy)
+
+| Component | Host | Status |
+|-----------|------|--------|
+| Action API | AI-Visibility-Report `/api/revenue-os/*` | Implemented |
+| GA4 Data API | Backend `lib/revenue-os/google/ga4-client.ts` | **EXTERNAL SETUP REQUIRED** |
+| Search Console API | Backend `lib/revenue-os/google/gsc-client.ts` | **EXTERNAL SETUP REQUIRED** |
+| Scheduler | Vercel cron daily 06:00 UTC, weekly Mon 07:00 UTC | Configured in `vercel.json` |
+| Content publish | GitHub API → mentionbee-website allowlisted paths | **EXTERNAL SETUP REQUIRED** |
+| Run storage | Neon `revenue_os_*` tables | Implemented |
+
+**GA4 Measurement ID (GTM):** `G-H7KK61GZHY` — Data API uses separate numeric `GA4_PROPERTY_ID`.
+
+**Autonomous publish scope:** comparison/blog/guide pages only; never checkout/pricing/analytics/admin.
+
+**First production content run:** manual via Action API — **not auto-executed on deploy**.
+
 ---
 
 ## 12. Decision Journal
@@ -1035,6 +1055,7 @@ Keine manuellen/erfundenen Zahlen. Nicht getrackte Metriken = **NOT TRACKED** (n
 | **1.1.1** | **2026-08-09** | Live price verify: Backend was 199 → DB+defaults set to **EUR 190** (API now 190); Website fallbacks unchanged; GA4 readiness inventory (GTM only; funnel events NOT TRACKED) | Live API + repo audit | Finalize operating state |
 | **1.1.2** | **2026-08-09** | Measurement Layer v1: dataLayer funnel events (`view_paid_report`, `view_sample_report`, `free_report_submit`, `begin_checkout`, `purchase` + dedupe) | Measurement gap before Day 1 | Funnel measurable from deploy |
 | **1.1.3** | **2026-08-09** | Checkout success journey stays on mentionbee.ai: `/order/success` → `/order/complete` → `/order/confirmation` via rewrites; Stripe success_url canonical apex | Purchase tracking + public UX | No visible backend domain hop |
+| **1.2.0** | **2026-08-09** | Revenue OS Execution Engine v1: GA4/GSC read layer, decision runtime, content validate/publish API, cron, Neon run logs | Autonomous revenue operations | Custom GPT Action API + bounded publish |
 | **1.1.4** | **2026-08-09** | Post-purchase onboarding + confirmation **native in mentionbee-website** (`/order/complete`, `/order/confirmation`); Backend HTML rewrites + `assetPrefix` **SUPERSEDED**; `/api/*` rewrite retained | GTM/Layout on all post-purchase steps | Remove proxied Backend UI dependency |
 
 ---

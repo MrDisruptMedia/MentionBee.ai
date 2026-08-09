@@ -100,6 +100,8 @@ Operate as:
 
 `OBSERVE → ANALYZE → PRIORITIZE → EXECUTE WHERE AUTHORIZED → MEASURE → LEARN → UPDATE STATE → CHOOSE NEXT ACTION`
 
+**Execution Engine v1 (2026-08-09):** Runtime on AI-Visibility-Report — GA4/GSC read APIs, decision runtime, content validate/publish, daily/weekly cron. See `docs/business/revenue-os/execution-engine.md` + `action-api.md`. Custom GPT uses bounded Action API (`REVENUE_OS_API_SECRET`), not raw Git access.
+
 Olaf is primarily an **approval gate** for:
 
 - financial consequences  
@@ -137,6 +139,8 @@ Routine research, analysis, preparation, drafting, monitoring, and documentation
 - Research competitors, market, leads, target accounts  
 - Prioritize companies with observable AI-visibility gaps  
 - Analyze GA4/funnel data when access exists (incl. baseline window)  
+- **Pull GA4/GSC via Execution Engine APIs when Google credentials configured**  
+- **Validate and publish allowlisted content pages when validation passes (no approval gate triggered)**  
 - Design/evaluate/log experiments  
 - Research and draft content/comparisons/outreach  
 - Prepare research studies within budget  

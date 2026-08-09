@@ -1,0 +1,49 @@
+openapi: 3.1.0
+info:
+  title: MentionBee Revenue OS Action API
+  version: 1.0.0
+  description: Bounded action layer for Custom GPT / Revenue OS Execution Engine v1
+servers:
+  - url: https://ai-visibility-report-tau.vercel.app
+security:
+  - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+paths:
+  /api/revenue-os/state:
+    get:
+      summary: Operational snapshot
+      operationId: getRevenueOsState
+  /api/revenue-os/analytics/summary:
+    get:
+      summary: GA4 traffic and funnel summary
+      operationId: getAnalyticsSummary
+  /api/revenue-os/analytics/funnel:
+    get:
+      summary: Funnel metrics by window
+      operationId: getAnalyticsFunnel
+      parameters:
+        - in: query
+          name: window
+          schema:
+            type: string
+            enum: [yesterday, last_7_days, previous_7_days, last_28_days, revenue_os_period]
+  /api/revenue-os/search-console/opportunities:
+    get:
+      summary: Search opportunity mining
+      operationId: getSearchOpportunities
+  /api/revenue-os/content/validate:
+    post:
+      summary: Validate content draft
+      operationId: validateContent
+  /api/revenue-os/content/publish:
+    post:
+      summary: Publish validated content
+      operationId: publishContent
+  /api/revenue-os/run:
+    post:
+      summary: Execute Revenue OS run
+      operationId: runRevenueOs
