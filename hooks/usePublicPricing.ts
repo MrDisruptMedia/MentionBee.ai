@@ -31,7 +31,7 @@ export function usePublicPricing(): {
   isFallback: boolean;
 } {
   const [pricing, setPricing] = useState<PublicPricing>(INITIAL_VISIBLE_PRICING);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => Boolean(getPricingApiBaseUrl()));
   const [isFallback, setIsFallback] = useState(true);
 
   useEffect(() => {
@@ -41,9 +41,6 @@ export function usePublicPricing(): {
       if (process.env.NODE_ENV !== "production") {
         console.warn("[usePublicPricing] NEXT_PUBLIC_APP_URL fehlt; nutze Fallback-Preis.");
       }
-      setPricing((prev) => ({ ...prev, ...PRICING_FALLBACK }));
-      setLoading(false);
-      setIsFallback(true);
       return;
     }
 
