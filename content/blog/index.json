@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-17T12:38:32.961Z",
+  "articles": [
+    {
+      "publicSlug": "neue-ki-modelle-ai-visibility",
+      "canonicalPath": "/blog/neue-ki-modelle-ai-visibility",
+      "title": "Ständig neue KI-Modelle – ändert das, wen ChatGPT und Gemini empfehlen?",
+      "description": "Fast im Wochentakt erscheinen neue KI-Modelle. Was ein Modellwechsel für die Sichtbarkeit deines Unternehmens bedeutet – und was nicht.",
+      "publishedAt": "2026-08-16T22:15:00.000Z",
+      "updatedAt": null,
+      "contentTypeLabel": "News-Analyse",
+      "tags": [
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "ai-search",
+          "label": "AI Search",
+          "slug": "ai-search"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "slug": "gemini"
+        }
+      ]
+    },
+    {
+      "publicSlug": "ai-visibility-audit-oder-monitoring",
+      "canonicalPath": "/blog/ai-visibility-audit-oder-monitoring",
+      "title": "Audit oder Monitoring? So entscheidest du bei AI Visibility",
+      "description": "Wann ein einmaliger AI Visibility Audit reicht — und wann wiederholtes Monitoring sinnvoller ist.",
+      "publishedAt": "2026-08-16T13:10:00.000Z",
+      "updatedAt": null,
+      "contentTypeLabel": "Entscheidungshilfe",
+      "tags": [
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "ai-visibility-audit",
+          "label": "AI Visibility Audit",
+          "slug": "ai-visibility-audit"
+        },
+        {
+          "id": "ai-monitoring",
+          "label": "AI Monitoring",
+          "slug": "ai-monitoring"
+        }
+      ]
+    },
+    {
+      "publicSlug": "die-besten-ai-visibility-audits-fuer-kmu",
+      "canonicalPath": "/blog/die-besten-ai-visibility-audits-fuer-kmu",
+      "title": "Die besten AI Visibility Audits für KMU: Welcher Ansatz passt zu deinem Unternehmen?",
+      "description": "Welche Audit-Ansätze für KMU sinnvoll sind — ohne automatischen Eigenprodukt-Sieg.",
+      "publishedAt": "2026-08-16T13:10:00.000Z",
+      "updatedAt": null,
+      "contentTypeLabel": "Vergleich",
+      "tags": [
+        {
+          "id": "ai-visibility-audit",
+          "label": "AI Visibility Audit",
+          "slug": "ai-visibility-audit"
+        },
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
+        }
+      ]
+    },
+    {
+      "publicSlug": "warum-chatgpt-dich-nicht-empfiehlt",
+      "canonicalPath": "/blog/warum-chatgpt-dich-nicht-empfiehlt",
+      "title": "Warum empfiehlt dich ChatGPT nicht? 6 mögliche Erklärungen – und wie du herausfindest, welche zutrifft",
+      "description": "Sechs diagnostische Erklärungen, warum ChatGPT dich nicht empfiehlt — und wie du prüfst, welche zutrifft.",
+      "publishedAt": "2026-08-15T14:10:29.149Z",
+      "updatedAt": null,
+      "contentTypeLabel": "Diagnose-Guide",
+      "tags": [
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
+        },
+        {
+          "id": "ai-search",
+          "label": "AI Search",
+          "slug": "ai-search"
+        }
+      ]
+    }
+  ]
+}

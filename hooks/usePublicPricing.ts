@@ -22,6 +22,8 @@ const INITIAL_VISIBLE_PRICING: PublicPricing = {
   currency: "EUR",
 };
 
+const pricingApiBase = getPricingApiBaseUrl();
+
 /**
  * Client: Preise von der Haupt-App (Neon `settings`). `NEXT_PUBLIC_APP_URL` = Basis-URL ohne trailing slash.
  */
@@ -30,8 +32,10 @@ export function usePublicPricing(): {
   loading: boolean;
   isFallback: boolean;
 } {
-  const [pricing, setPricing] = useState<PublicPricing>(INITIAL_VISIBLE_PRICING);
-  const [loading, setLoading] = useState(true);
+  const [pricing, setPricing] = useState<PublicPricing>(
+    pricingApiBase ? INITIAL_VISIBLE_PRICING : { ...PRICING_FALLBACK },
+  );
+  const [loading, setLoading] = useState(Boolean(pricingApiBase));
   const [isFallback, setIsFallback] = useState(true);
 
   useEffect(() => {
@@ -41,9 +45,6 @@ export function usePublicPricing(): {
       if (process.env.NODE_ENV !== "production") {
         console.warn("[usePublicPricing] NEXT_PUBLIC_APP_URL fehlt; nutze Fallback-Preis.");
       }
-      setPricing((prev) => ({ ...prev, ...PRICING_FALLBACK }));
-      setLoading(false);
-      setIsFallback(true);
       return;
     }
 

@@ -13,4 +13,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://www.mentionbee.ai/sitemap.xml
+Sitemap: https://mentionbee.ai/sitemap.xml

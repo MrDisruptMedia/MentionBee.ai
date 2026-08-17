@@ -20,8 +20,8 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "MentionBee",
-  url: "https://www.mentionbee.ai",
-  logo: "https://www.mentionbee.ai/mentionbee-logo-transparent.png",
+  url: "https://mentionbee.ai",
+  logo: "https://mentionbee.ai/mentionbee-logo-transparent.png",
   description:
     "MentionBee analysiert die AI-Sichtbarkeit von Unternehmen in ChatGPT, Claude, Gemini und Perplexity – mit Wettbewerbsvergleich und priorisiertem Maßnahmenplan.",
   email: "hello@mentionbee.ai",
@@ -41,6 +41,7 @@ const organizationJsonLd = {
 // Favicon: Next.js nutzt `app/icon.png` automatisch; `metadata.icons` ergänzt Link-Tags.
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mentionbee.ai"),
   title: "MentionBee.ai",
   description:
     "MentionBee analysiert, ob ChatGPT, Perplexity & Co. deine Marke nennen, empfehlen oder ignorieren – inklusive Wettbewerbsvergleich.",
@@ -52,9 +53,9 @@ export const metadata: Metadata = {
     title: "MentionBee – Wirst du von KI empfohlen?",
     description:
       "MentionBee analysiert, ob ChatGPT, Perplexity & Co. deine Marke nennen, empfehlen oder ignorieren – inklusive Wettbewerbsvergleich.",
-    url: "https://www.mentionbee.ai",
+    url: "https://mentionbee.ai",
     siteName: "MentionBee",
-    images: [{ url: "https://www.mentionbee.ai/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://mentionbee.ai/opengraph-image", width: 1200, height: 630 }],
     locale: "de_DE",
     type: "website",
   },
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MentionBee – Wirst du von KI empfohlen?",
     description: "AI Visibility Reports für smarte Marken im DACH-Raum.",
-    images: ["https://www.mentionbee.ai/opengraph-image"],
+    images: ["https://mentionbee.ai/opengraph-image"],
   },
 };
 

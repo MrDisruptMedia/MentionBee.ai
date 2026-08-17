@@ -1,0 +1,143 @@
+/* Article body styles — scoped to marketing blog (no app chrome). */
+
+.mb-article-root .mb-article-body {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #1a1a2e;
+}
+
+.mb-article-root .mb-article-body h1 {
+  display: none;
+}
+
+.mb-article-root .mb-article-body h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: #1a1a2e;
+  margin: 2.4rem 0 0.85rem;
+  scroll-margin-top: 96px;
+  padding-top: 0.35rem;
+  border-top: 1px solid #eef0f3;
+}
+
+.mb-article-root .mb-article-body h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.mb-article-root .mb-article-body h3 {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  font-weight: 600;
+  margin: 1.7rem 0 0.55rem;
+  scroll-margin-top: 96px;
+  color: #1a1a2e;
+}
+
+.mb-article-root .mb-article-body p {
+  margin: 0 0 1.15rem;
+}
+
+.mb-article-root .mb-article-body ul,
+.mb-article-root .mb-article-body ol {
+  margin: 0 0 1.25rem;
+  padding-left: 1.35rem;
+}
+
+.mb-article-root .mb-article-body li {
+  margin: 0.35rem 0;
+}
+
+.mb-article-root .mb-article-body a {
+  color: #1a1a2e;
+  text-decoration: underline;
+  text-decoration-color: #ffc400;
+  text-underline-offset: 2px;
+}
+
+.mb-article-root .mb-article-body a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.mb-article-root .mb-article-body a.mb-toc-link,
+.mb-article-root .mb-toc-link {
+  color: #1a1a2e;
+  text-decoration: none;
+  border-bottom: 2px solid #cbd5e1;
+  transition:
+    color 120ms ease,
+    border-color 120ms ease,
+    background-color 120ms ease;
+}
+
+.mb-article-root .mb-toc-link:hover {
+  border-bottom-color: #ffc400;
+  background-color: rgba(255, 196, 0, 0.12);
+}
+
+.mb-article-root .mb-body-toc-hidden,
+.mb-article-root .mb-body-lead-hidden,
+.mb-article-root .mb-body-sources-hidden {
+  display: none !important;
+}
+
+.mb-article-root .mb-article-body strong {
+  color: #1a1a2e;
+}
+
+.mb-article-root .mb-article-body blockquote {
+  margin: 1.4rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid #94a3b8;
+  background: #f9fafb;
+  color: #374151;
+}
+
+.mb-article-root .cev2-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.5rem 0 1.75rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.mb-article-root .cev2-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  min-width: 560px;
+}
+
+.mb-article-root .cev2-table-wrap th,
+.mb-article-root .cev2-table-wrap td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eef0f3;
+  text-align: left;
+  vertical-align: top;
+}
+
+.mb-article-root .cev2-table-wrap th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.mb-article-root .cev2-comp {
+  margin: 1.5rem 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f9fafb;
+}
+
+@media (max-width: 640px) {
+  .mb-article-root .mb-article-body {
+    font-size: 1.05rem;
+  }
+}

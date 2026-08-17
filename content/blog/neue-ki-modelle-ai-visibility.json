@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "contentId": "golden-sample-04",
+  "editorialSlug": "neue-ki-modelle-ai-visibility",
+  "publicSlug": "neue-ki-modelle-ai-visibility",
+  "canonicalPath": "/blog/neue-ki-modelle-ai-visibility",
+  "title": "Ständig neue KI-Modelle – ändert das, wen ChatGPT und Gemini empfehlen?",
+  "h1": "Ständig neue KI-Modelle – ändert das, wen ChatGPT und Gemini empfehlen?",
+  "description": "Fast im Wochentakt erscheinen neue KI-Modelle. Was ein Modellwechsel für die Sichtbarkeit deines Unternehmens bedeutet – und was nicht.",
+  "markdownBody": "# Ständig neue KI-Modelle – ändert das, wen ChatGPT und Gemini empfehlen?\n\n*Stand: 16. August 2026. Die konkreten Modellversionen in diesem Beitrag sind zeitgebundene Beispiele – der methodische Denkrahmen dahinter bleibt gültig, auch wenn die Namen längst andere sind.*\n\nKaum eine Woche ohne neues KI-Modell. Mal ist es eine neue Gemini-Version, mal ein GPT-Update, mal ein neues Claude-Modell. Für Unternehmen, die darauf achten, ob KI-Systeme sie bei Kauffragen empfehlen, stellt sich dabei jedes Mal dieselbe Frage: Wenn ChatGPT oder Gemini das Modell wechseln – werde ich jetzt anders empfohlen?\n\nDie ehrliche Antwort lautet: fast sicher nicht so, wie die Schlagzeile nahelegt. Aber ganz folgenlos ist ein Modellwechsel auch nicht – nur an einer anderen Stelle, als die meisten vermuten. Dieser Beitrag trennt beides.\n\n## Was gerade passiert\n\nZwei aktuelle Beispiele zeigen das Tempo.\n\nBei Google wurde **Gemini 3.5 Flash** am 19. Mai 2026 (Google I/O) zum Standardmodell in der Gemini-App und im AI Mode der Google-Suche – laut Googles eigener Ankündigung „weltweit\". Seither sind neuere Flash-Versionen erschienen: Gemini 3.6 Flash wurde in der Gemini-API allgemein verfügbar, und Gemini 3.7 Flash kam am 13. August heraus und wurde einen Tag später im AI Mode als *auswählbares* Modell ergänzt – ausdrücklich ohne die Angabe, dass es den Standard ablöst. Ob der AI-Mode-Default heute noch 3.5 Flash ist oder inzwischen über automatisches Routing verteilt wird, hat Google nicht eindeutig bestätigt. Genau diese Unschärfe ist der Punkt: Ein veröffentlichtes, sogar auswählbares Modell ist noch nicht automatisch das Standardmodell.\n\nBei OpenAI wurde **GPT-5.5 Instant** am 5. Mai 2026 zum Standardmodell in ChatGPT und löste GPT-5.3 Instant ab. Nur gut zwei Monate später begann laut OpenAIs eigener Dokumentation der gestaffelte Rollout der GPT-5.6-Reihe als neuer Standard – wobei „Standard\" hier vom Tarif abhängt: Für Free- und Go-Nutzer wird GPT-5.6 Luna zum Default, während GPT-5.6 Sol die bezahlten Stufen bedient. Welches Modell ein einzelner Nutzer gerade als Standard bekommt, hängt also von Plan und Rollout-Stand ab – nicht von einer einzigen, für alle gültigen Zahl.\n\nAus diesen beiden Beispielen lassen sich schon drei Dinge lernen, die im Alltag ständig durcheinandergeraten.\n\n## Drei Aussagen, die nicht dasselbe sind\n\nWer über Modellwechsel spricht, meint oft dreierlei gleichzeitig – obwohl es drei verschiedene Ereignisse sind:\n\n**Ein Modell wird veröffentlicht.** Das ist zunächst nur eine Verfügbarkeit. Gemini 3.7 Flash existiert – aber existieren heißt nicht, dass es irgendwo automatisch verwendet wird.\n\n**Ein Modell wird zum Default.** Das ist der eigentlich relevante Schritt: Erst wenn ein Modell das Standardmodell einer Oberfläche wird, erreicht es die breite Masse. Und Veröffentlichung und Default fallen oft *nicht* zusammen – Gemini 3.6 und 3.7 sind verfügbar, ohne dass Google sie zum AI-Mode-Standard erklärt hätte. Zudem kann „Default\" je nach Produkt und Nutzergruppe etwas anderes bedeuten: Bei ChatGPT hängt das Standardmodell inzwischen sogar vom Tarif ab.\n\n**Die Empfehlungen ändern sich.** Das ist die Aussage, die für dein Unternehmen zählt – und die am seltensten belegt ist. Dass ein anderes Modell antwortet, heißt noch lange nicht, dass es andere Anbieter empfiehlt.\n\nDie meisten Aufreger über Modellwechsel springen von der ersten Aussage direkt zur dritten. Genau dazwischen liegt der Fehler.\n\n## Warum ein neues Modell nicht automatisch neue Empfehlungen bedeutet\n\nWelche Unternehmen ein KI-System bei einer Kauffrage nennt, hängt von vielen Faktoren ab: davon, was zum Thema im Web dokumentiert ist, welche Quellen bei der Antwort herangezogen werden, wie eine Marke als Entität verstanden wird, ob eine Websuche aktiv ist, und – ja – auch vom Modell. Das Modell ist ein Faktor unter mehreren, nicht der alleinige Schalter.\n\nDeshalb gibt es für die naheliegende Annahme „neues Modell, also neue Empfehlungen für mich\" schlicht keinen Beleg. Sie *kann* im Einzelfall zutreffen. Sie kann genauso gut folgenlos bleiben. Solange man es nicht unter kontrollierten Bedingungen gemessen hat, ist es eine offene Frage – kein Fakt.\n\nDas ist dieselbe Disziplin, die wir an anderer Stelle beschrieben haben, nämlich Beobachtung von Ursache zu trennen. „Nach dem Modellwechsel sehe ich eine andere Antwort\" ist eine Beobachtung. „Wegen des Modellwechsels werde ich anders empfohlen\" ist eine Kausalbehauptung – und die verlangt mehr als eine zeitliche Nähe.\n\n## Was ein Modellwechsel *doch* verändert\n\nEs gibt allerdings eine Konsequenz, die nicht spekulativ ist, sondern direkt aus der Messlogik folgt: **Ein Modellwechsel verändert eine relevante Messbedingung – und kann deshalb die direkte Vergleichbarkeit früherer und späterer Messungen einschränken.**\n\nWenn du im April festgehalten hast, dass ChatGPT dich bei einer bestimmten Frage nennt, und im Juni erneut misst, hat sich zwischen beiden Messungen möglicherweise das Standardmodell geändert. Damit vergleichst du nicht mehr sauber „dieselbe Bedingung vorher und nachher\", sondern zwei Messungen, bei denen sich eine Bedingung nachweislich verschoben hat. Das Modell ist Teil der Messumgebung – so wie Standort, aktivierte Websuche oder der Messzeitpunkt.\n\nHier ist Präzision wichtig, damit daraus kein Trugschluss wird: Wer Modell und Zeitpunkt jeder Messung dokumentiert, weiß immerhin, *ob* sich zwischen zwei Messungen eine relevante Bedingung verändert hat. Welche Ursache hinter einer beobachteten Veränderung steckt, ist damit noch nicht geklärt. Sie kann an eigenen Maßnahmen liegen, am Modellwechsel, an veränderten Webquellen, am Abruf der Quellen – oder schlicht daran, dass dieselbe Frage zweimal unterschiedlich beantwortet wird. Die Dokumentation liefert also keine fertige Ursache. Sie macht aber sichtbar, welche Bedingungen sich überhaupt geändert haben – und das ist die Voraussetzung für jede seriöse Interpretation.\n\n## Der verführerische Fehlschluss\n\nDer Fehler, in den man dabei am leichtesten läuft, ist dieser: Eine Ankündigung erscheint, und man beginnt sofort, die eigene Sichtbarkeit „für das neue Modell zu optimieren\".\n\nDas ist aus zwei Gründen riskant. Erstens weiß niemand von außen zuverlässig, was genau sich im Empfehlungsverhalten geändert hat – man optimiert also gegen eine Vermutung. Zweitens erreichen viele Nutzer das neue Modell noch gar nicht, weil es (siehe Gemini) veröffentlicht und auswählbar, aber nicht flächendeckend zum Default geworden ist.\n\nEine Ankündigung ist ein Anlass, genauer hinzusehen – kein Beleg dafür, dass sich für dich etwas geändert hat. Aus einer Ankündigung eine Handlung abzuleiten, bevor man gemessen hat, ist genau der Sprung von der ersten zur dritten Aussage.\n\n## Was du konkret tun solltest\n\nDer nüchterne, aber wirksame Umgang mit dem ständigen Modell-Nachschub sieht so aus:\n\n**Dokumentiere Modell und Zeitpunkt jeder Messung.** Das ist die eine Maßnahme, die dich unabhängig von der Nachrichtenlage handlungsfähig hält. Ohne diese Angabe ist jede Zeitreihe später schwer zu deuten.\n\n**Optimiere nicht auf eine Ankündigung hin.** Warte, bis du unter dokumentierten Bedingungen tatsächlich eine Veränderung *gemessen* hast, bevor du daraus Maßnahmen ableitest.\n\n**Miss nach relevanten Wechseln gezielt nach** – aber behandle „keine Veränderung feststellbar\" als vollwertiges Ergebnis, nicht als Fehlschlag. Sehr oft ist das die korrekte Antwort.\n\nFür eine saubere Ausgangsmessung, gegen die sich solche Nachmessungen überhaupt erst vergleichen lassen, brauchst du zunächst eine dokumentierte Bestandsaufnahme deiner AI-Sichtbarkeit.\n\n## Kurz zusammengefasst\n\nNeue KI-Modelle erscheinen im Wochentakt, und die Versuchung ist groß, daraus sofort Konsequenzen für die eigene Sichtbarkeit abzuleiten. Meistens ist das verfrüht: Ein veröffentlichtes Modell ist noch kein Default, ein Default kann je nach Produkt und Tarif verschieden sein, und ein neuer Default ändert nicht automatisch, wen ein System empfiehlt.\n\nWas ein Modellwechsel dagegen verlässlich tut, ist, eine relevante Messbedingung zu verändern. Deshalb solltest du frühere und spätere Messungen nicht automatisch als direkt vergleichbar behandeln.\n\nDeshalb ist die richtige Reaktion nicht Aktionismus, sondern Buchführung: Modell und Zeitpunkt dokumentieren, nach relevanten Wechseln nachmessen – und erst handeln, wenn eine belegte Veränderung vorliegt.\n\n## Quellen und weiterführende Informationen\n\n- Google (blog.google): Gemini 3.5 – frontier intelligence with action (https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/) · Bezug: Gemini 3.5 Flash als Default in Gemini-App und AI Mode, global (19.05.2026) — Primärquelle\n- Google (blog.google): 100 things we announced at Google I/O 2026 (https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/) · Bezug: „Gemini 3.5 Flash as the new default model, globally\" — Primärquelle\n- OpenAI Help Center: GPT-5.6 in ChatGPT (https://help.openai.com/articles/11909943) · Bezug: gestaffelter Rollout von GPT-5.6 als neuer Default; Luna für Free/Go, Sol für Paid — Primärquelle\n- OpenAI Help Center: Model Release Notes (https://help.openai.com/en/articles/9624314-model-release-notes) · Bezug: Default-/Retirement-Historie in ChatGPT — Primärquelle\n- Search Engine Journal: Google Brings Gemini 3.7 Flash To AI Mode In Search (https://www.searchenginejournal.com/google-brings-gemini-3-7-flash-to-ai-mode-in-search/585923/) · Bezug: 3.7 Flash im AI Mode auswählbar, von Google nicht als Default bestätigt — Sekundärquelle, wo Primärquelle die Default-Frage offenlässt\n- TechCrunch: OpenAI releases GPT-5.5 Instant, a new default model for ChatGPT (https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/) · Bezug: GPT-5.5 Instant löst GPT-5.3 als ChatGPT-Default ab (05.05.2026) — Sekundärquelle zum Datum\n",
+  "bodyHtml": "<h1 id=\"ständig-neue-ki-modelle-ändert-das-wen-chatgpt-und-gemini-empfehlen\">Ständig neue KI-Modelle – ändert das, wen ChatGPT und Gemini empfehlen?</h1>\n<p><em>Stand: 16. August 2026. Die konkreten Modellversionen in diesem Beitrag sind zeitgebundene Beispiele – der methodische Denkrahmen dahinter bleibt gültig, auch wenn die Namen längst andere sind.</em></p>\n<p>Kaum eine Woche ohne neues KI-Modell. Mal ist es eine neue Gemini-Version, mal ein GPT-Update, mal ein neues Claude-Modell. Für Unternehmen, die darauf achten, ob KI-Systeme sie bei Kauffragen empfehlen, stellt sich dabei jedes Mal dieselbe Frage: Wenn ChatGPT oder Gemini das Modell wechseln – werde ich jetzt anders empfohlen?</p>\n<p>Die ehrliche Antwort lautet: fast sicher nicht so, wie die Schlagzeile nahelegt. Aber ganz folgenlos ist ein Modellwechsel auch nicht – nur an einer anderen Stelle, als die meisten vermuten. Dieser Beitrag trennt beides.</p>\n<h2 id=\"was-gerade-passiert\">Was gerade passiert</h2>\n<p>Zwei aktuelle Beispiele zeigen das Tempo.</p>\n<p>Bei Google wurde <strong>Gemini 3.5 Flash</strong> am 19. Mai 2026 (Google I/O) zum Standardmodell in der Gemini-App und im AI Mode der Google-Suche – laut Googles eigener Ankündigung „weltweit\". Seither sind neuere Flash-Versionen erschienen: Gemini 3.6 Flash wurde in der Gemini-API allgemein verfügbar, und Gemini 3.7 Flash kam am 13. August heraus und wurde einen Tag später im AI Mode als <em>auswählbares</em> Modell ergänzt – ausdrücklich ohne die Angabe, dass es den Standard ablöst. Ob der AI-Mode-Default heute noch 3.5 Flash ist oder inzwischen über automatisches Routing verteilt wird, hat Google nicht eindeutig bestätigt. Genau diese Unschärfe ist der Punkt: Ein veröffentlichtes, sogar auswählbares Modell ist noch nicht automatisch das Standardmodell.</p>\n<p>Bei OpenAI wurde <strong>GPT-5.5 Instant</strong> am 5. Mai 2026 zum Standardmodell in ChatGPT und löste GPT-5.3 Instant ab. Nur gut zwei Monate später begann laut OpenAIs eigener Dokumentation der gestaffelte Rollout der GPT-5.6-Reihe als neuer Standard – wobei „Standard\" hier vom Tarif abhängt: Für Free- und Go-Nutzer wird GPT-5.6 Luna zum Default, während GPT-5.6 Sol die bezahlten Stufen bedient. Welches Modell ein einzelner Nutzer gerade als Standard bekommt, hängt also von Plan und Rollout-Stand ab – nicht von einer einzigen, für alle gültigen Zahl.</p>\n<p>Aus diesen beiden Beispielen lassen sich schon drei Dinge lernen, die im Alltag ständig durcheinandergeraten.</p>\n<h2 id=\"drei-aussagen-die-nicht-dasselbe-sind\">Drei Aussagen, die nicht dasselbe sind</h2>\n<p>Wer über Modellwechsel spricht, meint oft dreierlei gleichzeitig – obwohl es drei verschiedene Ereignisse sind:</p>\n<p><strong>Ein Modell wird veröffentlicht.</strong> Das ist zunächst nur eine Verfügbarkeit. Gemini 3.7 Flash existiert – aber existieren heißt nicht, dass es irgendwo automatisch verwendet wird.</p>\n<p><strong>Ein Modell wird zum Default.</strong> Das ist der eigentlich relevante Schritt: Erst wenn ein Modell das Standardmodell einer Oberfläche wird, erreicht es die breite Masse. Und Veröffentlichung und Default fallen oft <em>nicht</em> zusammen – Gemini 3.6 und 3.7 sind verfügbar, ohne dass Google sie zum AI-Mode-Standard erklärt hätte. Zudem kann „Default\" je nach Produkt und Nutzergruppe etwas anderes bedeuten: Bei ChatGPT hängt das Standardmodell inzwischen sogar vom Tarif ab.</p>\n<p><strong>Die Empfehlungen ändern sich.</strong> Das ist die Aussage, die für dein Unternehmen zählt – und die am seltensten belegt ist. Dass ein anderes Modell antwortet, heißt noch lange nicht, dass es andere Anbieter empfiehlt.</p>\n<p>Die meisten Aufreger über Modellwechsel springen von der ersten Aussage direkt zur dritten. Genau dazwischen liegt der Fehler.</p>\n<h2 id=\"warum-ein-neues-modell-nicht-automatisch-neue-empfehlungen-bedeutet\">Warum ein neues Modell nicht automatisch neue Empfehlungen bedeutet</h2>\n<p>Welche Unternehmen ein KI-System bei einer Kauffrage nennt, hängt von vielen Faktoren ab: davon, was zum Thema im Web dokumentiert ist, welche Quellen bei der Antwort herangezogen werden, wie eine Marke als Entität verstanden wird, ob eine Websuche aktiv ist, und – ja – auch vom Modell. Das Modell ist ein Faktor unter mehreren, nicht der alleinige Schalter.</p>\n<p>Deshalb gibt es für die naheliegende Annahme „neues Modell, also neue Empfehlungen für mich\" schlicht keinen Beleg. Sie <em>kann</em> im Einzelfall zutreffen. Sie kann genauso gut folgenlos bleiben. Solange man es nicht unter kontrollierten Bedingungen gemessen hat, ist es eine offene Frage – kein Fakt.</p>\n<p>Das ist dieselbe Disziplin, die wir an anderer Stelle beschrieben haben, nämlich <a href=\"/blog/warum-chatgpt-dich-nicht-empfiehlt\" class=\"mb-internal-link\">Beobachtung von Ursache zu trennen</a>. „Nach dem Modellwechsel sehe ich eine andere Antwort\" ist eine Beobachtung. „Wegen des Modellwechsels werde ich anders empfohlen\" ist eine Kausalbehauptung – und die verlangt mehr als eine zeitliche Nähe.</p>\n<h2 id=\"was-ein-modellwechsel-doch-verändert\">Was ein Modellwechsel <em>doch</em> verändert</h2>\n<p>Es gibt allerdings eine Konsequenz, die nicht spekulativ ist, sondern direkt aus der Messlogik folgt: <strong>Ein Modellwechsel verändert eine relevante Messbedingung – und kann deshalb die direkte Vergleichbarkeit früherer und späterer Messungen einschränken.</strong></p>\n<p>Wenn du im April festgehalten hast, dass ChatGPT dich bei einer bestimmten Frage nennt, und im Juni erneut misst, hat sich zwischen beiden Messungen möglicherweise das Standardmodell geändert. Damit vergleichst du nicht mehr sauber „dieselbe Bedingung vorher und nachher\", sondern zwei Messungen, bei denen sich eine Bedingung nachweislich verschoben hat. Das Modell ist Teil der Messumgebung – so wie Standort, aktivierte Websuche oder der Messzeitpunkt.</p>\n<p>Hier ist Präzision wichtig, damit daraus kein Trugschluss wird: Wer Modell und Zeitpunkt jeder Messung dokumentiert, weiß immerhin, <em>ob</em> sich zwischen zwei Messungen eine relevante Bedingung verändert hat. Welche Ursache hinter einer beobachteten Veränderung steckt, ist damit noch nicht geklärt. Sie kann an eigenen Maßnahmen liegen, am Modellwechsel, an veränderten Webquellen, am Abruf der Quellen – oder schlicht daran, dass dieselbe Frage zweimal unterschiedlich beantwortet wird. Die Dokumentation liefert also keine fertige Ursache. Sie macht aber sichtbar, welche Bedingungen sich überhaupt geändert haben – und das ist die Voraussetzung für jede seriöse Interpretation.</p>\n<h2 id=\"der-verführerische-fehlschluss\">Der verführerische Fehlschluss</h2>\n<p>Der Fehler, in den man dabei am leichtesten läuft, ist dieser: Eine Ankündigung erscheint, und man beginnt sofort, die eigene Sichtbarkeit „für das neue Modell zu optimieren\".</p>\n<p>Das ist aus zwei Gründen riskant. Erstens weiß niemand von außen zuverlässig, was genau sich im Empfehlungsverhalten geändert hat – man optimiert also gegen eine Vermutung. Zweitens erreichen viele Nutzer das neue Modell noch gar nicht, weil es (siehe Gemini) veröffentlicht und auswählbar, aber nicht flächendeckend zum Default geworden ist.</p>\n<p>Eine Ankündigung ist ein Anlass, genauer hinzusehen – kein Beleg dafür, dass sich für dich etwas geändert hat. Aus einer Ankündigung eine Handlung abzuleiten, bevor man gemessen hat, ist genau der Sprung von der ersten zur dritten Aussage.</p>\n<h2 id=\"was-du-konkret-tun-solltest\">Was du konkret tun solltest</h2>\n<p>Der nüchterne, aber wirksame Umgang mit dem ständigen Modell-Nachschub sieht so aus:</p>\n<p><strong>Dokumentiere Modell und Zeitpunkt jeder Messung.</strong> Das ist die eine Maßnahme, die dich unabhängig von der Nachrichtenlage handlungsfähig hält. Ohne diese Angabe ist jede Zeitreihe später schwer zu deuten.</p>\n<p><strong>Optimiere nicht auf eine Ankündigung hin.</strong> Warte, bis du unter dokumentierten Bedingungen tatsächlich eine Veränderung <em>gemessen</em> hast, bevor du daraus Maßnahmen ableitest.</p>\n<p><strong>Miss nach relevanten Wechseln gezielt nach</strong> – aber behandle „keine Veränderung feststellbar\" als vollwertiges Ergebnis, nicht als Fehlschlag. Sehr oft ist das die korrekte Antwort.</p>\n<p>Für <a href=\"/blog/ai-visibility-audit-oder-monitoring\" class=\"mb-internal-link\">eine saubere Ausgangsmessung</a>, gegen die sich solche Nachmessungen überhaupt erst vergleichen lassen, brauchst du zunächst eine dokumentierte Bestandsaufnahme deiner AI-Sichtbarkeit.</p>\n<h2 id=\"kurz-zusammengefasst\">Kurz zusammengefasst</h2>\n<p>Neue KI-Modelle erscheinen im Wochentakt, und die Versuchung ist groß, daraus sofort Konsequenzen für die eigene Sichtbarkeit abzuleiten. Meistens ist das verfrüht: Ein veröffentlichtes Modell ist noch kein Default, ein Default kann je nach Produkt und Tarif verschieden sein, und ein neuer Default ändert nicht automatisch, wen ein System empfiehlt.</p>\n<p>Was ein Modellwechsel dagegen verlässlich tut, ist, eine relevante Messbedingung zu verändern. Deshalb solltest du frühere und spätere Messungen nicht automatisch als direkt vergleichbar behandeln.</p>\n<p>Deshalb ist die richtige Reaktion nicht Aktionismus, sondern Buchführung: Modell und Zeitpunkt dokumentieren, nach relevanten Wechseln nachmessen – und erst handeln, wenn eine belegte Veränderung vorliegt.</p>\n<div class=\"mb-body-sources-hidden\" hidden><h2 id=\"quellen-und-weiterführende-informationen\">Quellen und weiterführende Informationen</h2>\n<ul>\n<li>Google (blog.google): Gemini 3.5 – frontier intelligence with action (https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/) · Bezug: Gemini 3.5 Flash als Default in Gemini-App und AI Mode, global (19.05.2026) — Primärquelle</li>\n<li>Google (blog.google): 100 things we announced at Google I/O 2026 (https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/) · Bezug: „Gemini 3.5 Flash as the new default model, globally\" — Primärquelle</li>\n<li>OpenAI Help Center: GPT-5.6 in ChatGPT (https://help.openai.com/articles/11909943) · Bezug: gestaffelter Rollout von GPT-5.6 als neuer Default; Luna für Free/Go, Sol für Paid — Primärquelle</li>\n<li>OpenAI Help Center: Model Release Notes (https://help.openai.com/en/articles/9624314-model-release-notes) · Bezug: Default-/Retirement-Historie in ChatGPT — Primärquelle</li>\n<li>Search Engine Journal: Google Brings Gemini 3.7 Flash To AI Mode In Search (https://www.searchenginejournal.com/google-brings-gemini-3-7-flash-to-ai-mode-in-search/585923/) · Bezug: 3.7 Flash im AI Mode auswählbar, von Google nicht als Default bestätigt — Sekundärquelle, wo Primärquelle die Default-Frage offenlässt</li>\n<li>TechCrunch: OpenAI releases GPT-5.5 Instant, a new default model for ChatGPT (https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/) · Bezug: GPT-5.5 Instant löst GPT-5.3 als ChatGPT-Default ab (05.05.2026) — Sekundärquelle zum Datum</li>\n</ul></div>",
+  "lead": "Kaum eine Woche ohne neues KI-Modell. Mal ist es eine neue Gemini-Version, mal ein GPT-Update, mal ein neues Claude-Modell. Für Unternehmen, die darauf achten, ob KI-Systeme sie bei Kauffragen empfehlen, stellt sich dabei jedes Mal dieselbe Frage: Wenn ChatGPT oder Gemini das Modell wechseln – werde ich jetzt anders empfohlen?",
+  "readerHash": "42a5533a3c3c9724f7b4dfd976d5a56dfb93100d6f6cb28bda48dc7773ed46ec",
+  "readingMinutes": 6,
+  "publishedAt": "2026-08-16T22:15:00.000Z",
+  "updatedAt": null,
+  "language": "de",
+  "contentTypeLabel": "News-Analyse",
+  "author": {
+    "id": "olaf-kunz",
+    "name": "Olaf Kunz",
+    "slug": "olaf-kunz",
+    "role": "Gründer von MentionBee",
+    "shortBio": "Olaf Kunz entwickelt MentionBee und beschäftigt sich damit, wie Unternehmen in ChatGPT, Claude, Gemini und Perplexity sichtbar werden. Für MentionBee analysiert er AI-Antworten, testet Sichtbarkeitsfaktoren und entwickelt Methoden zur Messung von AI Visibility.",
+    "profileImage": null
+  },
+  "tags": [
+    {
+      "id": "ai-visibility",
+      "label": "AI Visibility",
+      "slug": "ai-visibility"
+    },
+    {
+      "id": "ai-search",
+      "label": "AI Search",
+      "slug": "ai-search"
+    },
+    {
+      "id": "chatgpt",
+      "label": "ChatGPT",
+      "slug": "chatgpt"
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "slug": "gemini"
+    }
+  ],
+  "hero": {
+    "status": "NOT_CREATED",
+    "src": null,
+    "alt": null,
+    "width": null,
+    "height": null
+  },
+  "sources": [
+    {
+      "title": "Gemini 3.5 – frontier intelligence with action",
+      "publisher": "Google (blog.google)",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "displayMode": "SOURCE_SECTION",
+      "sourceType": "PRIMARY_VENDOR_DOC",
+      "sectionHint": "Gemini 3.5 Flash als Default in Gemini-App und AI Mode, global (19.05.2026)"
+    },
+    {
+      "title": "100 things we announced at Google I/O 2026",
+      "publisher": "Google (blog.google)",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+      "displayMode": "SOURCE_SECTION",
+      "sourceType": "PRIMARY_VENDOR_DOC",
+      "sectionHint": "Gemini 3.5 Flash as the new default model, globally"
+    },
+    {
+      "title": "GPT-5.6 in ChatGPT",
+      "publisher": "OpenAI Help Center",
+      "url": "https://help.openai.com/articles/11909943",
+      "displayMode": "SOURCE_SECTION",
+      "sourceType": "PRIMARY_VENDOR_DOC",
+      "sectionHint": "gestaffelter Rollout von GPT-5.6 als neuer Default; Luna für Free/Go, Sol für Paid"
+    },
+    {
+      "title": "Model Release Notes",
+      "publisher": "OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+      "displayMode": "SOURCE_SECTION",
+      "sourceType": "PRIMARY_VENDOR_DOC",
+      "sectionHint": "Default-/Retirement-Historie in ChatGPT"
+    },
+    {
+      "title": "Google Brings Gemini 3.7 Flash To AI Mode In Search",
+      "publisher": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/google-brings-gemini-3-7-flash-to-ai-mode-in-search/585923/",
+      "displayMode": "SOURCE_SECTION",
+      "sourceType": "OTHER_VERIFIED",
+      "sectionHint": "3.7 Flash im AI Mode auswählbar, von Google nicht als Default bestätigt"
+    },
+    {
+      "title": "OpenAI releases GPT-5.5 Instant, a new default model for ChatGPT",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/",
+      "displayMode": "SOURCE_SECTION",
+      "sourceType": "OTHER_VERIFIED",
+      "sectionHint": "GPT-5.5 Instant löst GPT-5.3 als ChatGPT-Default ab (05.05.2026)"
+    }
+  ],
+  "related": [
+    {
+      "title": "Audit oder Monitoring? So entscheidest du bei AI Visibility",
+      "publicPath": "/blog/ai-visibility-audit-oder-monitoring",
+      "excerpt": "Wann ein einmaliger AI Visibility Audit reicht — und wann wiederholtes Monitoring sinnvoller ist."
+    },
+    {
+      "title": "Warum empfiehlt dich ChatGPT nicht? 6 mögliche Erklärungen – und wie du herausfindest, welche zutrifft",
+      "publicPath": "/blog/warum-chatgpt-dich-nicht-empfiehlt",
+      "excerpt": "Sechs diagnostische Erklärungen, warum ChatGPT dich nicht empfiehlt — und wie du prüfst, welche zutrifft."
+    },
+    {
+      "title": "Die besten AI Visibility Audits für KMU: Welcher Ansatz passt zu deinem Unternehmen?",
+      "publicPath": "/blog/die-besten-ai-visibility-audits-fuer-kmu",
+      "excerpt": "Welche Audit-Ansätze für KMU sinnvoll sind — ohne automatischen Eigenprodukt-Sieg."
+    }
+  ],
+  "toc": [
+    {
+      "id": "was-gerade-passiert",
+      "text": "Was gerade passiert",
+      "level": 2
+    },
+    {
+      "id": "drei-aussagen-die-nicht-dasselbe-sind",
+      "text": "Drei Aussagen, die nicht dasselbe sind",
+      "level": 2
+    },
+    {
+      "id": "warum-ein-neues-modell-nicht-automatisch-neue-empfehlungen-bedeutet",
+      "text": "Warum ein neues Modell nicht automatisch neue Empfehlungen bedeutet",
+      "level": 2
+    },
+    {
+      "id": "was-ein-modellwechsel-doch-verändert",
+      "text": "Was ein Modellwechsel *doch* verändert",
+      "level": 2
+    },
+    {
+      "id": "der-verführerische-fehlschluss",
+      "text": "Der verführerische Fehlschluss",
+      "level": 2
+    },
+    {
+      "id": "was-du-konkret-tun-solltest",
+      "text": "Was du konkret tun solltest",
+      "level": 2
+    },
+    {
+      "id": "kurz-zusammengefasst",
+      "text": "Kurz zusammengefasst",
+      "level": 2
+    }
+  ]
+}

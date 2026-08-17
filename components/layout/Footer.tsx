@@ -29,6 +29,7 @@ const columns: FooterCol[] = [
       { label: "Kostenloser Report", href: "/free-report" },
       { label: "Deep-Dive Report", href: "/report" },
       { label: "Beispielreport", href: "/sample-report" },
+      { label: "Blog", href: "/blog" },
       { label: "Methodik", href: "/#methodik" },
       { label: "FAQ", href: "/faq" },
     ],
