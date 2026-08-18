@@ -26,11 +26,11 @@ const columns: FooterCol[] = [
   {
     heading: "Produkt",
     links: [
-      { label: "Kostenloser Report", href: "/free-report" },
-      { label: "Deep-Dive Report", href: "/report" },
+      { label: "Gratis-Check", href: "/free-report" },
+      { label: "Report bestellen", href: "/report" },
       { label: "Beispielreport", href: "/sample-report" },
+      { label: "So funktioniert's", href: "/#so-funktionierts" },
       { label: "Blog", href: "/blog" },
-      { label: "Methodik", href: "/#methodik" },
       { label: "FAQ", href: "/faq" },
     ],
   },
@@ -66,7 +66,7 @@ export function Footer() {
           <div className="max-w-sm">
             <MentionBeeBrand />
             <p className="mt-3 text-sm leading-relaxed text-mention-gray">
-              AI Visibility für smarte Marken.
+              AI Visibility Audit – finde heraus, warum KI deine Konkurrenz empfiehlt und dich nicht.
             </p>
           </div>
 

@@ -33,16 +33,18 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2 justify-self-end">
-          <Link href="/report" className={`${primaryBtn} text-xs px-3 py-2 sm:px-5 sm:text-sm whitespace-nowrap`}>
-            <span className="sm:hidden">Deep-Dive</span>
-            <span className="hidden sm:inline">Deep-Dive bestellen</span>
-          </Link>
           <Link
             href="/free-report"
             className={`hidden min-[360px]:inline-flex px-3 py-2 text-center text-xs whitespace-nowrap sm:px-5 sm:text-sm ${secondaryBtn}`}
           >
-            <span className="sm:hidden">Gratis-Report</span>
-            <span className="hidden sm:inline">Kostenloser Report</span>
+            Gratis-Check
+          </Link>
+          <Link
+            href="/report"
+            className={`${primaryBtn} text-xs px-3 py-2 sm:px-5 sm:text-sm whitespace-nowrap`}
+          >
+            <span className="sm:hidden">Bestellen</span>
+            <span className="hidden sm:inline">Report bestellen</span>
           </Link>
         </div>
       </div>

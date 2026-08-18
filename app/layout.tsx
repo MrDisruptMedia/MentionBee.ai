@@ -42,17 +42,17 @@ const organizationJsonLd = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mentionbee.ai"),
-  title: "MentionBee.ai",
+  title: "MentionBee – AI Visibility Audit",
   description:
-    "MentionBee analysiert, ob ChatGPT, Perplexity & Co. deine Marke nennen, empfehlen oder ignorieren – inklusive Wettbewerbsvergleich.",
+    "Warum empfiehlt KI deine Konkurrenz – dich aber nicht? MentionBee zeigt dir, warum ChatGPT, Claude, Gemini & Co. dein Unternehmen (noch) nicht empfehlen – und was du tun kannst.",
   icons: {
     icon: "/mentionbee-logo-transparent.png",
     apple: "/mentionbee-logo-transparent.png",
   },
   openGraph: {
-    title: "MentionBee – Wirst du von KI empfohlen?",
+    title: "MentionBee – Warum empfiehlt KI deine Konkurrenz?",
     description:
-      "MentionBee analysiert, ob ChatGPT, Perplexity & Co. deine Marke nennen, empfehlen oder ignorieren – inklusive Wettbewerbsvergleich.",
+      "AI Visibility Audit: MentionBee zeigt dir, warum ChatGPT, Claude, Gemini und Perplexity dein Unternehmen (noch) nicht empfehlen – und wo du ansetzen kannst.",
     url: "https://mentionbee.ai",
     siteName: "MentionBee",
     images: [{ url: "https://mentionbee.ai/opengraph-image", width: 1200, height: 630 }],
@@ -61,8 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MentionBee – Wirst du von KI empfohlen?",
-    description: "AI Visibility Reports für smarte Marken im DACH-Raum.",
+    title: "MentionBee – AI Visibility Audit",
+    description:
+      "Finde heraus, warum ChatGPT, Claude, Gemini und Perplexity deine Konkurrenz empfehlen – und dich vielleicht nicht.",
     images: ["https://mentionbee.ai/opengraph-image"],
   },
 };

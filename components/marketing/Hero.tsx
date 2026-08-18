@@ -1,47 +1,63 @@
 import Link from "next/link";
 
-const competitorRows = [
-  { name: "Competitor A", score: 87, barClass: "bg-emerald-500" },
-  { name: "Competitor B", score: 72, barClass: "bg-emerald-500" },
-  { name: "YourBrand", score: 63, barClass: "bg-primary" },
-  { name: "Competitor C", score: 41, barClass: "bg-zinc-400" },
-] as const;
-
-function ScoreRing({ score, max = 100 }: { score: number; max?: number }) {
-  const r = 52;
-  const c = 2 * Math.PI * r;
-  const progress = Math.min(Math.max(score / max, 0), 1);
-  const dash = progress * c;
-
+function HeroAnswerVisual() {
   return (
-    <div className="flex flex-col items-center gap-1">
-      <div className="relative size-36 sm:size-40">
-        <svg className="-rotate-90 size-full" viewBox="0 0 120 120" aria-hidden>
-          <circle
-            cx="60"
-            cy="60"
-            r={r}
-            fill="none"
-            className="stroke-mention-light"
-            strokeWidth="10"
-          />
-          <circle
-            cx="60"
-            cy="60"
-            r={r}
-            fill="none"
-            className="stroke-primary"
-            strokeWidth="10"
-            strokeLinecap="round"
-            strokeDasharray={`${dash} ${c}`}
-          />
-        </svg>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <span className="text-3xl font-bold text-primary tabular-nums sm:text-4xl">{score}</span>
-          <span className="text-xs font-medium text-mention-gray">von {max}</span>
+    <div
+      className="mx-auto w-full max-w-md rounded-2xl border border-zinc-200/90 bg-white p-5 shadow-lg ring-1 ring-zinc-100 sm:p-6 lg:mx-0 lg:max-w-none"
+      aria-label="Beispiel: KI-Antwort ohne dein Unternehmen"
+    >
+      <div className="flex items-center gap-2 border-b border-zinc-100 pb-4">
+        <span className="flex size-8 items-center justify-center rounded-full bg-mention-light text-sm font-bold text-mention-dark">
+          KI
+        </span>
+        <div className="min-w-0">
+          <p className="text-sm font-semibold text-mention-dark">Kaufnahe Frage</p>
+          <p className="text-xs text-mention-gray">ChatGPT · Claude · Gemini · Perplexity</p>
         </div>
       </div>
-      <p className="text-xs font-medium text-mention-gray">AI Visibility Score</p>
+
+      <blockquote className="mt-4 rounded-xl bg-mention-light/70 px-4 py-3 text-sm leading-relaxed text-mention-dark">
+        „Welche Anbieter für [deine Leistung] gibt es in meiner Region?“
+      </blockquote>
+
+      <div className="mt-5 space-y-3">
+        <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
+          Antwort der KI
+        </p>
+        <ul className="space-y-2.5" role="list">
+          <li className="flex items-start gap-3 rounded-xl border border-emerald-200/80 bg-emerald-50/70 px-3 py-2.5">
+            <span className="mt-0.5 text-sm font-bold text-emerald-700" aria-hidden>
+              1
+            </span>
+            <div>
+              <p className="text-sm font-semibold text-mention-dark">Wettbewerber A</p>
+              <p className="text-xs text-mention-gray">Wird empfohlen</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-3 rounded-xl border border-emerald-200/80 bg-emerald-50/70 px-3 py-2.5">
+            <span className="mt-0.5 text-sm font-bold text-emerald-700" aria-hidden>
+              2
+            </span>
+            <div>
+              <p className="text-sm font-semibold text-mention-dark">Wettbewerber B</p>
+              <p className="text-xs text-mention-gray">Wird empfohlen</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-3 rounded-xl border border-dashed border-zinc-300 bg-zinc-50 px-3 py-2.5">
+            <span className="mt-0.5 text-sm font-bold text-zinc-400" aria-hidden>
+              —
+            </span>
+            <div>
+              <p className="text-sm font-semibold text-mention-dark">Dein Unternehmen</p>
+              <p className="text-xs font-medium text-red-600">Nicht genannt</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <p className="mt-5 border-t border-zinc-100 pt-4 text-center text-sm font-semibold text-mention-dark">
+        Andere werden empfohlen. Du nicht.
+      </p>
     </div>
   );
 }
@@ -49,126 +65,35 @@ function ScoreRing({ score, max = 100 }: { score: number; max?: number }) {
 export function Hero() {
   return (
     <section className="border-b border-zinc-200/80 bg-white">
-      <div className="mx-auto flex min-h-[85vh] max-w-6xl flex-col justify-center gap-12 px-4 py-16 max-lg:items-start lg:grid lg:min-h-[85vh] lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-20">
+      <div className="mx-auto flex min-h-[80vh] max-w-6xl flex-col justify-center gap-12 px-4 py-16 max-lg:items-start lg:grid lg:min-h-[80vh] lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-20">
         <div className="flex max-w-xl flex-col gap-6">
           <p className="w-fit rounded-full border border-zinc-200/90 bg-mention-light px-3 py-1 text-xs font-semibold tracking-wide text-mention-dark uppercase">
-            KI-Sichtbarkeitsanalyse
+            AI Visibility Audit
           </p>
 
-          <h1 className="font-heading text-5xl leading-[1.1] font-bold md:text-6xl lg:text-7xl">
-            <span className="block text-mention-dark">Deine Kunden fragen KI.</span>
-            <span className="block font-bold text-primary italic">Empfiehlt sie dich?</span>
+          <h1 className="font-heading text-4xl leading-[1.12] font-bold text-mention-dark sm:text-5xl lg:text-6xl">
+            Warum empfiehlt KI deine Konkurrenz – dich aber nicht?
           </h1>
 
           <p className="text-lg leading-relaxed text-mention-gray">
-            MentionBee zeigt dir, ob ChatGPT, Perplexity &amp; Co. deine Marke in kaufnahen Fragen nennen,
-            empfehlen oder ignorieren – und welche Wettbewerber stattdessen sichtbar sind.
+            MentionBee zeigt dir, warum ChatGPT, Claude, Gemini &amp; Co. dein Unternehmen (noch) nicht
+            empfehlen – und was du tun kannst, damit sich das ändert.
           </p>
 
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="flex flex-col gap-3">
             <Link
               href="/report"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-mention-dark shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark"
+              className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3.5 text-center text-sm font-semibold text-mention-dark shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark sm:w-auto"
             >
-              Deep-Dive bestellen →
+              Meine Sichtbarkeit prüfen →
             </Link>
-            <Link
-              href="/free-report"
-              className="inline-flex items-center justify-center rounded-full bg-mention-dark px-6 py-3 text-center text-sm font-semibold text-white shadow-md transition-all duration-200 hover:scale-105 hover:bg-mention-dark/90"
-            >
-              Kostenlosen Report anfordern →
-            </Link>
-          </div>
-
-          <Link
-            href="/sample-report"
-            className="mt-1 inline-block text-sm text-mention-gray underline-offset-4 transition-colors hover:text-mention-dark hover:underline"
-          >
-            Beispielreport ansehen →
-          </Link>
-
-          <p className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-mention-gray">
-            <span>🔒 Ohne Login</span>
-            <span className="hidden text-zinc-300 sm:inline" aria-hidden>
-              ·
-            </span>
-            <span>🛡️ DSGVO-bewusst</span>
-            <span className="hidden text-zinc-300 sm:inline" aria-hidden>
-              ·
-            </span>
-            <span>📧 Ergebnis per E-Mail</span>
-          </p>
-        </div>
-
-        <div
-          className="mx-auto w-full max-w-md rounded-2xl bg-white p-6 shadow-lg ring-1 ring-zinc-100 lg:mx-0 lg:max-w-none"
-          aria-label="Beispiel Report-Vorschau"
-        >
-          <div className="border-b border-zinc-100 pb-4">
-            <p className="text-sm font-semibold text-mention-dark">AI Visibility Overview</p>
-            <p className="mt-1 text-xs text-mention-gray">
-              Report für: YourBrand · Datum: 12. Mai 2026
+            <p className="text-sm text-mention-gray">
+              Einmaliger Report · 190 CHF · Konkrete Massnahmen statt Abo
             </p>
           </div>
-
-          <div className="flex flex-col gap-6 pt-6 sm:flex-row sm:items-start sm:justify-between">
-            <ScoreRing score={63} />
-
-            <div className="min-w-0 flex-1 space-y-4">
-              <div>
-                <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
-                  Mentions
-                </p>
-                <p className="mt-1 text-sm font-medium text-mention-dark">
-                  7 / 20 Prompts mit Erwähnung
-                </p>
-              </div>
-
-              <div>
-                <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
-                  Top Wettbewerber
-                </p>
-                <ul className="mt-3 space-y-2.5" role="list">
-                  {competitorRows.map((row) => (
-                    <li key={row.name} className="grid grid-cols-[minmax(0,1fr)_2.5rem] gap-2">
-                      <div className="min-w-0">
-                        <div className="flex h-2 overflow-hidden rounded-full bg-mention-light">
-                          <div
-                            className={`${row.barClass} rounded-full`}
-                            style={{ width: `${row.score}%` }}
-                          />
-                        </div>
-                        <p className="mt-1 truncate text-xs font-medium text-mention-dark">
-                          {row.name}
-                        </p>
-                      </div>
-                      <span className="text-right text-xs font-semibold tabular-nums text-mention-dark">
-                        {row.score}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-6 grid gap-3 border-t border-zinc-100 pt-6 sm:grid-cols-2">
-            <figure className="rounded-xl border border-zinc-100 bg-mention-light/60 p-3">
-              <figcaption className="text-xs font-semibold text-mention-dark">ChatGPT</figcaption>
-              <blockquote className="mt-2 text-xs leading-relaxed text-mention-gray italic">
-                „YourBrand wird oft als solide Option genannt; Alternativen mit stärkerer Präsenz sind
-                …“
-              </blockquote>
-            </figure>
-            <figure className="rounded-xl border border-zinc-100 bg-mention-light/60 p-3">
-              <figcaption className="text-xs font-semibold text-mention-dark">Perplexity</figcaption>
-              <blockquote className="mt-2 text-xs leading-relaxed text-mention-gray italic">
-                „Laut aktuellen Quellen: YourBrand taucht in Listen gelegentlich auf, jedoch seltener
-                als …“
-              </blockquote>
-            </figure>
-          </div>
         </div>
+
+        <HeroAnswerVisual />
       </div>
     </section>
   );

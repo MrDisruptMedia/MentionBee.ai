@@ -89,6 +89,36 @@ export const faqFullPageSections: FaqFullPageSection[] = [
     heading: "Reports & Preise",
     items: [
       {
+        id: "was-ist-ai-visibility-audit",
+        question: "Was genau ist ein AI Visibility Audit?",
+        answerText:
+          "Eine strukturierte Bestandsaufnahme deiner Sichtbarkeit in KI-Antworten sowie relevanter inhaltlicher, technischer und digitaler Faktoren. Der Audit ist die Untersuchung; das Ergebnis erhältst du als Report.",
+      },
+      {
+        id: "garantie-empfehlung",
+        question: "Garantiert MentionBee, dass ChatGPT oder andere KI-Systeme mich danach empfehlen?",
+        answerText:
+          "Nein. Eine solche Garantie wäre unseriös. Der Report zeigt dir beobachtbare Befunde, plausible Einflussfaktoren und konkrete Ansatzpunkte – nicht einen geheimen Algorithmus für garantierte KI-Rankings.",
+      },
+      {
+        id: "abo-noetig",
+        question: "Brauche ich danach ein Abo?",
+        answerText:
+          "Nein. Der Report ist eine einmalige Analyse. Du entscheidest danach selbst, welche Massnahmen du umsetzt.",
+      },
+      {
+        id: "selbst-machen",
+        question: "Kann ich die Analyse auch selbst machen?",
+        answerText:
+          "Einzelne KI-Abfragen kannst und solltest du selbst ausprobieren. MentionBee geht darüber hinaus und führt die Beobachtungen mit Wettbewerbs-, Content-, Website- und technischen Analysen zu einer strukturierten Diagnose zusammen.",
+      },
+      {
+        id: "umfang-analyse",
+        question: "Wie umfangreich ist die Analyse?",
+        answerText:
+          "Ein typischer MentionBee-Report wertet über 120 Datenpunkte aus. Dazu gehören deine Sichtbarkeit bei kaufnahen Fragen in vier KI-Systemen, die Erwähnungen relevanter Wettbewerber sowie mehr als 60 Prüfungen deiner Inhalte, Website, technischen Voraussetzungen, Vertrauens- und Marktsignale. Die genaue Zahl variiert je nach Anzahl der untersuchten Fragen und Wettbewerber.",
+      },
+      {
         id: "gratis-report-inhalt",
         question: "Was ist im kostenlosen Report enthalten?",
         answerText:
@@ -96,15 +126,15 @@ export const faqFullPageSections: FaqFullPageSection[] = [
       },
       {
         id: "deep-dive-inhalt",
-        question: "Was ist im Deep-Dive Report enthalten?",
+        question: "Was ist im MentionBee-Report enthalten?",
         answerText:
-          "Der Deep-Dive Report umfasst 150+ strukturierte Checks über 6 Module: AI Visibility (4 KI-Systeme), Positionierungsklarheit, Tech SEO, Schema & E-E-A-T, UX & Conversion und Market Signals. Das Ergebnis: ein gewichteter Gesamtscore, eine vollständige Wettbewerbsanalyse, 25 gewichtete Massnahmen mit Umsetzungsanleitungen und konkrete Content- und PR-Empfehlungen. Lieferung in 24–48h per E-Mail.",
+          "Nach dem AI Visibility Audit erhältst du einen individuellen Online-Report: 3–5 kaufnahe Fragen, getestet über ChatGPT, Claude, Gemini und Perplexity, bis zu 3 Wettbewerber im direkten Vergleich, 68+ Website-, Trust- und Marktsignale sowie 10 priorisierte Massnahmen. Lieferung innerhalb von 24 Stunden per E-Mail-Link.",
       },
       {
         id: "was-fuer-deep-dive-preis",
         question: "Was bekomme ich für {{DEEP_DIVE_PRICE}}?",
         answerText:
-          "Der Deep-Dive Report liefert was Agenturen für CHF 2.500–5.000 berechnen: einen vollständigen AI Visibility- und Website-Audit mit 150+ Checks über 6 Module, Wettbewerbsanalyse, 25 gewichtete Massnahmen mit Umsetzungsanleitungen und konkrete Content- und PR-Empfehlungen – in 24–48h, ohne Briefing, ohne Wartezeit.",
+          "Einen einmaligen AI Visibility Audit mit individuellem Online-Report: Sichtbarkeit in ChatGPT, Claude, Gemini und Perplexity, Wettbewerbsvergleich, Website-, Trust- und Marktsignale sowie 10 priorisierte Massnahmen. Kein Abo, Lieferung innerhalb von 24 Stunden.",
       },
       {
         id: "wettbewerber-angeben",
@@ -116,7 +146,7 @@ export const faqFullPageSections: FaqFullPageSection[] = [
         id: "analyse-dauer",
         question: "Wie lange dauert die Analyse?",
         answerText:
-          "Der kostenlose Report wird zeitnah per E-Mail zugestellt. Der Deep-Dive Report wird innerhalb von 24–48 Stunden geliefert.",
+          "Der kostenlose Report wird zeitnah per E-Mail zugestellt. Den individuellen Online-Report erhältst du innerhalb von 24 Stunden per E-Mail-Link.",
       },
     ],
   },

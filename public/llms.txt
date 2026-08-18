@@ -105,7 +105,7 @@ A sample report is available at https://mentionbee.ai/sample-report
 - Sample Report: https://mentionbee.ai/sample-report
 - Blog: https://mentionbee.ai/blog (Articles on AI Visibility, ChatGPT recommendations, and AI Search)
 - Author: https://mentionbee.ai/autor/olaf-kunz
-- Methodology: https://mentionbee.ai/#methodik
+- Methodology: https://mentionbee.ai/#so-funktionierts
 - FAQ: https://mentionbee.ai/faq (Canonical answers about MentionBee, AI Visibility, GEO, report methodology and pricing)
 
 ## Technology & Methodology

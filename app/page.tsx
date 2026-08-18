@@ -1,14 +1,13 @@
+import { DiagnosisGapSection } from "@/components/marketing/DiagnosisGapSection";
+import { DiyObjectionSection } from "@/components/marketing/DiyObjectionSection";
 import { FAQ } from "@/components/marketing/FAQ";
 import { FinalCTA } from "@/components/marketing/FinalCTA";
-import { FreeVsPaid } from "@/components/marketing/FreeVsPaid";
 import { Hero } from "@/components/marketing/Hero";
-import { HowItWorks } from "@/components/marketing/HowItWorks";
+import { MemsTestimonial } from "@/components/marketing/MemsTestimonial";
+import { PricingRiskSection } from "@/components/marketing/PricingRiskSection";
 import { ProblemSection } from "@/components/marketing/ProblemSection";
-import { UnsichtbarkeitSection } from "@/components/marketing/UnsichtbarkeitSection";
-import { SampleReportTeaser } from "@/components/marketing/SampleReportTeaser";
-import { TrustSection } from "@/components/marketing/TrustSection";
-import { ValueAnchor } from "@/components/marketing/ValueAnchor";
 import { WhatWeAnalyze } from "@/components/marketing/WhatWeAnalyze";
+import { WhatYouGetSection } from "@/components/marketing/WhatYouGetSection";
 import { fetchPublicPricing } from "@/lib/public-pricing";
 
 export default async function Home() {
@@ -18,13 +17,12 @@ export default async function Home() {
     <>
       <Hero />
       <ProblemSection />
-      <UnsichtbarkeitSection />
+      <DiagnosisGapSection />
       <WhatWeAnalyze />
-      <ValueAnchor />
-      <FreeVsPaid />
-      <HowItWorks />
-      <SampleReportTeaser />
-      <TrustSection />
+      <MemsTestimonial />
+      <DiyObjectionSection />
+      <WhatYouGetSection />
+      <PricingRiskSection />
       <FAQ pricing={pricing} />
       <FinalCTA />
     </>

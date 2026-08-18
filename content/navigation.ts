@@ -5,17 +5,15 @@ export type NavItem = {
 
 /** Header-Hauptnavigation (Desktop) */
 export const headerNavigation: NavItem[] = [
-  { label: "Kostenloser Report", href: "/free-report" },
-  { label: "Deep-Dive Report", href: "/report" },
+  { label: "So funktioniert's", href: "/#so-funktionierts" },
   { label: "Beispielreport", href: "/sample-report" },
-  { label: "Blog", href: "/blog" },
-  { label: "Methodik", href: "/#methodik" },
   { label: "FAQ", href: "/faq" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export const mainNavigation: NavItem[] = [
-  { label: "Kostenloser Report", href: "/free-report" },
-  { label: "Report", href: "/report" },
+  { label: "Gratis-Check", href: "/free-report" },
+  { label: "Report bestellen", href: "/report" },
   { label: "Beispielreport", href: "/sample-report" },
 ];
 

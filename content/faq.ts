@@ -4,53 +4,36 @@ export type FaqEntry = {
   answer: string;
 };
 
+/** Homepage FAQ teaser — Source of Truth: AI Visibility Audit storyline */
 export const faqEntries: FaqEntry[] = [
   {
-    id: "free-report-inhalt",
-    question: "Was ist im kostenlosen Report enthalten?",
+    id: "was-ist-ai-visibility-audit",
+    question: "Was genau ist ein AI Visibility Audit?",
     answer:
-      "Der kostenlose Report gibt dir einen ersten Überblick über deine Sichtbarkeit in ausgewählten KI-Antworten: ob deine Marke überhaupt vorkommt, wie oft sie erwähnt wird und ein kompaktes Fazit. Die Anzahl der geprüften Prompts ist bewusst begrenzt – genug, um ein Potenzial oder Problem zu erkennen.",
+      "Eine strukturierte Bestandsaufnahme deiner Sichtbarkeit in KI-Antworten sowie relevanter inhaltlicher, technischer und digitaler Faktoren. Der Audit ist die Untersuchung; das Ergebnis erhältst du als Report.",
   },
   {
-    id: "paid-difference",
-    question: "Was ist im bezahlten Report anders?",
+    id: "garantie-empfehlung",
+    question: "Garantiert MentionBee, dass ChatGPT oder andere KI-Systeme mich danach empfehlen?",
     answer:
-      "Der Deep-Dive Report geht viel tiefer: mehr Prompts und Use Cases, ein strukturierter Wettbewerbsvergleich, Ursachenanalyse (warum du sichtbar bist oder nicht) und ein priorisierter Maßnahmenplan. Du siehst, in welchen Themenfeldern andere Marken dominieren und welche Hebel für dich am wirkungsvollsten sind.",
+      "Nein. Eine solche Garantie wäre unseriös. Der Report zeigt dir beobachtbare Befunde, plausible Einflussfaktoren und konkrete Ansatzpunkte – nicht einen geheimen Algorithmus für garantierte KI-Rankings.",
   },
   {
-    id: "ai-systems",
-    question: "Welche KI-Systeme werden analysiert?",
+    id: "abo-noetig",
+    question: "Brauche ich danach ein Abo?",
     answer:
-      "Wir prüfen relevante, marktführende Assistenz- und Such-KI, die Kauf- und Rechercheentscheidungen beeinflussen – z. B. ChatGPT und Perplexity. Die genaue Auswahl kann sich weiterentwickeln; im Report siehst du transparent, welche Systeme für deine Auswertung herangezogen wurden.",
+      "Nein. Der Report ist eine einmalige Analyse. Du entscheidest danach selbst, welche Massnahmen du umsetzt.",
   },
   {
-    id: "vs-own-chatgpt",
-    question: "Ich nutze bereits ChatGPT oder Claude – was bringt mir der Report mehr?",
+    id: "selbst-machen",
+    question: "Kann ich die Analyse auch selbst machen?",
     answer:
-      "Ein AI-Abo zeigt dir, was KI antwortet, wenn du fragst. MentionBee zeigt dir, was KI antwortet, wenn deine potenziellen Kunden fragen – ohne dass du dabei bist. Wir testen 20–50 kaufnahe Prompts deiner Branche, vergleichen dich mit bis zu 3 Wettbewerbern und analysieren strukturiert, warum du empfohlen wirst oder nicht. Das ist kein Chat – das ist ein Audit.",
+      "Einzelne KI-Abfragen kannst und solltest du selbst ausprobieren. MentionBee geht darüber hinaus und führt die Beobachtungen mit Wettbewerbs-, Content-, Website- und technischen Analysen zu einer strukturierten Diagnose zusammen.",
   },
   {
-    id: "competitors",
-    question: "Kann ich Wettbewerber angeben?",
+    id: "umfang-analyse",
+    question: "Wie umfangreich ist die Analyse?",
     answer:
-      "Ja. Du kannst Marken definieren, gegen die du verglichen werden möchtest. So wird die Wettbewerbslücke greifbar: wer in den gleichen Themen genannt wird, empfohlen wird oder öfter auftaucht als du.",
-  },
-  {
-    id: "duration",
-    question: "Wie lange dauert der Report?",
-    answer:
-      "Die Laufzeit hängt vom Umfang der Analyse ab (z. B. Anzahl Prompts und Systeme). In der Regel erhältst du den kostenlosen Report zeitnah per E-Mail; beim Deep-Dive kann es etwas länger dauern, bis alle Daten aufbereitet sind. Du siehst den Fortschritt bzw. die Zustellung transparent in der Kommunikation per E-Mail.",
-  },
-  {
-    id: "vs-seo",
-    question: "Ist das klassisches SEO?",
-    answer:
-      "Nein – es geht um AI Visibility: wie KI-Systeme deine Marke in natürlichen Antworten darstellen, ob du empfohlen wirst und wie du im Vergleich zu Wettbewerbern wahrgenommen wirst. Klassisches SEO (Google-Ranking, Metadaten) ist ein anderes Spielfeld; MentionBee ergänzt deine Sichtbarkeit dort, wo Nutzer heute zunehmend fragen: bei KI.",
-  },
-  {
-    id: "ki-antworten-varianz",
-    question: "Wie zuverlässig sind KI-Antworten? Variieren die nicht ständig?",
-    answer:
-      "KI-Antworten variieren tatsächlich – das ist ein bekanntes Phänomen. Deshalb testen wir nicht einmal, sondern mit mehreren Prompts über 4 verschiedene KI-Systeme. Das ergibt ein statistisch stabileres Bild deiner Sichtbarkeit. Kein einzelner Prompt ist repräsentativ – aber 20–50 Prompts über ChatGPT, Perplexity, Gemini und Claude schon.",
+      "Ein typischer MentionBee-Report wertet über 120 Datenpunkte aus. Dazu gehören deine Sichtbarkeit bei kaufnahen Fragen in vier KI-Systemen, die Erwähnungen relevanter Wettbewerber sowie mehr als 60 Prüfungen deiner Inhalte, Website, technischen Voraussetzungen, Vertrauens- und Marktsignale. Die genaue Zahl variiert je nach Anzahl der untersuchten Fragen und Wettbewerber.",
   },
 ];

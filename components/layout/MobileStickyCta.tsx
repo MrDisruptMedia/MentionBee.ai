@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const hiddenPathPrefixes = ["/report", "/free-report", "/checkout"];
+const hiddenPathPrefixes = ["/report", "/free-report", "/checkout", "/order"];
 
 export function MobileStickyCta() {
   const pathname = usePathname();
@@ -21,13 +21,13 @@ export function MobileStickyCta() {
         href="/report"
         className="flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md"
       >
-        Deep-Dive bestellen →
+        Meine Sichtbarkeit prüfen →
       </Link>
       <Link
         href="/free-report"
         className="mt-1 block text-center text-xs text-mention-gray underline-offset-4 hover:underline"
       >
-        oder kostenlosen Report starten
+        oder Gratis-Check starten
       </Link>
     </div>
   );
