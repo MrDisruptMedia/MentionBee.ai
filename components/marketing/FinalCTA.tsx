@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-export function FinalCTA() {
+import type { PublicPricing } from "@/lib/public-pricing";
+
+export function FinalCTA({ pricing }: { pricing: PublicPricing }) {
   return (
     <section className="bg-mention-dark py-14 md:py-20">
       <div className="mx-auto max-w-3xl px-4 text-center">
@@ -24,7 +26,9 @@ export function FinalCTA() {
         >
           Meine Sichtbarkeit prüfen →
         </Link>
-        <p className="mt-3 text-sm text-white/70">Einmaliger Report · 190 CHF · Kein Abo</p>
+        <p className="mt-3 text-sm text-white/70">
+          Einmaliger Report · {pricing.deepDivePriceFormatted} · Kein Abo
+        </p>
       </div>
     </section>
   );

@@ -28,7 +28,7 @@ async function resolveCheckoutPricing(fallback: {
 }
 
 export function PaidReportForm() {
-  const { pricing } = usePublicPricing();
+  const { pricing, loading: pricingLoading } = usePublicPricing();
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -114,10 +114,14 @@ export function PaidReportForm() {
 
       <button
         type="submit"
-        disabled={isLoading}
+        disabled={isLoading || pricingLoading}
         className="mt-2 w-full rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark hover:shadow-lg disabled:pointer-events-none disabled:opacity-60"
       >
-        {isLoading ? "Wird vorbereitet..." : `Jetzt für ${pricing.deepDivePriceFormatted} bestellen →`}
+        {isLoading
+          ? "Wird vorbereitet..."
+          : pricingLoading || !pricing.deepDivePriceFormatted
+            ? "Jetzt bestellen →"
+            : `Jetzt für ${pricing.deepDivePriceFormatted} bestellen →`}
       </button>
 
       {error ? (

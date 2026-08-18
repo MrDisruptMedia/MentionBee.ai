@@ -7,13 +7,25 @@ export type PublicPricing = {
   currency: string;
 };
 
-/** Entspricht dem API-Fehlerfallback der Haupt-App (Backend-SoT: EUR 190). */
+/**
+ * Letzter Server-/Fehlerfallback, angeglichen an die Backend-`settings`-SoT.
+ * Kein Verkaufspreis für Client-Loading; siehe `PRICING_PLACEHOLDER`.
+ */
 export const PRICING_FALLBACK: PublicPricing = {
   deepDivePrice: 190,
   deepDivePriceFormatted: "€ 190",
   deepDiveRegularPrice: 249,
   deepDiveRegularPriceFormatted: "€ 249",
   currency: "EUR",
+};
+
+/** Kein Verkaufspreis — nur Layout-Platzhalter, bis `/api/public/pricing` geantwortet hat. */
+export const PRICING_PLACEHOLDER: PublicPricing = {
+  deepDivePrice: 0,
+  deepDivePriceFormatted: "",
+  deepDiveRegularPrice: 0,
+  deepDiveRegularPriceFormatted: "",
+  currency: "",
 };
 
 export function getPricingApiBaseUrl(): string {

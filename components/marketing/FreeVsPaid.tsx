@@ -29,7 +29,7 @@ const deepDiveItems = [
 ] as const;
 
 export function FreeVsPaid() {
-  const { pricing } = usePublicPricing();
+  const { pricing, loading } = usePublicPricing();
   const sale = pricing.deepDivePriceFormatted;
   const regular = pricing.deepDiveRegularPriceFormatted;
 
@@ -70,15 +70,16 @@ export function FreeVsPaid() {
             <h3 className="pr-24 font-heading text-xl font-semibold text-mention-dark">Deep-Dive Report</h3>
 
             <div className="mt-4 inline-flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-xl border border-primary/25 bg-primary/5 px-4 py-3">
-              <span className="text-lg font-medium text-mention-gray line-through decoration-mention-gray/80">
-                {regular}
+              <span className="min-h-[1.75rem] min-w-[4.5rem] text-lg font-medium text-mention-gray line-through decoration-mention-gray/80">
+                {loading ? "\u00a0" : regular}
               </span>
-              <span className="text-2xl font-bold text-primary tabular-nums">
-                {sale} netto
+              <span className="min-h-[2rem] min-w-[5.5rem] text-2xl font-bold text-primary tabular-nums">
+                {loading ? "\u00a0" : `${sale} netto`}
               </span>
             </div>
             <p className="mt-2 text-xs text-mention-gray">
-              Einmalig · Kein Abo · Innerhalb von 24 Stunden · Regulär {regular}
+              Einmalig · Kein Abo · Innerhalb von 24 Stunden
+              {loading || !regular ? "" : ` · Regulär ${regular}`}
             </p>
 
             <p className="mb-3 mt-6 text-sm italic text-mention-gray">

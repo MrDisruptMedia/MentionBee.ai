@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import {
   PRICING_FALLBACK,
-  getPricingApiBaseUrl,
+  PRICING_PLACEHOLDER,
+  getClientPricingApiUrl,
   parsePublicPricingFromJson,
   type PublicPricing,
 } from "@/lib/public-pricing";
@@ -11,46 +12,28 @@ import {
 export type { PublicPricing };
 
 /**
- * Erste und Fallback-Anzeige, bis `/api/public/pricing` geantwortet hat.
- * Bewusst echte Platzhalter-Strings — UI soll immer `pricing` rendern (nicht `loading`).
- */
-const INITIAL_VISIBLE_PRICING: PublicPricing = {
-  deepDivePrice: 199,
-  deepDivePriceFormatted: "€ 199",
-  deepDiveRegularPrice: 299,
-  deepDiveRegularPriceFormatted: "€ 299",
-  currency: "EUR",
-};
-
-const pricingApiBase = getPricingApiBaseUrl();
-
-/**
- * Client: Preise von der Haupt-App (Neon `settings`). `NEXT_PUBLIC_APP_URL` = Basis-URL ohne trailing slash.
+ * Client: Preise von der Haupt-App (Neon `settings`).
+ * Lädt über `NEXT_PUBLIC_APP_URL` oder same-origin `/api/public/pricing` (Rewrite).
+ * Zeigt während des Ladens keinen hardcodierten Verkaufspreis.
  */
 export function usePublicPricing(): {
   pricing: PublicPricing;
   loading: boolean;
   isFallback: boolean;
 } {
-  const [pricing, setPricing] = useState<PublicPricing>(
-    pricingApiBase ? INITIAL_VISIBLE_PRICING : { ...PRICING_FALLBACK },
-  );
-  const [loading, setLoading] = useState(Boolean(pricingApiBase));
+  const [pricing, setPricing] = useState<PublicPricing>(PRICING_PLACEHOLDER);
+  const [loading, setLoading] = useState(true);
   const [isFallback, setIsFallback] = useState(true);
 
   useEffect(() => {
-    const base = getPricingApiBaseUrl();
-    const url = base ? `${base}/api/public/pricing` : "";
-    if (!url) {
-      if (process.env.NODE_ENV !== "production") {
-        console.warn("[usePublicPricing] NEXT_PUBLIC_APP_URL fehlt; nutze Fallback-Preis.");
-      }
-      return;
-    }
+    const url = getClientPricingApiUrl() || "/api/public/pricing";
 
     let cancelled = false;
     void fetch(url, { credentials: "omit" })
-      .then((r) => r.json())
+      .then((r) => {
+        if (!r.ok) throw new Error(`pricing ${r.status}`);
+        return r.json();
+      })
       .then((body: unknown) => {
         if (cancelled) return;
         const parsed = parsePublicPricingFromJson(body);
@@ -58,13 +41,13 @@ export function usePublicPricing(): {
           setPricing(parsed);
           setIsFallback(false);
         } else {
-          setPricing({ ...INITIAL_VISIBLE_PRICING });
+          setPricing(PRICING_PLACEHOLDER);
           setIsFallback(true);
         }
       })
       .catch(() => {
         if (!cancelled) {
-          setPricing({ ...PRICING_FALLBACK });
+          setPricing(PRICING_FALLBACK);
           setIsFallback(true);
         }
       })

@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-export function PricingRiskSection() {
+import type { PublicPricing } from "@/lib/public-pricing";
+
+export function PricingRiskSection({ pricing }: { pricing: PublicPricing }) {
   return (
     <section className="border-b border-zinc-200/80 bg-mention-light py-14 md:py-20">
       <div className="mx-auto max-w-3xl px-4 text-center">
@@ -26,7 +28,7 @@ export function PricingRiskSection() {
 
         <div className="mt-10 rounded-2xl border border-zinc-200/80 bg-white px-6 py-8 shadow-sm">
           <p className="font-heading text-5xl font-bold tracking-tight text-mention-dark tabular-nums sm:text-6xl">
-            190 CHF
+            {pricing.deepDivePriceFormatted}
           </p>
           <p className="mt-2 text-sm text-mention-gray">einmalig · kein Abo</p>
         </div>

@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 import type { ComparisonPageContent } from "@/content/compare/types";
+import { applyPricingTemplates } from "@/lib/apply-pricing-templates";
+import { fetchPublicPricing } from "@/lib/public-pricing";
 
 function markdownishToParagraphs(text: string): string[] {
   return text
@@ -9,7 +11,13 @@ function markdownishToParagraphs(text: string): string[] {
     .filter(Boolean);
 }
 
-export function ComparisonPageTemplate({ content }: { content: ComparisonPageContent }) {
+export async function ComparisonPageTemplate({ content }: { content: ComparisonPageContent }) {
+  const pricing = await fetchPublicPricing();
+  const sections = content.sections.map((section) => ({
+    ...section,
+    heading: section.heading ? applyPricingTemplates(section.heading, pricing) : section.heading,
+    body: applyPricingTemplates(section.body, pricing),
+  }));
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -32,7 +40,7 @@ export function ComparisonPageTemplate({ content }: { content: ComparisonPageCon
         </header>
 
         <div className="prose prose-zinc max-w-none prose-headings:font-heading prose-a:text-primary">
-          {content.sections.map((section, idx) => (
+          {sections.map((section, idx) => (
             <section key={idx} className="mb-10">
               {section.heading ? (
                 <h2 className="font-heading text-2xl font-semibold text-mention-dark">{section.heading}</h2>

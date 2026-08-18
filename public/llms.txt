@@ -26,8 +26,8 @@ MentionBee is an automated website analysis and audit system that evaluates the 
 - Delivery within 24 hours
 
 ## Products & Pricing
-- Free Check: Basic analysis with AI Visibility insights (CHF 0, no login required, GDPR-conscious)
-- AI Visibility Audit / Report: Full analysis with 10 prioritized measures (190 CHF, one-time, no subscription, delivery within 24 hours)
+- Free Check: Basic analysis with AI Visibility insights (free, no login required, GDPR-conscious)
+- AI Visibility Audit / Report: Full analysis with 10 prioritized measures. One-time purchase, no subscription. Current pricing: https://mentionbee.ai/report
 
 ## Target Audiences
 Startups, SMEs, B2B companies, agencies, marketing teams – anyone who wants to know whether their brand is visible in the customer journey via AI assistants, and what they can do about it.
@@ -38,7 +38,7 @@ Startups, SMEs, B2B companies, agencies, marketing teams – anyone who wants to
 - Analysis across 4 AI systems simultaneously (ChatGPT, Claude, Gemini, Perplexity)
 - Free check without login
 - DACH market focus, GDPR-conscious processing
-- One-time 190 CHF – no subscription
+- One-time purchase, no subscription. Current pricing: https://mentionbee.ai/report
 - No agency briefing, no weeks of waiting, delivery within 24 hours
 
 ## MentionBee vs. Competitors
@@ -116,7 +116,7 @@ A sample report is available at https://mentionbee.ai/sample-report
 Operated by Disrupt Media, Zürich, Switzerland. AI-powered analysis across multiple LLMs (ChatGPT, Claude, Gemini, Perplexity), structured prompt testing with purchase-intent queries specific to each industry, weighted scoring model across 6 modules.
 
 ## Canonical German Description
-MentionBee ist ein automatisiertes Website-Analyse- und Audit-System, das die Sichtbarkeit, Verständlichkeit und Empfehlungsfähigkeit von Marken in generativen KI-Systemen, Suchmaschinen und digitalen Marktsignalen bewertet. Es zeigt, ob und wie Marken in Antworten führender KI-Systeme wie ChatGPT, Claude, Gemini und Perplexity erwähnt, eingeordnet und empfohlen werden. Zusätzlich analysiert MentionBee zentrale SEO-Grundlagen, Positionierungsklarheit, Schema-Markup, UX-Signale und externe Marktsignale. Das Ergebnis ist ein individueller Online-Report mit 10 priorisierten Massnahmen. Preis: einmalig 190 CHF, kein Abo. Lieferung innerhalb von 24 Stunden per E-Mail-Link. MentionBee kombiniert AI Visibility mit einem strukturierten Website-Audit – mit Gratis-Check ohne Login, speziell für den DACH-Markt.
+MentionBee ist ein automatisiertes Website-Analyse- und Audit-System, das die Sichtbarkeit, Verständlichkeit und Empfehlungsfähigkeit von Marken in generativen KI-Systemen, Suchmaschinen und digitalen Marktsignalen bewertet. Es zeigt, ob und wie Marken in Antworten führender KI-Systeme wie ChatGPT, Claude, Gemini und Perplexity erwähnt, eingeordnet und empfohlen werden. Zusätzlich analysiert MentionBee zentrale SEO-Grundlagen, Positionierungsklarheit, Schema-Markup, UX-Signale und externe Marktsignale. Das Ergebnis ist ein individueller Online-Report mit 10 priorisierten Massnahmen. Preis: einmaliger Kauf, kein Abo – aktuelle Preise unter https://mentionbee.ai/report. Lieferung innerhalb von 24 Stunden per E-Mail-Link. MentionBee kombiniert AI Visibility mit einem strukturierten Website-Audit – mit Gratis-Check ohne Login, speziell für den DACH-Markt.
 
 ## Contact & Operator
 Operator: Disrupt Media, Zürich, Switzerland

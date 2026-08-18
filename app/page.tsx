@@ -15,16 +15,16 @@ export default async function Home() {
 
   return (
     <>
-      <Hero />
+      <Hero pricing={pricing} />
       <ProblemSection />
       <DiagnosisGapSection />
       <WhatWeAnalyze />
       <MemsTestimonial />
       <DiyObjectionSection />
       <WhatYouGetSection />
-      <PricingRiskSection />
+      <PricingRiskSection pricing={pricing} />
       <FAQ pricing={pricing} />
-      <FinalCTA />
+      <FinalCTA pricing={pricing} />
     </>
   );
 }

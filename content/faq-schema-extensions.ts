@@ -13,6 +13,6 @@ export const faqHomepageSchemaExtensions = [
   {
     question: "Was kostet der AI Visibility Audit?",
     answer:
-      "Der AI Visibility Audit kostet einmalig 190 CHF. Du erhältst einen individuellen Online-Report mit konkreten Massnahmen – kein Abo.",
+      "Der AI Visibility Audit kostet einmalig {{DEEP_DIVE_PRICE}}. Du erhältst einen individuellen Online-Report mit konkreten Massnahmen – kein Abo.",
   },
 ] as const;

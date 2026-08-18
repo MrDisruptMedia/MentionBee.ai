@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import type { PublicPricing } from "@/lib/public-pricing";
+
 function HeroAnswerVisual() {
   return (
     <div
@@ -62,7 +64,7 @@ function HeroAnswerVisual() {
   );
 }
 
-export function Hero() {
+export function Hero({ pricing }: { pricing: PublicPricing }) {
   return (
     <section className="border-b border-zinc-200/80 bg-white">
       <div className="mx-auto flex min-h-[80vh] max-w-6xl flex-col justify-center gap-12 px-4 py-16 max-lg:items-start lg:grid lg:min-h-[80vh] lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-20">
@@ -88,7 +90,7 @@ export function Hero() {
               Meine Sichtbarkeit prüfen →
             </Link>
             <p className="text-sm text-mention-gray">
-              Einmaliger Report · 190 CHF · Konkrete Massnahmen statt Abo
+              Einmaliger Report · {pricing.deepDivePriceFormatted} · Konkrete Massnahmen statt Abo
             </p>
           </div>
         </div>
