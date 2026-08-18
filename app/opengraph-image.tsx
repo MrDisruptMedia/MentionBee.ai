@@ -68,7 +68,7 @@ export default async function Image() {
             marginBottom: "48px",
           }}
         >
-          AI Visibility Reports für smarte Marken im DACH-Raum
+          AI Visibility Audits für smarte Marken im DACH-Raum
         </div>
 
         {/* 3 Pills */}

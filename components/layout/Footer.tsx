@@ -27,7 +27,7 @@ const columns: FooterCol[] = [
     heading: "Produkt",
     links: [
       { label: "Gratis-Check", href: "/free-report" },
-      { label: "Report bestellen", href: "/report" },
+      { label: "Sichtbarkeit prüfen", href: "/report" },
       { label: "Beispielreport", href: "/sample-report" },
       { label: "So funktioniert's", href: "/#so-funktionierts" },
       { label: "Blog", href: "/blog" },

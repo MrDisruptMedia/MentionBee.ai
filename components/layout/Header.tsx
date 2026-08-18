@@ -43,8 +43,7 @@ export function Header() {
             href="/report"
             className={`${primaryBtn} text-xs px-3 py-2 sm:px-5 sm:text-sm whitespace-nowrap`}
           >
-            <span className="sm:hidden">Bestellen</span>
-            <span className="hidden sm:inline">Report bestellen</span>
+            Sichtbarkeit prüfen
           </Link>
         </div>
       </div>

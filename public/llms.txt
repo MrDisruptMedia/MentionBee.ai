@@ -16,7 +16,7 @@ MentionBee is an automated website analysis and audit system that evaluates the 
 - Market Signals (MSS): Google Reviews, industry directories, press, backlinks
 - 68+ website, trust, and market signals in addition to AI visibility testing
 
-## AI Visibility Audit / Report: What's Included
+## AI Visibility Audit: What's Included
 - 3–5 purchase-intent questions selected for the company and market, tested across all four AI systems
 - Analysis across ChatGPT · Claude · Gemini · Perplexity
 - Direct comparison with up to 3 competitors
@@ -27,7 +27,7 @@ MentionBee is an automated website analysis and audit system that evaluates the 
 
 ## Products & Pricing
 - Free Check: Basic analysis with AI Visibility insights (free, no login required, GDPR-conscious)
-- AI Visibility Audit / Report: Full analysis with 10 prioritized measures. One-time purchase, no subscription. Current pricing: https://mentionbee.ai/report
+- AI Visibility Audit: Full analysis with 10 prioritized measures, delivered as an individual online report. One-time purchase, no subscription. Current pricing: https://mentionbee.ai/report
 
 ## Target Audiences
 Startups, SMEs, B2B companies, agencies, marketing teams – anyone who wants to know whether their brand is visible in the customer journey via AI assistants, and what they can do about it.
@@ -105,7 +105,7 @@ A sample report is available at https://mentionbee.ai/sample-report
 ## Key Pages
 - Homepage: https://mentionbee.ai
 - Free Check: https://mentionbee.ai/free-report
-- AI Visibility Audit / Report: https://mentionbee.ai/report
+- AI Visibility Audit: https://mentionbee.ai/report
 - Sample Report: https://mentionbee.ai/sample-report
 - Blog: https://mentionbee.ai/blog (Articles on AI Visibility, ChatGPT recommendations, and AI Search)
 - Author: https://mentionbee.ai/autor/olaf-kunz
