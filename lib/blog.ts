@@ -12,6 +12,18 @@ export function loadBlogIndex(): PublicArticleIndex {
   return JSON.parse(readFileSync(file, "utf8")) as PublicArticleIndex;
 }
 
+/** Latest published posts from the public blog index (source of truth). */
+export function getLatestPublishedArticles(limit: number): PublicArticle[] {
+  const slugs = [...loadBlogIndex().articles]
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+    .slice(0, limit)
+    .map((a) => a.publicSlug);
+
+  return slugs
+    .map((slug) => getPublicArticleBySlug(slug))
+    .filter((article): article is PublicArticle => article !== null);
+}
+
 export function listPublicArticles(): PublicArticle[] {
   if (!existsSync(BLOG_DIR)) return [];
   return readdirSync(BLOG_DIR)

@@ -40,11 +40,53 @@ export default function ReportPage() {
           Der vollständige Audit deiner Sichtbarkeit in KI-Antworten – mit Wettbewerbsvergleich,
           Ursachenanalyse und priorisierten Massnahmen.
         </p>
-        <ReportPriceBadges variant="hero" />
-        <p className="mt-3 text-sm text-mention-gray">
-          Einmalig · Kein Abo · Innerhalb von 24 Stunden
-        </p>
       </header>
+
+      {/* Leistungen + Bestellung */}
+      <section className="mt-12 lg:mt-16">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:items-start lg:gap-12">
+          <div>
+            <h2 className="font-heading text-2xl font-bold text-mention-dark sm:text-3xl">
+              Im Audit enthalten:
+            </h2>
+            <ul className="mt-6 flex flex-col gap-3" role="list">
+              {featureBullets.map((line) => (
+                <li key={line} className="flex gap-3 text-mention-dark">
+                  <Check className="mt-0.5 size-5 shrink-0 text-primary" strokeWidth={2.25} aria-hidden />
+                  <span className="leading-relaxed">{line}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <aside className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-zinc-100 sm:p-8">
+            <h2 className="font-heading text-xl font-semibold text-mention-dark">Jetzt bestellen</h2>
+            <ReportPriceBadges variant="aside" />
+            <p className="mt-2 text-sm text-mention-gray">
+              Einmalig · Kein Abo · Innerhalb von 24 Stunden
+            </p>
+            <hr className="my-6 border-zinc-200" />
+            <PaidReportForm />
+            <p className="mt-6 text-xs leading-relaxed text-mention-gray">
+              Mit dem Absenden akzeptierst du unsere{" "}
+              <Link href="/agb" className="font-medium text-primary underline underline-offset-2">
+                AGB
+              </Link>{" "}
+              und{" "}
+              <Link
+                href="/datenschutzerklaerung"
+                className="font-medium text-primary underline underline-offset-2"
+              >
+                Datenschutzerklärung
+              </Link>
+              .
+            </p>
+            <p className="mt-4 text-center text-sm text-mention-gray" aria-label="Sichere Zahlung via Stripe">
+              🔒 Sichere Zahlung via Stripe
+            </p>
+          </aside>
+        </div>
+      </section>
 
       {/* Was du bekommst */}
       <section className="mt-16 border-t border-zinc-100 pt-16">
@@ -79,52 +121,6 @@ export default function ReportPage() {
               solltest.
             </p>
           </article>
-        </div>
-      </section>
-
-      {/* Leistungen + Bestellung */}
-      <section className="mt-16 border-t border-zinc-100 pt-16">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-14 lg:items-start">
-          <div>
-            <h2 className="font-heading text-2xl font-bold text-mention-dark sm:text-3xl">
-              Im Audit enthalten:
-            </h2>
-            <ul className="mt-6 flex flex-col gap-3" role="list">
-              {featureBullets.map((line) => (
-                <li key={line} className="flex gap-3 text-mention-dark">
-                  <Check className="mt-0.5 size-5 shrink-0 text-primary" strokeWidth={2.25} aria-hidden />
-                  <span className="leading-relaxed">{line}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <aside className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-zinc-100">
-            <h2 className="font-heading text-xl font-semibold text-mention-dark">Jetzt bestellen</h2>
-            <ReportPriceBadges variant="aside" />
-            <p className="mt-2 text-sm text-mention-gray">
-              Einmalig · Kein Abo · Innerhalb von 24 Stunden
-            </p>
-            <hr className="my-6 border-zinc-200" />
-            <PaidReportForm />
-            <p className="mt-6 text-xs leading-relaxed text-mention-gray">
-              Mit dem Absenden akzeptierst du unsere{" "}
-              <Link href="/agb" className="font-medium text-primary underline underline-offset-2">
-                AGB
-              </Link>{" "}
-              und{" "}
-              <Link
-                href="/datenschutzerklaerung"
-                className="font-medium text-primary underline underline-offset-2"
-              >
-                Datenschutzerklärung
-              </Link>
-              .
-            </p>
-            <p className="mt-4 text-center text-sm text-mention-gray" aria-label="Sichere Zahlung via Stripe">
-              🔒 Sichere Zahlung via Stripe
-            </p>
-          </aside>
         </div>
       </section>
     </div>
