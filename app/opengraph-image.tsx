@@ -33,6 +33,8 @@ export default async function Image() {
           </div>
           <div
             style={{
+              display: "flex",
+              alignItems: "baseline",
               fontSize: "48px",
               fontWeight: "bold",
               color: "#FFFFFF",
@@ -63,6 +65,7 @@ export default async function Image() {
         {/* Subline */}
         <div
           style={{
+            display: "flex",
             fontSize: "32px",
             color: "#9CA3AF",
             maxWidth: "800px",
