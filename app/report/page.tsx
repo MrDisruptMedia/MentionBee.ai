@@ -6,6 +6,8 @@ import { PaidReportForm } from "@/components/forms/PaidReportForm";
 import { ReportPriceBadges } from "@/components/marketing/ReportPriceBadges";
 import { TrackFunnelView } from "@/components/analytics/TrackFunnelView";
 import { FUNNEL_EVENTS } from "@/lib/analytics/data-layer";
+import { auditServiceJsonLd } from "@/lib/json-ld";
+import { fetchPublicPricing } from "@/lib/public-pricing";
 
 export const metadata: Metadata = {
   title: "AI Visibility Audit | MentionBee",
@@ -24,9 +26,17 @@ const featureBullets = [
   "Innerhalb von 24 Stunden",
 ] as const;
 
-export default function ReportPage() {
+export default async function ReportPage() {
+  const pricing = await fetchPublicPricing();
+
   return (
     <div className="mx-auto max-w-5xl px-4 pt-24 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(auditServiceJsonLd(pricing)),
+        }}
+      />
       <TrackFunnelView event={FUNNEL_EVENTS.VIEW_PAID_REPORT} />
       {/* Hero */}
       <header className="mx-auto max-w-3xl text-center">

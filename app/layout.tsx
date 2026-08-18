@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileStickyCta } from "@/components/layout/MobileStickyCta";
+import { siteGraphJsonLd } from "@/lib/json-ld";
 
 import "./globals.css";
 
@@ -15,28 +16,6 @@ const inter = Inter({
 });
 
 const gtmId = "GTM-W25FQX2Z";
-
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "MentionBee",
-  url: "https://mentionbee.ai",
-  logo: "https://mentionbee.ai/mentionbee-logo-transparent.png",
-  description:
-    "MentionBee analysiert die AI-Sichtbarkeit von Unternehmen in ChatGPT, Claude, Gemini und Perplexity – mit Wettbewerbsvergleich und priorisiertem Maßnahmenplan.",
-  email: "hello@mentionbee.ai",
-  foundingLocation: {
-    "@type": "Place",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Wieslergasse 2",
-      addressLocality: "Zürich",
-      postalCode: "8049",
-      addressCountry: "CH",
-    },
-  },
-  sameAs: ["https://www.linkedin.com/company/mentionbee"],
-};
 
 // Favicon: Next.js nutzt `app/icon.png` automatisch; `metadata.icons` ergänzt Link-Tags.
 
@@ -92,7 +71,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd),
+            __html: JSON.stringify(siteGraphJsonLd()),
           }}
         />
         <noscript>

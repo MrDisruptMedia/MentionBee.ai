@@ -26,7 +26,7 @@ export default async function Home() {
       <DiyObjectionSection />
       <WhatYouGetSection />
       <PricingRiskSection pricing={pricing} />
-      <FAQ pricing={pricing} />
+      <FAQ />
       <LatestPostsSection articles={latestPosts} />
       <FinalCTA pricing={pricing} />
     </>

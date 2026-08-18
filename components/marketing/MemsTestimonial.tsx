@@ -1,9 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { MEMS_REVIEW_QUOTE, memsReviewJsonLd } from "@/lib/json-ld";
+
 export function MemsTestimonial() {
   return (
     <section className="border-b border-zinc-200/80 bg-white py-14 md:py-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(memsReviewJsonLd()),
+        }}
+      />
       <div className="mx-auto max-w-4xl px-4">
         <h2 className="mx-auto max-w-3xl text-center font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
           Ein Blick von aussen zeigt Dinge, die man selbst leicht übersieht.
@@ -23,9 +31,7 @@ export function MemsTestimonial() {
 
           <div>
             <blockquote className="font-heading text-xl leading-relaxed text-mention-dark sm:text-2xl">
-              „Der Report offenbarte den dringenden Handlungsbedarf für unseren Webauftritt. Daraufhin
-              haben wir unsere Website neu gestaltet – seitdem erhalten wir messbar mehr verwertbare
-              Anfragen.“
+              {MEMS_REVIEW_QUOTE}
             </blockquote>
             <figcaption className="mt-6">
               <p className="text-base font-semibold text-mention-dark">Markus Nägele</p>
