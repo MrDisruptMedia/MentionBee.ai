@@ -46,6 +46,8 @@ export default async function Image() {
         {/* Headline */}
         <div
           style={{
+            display: "flex",
+            flexWrap: "wrap",
             fontSize: "72px",
             fontWeight: "bold",
             color: "#FFFFFF",
