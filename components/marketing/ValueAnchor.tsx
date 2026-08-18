@@ -14,7 +14,7 @@ export function ValueAnchor() {
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-center text-lg leading-relaxed text-mention-dark md:text-xl">
           Was Agenturen für 2.500–5.000 € als AI- und Website-Audit liefern, erhältst du hier strukturiert,
-          transparent und praktikabel innerhalb von 48h für {offer}.
+          transparent und praktikabel innerhalb von 24 Stunden für {offer}.
         </p>
         <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-mention-gray">
           Kein Agentur-Briefing. Kein wochenlanges Warten. Kein generischer Bericht.

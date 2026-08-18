@@ -29,7 +29,7 @@ export function OrderConfirmationContent() {
 
       <p className="mt-4 text-lg leading-relaxed text-mention-gray">
         Wir analysieren jetzt deine Website mit 6 verschiedenen Modulen. Du erhältst den fertigen
-        Report per E-Mail – in der Regel innerhalb von 24 Stunden.
+        individuellen Online-Report per E-Mail-Link – innerhalb von 24 Stunden.
       </p>
 
       <div className="mt-8 rounded-xl border border-zinc-200/90 bg-white px-6 py-5 text-left shadow-sm">

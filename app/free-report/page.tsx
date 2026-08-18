@@ -6,11 +6,11 @@ import { FreeReportForm } from "@/components/forms/FreeReportForm";
 export const metadata: Metadata = {
   title: "Kostenloser AI Visibility Report | MentionBee",
   description:
-    "Kostenloser Check: Sieh, ob ChatGPT, Perplexity und weitere KI deine Marke nennen – mit Sichtbarkeits-Score, Wettbewerbsvergleich und ersten Empfehlungen per E-Mail.",
+    "Kostenloser Check: Sieh, ob ChatGPT, Claude, Gemini und Perplexity deine Marke nennen – mit Sichtbarkeits-Score, Wettbewerbsvergleich und ersten Empfehlungen per E-Mail.",
 };
 
 const bullets = [
-  "Analyse über 4 KI-Systeme",
+  "Analyse über ChatGPT · Claude · Gemini · Perplexity",
   "Erster Sichtbarkeits-Score",
   "Wettbewerber-Vergleich",
   "Konkrete erste Empfehlungen",
@@ -30,7 +30,7 @@ export default function FreeReportPage() {
           </h1>
 
           <p className="text-lg leading-relaxed text-mention-gray">
-            Finde heraus, ob ChatGPT, Perplexity &amp; Co. deine Marke kennen – inklusive erstem
+            Finde heraus, ob ChatGPT, Claude, Gemini und Perplexity deine Marke kennen – inklusive erstem
             Wettbewerbsvergleich.
           </p>
 

@@ -42,9 +42,10 @@ export default function AgbPage() {
         <section>
           <h2 className="mt-8 mb-3 text-xl font-semibold text-mention-dark">§4 Lieferung</h2>
           <p>
-            Der Report wird nach erfolgreicher Zahlung automatisiert erstellt und per E-Mail zugestellt. Die
-            Lieferzeit beträgt in der Regel 24–48 Stunden. Bei technischen Störungen kann sich die Lieferzeit
-            verzögern; der Anbieter informiert den Kunden in diesem Fall per E-Mail.
+            Der Report wird nach erfolgreicher Zahlung automatisiert erstellt und als individueller
+            Online-Report per E-Mail-Link zugestellt. Die Lieferzeit beträgt innerhalb von 24 Stunden. Bei
+            technischen Störungen kann sich die Lieferzeit verzögern; der Anbieter informiert den Kunden in
+            diesem Fall per E-Mail.
           </p>
         </section>
 

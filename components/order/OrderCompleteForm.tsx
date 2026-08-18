@@ -495,7 +495,7 @@ export function OrderCompleteForm() {
       </button>
 
       <p className="text-center text-xs text-mention-gray">
-        Der Report wird in der Regel innerhalb von 24 Stunden per E-Mail zugestellt.
+        Den individuellen Online-Report erhältst du innerhalb von 24 Stunden per E-Mail-Link.
       </p>
     </div>
   );

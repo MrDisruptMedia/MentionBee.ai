@@ -5,7 +5,7 @@ const steps = [
   {
     n: 2,
     title:
-      "MentionBee führt 150+ strukturierte Checks durch – inklusive 4 KI-Systeme, Tech SEO, UX und mehr",
+      "MentionBee untersucht 3–5 kaufnahe Fragen über ChatGPT, Claude, Gemini und Perplexity sowie 68+ Website-, Trust- und Marktsignale",
   },
   { n: 3, title: "Du erhältst einen priorisierten Maßnahmenplan per E-Mail" },
   { n: 4, title: "Optional: Umsetzungs-Support buchen" },

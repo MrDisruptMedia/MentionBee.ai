@@ -21,11 +21,11 @@ const deepDiveItems = [
   "siehst du, bei welchen Kauf-Fragen du nicht auftauchst",
   "erkennst du, welche Wettbewerber KI stattdessen empfiehlt",
   "verstehst du, welche Quellen und Inhalte dir fehlen",
-  "bekommst du 25 gewichtete Maßnahmen in 3 wichtigen Kategorien",
-  "erhältst du einen priorisierten Maßnahmenplan",
-  "erhältst du konkrete Content- und PR-Empfehlungen",
-  "erfährst du, wie du Maßnahmen in deinem CMS umsetzt",
-  "analysieren wir 5–6 kaufnahe Suchanfragen deiner Branche über 4 KI-Systeme",
+  "bekommst du 10 priorisierte Massnahmen",
+  "erhältst du einen priorisierten Massnahmenplan",
+  "untersuchst du 68+ Website-, Trust- und Marktsignale",
+  "analysieren wir 3–5 kaufnahe Fragen über ChatGPT, Claude, Gemini und Perplexity",
+  "erhältst du deinen individuellen Online-Report innerhalb von 24 Stunden",
 ] as const;
 
 export function FreeVsPaid() {
@@ -78,7 +78,7 @@ export function FreeVsPaid() {
               </span>
             </div>
             <p className="mt-2 text-xs text-mention-gray">
-              Einführungspreis · Regulär {regular} · Lieferung in 24–48h
+              Einmalig · Kein Abo · Innerhalb von 24 Stunden · Regulär {regular}
             </p>
 
             <p className="mb-3 mt-6 text-sm italic text-mention-gray">

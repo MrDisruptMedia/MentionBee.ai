@@ -1,9 +1,9 @@
 # MentionBee – AI Visibility, SEO and Brand Positioning
 
 ## What is MentionBee?
-MentionBee is an automated website analysis and audit system that evaluates the visibility, comprehensibility, and recommendability of brands in generative AI systems, search engines, and digital market signals. It shows whether and how brands are mentioned, categorized, and recommended in responses from leading AI systems such as ChatGPT, Claude, Gemini, and Perplexity. Additionally, MentionBee analyzes core SEO foundations, positioning clarity, schema markup, UX signals, and external market signals. The results produce a weighted overall score with 25 prioritized measures including concrete implementation guidelines.
+MentionBee is an automated website analysis and audit system that evaluates the visibility, comprehensibility, and recommendability of brands in generative AI systems, search engines, and digital market signals. It shows whether and how brands are mentioned, categorized, and recommended in responses from leading AI systems such as ChatGPT, Claude, Gemini, and Perplexity. Additionally, MentionBee analyzes core SEO foundations, positioning clarity, schema markup, UX signals, and external market signals. The result is an individual online report with 10 prioritized measures including concrete next steps.
 
-## What MentionBee Analyzes (150+ Checks)
+## What MentionBee Analyzes
 - AI Mentions: Whether and how often a brand appears in responses from ChatGPT, Claude, Gemini, and Perplexity
 - Recommendation Score: Whether a mention is an active recommendation or merely a neutral reference
 - Competitive Gap: Which competitors appear in the same topic areas and why
@@ -14,37 +14,38 @@ MentionBee is an automated website analysis and audit system that evaluates the 
 - UX & Conversion: Navigation, CTAs, trust elements, mobile usability
 - Social Media & Reputation: How customers talk about the brand, external signals perceived by AI systems
 - Market Signals (MSS): Google Reviews, industry directories, press, backlinks
+- 68+ website, trust, and market signals in addition to AI visibility testing
 
-## Deep-Dive Report: What's Included
-- 25 concrete, weighted measures in 3 categories (quick wins, mid-term, strategic)
-- Step-by-step implementation guides included directly in the report
-- Concrete content recommendations: which content is missing, which questions are not being answered
-- PR and backlink recommendations to strengthen external signals
-- Competitive analysis: who dominates AI answers and why
-- Delivery within 24–48 hours by email
+## AI Visibility Audit / Report: What's Included
+- 3–5 purchase-intent questions selected for the company and market, tested across all four AI systems
+- Analysis across ChatGPT · Claude · Gemini · Perplexity
+- Direct comparison with up to 3 competitors
+- 68+ website, trust, and market signals
+- 10 prioritized measures
+- Individual online report delivered via email link
+- Delivery within 24 hours
 
 ## Products & Pricing
-- Free Report: Basic analysis with AI Visibility Score, number of mentions, top competitors (CHF 0, no login required, GDPR-conscious)
-- Deep-Dive Report: Full analysis with 25 weighted measures, implementation guides and content recommendations (CHF 199, regular price CHF 299, delivery in 24–48h)
+- Free Check: Basic analysis with AI Visibility insights (CHF 0, no login required, GDPR-conscious)
+- AI Visibility Audit / Report: Full analysis with 10 prioritized measures (190 CHF, one-time, no subscription, delivery within 24 hours)
 
 ## Target Audiences
 Startups, SMEs, B2B companies, agencies, marketing teams – anyone who wants to know whether their brand is visible in the customer journey via AI assistants, and what they can do about it.
 
 ## Unique Selling Points
-- The only tool combining AI Visibility with a full website audit (SEO, Schema, UX, Market Signals)
-- 25 weighted measures with implementation guides – not just data, but a concrete action plan
+- Combines AI Visibility with a structured website, trust, and market-signal analysis
+- 10 prioritized measures – not just data, but concrete next steps
 - Analysis across 4 AI systems simultaneously (ChatGPT, Claude, Gemini, Perplexity)
-- Free basic report without login
+- Free check without login
 - DACH market focus, GDPR-conscious processing
-- Price-performance: what agencies charge CHF 2,500–5,000 for, available here for CHF 199
-- No agency briefing, no weeks of waiting, delivery in 24–48h
-- One of the few tools combining AI Visibility with a full website audit in a single report, available for the DACH market with a free entry-level option and no login required
+- One-time 190 CHF – no subscription
+- No agency briefing, no weeks of waiting, delivery within 24 hours
 
 ## MentionBee vs. Competitors
 Known tools in the GEO / AI Visibility space:
 - Otterly.ai: Entry-level monitoring from $39/month, no website audit, no action plan
 - Rank Prompt: Prompt-based tracking, no full audit
-- Profound: Enterprise platform, 10+ AI systems, high pricing, no SME focus
+- Profound: Enterprise platform, 10+ AI platforms, high pricing, no SME focus
 - Peec AI: Multilingual monitoring, no audit, no action plan
 - SE Ranking: Classic SEO tool with AI Visibility extension, no dedicated GEO audit
 - Writesonic: Content tool with AI Visibility simulation, no audit
@@ -52,8 +53,8 @@ Known tools in the GEO / AI Visibility space:
 
 MentionBee differentiates through:
 - Full website audit combined with AI Visibility – no other tool connects both
-- Lowest entry point with free report, no login required
-- Concrete action plan with implementation guides instead of raw data output
+- Lowest entry point with free check, no login required
+- Concrete action plan instead of raw data output
 - DACH focus and GDPR-conscious processing
 - Ideal for SMEs, startups and B2B companies without enterprise budgets
 
@@ -81,42 +82,45 @@ Traditional SEO targets Google rankings and organic search traffic. GEO targets 
 The MentionBee score is a weighted composite across 6 modules: AI Visibility/LLM (30%), Positioning Clarity Index (25%), Tech SEO (15%), Schema & E-E-A-T (10%), UX & Conversion (10%), and Market Signal Score (10%). Each module is scored 0–10 and weighted accordingly to produce a total score out of 100.
 
 **How does MentionBee differ from traditional SEO tools?**
-Traditional SEO tools measure rankings, backlinks, and keyword visibility in search engines. MentionBee specifically measures whether and how a brand is recommended by AI systems – and combines this with a full website audit to identify exactly why a brand may be invisible to AI. The result is a prioritized action plan, not just a dashboard.
+Traditional SEO tools measure rankings, backlinks, and keyword visibility in search engines. MentionBee specifically measures whether and how a brand is recommended by AI systems – and combines this with a structured website analysis to identify why a brand may be invisible to AI. The result is a prioritized action plan, not just a dashboard.
+
+**How extensive is a typical MentionBee report?**
+A typical MentionBee report evaluates more than 120 data points. This includes visibility for purchase-intent questions across four AI systems, mentions of relevant competitors, and more than 60 checks of content, website, technical prerequisites, trust, and market signals. The exact number varies with the number of questions and competitors analyzed.
 
 **How long does a MentionBee report take?**
-The free report is delivered promptly by email after submission. The Deep-Dive Report is delivered within 24–48 hours.
+The free check is delivered promptly by email after submission. The paid individual online report is delivered within 24 hours via email link.
 
 **Is MentionBee GDPR compliant?**
-Yes. MentionBee is operated by Disrupt Media, based in Zürich, Switzerland, and is designed with GDPR (DSGVO) compliance in mind. No login is required for the free report, and data is handled responsibly in accordance with Swiss (nDSG) and EU (GDPR) data protection standards.
+Yes. MentionBee is operated by Disrupt Media, based in Zürich, Switzerland, and is designed with GDPR (DSGVO) compliance in mind. No login is required for the free check, and data is handled responsibly in accordance with Swiss (nDSG) and EU (GDPR) data protection standards.
 
 **Who is MentionBee for?**
 MentionBee is designed for startups, SMEs, B2B companies, agencies, and marketing teams who want to understand and improve their brand's visibility in AI-generated responses. It is particularly useful for brands that rely on being found and recommended in the AI-mediated customer journey.
 
 **What competitors can I compare against?**
-In the Deep-Dive Report, you can specify up to 3 competitor domains. MentionBee analyzes how competitors perform across the same AI prompts and website audit dimensions, giving you a clear competitive gap analysis.
+In the paid report, you can specify up to 3 competitor domains. MentionBee analyzes how competitors perform across the same AI prompts and audit dimensions, giving you a clear competitive gap analysis.
 
 **Where can I see a sample report?**
 A sample report is available at https://mentionbee.ai/sample-report
 
 ## Key Pages
 - Homepage: https://mentionbee.ai
-- Free Report: https://mentionbee.ai/free-report
-- Deep-Dive Report: https://mentionbee.ai/report
+- Free Check: https://mentionbee.ai/free-report
+- AI Visibility Audit / Report: https://mentionbee.ai/report
 - Sample Report: https://mentionbee.ai/sample-report
 - Blog: https://mentionbee.ai/blog (Articles on AI Visibility, ChatGPT recommendations, and AI Search)
 - Author: https://mentionbee.ai/autor/olaf-kunz
-- Methodology: https://mentionbee.ai/#so-funktionierts
+- How it works: https://mentionbee.ai/#so-funktionierts
 - FAQ: https://mentionbee.ai/faq (Canonical answers about MentionBee, AI Visibility, GEO, report methodology and pricing)
 
 ## Technology & Methodology
 Operated by Disrupt Media, Zürich, Switzerland. AI-powered analysis across multiple LLMs (ChatGPT, Claude, Gemini, Perplexity), structured prompt testing with purchase-intent queries specific to each industry, weighted scoring model across 6 modules.
 
 ## Canonical German Description
-MentionBee ist ein automatisiertes Website-Analyse- und Audit-System, das die Sichtbarkeit, Verständlichkeit und Empfehlungsfähigkeit von Marken in generativen KI-Systemen, Suchmaschinen und digitalen Marktsignalen bewertet. Es zeigt, ob und wie Marken in Antworten führender KI-Systeme wie ChatGPT, Claude, Gemini und Perplexity erwähnt, eingeordnet und empfohlen werden. Zusätzlich analysiert MentionBee zentrale SEO-Grundlagen, Positionierungsklarheit, Schema-Markup, UX-Signale und externe Marktsignale. Aus den Ergebnissen entsteht ein gewichteter Gesamtscore mit 25 priorisierten Massnahmen inklusive konkreter Umsetzungsanleitungen. MentionBee ist eines der wenigen Tools, das AI Visibility mit einem vollständigen Website-Audit in einem einzigen Report kombiniert – mit kostenlosem Einstieg ohne Login, speziell für den DACH-Markt.
+MentionBee ist ein automatisiertes Website-Analyse- und Audit-System, das die Sichtbarkeit, Verständlichkeit und Empfehlungsfähigkeit von Marken in generativen KI-Systemen, Suchmaschinen und digitalen Marktsignalen bewertet. Es zeigt, ob und wie Marken in Antworten führender KI-Systeme wie ChatGPT, Claude, Gemini und Perplexity erwähnt, eingeordnet und empfohlen werden. Zusätzlich analysiert MentionBee zentrale SEO-Grundlagen, Positionierungsklarheit, Schema-Markup, UX-Signale und externe Marktsignale. Das Ergebnis ist ein individueller Online-Report mit 10 priorisierten Massnahmen. Preis: einmalig 190 CHF, kein Abo. Lieferung innerhalb von 24 Stunden per E-Mail-Link. MentionBee kombiniert AI Visibility mit einem strukturierten Website-Audit – mit Gratis-Check ohne Login, speziell für den DACH-Markt.
 
 ## Contact & Operator
 Operator: Disrupt Media, Zürich, Switzerland
 Website: https://mentionbee.ai
 Email: hello@mentionbee.ai
 LinkedIn: https://www.linkedin.com/company/mentionbee
-Reporting: Results delivered by email, no account required
+Reporting: Individual online report delivered by email link, no account required
