@@ -1,49 +1,56 @@
 import Link from "next/link";
-import { Bot, FileText, Globe, Settings, User, Users } from "lucide-react";
 
+import {
+  IconDigitalePraesenz,
+  IconInhalte,
+  IconKiEmpfehlungen,
+  IconNutzererlebnis,
+  IconTechnik,
+  IconWettbewerb,
+} from "@/components/marketing/AuditDimensionIcons";
 import { ReportMeasuresExcerpt } from "@/components/marketing/ReportMeasuresExcerpt";
 
 const areas = [
   {
     n: "1",
     title: "KI-Empfehlungen",
-    icon: Bot,
+    icon: IconKiEmpfehlungen,
     body: "Wir testen, bei welchen relevanten Fragen dein Unternehmen in ChatGPT, Claude, Gemini und Perplexity genannt wird – und wann nicht.",
   },
   {
     n: "2",
     title: "Wettbewerb",
-    icon: Users,
+    icon: IconWettbewerb,
     body: "Wir zeigen, wer stattdessen auftaucht und wo sich relevante Unterschiede zu deinen Wettbewerbern zeigen.",
   },
   {
     n: "3",
     title: "Inhalte & Positionierung",
-    icon: FileText,
+    icon: IconInhalte,
     body: "Wir prüfen, ob Angebot, Leistungen und Kernthemen klar, vollständig und für Menschen wie KI-Systeme verständlich beschrieben sind.",
   },
   {
     n: "4",
     title: "Digitale Präsenz",
-    icon: Globe,
+    icon: IconDigitalePraesenz,
     body: "Wir analysieren, wie vollständig und konsistent dein Unternehmen im Web sichtbar ist und wo wichtige Signale fehlen.",
   },
   {
     n: "5",
     title: "Technische Voraussetzungen",
-    icon: Settings,
+    icon: IconTechnik,
     body: "Wir prüfen, ob Suchmaschinen und KI-nahe Crawler deine wichtigsten Inhalte sauber erreichen und verarbeiten können.",
   },
   {
     n: "6",
     title: "Website & Nutzererlebnis",
-    icon: User,
+    icon: IconNutzererlebnis,
     body: "Wir untersuchen, wie schnell Menschen und Maschinen wichtige Informationen finden und wo Struktur oder Nutzerführung im Weg stehen.",
   },
 ] as const;
 
 const markerUnderline = `url("data:image/svg+xml,${encodeURIComponent(
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 10" preserveAspectRatio="none"><path d="M2 7C52 2.5 98 9 146 5.2S208 8.5 238 3.8" fill="none" stroke="#FFC400" stroke-width="3.8" stroke-linecap="round"/></svg>`,
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 16" preserveAspectRatio="none"><path d="M1 11c28-5.5 58 3 92-1.2 36-4.4 62 5.8 98 1.4 16-1.9 36 2.4 48-1.6" fill="none" stroke="#FFC400" stroke-width="7.2" stroke-linecap="round"/></svg>`,
 )}")`;
 
 export function WhatWeAnalyze() {
@@ -57,7 +64,7 @@ export function WhatWeAnalyze() {
           <h2 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
             Vom „
             <span
-              className="inline bg-bottom bg-no-repeat pb-[0.18em] [background-size:100%_0.3em] [box-decoration-break:clone] [-webkit-box-decoration-break:clone]"
+              className="inline bg-bottom bg-no-repeat pb-[0.12em] [background-size:100%_0.46em] [box-decoration-break:clone] [-webkit-box-decoration-break:clone]"
               style={{ backgroundImage: markerUnderline }}
             >
               Wir werden nicht genannt
@@ -78,19 +85,15 @@ export function WhatWeAnalyze() {
                 key={area.n}
                 className="rounded-2xl border border-zinc-200/80 bg-white p-5 shadow-sm"
               >
-                <div className="flex items-center gap-3.5">
-                  <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/25 sm:size-16">
-                    <Icon
-                      className="size-7 text-mention-dark sm:size-8"
-                      strokeWidth={1.75}
-                      aria-hidden
-                    />
+                <div className="flex items-start gap-4">
+                  <span className="flex size-16 shrink-0 items-center justify-center rounded-full bg-[#FFF3C2]">
+                    <Icon className="size-8 text-mention-dark" />
                   </span>
-                  <p className="font-heading text-base font-bold tracking-tight text-mention-dark">
+                  <p className="pt-1 font-heading text-base font-bold leading-snug tracking-tight text-mention-dark">
                     <span className="text-primary">{area.n}.</span> {area.title}
                   </p>
                 </div>
-                <p className="mt-3 text-sm leading-snug text-mention-gray">{area.body}</p>
+                <p className="mt-4 text-sm leading-snug text-mention-gray">{area.body}</p>
               </li>
             );
           })}
