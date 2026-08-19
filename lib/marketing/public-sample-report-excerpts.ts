@@ -27,36 +27,28 @@ export const PUBLIC_SAMPLE_AI_PROVIDERS = [
 
 /**
  * First three measures from `/sample-report` (“Deine 10 Top-Maßnahmen”).
- * Rank is display order on that page. Badges exist only on the first measure.
+ * Rank is display order on that page. Impact/effort/Quick-Win badges exist only
+ * on the first measure in the public sample; do not invent them for 2–3.
+ * Summaries compress the public problem/solution texts, without new advice.
  */
 export const PUBLIC_SAMPLE_MEASURES = [
   {
     rank: 1,
     title: "llms.txt für Disrupt Media erstellen",
-    badges: [
-      { label: "Quick Win", tone: "accent" },
-      { label: "Hoch", tone: "high" },
-      { label: "Klein", tone: "neutral" },
-    ],
-    problem: "KI-Systeme haben keinen strukturierten Überblick über deine Angebote",
-    solution: "Erstelle eine /llms.txt-Datei mit deinen Kern-Angeboten",
+    quickWin: true,
+    impact: "Hoch",
+    effort: "Klein",
+    summary: "KI-Systemen einen strukturierten Überblick über Angebote geben.",
   },
   {
     rank: 2,
     title: "Google Business Profile mit KI-tauglichen FAQs pflegen",
-    badges: [],
-    problem:
-      "Lokale und vertrauensbildende Signale sind nicht strukturiert – KI-Systeme erkennen deine Relevanz im Raum Zürich schlecht.",
-    solution:
-      "Ergänze FAQs mit klaren Entitäten, Leistungen und Standorten; verknüpfe sie mit deinen Money-Pages.",
+    summary:
+      "Lokale Relevanz und vertrauensbildende Signale für KI-Systeme stärken.",
   },
   {
     rank: 3,
     title: "Thought-Leadership zu AI Visibility & Conversion Tracking",
-    badges: [],
-    problem:
-      "Fachliche Tiefe zu deinen Kern-Themen fehlt als eigenständige, zitierfähige Inhalte – du wirst nicht als Go-to-Expert wahrgenommen.",
-    solution:
-      "Veröffentliche 2–3 analystische Artikel mit klaren Definitionen, Frameworks und Fallstudien; verlinke intern auf Services.",
+    summary: "Fachliche Autorität zu den Kernthemen gezielt ausbauen.",
   },
 ] as const;
