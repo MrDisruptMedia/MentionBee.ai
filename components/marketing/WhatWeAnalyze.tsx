@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Bot, FileText, Globe, Settings, User, Users } from "lucide-react";
 
-import { ReportAiVisibilityExcerpt } from "@/components/marketing/ReportAiVisibilityExcerpt";
 import { ReportMeasuresExcerpt } from "@/components/marketing/ReportMeasuresExcerpt";
 
 const areas = [
@@ -43,6 +42,10 @@ const areas = [
   },
 ] as const;
 
+const markerUnderline = `url("data:image/svg+xml,${encodeURIComponent(
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 10" preserveAspectRatio="none"><path d="M2 7C52 2.5 98 9 146 5.2S208 8.5 238 3.8" fill="none" stroke="#FFC400" stroke-width="3.8" stroke-linecap="round"/></svg>`,
+)}")`;
+
 export function WhatWeAnalyze() {
   return (
     <section
@@ -52,7 +55,14 @@ export function WhatWeAnalyze() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto max-w-3xl">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
-            Vom „Wir werden nicht genannt“ zur konkreten Diagnose.
+            Vom „
+            <span
+              className="inline bg-bottom bg-no-repeat pb-[0.18em] [background-size:100%_0.3em] [box-decoration-break:clone] [-webkit-box-decoration-break:clone]"
+              style={{ backgroundImage: markerUnderline }}
+            >
+              Wir werden nicht genannt
+            </span>
+            “ zur konkreten Diagnose.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-mention-gray sm:text-lg">
             Der AI Visibility Audit untersucht sechs Ebenen deiner digitalen Sichtbarkeit und zeigt,
@@ -68,9 +78,13 @@ export function WhatWeAnalyze() {
                 key={area.n}
                 className="rounded-2xl border border-zinc-200/80 bg-white p-5 shadow-sm"
               >
-                <div className="flex items-center gap-3">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/20">
-                    <Icon className="size-4 text-mention-dark" strokeWidth={2} aria-hidden />
+                <div className="flex items-center gap-3.5">
+                  <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/25 sm:size-16">
+                    <Icon
+                      className="size-7 text-mention-dark sm:size-8"
+                      strokeWidth={1.75}
+                      aria-hidden
+                    />
                   </span>
                   <p className="font-heading text-base font-bold tracking-tight text-mention-dark">
                     <span className="text-primary">{area.n}.</span> {area.title}
@@ -82,9 +96,7 @@ export function WhatWeAnalyze() {
           })}
         </ol>
 
-        <ReportAiVisibilityExcerpt />
-
-        <div className="mt-16 grid items-start gap-10 lg:grid-cols-2 lg:gap-12">
+        <div className="mt-12 grid items-start gap-10 md:mt-16 lg:grid-cols-2 lg:gap-12">
           <div>
             <h3 className="font-heading text-2xl font-bold tracking-tight text-mention-dark sm:text-3xl">
               Das Ergebnis: keine weitere Datenhalde, sondern Prioritäten.

@@ -5,26 +5,6 @@
  * Deep-Dive, PageSpeed API-key row).
  */
 
-export const PUBLIC_SAMPLE_COMPANY = "Disrupt Media";
-
-/** Module score from the public sample MentionBee Score board. */
-export const PUBLIC_SAMPLE_AI_MENTION_MODULE = {
-  name: "KI-Erwähnungen",
-  scoreLabel: "2.0",
-  max: 10,
-} as const;
-
-/**
- * Mention status per provider as shown on `/sample-report` (all “Nicht erwähnt”).
- * Display order follows the current product listing, not the sample’s Claude-first order.
- */
-export const PUBLIC_SAMPLE_AI_PROVIDERS = [
-  { name: "ChatGPT", mentioned: false },
-  { name: "Claude", mentioned: false },
-  { name: "Gemini", mentioned: false },
-  { name: "Perplexity", mentioned: false },
-] as const;
-
 /**
  * First three measures from `/sample-report` (“Deine 10 Top-Maßnahmen”).
  * Rank is display order on that page. Impact/effort/Quick-Win badges exist only
