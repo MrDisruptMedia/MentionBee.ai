@@ -33,32 +33,32 @@ export function WhatYouGetSection() {
   return (
     <section className="border-b border-zinc-200/80 bg-white py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
-            Ein individueller Report, mit dem du weiterarbeiten kannst.
-          </h2>
-          <p className="mt-5 text-base leading-relaxed text-mention-gray sm:text-lg">
-            Nach dem AI Visibility Audit erhältst du deinen individuellen MentionBee-Report.
-          </p>
-        </div>
+        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.44fr)_minmax(0,0.56fr)] lg:gap-12">
+          <div>
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
+              Ein individueller Report, mit dem du weiterarbeiten kannst.
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-mention-gray sm:text-lg">
+              Nach dem AI Visibility Audit erhältst du deinen individuellen MentionBee-Report.
+            </p>
 
-        <div className="mt-10 grid items-start gap-10 lg:mt-12 lg:grid-cols-5 lg:gap-12">
-          <ul className="space-y-5 lg:col-span-2 lg:space-y-6 lg:pt-1" role="list">
-            {deliverables.map((item) => (
-              <li key={item} className="flex items-start gap-3 sm:gap-3.5">
-                <Checkmark />
-                <p className="text-base leading-snug text-mention-dark sm:text-lg sm:leading-snug">
-                  {item}
-                </p>
-              </li>
-            ))}
-          </ul>
+            <ul className="mt-7 space-y-5 lg:mt-8 lg:space-y-6" role="list">
+              {deliverables.map((item) => (
+                <li key={item} className="flex items-start gap-3 sm:gap-3.5">
+                  <Checkmark />
+                  <p className="text-base leading-snug text-mention-dark sm:text-lg sm:leading-snug">
+                    {item}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <div className="min-w-0 lg:col-span-3">
+          <div className="min-w-0">
             <ReportScoreExcerpt />
             <Link
               href="/sample-report"
-              className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark sm:w-auto"
+              className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark sm:w-auto"
             >
               Beispielreport ansehen →
             </Link>
