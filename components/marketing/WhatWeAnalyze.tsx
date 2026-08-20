@@ -55,16 +55,23 @@ export function WhatWeAnalyze() {
             <span className="relative inline-block whitespace-nowrap">
               Wir werden nicht genannt
               <svg
-                className="pointer-events-none absolute inset-x-[-1%] -bottom-[0.52em] h-[0.8em] w-[102%] overflow-visible sm:-bottom-[0.44em] sm:h-[0.62em]"
-                viewBox="0 0 400 24"
+                className="pointer-events-none absolute left-0 -bottom-[0.2em] h-[0.36em] w-[96%] overflow-visible sm:-bottom-[0.16em] sm:h-[0.34em]"
+                viewBox="0 0 400 16"
                 fill="none"
                 preserveAspectRatio="none"
                 aria-hidden
               >
                 <path
-                  d="M6 14.8 C 46 8.2, 86 18.6, 128 12.4 C 168 7.1, 206 17.8, 248 11.6 C 286 6.8, 328 16.4, 364 10.2 C 378 8.4, 390 13.6, 394 11.1"
+                  d="M5 9.55 C 16 8.9, 29 10.15, 47 9.05 C 61 9.7, 74 8.65, 93 9.45 C 118 9.1, 139 10.2, 163 8.85 C 186 9.9, 207 8.7, 236 9.5 C 258 9.05, 281 10.05, 309 9.15 C 332 9.65, 351 8.8, 376 9.4"
                   stroke="#FFC400"
-                  strokeWidth="5"
+                  strokeWidth="4.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M11 10.2 C 33 9.35, 59 10.55, 90 9.5 C 121 10.4, 152 8.95, 189 10.1 C 223 9.2, 261 10.45, 298 9.35 C 328 10.15, 351 9.25, 369 9.7"
+                  stroke="#FFC400"
+                  strokeWidth="3.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
