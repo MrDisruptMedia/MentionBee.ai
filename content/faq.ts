@@ -31,6 +31,12 @@ export const faqEntries: FaqEntry[] = [
       "Einzelne KI-Abfragen kannst und solltest du selbst ausprobieren. MentionBee geht darüber hinaus und führt die Beobachtungen mit Wettbewerbs-, Content-, Website- und technischen Analysen zu einer strukturierten Diagnose zusammen.",
   },
   {
+    id: "chatgpt-selbst-fragen",
+    question: "Kann ich nicht einfach selbst ChatGPT fragen?",
+    answer:
+      "Ja. Und das solltest du sogar. Frag ChatGPT, Claude, Gemini oder Perplexity nach Anbietern aus deinem Markt und schau, wer genannt wird. Eine einzelne Antwort zeigt dir aber noch nicht, wie belastbar diese Beobachtung ist – und vor allem nicht, warum ein Wettbewerber auftaucht und du nicht. Der AI Visibility Audit untersucht deshalb mehrere kaufnahe Fragen über vier KI-Systeme hinweg und verbindet die Ergebnisse mit der Analyse deiner Website, deiner Inhalte, deiner technischen Voraussetzungen, deiner digitalen Präsenz und relevanter Marktsignale. So erfährst du nicht nur, ob du sichtbar bist, sondern wo du zuerst ansetzen solltest.",
+  },
+  {
     id: "umfang-analyse",
     question: "Wie umfangreich ist die Analyse?",
     answer:

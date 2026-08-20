@@ -1,4 +1,3 @@
-import { DiyObjectionSection } from "@/components/marketing/DiyObjectionSection";
 import { FAQ } from "@/components/marketing/FAQ";
 import { FinalCTA } from "@/components/marketing/FinalCTA";
 import { Hero } from "@/components/marketing/Hero";
@@ -21,7 +20,6 @@ export default async function Home() {
       <ProblemSection />
       <WhatWeAnalyze />
       <MemsTestimonial />
-      <DiyObjectionSection />
       <WhatYouGetSection />
       <PricingRiskSection pricing={pricing} />
       <FAQ />
