@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { ReportScoreExcerpt } from "@/components/marketing/ReportScoreExcerpt";
+
 const specs = [
   {
     title: "3–5 kaufnahe Fragen",
@@ -51,6 +53,10 @@ export function WhatYouGetSection() {
             </li>
           ))}
         </ul>
+
+        <div className="mt-12 md:mt-16">
+          <ReportScoreExcerpt />
+        </div>
 
         <div className="mt-10 text-center">
           <Link

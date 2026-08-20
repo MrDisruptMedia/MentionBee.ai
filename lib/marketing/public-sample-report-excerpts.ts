@@ -1,8 +1,7 @@
 /**
- * Homepage product-proof excerpts sourced from the public Disrupt Media
- * sample at `/sample-report`. Do not add invented competitors, questions,
+ * Homepage product-proof excerpts. Do not add invented competitors, questions,
  * scores, or measures. Do not copy stale sample claims (e.g. “0 von 24”,
- * Deep-Dive, PageSpeed API-key row).
+ * Deep-Dive, PageSpeed API-key row). Do not use MEMS report data.
  */
 
 /**
@@ -32,3 +31,57 @@ export const PUBLIC_SAMPLE_MEASURES = [
     summary: "Fachliche Autorität zu den Kernthemen gezielt ausbauen.",
   },
 ] as const;
+
+/**
+ * Public MentionBee Score excerpt for homepage product proof.
+ * Module names, descriptions, scores, weights, and overall 50/100 match the
+ * current product score UI (not the older `/sample-report` 40/100 block).
+ */
+export const PUBLIC_SAMPLE_SCORE = {
+  total: 50,
+  max: 100,
+  status: "Verbesserungspotenzial vorhanden",
+  explanation:
+    "Der Gesamtscore berechnet sich aus 6 Modulen, gewichtet nach ihrer Relevanz für deine KI-Sichtbarkeit und SEO-Performance.",
+  modules: [
+    {
+      name: "KI-Präsenz & Sichtbarkeit",
+      description:
+        "Wie häufig und in welchem Kontext die Marke in Antworten von ChatGPT, Claude, Gemini und Perplexity erscheint",
+      score: 2.0,
+      weightPct: 30,
+    },
+    {
+      name: "Inhalte & Verständlichkeit",
+      description:
+        "Wie klar, relevant und nachvollziehbar Angebot und Inhalte für Nutzer und KI-Systeme wirken",
+      score: 5.6,
+      weightPct: 25,
+    },
+    {
+      name: "Technische Grundlagen",
+      description: "Technische Basis für Suchmaschinen, KI-Crawler und saubere Erfassung von Inhalten",
+      score: 9.0,
+      weightPct: 15,
+    },
+    {
+      name: "Vertrauen & Expertise",
+      description:
+        "Signale für Erfahrung, Fachwissen, Autorität und Vertrauen (E-E-A-T) auf der Website",
+      score: 7.7,
+      weightPct: 10,
+    },
+    {
+      name: "Nutzererlebnis & Conversion",
+      description: "Nutzerführung, Orientierung und Conversion-Potenzial der Website",
+      score: 6.0,
+      weightPct: 10,
+    },
+    {
+      name: "Externe Marktsignale",
+      description: "Externe Signale wie Bewertungen, Presse, Erwähnungen und Branchenportale",
+      score: 6.0,
+      weightPct: 10,
+    },
+  ],
+} as const;
