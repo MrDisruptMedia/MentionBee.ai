@@ -18,7 +18,7 @@ export function ReportScoreExcerpt() {
 
   return (
     <div
-      className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8"
+      className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-6 lg:p-7"
       aria-label="Ausschnitt aus dem MentionBee-Report: MentionBee Score"
     >
       <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
@@ -35,15 +35,15 @@ export function ReportScoreExcerpt() {
         </span>
       </div>
 
-      <p className="mt-4 max-w-3xl text-sm leading-relaxed text-mention-gray sm:text-base">
+      <p className="mt-4 text-sm leading-relaxed text-mention-gray">
         {explanation}
       </p>
 
-      <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2" role="list">
+      <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4" role="list">
         {modules.map((mod) => (
-          <li key={mod.name} className="rounded-xl border border-zinc-200 bg-white p-5">
+          <li key={mod.name} className="rounded-xl border border-zinc-200 bg-white p-4 sm:p-5">
             <div className="flex items-start justify-between gap-3">
-              <h3 className="font-heading text-sm font-semibold text-mention-dark sm:text-base">
+              <h3 className="font-heading text-sm font-semibold text-mention-dark">
                 {mod.name}
               </h3>
               <span
