@@ -1,4 +1,3 @@
-import { DiagnosisGapSection } from "@/components/marketing/DiagnosisGapSection";
 import { DiyObjectionSection } from "@/components/marketing/DiyObjectionSection";
 import { FAQ } from "@/components/marketing/FAQ";
 import { FinalCTA } from "@/components/marketing/FinalCTA";
@@ -20,7 +19,6 @@ export default async function Home() {
     <>
       <Hero pricing={pricing} />
       <ProblemSection />
-      <DiagnosisGapSection />
       <WhatWeAnalyze />
       <MemsTestimonial />
       <DiyObjectionSection />
