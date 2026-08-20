@@ -52,19 +52,19 @@ export function WhatWeAnalyze() {
         <div className="mx-auto max-w-3xl">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
             Vom „
-            <span className="relative inline-block">
+            <span className="relative inline-block whitespace-nowrap">
               Wir werden nicht genannt
               <svg
-                className="pointer-events-none absolute inset-x-0 -bottom-[0.12em] h-[0.34em] w-full overflow-visible"
-                viewBox="0 0 400 16"
+                className="pointer-events-none absolute inset-x-[-1%] -bottom-[0.52em] h-[0.8em] w-[102%] overflow-visible sm:-bottom-[0.44em] sm:h-[0.62em]"
+                viewBox="0 0 400 24"
                 fill="none"
                 preserveAspectRatio="none"
                 aria-hidden
               >
                 <path
-                  d="M2 12 C40 9, 82 13, 122 11 S202 14, 260 10 S340 13, 398 11"
+                  d="M6 14.8 C 46 8.2, 86 18.6, 128 12.4 C 168 7.1, 206 17.8, 248 11.6 C 286 6.8, 328 16.4, 364 10.2 C 378 8.4, 390 13.6, 394 11.1"
                   stroke="#FFC400"
-                  strokeWidth="3.2"
+                  strokeWidth="5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
