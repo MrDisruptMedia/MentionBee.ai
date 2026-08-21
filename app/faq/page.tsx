@@ -85,7 +85,7 @@ export default async function FaqPage() {
                     <AccordionContent className="w-full text-mention-gray">
                       {html ? (
                         <div
-                          className="w-full text-sm leading-relaxed md:text-base [&_a]:font-medium [&_a]:text-mention-yellow-text"
+                          className="w-full text-sm leading-relaxed md:text-base [&_a]:font-medium [&_a]:text-mention-dark"
                           dangerouslySetInnerHTML={{ __html: html }}
                         />
                       ) : (

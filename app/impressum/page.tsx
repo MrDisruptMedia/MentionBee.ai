@@ -16,7 +16,7 @@ export default function ImpressumPage() {
               href="https://disruptmedia.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-mention-yellow-text underline underline-offset-2"
+              className="text-mention-dark underline underline-offset-2"
             >
               Disrupt Media
             </a>{" "}
@@ -29,7 +29,7 @@ export default function ImpressumPage() {
 
         <p>
           E-Mail:{" "}
-          <a href="mailto:hello@mentionbee.ai" className="text-mention-yellow-text underline underline-offset-2">
+          <a href="mailto:hello@mentionbee.ai" className="text-mention-dark underline underline-offset-2">
             hello@mentionbee.ai
           </a>
         </p>

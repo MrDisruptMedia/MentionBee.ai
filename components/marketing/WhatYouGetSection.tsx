@@ -62,7 +62,7 @@ export function WhatYouGetSection() {
                 href="https://disruptmedia.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-mention-dark underline underline-offset-2 decoration-zinc-300 transition-colors hover:text-mention-yellow-text hover:decoration-primary"
+                className="text-mention-dark underline underline-offset-2 decoration-zinc-300 transition-colors hover:text-mention-gray hover:decoration-primary"
               >
                 Disrupt Media
               </a>

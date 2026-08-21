@@ -82,7 +82,7 @@ export default function AgbPage() {
           <h2 className="mt-8 mb-3 text-xl font-semibold text-mention-dark">§7 Datenschutz</h2>
           <p>
             Die Verarbeitung personenbezogener Daten erfolgt gemäss unserer Datenschutzerklärung unter{" "}
-            <Link href="/datenschutzerklaerung" className="text-mention-yellow-text underline underline-offset-2">
+            <Link href="/datenschutzerklaerung" className="text-mention-dark underline underline-offset-2">
               mentionbee.ai/datenschutzerklaerung
             </Link>
             .

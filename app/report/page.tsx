@@ -79,13 +79,13 @@ export default async function ReportPage() {
             <PaidReportForm />
             <p className="mt-6 text-xs leading-relaxed text-mention-gray">
               Mit dem Absenden akzeptierst du unsere{" "}
-              <Link href="/agb" className="font-medium text-mention-yellow-text underline underline-offset-2">
+              <Link href="/agb" className="font-medium text-mention-dark underline underline-offset-2">
                 AGB
               </Link>{" "}
               und{" "}
               <Link
                 href="/datenschutzerklaerung"
-                className="font-medium text-mention-yellow-text underline underline-offset-2"
+                className="font-medium text-mention-dark underline underline-offset-2"
               >
                 Datenschutzerklärung
               </Link>

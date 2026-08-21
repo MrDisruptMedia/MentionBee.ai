@@ -99,7 +99,7 @@ function OrderSuccessContent() {
         <p className="mt-10 text-sm text-mention-gray">
           <Link
             href={targetUrl}
-            className="font-medium text-mention-yellow-text underline underline-offset-2 hover:text-mention-yellow-text-hover"
+            className="font-medium text-mention-dark underline underline-offset-2 hover:text-mention-gray"
           >
             Hier klicken falls du nicht weitergeleitet wirst →
           </Link>

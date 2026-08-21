@@ -81,7 +81,7 @@ export function Footer() {
                     <a
                       key={item.href}
                       href={item.href}
-                      className="text-mention-dark/90 transition-colors hover:text-mention-yellow-text"
+                      className="text-mention-dark/90 transition-colors hover:text-mention-gray"
                     >
                       llms.txt
                     </a>
@@ -89,7 +89,7 @@ export function Footer() {
                     <Link
                       key={item.label}
                       href={item.href}
-                      className="text-mention-dark/90 transition-colors hover:text-mention-yellow-text"
+                      className="text-mention-dark/90 transition-colors hover:text-mention-gray"
                     >
                       {item.label}
                     </Link>

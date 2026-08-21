@@ -92,7 +92,7 @@ export function FreeVsPaid() {
             </ul>
             <Link
               href="/report"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-full border-2 border-primary bg-primary/5 px-6 py-3 text-center text-sm font-semibold text-mention-yellow-text transition-colors duration-200 hover:border-mention-dark hover:bg-mention-dark hover:text-white sm:w-auto sm:self-start"
+              className="mt-8 inline-flex w-full items-center justify-center rounded-full border-2 border-primary bg-primary/5 px-6 py-3 text-center text-sm font-semibold text-mention-dark transition-colors duration-200 hover:border-mention-dark hover:bg-mention-dark hover:text-white sm:w-auto sm:self-start"
             >
               Deep-Dive ansehen →
             </Link>

@@ -34,7 +34,7 @@ export function TrustSection() {
           </h2>
           <Link
             href="/#methodik"
-            className="shrink-0 text-sm font-semibold text-mention-yellow-text hover:text-mention-yellow-text-hover"
+            className="shrink-0 text-sm font-semibold text-mention-dark hover:text-mention-gray"
           >
             Mehr zur Methodik →
           </Link>
