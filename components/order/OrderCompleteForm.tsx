@@ -399,7 +399,7 @@ export function OrderCompleteForm() {
         </h2>
         <p className="mb-4 text-sm text-mention-gray">
           Diese Fragen stellen wir ChatGPT, Claude, Gemini und Perplexity um zu prüfen ob du erwähnt
-          wirst. Wähle 3–5 Fragen aus oder ergänze bis zu 2 eigene.
+          wirst. Wähle 3–6 Fragen aus oder ergänze bis zu 2 eigene.
         </p>
 
         {!questionsLoaded ? (

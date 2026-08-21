@@ -13,7 +13,7 @@ export interface QuestionGenerationResult {
 }
 
 export const MAX_CUSTOM_QUESTIONS = 3;
-export const MAX_SELECTED_QUESTIONS = 5;
+export const MAX_SELECTED_QUESTIONS = 6;
 export const REQUIRED_QUESTIONS = 3;
 
 export function defaultQuestionIndices(

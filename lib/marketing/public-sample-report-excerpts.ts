@@ -54,7 +54,7 @@ export const PUBLIC_SAMPLE_SCORE = {
   max: 100,
   status: "Verbesserungspotenzial vorhanden",
   explanation:
-    "Der Gesamtscore berechnet sich aus 6 Modulen, gewichtet nach ihrer Relevanz für deine KI-Sichtbarkeit und SEO-Performance.",
+    "Der Gesamtscore berechnet sich aus 6 Messbereichen, gewichtet nach ihrer Relevanz für deine KI-Sichtbarkeit und SEO-Performance.",
   modules: [
     {
       name: "KI-Präsenz & Sichtbarkeit",

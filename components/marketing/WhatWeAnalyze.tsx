@@ -6,13 +6,13 @@ import { ReportMeasuresExcerpt } from "@/components/marketing/ReportMeasuresExce
 const areas = [
   {
     n: "1",
-    title: "KI-Sichtbarkeit",
+    title: "KI-Präsenz & Sichtbarkeit",
     iconSrc: "/images/audit-dimensions/01-ki-empfehlungen.svg",
     body: "Wo und wie häufig wirst du bei relevanten Fragen von ChatGPT, Claude, Gemini und Perplexity genannt und empfohlen?",
   },
   {
     n: "2",
-    title: "Inhalte & Positionierung",
+    title: "Inhalte & Verständlichkeit",
     iconSrc: "/images/audit-dimensions/03-inhalte-positionierung.svg",
     body: "Ist klar, was du anbietest, für wen dein Angebot relevant ist und wodurch du dich unterscheidest?",
   },
@@ -38,7 +38,7 @@ const areas = [
     n: "6",
     title: "Externe Marktsignale",
     iconSrc: "/images/audit-dimensions/04-digitale-praesenz.svg",
-    body: "Welche Signale über dein Unternehmen existieren außerhalb deiner eigenen Website – etwa Reviews, Verzeichnisse, Presse, Social und Vergleichsplattformen?",
+    body: "Welche Signale über dein Unternehmen existieren ausserhalb deiner eigenen Website – etwa Reviews, Verzeichnisse, Presse, Social und Vergleichsplattformen?",
   },
 ] as const;
 
@@ -80,7 +80,7 @@ export function WhatWeAnalyze() {
             zur konkreten Diagnose.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-mention-gray sm:text-lg">
-            Der AI Visibility Audit untersucht sechs Messbereiche – von KI-Sichtbarkeit und Inhalten
+            Der AI Visibility Audit untersucht sechs Messbereiche – von KI-Präsenz & Sichtbarkeit und Inhalten
             bis zu Technik, Vertrauen und externen Marktsignalen.
           </p>
         </div>
@@ -127,7 +127,7 @@ export function WhatWeAnalyze() {
               Und deine Wettbewerber?
             </p>
             <p className="mt-1 text-sm leading-snug text-mention-gray">
-              Wir betrachten diese Bereiche nicht isoliert. Bei bis zu drei relevanten Wettbewerbern
+              Wir betrachten diese Messbereiche nicht isoliert. Bei bis zu drei relevanten Wettbewerbern
               prüfen wir, wer in KI-Antworten häufiger auftaucht und wo entscheidende Unterschiede
               liegen.
             </p>
@@ -141,7 +141,7 @@ export function WhatWeAnalyze() {
             </h3>
             <p className="mt-4 text-base leading-relaxed text-mention-gray sm:text-lg">
               Nicht jede Auffälligkeit ist gleich wichtig. Deshalb führt MentionBee die Erkenntnisse aus
-              diesen sechs Bereichen zusammen und priorisiert die Massnahmen danach, wo du
+              diesen sechs Messbereichen zusammen und priorisiert die Massnahmen danach, wo du
               sinnvollerweise zuerst ansetzen solltest.
             </p>
 

@@ -28,7 +28,7 @@ export function OrderConfirmationContent() {
       </h1>
 
       <p className="mt-4 text-lg leading-relaxed text-mention-gray">
-        Wir analysieren jetzt deine Website mit 6 verschiedenen Modulen. Du erhältst den fertigen
+        Wir analysieren jetzt deine Website in 6 Messbereichen. Du erhältst den fertigen
         individuellen Online-Report per E-Mail-Link – innerhalb von 24 Stunden.
       </p>
 
