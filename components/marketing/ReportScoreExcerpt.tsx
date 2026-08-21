@@ -26,7 +26,7 @@ export function ReportScoreExcerpt() {
       </p>
 
       <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-3">
-        <p className="font-heading text-5xl font-bold leading-none tabular-nums text-orange-500 sm:text-6xl">
+        <p className="font-heading text-5xl font-bold leading-none tabular-nums text-[#EB6100] sm:text-6xl">
           {total}
           <span className="text-xl font-medium text-mention-gray sm:text-2xl"> /{max}</span>
         </p>
