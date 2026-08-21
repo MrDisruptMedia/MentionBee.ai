@@ -52,6 +52,26 @@ export default function RootLayout({
     <html lang="de" className={`${inter.variable} h-full`}>
       <body className="flex min-h-full flex-col pb-24 md:pb-0">
         <Script
+          id="google-consent-default"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  functionality_storage: 'denied',
+  personalization_storage: 'denied',
+  security_storage: 'granted',
+  wait_for_update: 2000
+});
+            `.trim(),
+          }}
+        />
+        <Script
           id="google-tag-manager"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
