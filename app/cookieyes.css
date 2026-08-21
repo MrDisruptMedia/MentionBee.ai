@@ -1,0 +1,31 @@
+/* Appearance previously applied by GTM Custom HTML (published tag_id 5). */
+
+.cky-btn-accept,
+.cky-btn-reject {
+  background-color: #f5c842 !important;
+  border-color: #f5c842 !important;
+  color: #212121 !important;
+}
+
+.cky-btn-customize {
+  color: #212121 !important;
+  border-color: #f5c842 !important;
+  background-color: transparent !important;
+}
+
+[data-cky-tag="powered-by"] {
+  display: none !important;
+}
+
+.cky-btn-revisit-wrapper {
+  background-color: #f5c842 !important;
+}
+
+@media (max-width: 767px) {
+  .cky-btn-revisit,
+  #cky-btn-revisit,
+  .cky-revisit-bottom-left {
+    bottom: calc(7.5rem + env(safe-area-inset-bottom, 0px)) !important;
+    left: 16px !important;
+  }
+}

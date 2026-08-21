@@ -8,6 +8,7 @@ import { MobileStickyCta } from "@/components/layout/MobileStickyCta";
 import { siteGraphJsonLd } from "@/lib/json-ld";
 
 import "./globals.css";
+import "./cookieyes.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,6 +17,7 @@ const inter = Inter({
 });
 
 const gtmId = "GTM-W25FQX2Z";
+const cookieYesWebsiteKey = "6d5a7a5e98f2f8277ca2fd1785c55485";
 
 // Favicon: Next.js nutzt `app/icon.png` (Bienen-Mark) automatisch.
 
@@ -70,6 +72,11 @@ gtag('consent', 'default', {
 });
             `.trim(),
           }}
+        />
+        <Script
+          id="cookieyes"
+          src={`https://cdn-cookieyes.com/client_data/${cookieYesWebsiteKey}/script.js`}
+          strategy="beforeInteractive"
         />
         <Script
           id="google-tag-manager"
