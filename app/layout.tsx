@@ -84,7 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <Header />
-        <main className="flex flex-1 flex-col">{children}</main>
+        <main className="flex min-w-0 flex-1 flex-col">{children}</main>
         <Footer />
         <MobileStickyCta />
       </body>

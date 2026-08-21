@@ -15,8 +15,8 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="mb-article-root mx-auto max-w-6xl px-4 py-10 md:py-14">
-        <article className="mx-auto max-w-[42rem]">
+      <div className="mb-article-root mx-auto w-full min-w-0 max-w-6xl px-4 py-10 md:py-14">
+        <article className="mx-auto w-full min-w-0 max-w-[42rem]">
           <header className="mb-8">
             {article.contentTypeLabel ? (
               <p className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-xs font-semibold tracking-wide text-gray-900 uppercase">
