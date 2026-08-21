@@ -1,3 +1,5 @@
+import { calculateTotalScore } from "@/lib/scoring/total-score";
+
 /**
  * Homepage product-proof excerpts. Do not add invented competitors, questions,
  * scores, or measures. Do not copy stale sample claims (e.g. “0 von 24”,
@@ -32,13 +34,23 @@ export const PUBLIC_SAMPLE_MEASURES = [
   },
 ] as const;
 
+/** Same six module scores as shown on the homepage score excerpt (0–10 scale). */
+const PUBLIC_SAMPLE_MODULE_SCORES = {
+  llm: 2.0,
+  pki: 5.6,
+  technical_seo: 9.0,
+  schema: 7.7,
+  ux: 6.0,
+  mss: 6.0,
+} as const;
+
 /**
  * Public MentionBee Score excerpt for homepage product proof.
- * Module names, descriptions, scores, weights, and overall 50/100 match the
- * current product score UI (not the older `/sample-report` 40/100 block).
+ * Module names, descriptions, scores, and weights match the product score UI.
+ * Overall total is derived via `calculateTotalScore` (same formula as paid reports).
  */
 export const PUBLIC_SAMPLE_SCORE = {
-  total: 50,
+  total: calculateTotalScore(PUBLIC_SAMPLE_MODULE_SCORES),
   max: 100,
   status: "Verbesserungspotenzial vorhanden",
   explanation:
@@ -48,39 +60,39 @@ export const PUBLIC_SAMPLE_SCORE = {
       name: "KI-Präsenz & Sichtbarkeit",
       description:
         "Wie häufig und in welchem Kontext die Marke in Antworten von ChatGPT, Claude, Gemini und Perplexity erscheint",
-      score: 2.0,
+      score: PUBLIC_SAMPLE_MODULE_SCORES.llm,
       weightPct: 30,
     },
     {
       name: "Inhalte & Verständlichkeit",
       description:
         "Wie klar, relevant und nachvollziehbar Angebot und Inhalte für Nutzer und KI-Systeme wirken",
-      score: 5.6,
+      score: PUBLIC_SAMPLE_MODULE_SCORES.pki,
       weightPct: 25,
     },
     {
       name: "Technische Grundlagen",
       description: "Technische Basis für Suchmaschinen, KI-Crawler und saubere Erfassung von Inhalten",
-      score: 9.0,
+      score: PUBLIC_SAMPLE_MODULE_SCORES.technical_seo,
       weightPct: 15,
     },
     {
       name: "Vertrauen & Expertise",
       description:
         "Signale für Erfahrung, Fachwissen, Autorität und Vertrauen (E-E-A-T) auf der Website",
-      score: 7.7,
+      score: PUBLIC_SAMPLE_MODULE_SCORES.schema,
       weightPct: 10,
     },
     {
       name: "Nutzererlebnis & Conversion",
       description: "Nutzerführung, Orientierung und Conversion-Potenzial der Website",
-      score: 6.0,
+      score: PUBLIC_SAMPLE_MODULE_SCORES.ux,
       weightPct: 10,
     },
     {
       name: "Externe Marktsignale",
       description: "Externe Signale wie Bewertungen, Presse, Erwähnungen und Branchenportale",
-      score: 6.0,
+      score: PUBLIC_SAMPLE_MODULE_SCORES.mss,
       weightPct: 10,
     },
   ],
