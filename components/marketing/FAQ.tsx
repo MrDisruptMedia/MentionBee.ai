@@ -42,7 +42,7 @@ export function FAQ() {
           <Accordion className="mt-12 rounded-2xl border border-zinc-200/80 bg-mention-light/30 px-2 sm:px-4">
             {faqEntries.map((entry) => (
               <AccordionItem key={entry.id} value={entry.id} className="px-2 sm:px-2">
-                <AccordionTrigger className="text-base font-semibold text-mention-dark hover:no-underline">
+                <AccordionTrigger className="text-base font-semibold text-mention-dark max-lg:min-h-11 hover:no-underline">
                   {entry.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-mention-gray">

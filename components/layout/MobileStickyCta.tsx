@@ -14,18 +14,18 @@ export function MobileStickyCta() {
 
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-zinc-200 bg-white/95 px-4 py-3 backdrop-blur md:hidden"
-      style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
+      className="fixed inset-x-0 bottom-0 z-50 box-border max-w-full border-t border-zinc-200 bg-white/95 px-4 py-3 backdrop-blur md:hidden"
+      style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom, 0px))" }}
     >
       <Link
         href="/report"
-        className="flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md"
+        className="flex min-h-11 w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-mention-dark shadow-md"
       >
         Meine Sichtbarkeit prüfen →
       </Link>
       <Link
         href="/free-report"
-        className="mt-1 block text-center text-xs text-mention-gray underline-offset-4 hover:underline"
+        className="mt-1 flex min-h-10 w-full items-center justify-center text-center text-xs text-mention-gray underline-offset-4 hover:underline"
       >
         oder Gratis-Check starten
       </Link>
