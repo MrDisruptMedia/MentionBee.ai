@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ReportScoreExcerpt } from "@/components/marketing/ReportScoreExcerpt";
 
 const deliverables = [
-  "3–5 kaufnahe Fragen für dein Unternehmen und deinen Markt",
+  "3–6 kaufnahe Fragen für dein Unternehmen und deinen Markt",
   "ChatGPT, Claude, Gemini & Perplexity plus bis zu 3 Wettbewerber",
-  "68+ Website-, Trust- und Marktsignale",
+  "Über 100 Datenpunkt-Checks aus KI-Antworten, Wettbewerb, Website-, Trust- und Marktsignalen",
   "10 priorisierte Massnahmen mit konkreten nächsten Schritten",
   "Online-Report innerhalb von 24 Stunden",
 ] as const;

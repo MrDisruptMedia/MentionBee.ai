@@ -12,11 +12,11 @@ import { fetchPublicPricing } from "@/lib/public-pricing";
 export const metadata: Metadata = {
   title: "AI Visibility Audit | MentionBee",
   description:
-    "Einmaliger AI Visibility Audit: 3–5 kaufnahe Fragen über ChatGPT, Claude, Gemini und Perplexity, bis zu 3 Wettbewerber, 68+ Signale und 10 priorisierte Massnahmen. Innerhalb von 24 Stunden.",
+    "Einmaliger AI Visibility Audit: 3–6 kaufnahe Fragen über ChatGPT, Claude, Gemini und Perplexity, bis zu 3 Wettbewerber, 68+ Signale und 10 priorisierte Massnahmen. Innerhalb von 24 Stunden.",
 };
 
 const featureBullets = [
-  "3–5 kaufnahe Fragen für dein Unternehmen und deinen Markt",
+  "3–6 kaufnahe Fragen für dein Unternehmen und deinen Markt",
   "Analyse über 4 KI-Systeme (ChatGPT · Claude · Gemini · Perplexity)",
   "Wettbewerbsvergleich gegen bis zu 3 Anbieter",
   "68+ Website-, Trust- und Marktsignale",
@@ -108,7 +108,7 @@ export default async function ReportPage() {
               Vollständige KI-Analyse
             </h3>
             <p className="text-sm leading-relaxed text-mention-gray">
-              3–5 kaufnahe Fragen – getestet über ChatGPT, Claude, Gemini und Perplexity.
+              3–6 kaufnahe Fragen – getestet über ChatGPT, Claude, Gemini und Perplexity.
             </p>
           </article>
           <article className="flex flex-col gap-3 rounded-2xl border border-zinc-100 bg-white/80 p-6 shadow-sm">

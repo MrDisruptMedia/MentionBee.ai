@@ -128,7 +128,7 @@ export const faqFullPageSections: FaqFullPageSection[] = [
         id: "deep-dive-inhalt",
         question: "Was ist im MentionBee-Report enthalten?",
         answerText:
-          "Nach dem AI Visibility Audit erhältst du einen individuellen Online-Report: 3–5 kaufnahe Fragen, getestet über ChatGPT, Claude, Gemini und Perplexity, bis zu 3 Wettbewerber im direkten Vergleich, 68+ Website-, Trust- und Marktsignale sowie 10 priorisierte Massnahmen. Lieferung innerhalb von 24 Stunden per E-Mail-Link.",
+          "Nach dem AI Visibility Audit erhältst du einen individuellen Online-Report: 3–6 kaufnahe Fragen, getestet über ChatGPT, Claude, Gemini und Perplexity, bis zu 3 Wettbewerber im direkten Vergleich, 68+ Website-, Trust- und Marktsignale sowie 10 priorisierte Massnahmen. Lieferung innerhalb von 24 Stunden per E-Mail-Link.",
       },
       {
         id: "was-fuer-deep-dive-preis",

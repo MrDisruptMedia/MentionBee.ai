@@ -21,7 +21,7 @@ export default async function Home() {
       <WhatWeAnalyze />
       <MemsTestimonial />
       <WhatYouGetSection />
-      <PricingRiskSection pricing={pricing} />
+      <PricingRiskSection />
       <FAQ />
       <LatestPostsSection articles={latestPosts} />
       <FinalCTA pricing={pricing} />

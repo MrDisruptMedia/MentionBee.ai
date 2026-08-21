@@ -1,8 +1,6 @@
 import Link from "next/link";
 
-import type { PublicPricing } from "@/lib/public-pricing";
-
-export function PricingRiskSection({ pricing }: { pricing: PublicPricing }) {
+export function PricingRiskSection() {
   return (
     <section className="border-b border-zinc-200/80 bg-mention-light py-14 md:py-20">
       <div className="mx-auto max-w-3xl px-4 text-center">
@@ -26,14 +24,7 @@ export function PricingRiskSection({ pricing }: { pricing: PublicPricing }) {
           </p>
         </div>
 
-        <div className="mt-10 rounded-2xl border border-zinc-200/80 bg-white px-6 py-8 shadow-sm">
-          <p className="font-heading text-5xl font-bold tracking-tight text-mention-dark tabular-nums sm:text-6xl">
-            {pricing.deepDivePriceFormatted}
-          </p>
-          <p className="mt-2 text-sm text-mention-gray">einmalig · kein Abo</p>
-        </div>
-
-        <div className="mt-10 space-y-4 text-left text-base leading-relaxed text-mention-gray sm:text-lg">
+        <div className="mt-8 space-y-4 text-left text-base leading-relaxed text-mention-gray sm:text-lg">
           <p>
             Niemand kann dir seriös garantieren, dass ChatGPT, Claude, Gemini oder Perplexity dein
             Unternehmen nach einer bestimmten Änderung häufiger empfiehlt.

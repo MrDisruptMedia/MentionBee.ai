@@ -49,13 +49,13 @@ export function WhatWeAnalyze() {
       className="scroll-mt-24 border-b border-zinc-200/80 bg-mention-light py-14 md:py-20"
     >
       <div className="mx-auto max-w-6xl px-4">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto min-w-0 max-w-3xl">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
             Vom „
-            <span className="relative inline-block whitespace-nowrap">
-              Wir werden nicht genannt
+            <span className="relative inline-block max-w-full sm:whitespace-nowrap">
+              Wir werden nicht genannt“
               <svg
-                className="pointer-events-none absolute left-0 -bottom-[0.2em] h-[0.36em] w-[96%] overflow-visible sm:-bottom-[0.16em] sm:h-[0.34em]"
+                className="pointer-events-none absolute left-0 -bottom-[0.2em] h-[0.36em] w-[96%] max-w-full overflow-hidden sm:-bottom-[0.16em] sm:h-[0.34em] sm:overflow-visible"
                 viewBox="0 0 400 16"
                 fill="none"
                 preserveAspectRatio="none"
@@ -76,8 +76,8 @@ export function WhatWeAnalyze() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </span>
-            “ zur konkreten Diagnose.
+            </span>{" "}
+            zur konkreten Diagnose.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-mention-gray sm:text-lg">
             Der AI Visibility Audit untersucht sechs Messbereiche – von KI-Sichtbarkeit und Inhalten
