@@ -52,6 +52,22 @@ export function WhatYouGetSection() {
                 </li>
               ))}
             </ul>
+
+            <p className="mt-7 text-sm leading-relaxed text-mention-gray sm:mt-8">
+              <span className="font-semibold text-mention-dark">
+                Du willst die Massnahmen nicht selbst umsetzen?
+              </span>{" "}
+              Auf Wunsch unterstützt dich{" "}
+              <a
+                href="https://disruptmedia.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-mention-dark underline underline-offset-2 decoration-zinc-300 transition-colors hover:text-primary hover:decoration-primary"
+              >
+                Disrupt Media
+              </a>
+              , die Agentur hinter MentionBee, auch bei der Umsetzung.
+            </p>
           </div>
 
           <div className="min-w-0">

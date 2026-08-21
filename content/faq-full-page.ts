@@ -104,7 +104,9 @@ export const faqFullPageSections: FaqFullPageSection[] = [
         id: "abo-noetig",
         question: "Brauche ich danach ein Abo?",
         answerText:
-          "Nein. Der Report ist eine einmalige Analyse. Du entscheidest danach selbst, welche Massnahmen du umsetzt.",
+          "Nein. Der Report ist eine einmalige Analyse – kein Abo. Du kannst die Massnahmen selbst umsetzen. Wenn du dabei Unterstützung möchtest, unterstützt dich auf Wunsch Disrupt Media, die Agentur hinter MentionBee. Deine Entscheidung – kein Automatismus.",
+        answerHtml:
+          'Nein. Der Report ist eine einmalige Analyse – kein Abo. Du kannst die Massnahmen selbst umsetzen. Wenn du dabei Unterstützung möchtest, unterstützt dich auf Wunsch <a href="https://disruptmedia.com" target="_blank" rel="noopener noreferrer">Disrupt Media</a>, die Agentur hinter MentionBee. Deine Entscheidung – kein Automatismus.',
       },
       {
         id: "selbst-machen",

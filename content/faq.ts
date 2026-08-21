@@ -22,7 +22,7 @@ export const faqEntries: FaqEntry[] = [
     id: "abo-noetig",
     question: "Brauche ich danach ein Abo?",
     answer:
-      "Nein. Der Report ist eine einmalige Analyse. Du entscheidest danach selbst, welche Massnahmen du umsetzt.",
+      "Nein. Der Report ist eine einmalige Analyse – kein Abo. Du kannst die Massnahmen selbst umsetzen. Wenn du dabei Unterstützung möchtest, unterstützt dich auf Wunsch Disrupt Media, die Agentur hinter MentionBee. Deine Entscheidung – kein Automatismus.",
   },
   {
     id: "selbst-machen",
