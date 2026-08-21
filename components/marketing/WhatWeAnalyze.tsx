@@ -6,39 +6,39 @@ import { ReportMeasuresExcerpt } from "@/components/marketing/ReportMeasuresExce
 const areas = [
   {
     n: "1",
-    title: "KI-Empfehlungen",
+    title: "KI-Sichtbarkeit",
     iconSrc: "/images/audit-dimensions/01-ki-empfehlungen.svg",
-    body: "Wir testen, bei welchen relevanten Fragen dein Unternehmen in ChatGPT, Claude, Gemini und Perplexity genannt wird – und wann nicht.",
+    body: "Wo und wie häufig wirst du bei relevanten Fragen von ChatGPT, Claude, Gemini und Perplexity genannt und empfohlen?",
   },
   {
     n: "2",
-    title: "Wettbewerb",
-    iconSrc: "/images/audit-dimensions/02-wettbewerb.svg",
-    body: "Wir zeigen, wer stattdessen auftaucht und wo sich relevante Unterschiede zu deinen Wettbewerbern zeigen.",
+    title: "Inhalte & Positionierung",
+    iconSrc: "/images/audit-dimensions/03-inhalte-positionierung.svg",
+    body: "Ist klar, was du anbietest, für wen dein Angebot relevant ist und wodurch du dich unterscheidest?",
   },
   {
     n: "3",
-    title: "Inhalte & Positionierung",
-    iconSrc: "/images/audit-dimensions/03-inhalte-positionierung.svg",
-    body: "Wir prüfen, ob Angebot, Leistungen und Kernthemen klar, vollständig und für Menschen wie KI-Systeme verständlich beschrieben sind.",
+    title: "Technische Grundlagen",
+    iconSrc: "/images/audit-dimensions/05-technische-voraussetzungen.svg",
+    body: "Können Suchmaschinen und KI-nahe Systeme deine wichtigsten Inhalte sauber erreichen und verarbeiten?",
   },
   {
     n: "4",
-    title: "Digitale Präsenz",
-    iconSrc: "/images/audit-dimensions/04-digitale-praesenz.svg",
-    body: "Wir analysieren, wie vollständig und konsistent dein Unternehmen im Web sichtbar ist und wo wichtige Signale fehlen.",
+    title: "Vertrauen & Expertise",
+    iconSrc: "/images/audit-dimensions/06-website-nutzererlebnis.svg",
+    body: "Zeigt deine Website ausreichend deutlich, wer hinter dem Unternehmen steht und warum Kunden und KI-Systeme dir vertrauen können?",
   },
   {
     n: "5",
-    title: "Technische Voraussetzungen",
-    iconSrc: "/images/audit-dimensions/05-technische-voraussetzungen.svg",
-    body: "Wir prüfen, ob Suchmaschinen und KI-nahe Crawler deine wichtigsten Inhalte sauber erreichen und verarbeiten können.",
+    title: "Nutzererlebnis & Conversion",
+    iconSrc: "/images/audit-dimensions/02-wettbewerb.svg",
+    body: "Finden Besucher schnell die richtigen Informationen und einen klaren nächsten Schritt?",
   },
   {
     n: "6",
-    title: "Website & Nutzererlebnis",
-    iconSrc: "/images/audit-dimensions/06-website-nutzererlebnis.svg",
-    body: "Wir untersuchen, wie schnell Menschen und Maschinen wichtige Informationen finden und wo Struktur oder Nutzerführung im Weg stehen.",
+    title: "Externe Marktsignale",
+    iconSrc: "/images/audit-dimensions/04-digitale-praesenz.svg",
+    body: "Welche Signale über dein Unternehmen existieren außerhalb deiner eigenen Website – etwa Reviews, Verzeichnisse, Presse, Social und Vergleichsplattformen?",
   },
 ] as const;
 
@@ -80,8 +80,8 @@ export function WhatWeAnalyze() {
             “ zur konkreten Diagnose.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-mention-gray sm:text-lg">
-            Der AI Visibility Audit untersucht sechs Ebenen deiner digitalen Sichtbarkeit und zeigt,
-            wo Unterschiede, Lücken und Ansatzpunkte liegen.
+            Das AI Visibility Audit untersucht sechs Messbereiche – von KI-Sichtbarkeit und Inhalten
+            bis zu Technik, Vertrauen und externen Marktsignalen.
           </p>
         </div>
 
@@ -110,6 +110,29 @@ export function WhatWeAnalyze() {
             </li>
           ))}
         </ol>
+
+        <div className="mt-4 flex items-start gap-3.5 rounded-xl bg-white/55 px-4 py-3.5 ring-1 ring-zinc-200/60 sm:items-center sm:gap-4 sm:px-5">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#FFF3C2]">
+            <Image
+              src="/images/audit-dimensions/02-wettbewerb.svg"
+              alt=""
+              width={26}
+              height={26}
+              className="size-[26px]"
+              unoptimized
+            />
+          </span>
+          <div className="min-w-0">
+            <p className="font-heading text-sm font-bold tracking-tight text-mention-dark sm:text-base">
+              Und deine Wettbewerber?
+            </p>
+            <p className="mt-1 text-sm leading-snug text-mention-gray">
+              Wir betrachten diese Bereiche nicht isoliert. Bei bis zu drei relevanten Wettbewerbern
+              prüfen wir, wer in KI-Antworten häufiger auftaucht und wo entscheidende Unterschiede
+              liegen.
+            </p>
+          </div>
+        </div>
 
         <div className="mt-12 grid items-start gap-10 md:mt-16 lg:grid-cols-2 lg:gap-12">
           <div>
