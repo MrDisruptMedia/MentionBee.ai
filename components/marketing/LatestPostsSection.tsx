@@ -40,7 +40,7 @@ export function LatestPostsSection({ articles }: { articles: PublicArticle[] }) 
                     <h3 className="mt-2 font-heading text-lg font-semibold tracking-tight text-mention-dark">
                       <Link
                         href={article.canonicalPath}
-                        className="transition-colors hover:text-mention-gray"
+                        className="text-mention-yellow-text transition-colors hover:text-mention-yellow-text-hover"
                       >
                         {article.title}
                       </Link>
@@ -60,7 +60,7 @@ export function LatestPostsSection({ articles }: { articles: PublicArticle[] }) 
         <p className="mt-10 text-center">
           <Link
             href="/blog"
-            className="text-base font-semibold text-primary underline underline-offset-3 transition-colors hover:text-primary-dark"
+            className="text-base font-semibold text-mention-yellow-text underline underline-offset-3 transition-colors hover:text-mention-yellow-text-hover"
           >
             Alle Artikel ansehen
           </Link>

@@ -1,7 +1,7 @@
 export function Weltbienentag2026Body() {
   return (
     <div className="mx-auto max-w-3xl px-4 pt-24 pb-16">
-      <p className="mb-2 text-sm font-medium uppercase tracking-wide text-primary">20. Mai – Weltbienentag</p>
+      <p className="mb-2 text-sm font-medium uppercase tracking-wide text-mention-yellow-text">20. Mai – Weltbienentag</p>
       <h1 className="mb-8 font-heading text-3xl font-bold text-mention-dark">
         11 Fakten über Bienen, die dich sprachlos machen werden
       </h1>
@@ -79,7 +79,7 @@ export function Weltbienentag2026Body() {
             ob die Konkurrenz das Feld übernimmt.
           </p>
           <p className="pt-2">
-            <a href="https://mentionbee.ai" className="text-primary font-semibold underline underline-offset-2">
+            <a href="https://mentionbee.ai" className="text-mention-yellow-text font-semibold underline underline-offset-2">
               Kostenlosen Report anfordern
             </a>
           </p>
@@ -96,7 +96,7 @@ export function Weltbienentag2026Body() {
               href="https://bienen.ch"
               rel="noopener noreferrer"
               target="_blank"
-              className="text-primary underline underline-offset-2"
+              className="text-mention-yellow-text underline underline-offset-2"
             >
               https://bienen.ch
             </a>

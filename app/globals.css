@@ -59,6 +59,8 @@
   --popover-foreground: #1a1a2e;
   --primary: #ffc400;
   --primary-foreground: #111827;
+  --mention-yellow-text: #8f6d00;
+  --mention-yellow-text-hover: #6b5200;
   --secondary: #f9fafb;
   --secondary-foreground: #1a1a2e;
   --muted: #f9fafb;
@@ -155,6 +157,6 @@
     @apply text-base leading-relaxed;
   }
   a {
-    @apply text-primary underline-offset-4 transition-colors hover:text-primary-dark;
+    @apply text-mention-yellow-text underline-offset-4 transition-colors hover:text-mention-yellow-text-hover;
   }
 }

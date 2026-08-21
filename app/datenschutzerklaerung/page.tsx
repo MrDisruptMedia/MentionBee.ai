@@ -15,7 +15,7 @@ export default function DatenschutzerklaerungPage() {
           <p>Wieslergasse 2, 8049 Zürich, Schweiz</p>
           <p>
             E-Mail:{" "}
-            <a href="mailto:hello@mentionbee.ai" className="text-primary underline underline-offset-2">
+            <a href="mailto:hello@mentionbee.ai" className="text-mention-yellow-text underline underline-offset-2">
               hello@mentionbee.ai
             </a>
           </p>
@@ -67,7 +67,7 @@ export default function DatenschutzerklaerungPage() {
           <h2 className="mt-8 mb-3 text-xl font-semibold text-mention-dark">5. Betroffenenrechte</h2>
           <p>
             Du hast das Recht auf Auskunft, Berichtigung und Löschung deiner Daten. Anfragen per E-Mail an:{" "}
-            <a href="mailto:hello@mentionbee.ai" className="text-primary underline underline-offset-2">
+            <a href="mailto:hello@mentionbee.ai" className="text-mention-yellow-text underline underline-offset-2">
               hello@mentionbee.ai
             </a>
           </p>

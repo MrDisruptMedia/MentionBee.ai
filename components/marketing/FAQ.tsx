@@ -53,7 +53,7 @@ export function FAQ() {
                         href={entry.answerLink.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-mention-dark underline underline-offset-2 decoration-zinc-300 transition-colors hover:text-primary hover:decoration-primary"
+                        className="text-mention-dark underline underline-offset-2 decoration-zinc-300 transition-colors hover:text-mention-yellow-text hover:decoration-primary"
                       >
                         {entry.answerLink.label}
                       </a>
@@ -70,7 +70,7 @@ export function FAQ() {
           <p className="mt-8 text-center">
             <Link
               href="/faq"
-              className="text-base font-semibold text-primary underline underline-offset-3 transition-colors hover:text-primary-dark"
+              className="text-base font-semibold text-mention-yellow-text underline underline-offset-3 transition-colors hover:text-mention-yellow-text-hover"
             >
               Alle Fragen ansehen
             </Link>

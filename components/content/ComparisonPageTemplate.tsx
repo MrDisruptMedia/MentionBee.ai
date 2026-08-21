@@ -33,13 +33,13 @@ export async function ComparisonPageTemplate({ content }: { content: ComparisonP
       />
       <article className="mx-auto w-full max-w-3xl px-4 pb-20 pt-24 md:pt-28">
         <header className="mb-10">
-          <p className="text-sm font-medium uppercase tracking-wide text-primary">MentionBee Guide</p>
+          <p className="text-sm font-medium uppercase tracking-wide text-mention-yellow-text">MentionBee Guide</p>
           <h1 className="mt-3 font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
             {content.title}
           </h1>
         </header>
 
-        <div className="prose prose-zinc max-w-none prose-headings:font-heading prose-a:text-primary">
+        <div className="prose prose-zinc max-w-none prose-headings:font-heading prose-a:text-mention-yellow-text">
           {sections.map((section, idx) => (
             <section key={idx} className="mb-10">
               {section.heading ? (
@@ -60,7 +60,7 @@ export async function ComparisonPageTemplate({ content }: { content: ComparisonP
             <ul className="mt-4 space-y-2">
               {content.internalLinks.map((href) => (
                 <li key={href}>
-                  <Link href={href} className="font-medium text-primary underline underline-offset-2 hover:text-primary-dark">
+                  <Link href={href} className="font-medium text-mention-yellow-text underline underline-offset-2 hover:text-mention-yellow-text-hover">
                     {href}
                   </Link>
                 </li>

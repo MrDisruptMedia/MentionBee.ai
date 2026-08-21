@@ -16,6 +16,9 @@ export default {
           gray: "#6B7280",
           light: "#F9FAFB",
           white: "#FFFFFF",
+          /** Accessible yellow for text on light backgrounds (WCAG AA vs white). Not for CTA fills. */
+          "yellow-text": "#8F6D00",
+          "yellow-text-hover": "#6B5200",
         },
       },
     },

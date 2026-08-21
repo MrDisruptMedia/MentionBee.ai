@@ -154,11 +154,11 @@ export function FreeReportForm() {
 
             <p className="text-xs leading-relaxed text-mention-gray">
               Mit dem Absenden akzeptierst du unsere{" "}
-              <Link href="/agb" className="font-medium text-primary underline underline-offset-2">
+              <Link href="/agb" className="font-medium text-mention-yellow-text underline underline-offset-2">
                 AGB
               </Link>{" "}
               und{" "}
-              <Link href="/datenschutzerklaerung" className="font-medium text-primary underline underline-offset-2">
+              <Link href="/datenschutzerklaerung" className="font-medium text-mention-yellow-text underline underline-offset-2">
                 Datenschutzerklärung
               </Link>
               .
