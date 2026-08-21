@@ -80,7 +80,7 @@ export function WhatWeAnalyze() {
             “ zur konkreten Diagnose.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-mention-gray sm:text-lg">
-            Das AI Visibility Audit untersucht sechs Messbereiche – von KI-Sichtbarkeit und Inhalten
+            Der AI Visibility Audit untersucht sechs Messbereiche – von KI-Sichtbarkeit und Inhalten
             bis zu Technik, Vertrauen und externen Marktsignalen.
           </p>
         </div>
