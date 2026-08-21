@@ -57,7 +57,7 @@ export function WhatYouGetSection() {
               <span className="font-semibold text-mention-dark">
                 Du willst die Massnahmen nicht selbst umsetzen?
               </span>{" "}
-              Auf Wunsch unterstützt dich{" "}
+              Auf Wunsch begleitet dich{" "}
               <a
                 href="https://disruptmedia.com"
                 target="_blank"
@@ -66,7 +66,7 @@ export function WhatYouGetSection() {
               >
                 Disrupt Media
               </a>
-              , die Agentur hinter MentionBee, auch bei der Umsetzung.
+              , die Agentur hinter MentionBee, bei der Umsetzung.
             </p>
           </div>
 

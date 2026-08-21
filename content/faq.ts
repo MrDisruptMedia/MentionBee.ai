@@ -1,7 +1,15 @@
 export type FaqEntry = {
   id: string;
   question: string;
+  /** Plain text for JSON-LD and as fallback. */
   answer: string;
+  /** Optional in-answer link, rendered as React — not HTML. */
+  answerLink?: {
+    before: string;
+    href: string;
+    label: string;
+    after: string;
+  };
 };
 
 /** Homepage FAQ teaser — Source of Truth: AI Visibility Audit storyline */
@@ -22,7 +30,14 @@ export const faqEntries: FaqEntry[] = [
     id: "abo-noetig",
     question: "Brauche ich danach ein Abo?",
     answer:
-      "Nein. Der Report ist eine einmalige Analyse – kein Abo. Du kannst die Massnahmen selbst umsetzen. Wenn du dabei Unterstützung möchtest, unterstützt dich auf Wunsch Disrupt Media, die Agentur hinter MentionBee. Deine Entscheidung – kein Automatismus.",
+      "Nein. Der Report ist eine einmalige Analyse – kein Abo. Du kannst die Massnahmen selbst umsetzen. Wenn du dabei Hilfe möchtest, begleitet dich auf Wunsch Disrupt Media, die Agentur hinter MentionBee. Deine Entscheidung – kein Automatismus.",
+    answerLink: {
+      before:
+        "Nein. Der Report ist eine einmalige Analyse – kein Abo. Du kannst die Massnahmen selbst umsetzen. Wenn du dabei Hilfe möchtest, begleitet dich auf Wunsch ",
+      href: "https://disruptmedia.com",
+      label: "Disrupt Media",
+      after: ", die Agentur hinter MentionBee. Deine Entscheidung – kein Automatismus.",
+    },
   },
   {
     id: "selbst-machen",

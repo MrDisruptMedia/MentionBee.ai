@@ -46,7 +46,22 @@ export function FAQ() {
                   {entry.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-mention-gray">
-                  <p>{entry.answer}</p>
+                  {entry.answerLink ? (
+                    <p>
+                      {entry.answerLink.before}
+                      <a
+                        href={entry.answerLink.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-mention-dark underline underline-offset-2 decoration-zinc-300 transition-colors hover:text-primary hover:decoration-primary"
+                      >
+                        {entry.answerLink.label}
+                      </a>
+                      {entry.answerLink.after}
+                    </p>
+                  ) : (
+                    <p>{entry.answer}</p>
+                  )}
                 </AccordionContent>
               </AccordionItem>
             ))}
