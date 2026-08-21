@@ -30,7 +30,7 @@ export function ReportScoreExcerpt() {
           {total}
           <span className="text-xl font-medium text-mention-gray sm:text-2xl"> /{max}</span>
         </p>
-        <span className="inline-flex rounded-full bg-orange-50 px-3.5 py-1.5 text-sm font-medium text-orange-600 ring-1 ring-orange-100">
+        <span className="inline-flex rounded-full bg-orange-50 px-3.5 py-1.5 text-sm font-medium text-mention-dark ring-1 ring-orange-100">
           {status}
         </span>
       </div>
