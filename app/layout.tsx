@@ -17,17 +17,13 @@ const inter = Inter({
 
 const gtmId = "GTM-W25FQX2Z";
 
-// Favicon: Next.js nutzt `app/icon.png` automatisch; `metadata.icons` ergänzt Link-Tags.
+// Favicon: Next.js nutzt `app/icon.png` (Bienen-Mark) automatisch.
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mentionbee.ai"),
   title: "MentionBee – AI Visibility Audit",
   description:
     "Warum empfiehlt KI deine Konkurrenz – dich aber nicht? MentionBee zeigt dir, warum ChatGPT, Claude, Gemini & Co. dein Unternehmen (noch) nicht empfehlen – und was du tun kannst.",
-  icons: {
-    icon: "/mentionbee-logo-transparent.png",
-    apple: "/mentionbee-logo-transparent.png",
-  },
   openGraph: {
     title: "MentionBee – Warum empfiehlt KI deine Konkurrenz?",
     description:

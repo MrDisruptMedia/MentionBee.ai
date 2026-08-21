@@ -12,7 +12,7 @@ export function organizationNode() {
     "@id": ORGANIZATION_ID,
     name: "MentionBee",
     url: SITE_ORIGIN,
-    logo: `${SITE_ORIGIN}/mentionbee-logo-transparent.png`,
+    logo: `${SITE_ORIGIN}/mentionbee-logo.png`,
     description:
       "MentionBee bietet AI Visibility Audits an. Die Audits untersuchen die Sichtbarkeit von Unternehmen in KI-Systemen wie ChatGPT, Claude, Gemini und Perplexity sowie relevante Website-, Trust- und Marktsignale. Das Ergebnis ist ein individueller Online-Report mit priorisierten Massnahmen.",
     email: "hello@mentionbee.ai",

@@ -51,7 +51,7 @@ export function buildBlogPostingJsonLd(article: PublicArticle): Record<string, u
           url: SITE_ORIGIN,
           logo: {
             "@type": "ImageObject",
-            url: absoluteUrl("/mentionbee-logo-transparent.png"),
+            url: absoluteUrl("/mentionbee-logo.png"),
           },
         },
         articleBody: article.markdownBody,
