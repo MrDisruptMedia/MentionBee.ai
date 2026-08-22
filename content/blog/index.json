@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-17T13:12:41.972Z",
+  "generatedAt": "2026-08-22T06:14:43.376Z",
   "articles": [
+    {
+      "publicSlug": "otterly-ai-alternative-mentionbee",
+      "canonicalPath": "/blog/otterly-ai-alternative-mentionbee",
+      "title": "Otterly.ai Alternative: MentionBee im Vergleich",
+      "description": "Otterly.ai vs. MentionBee — ehrlicher Vergleich für AI-Sichtbarkeit im DACH-Raum: laufendes Monitoring-Abo oder einmaliger Audit mit Claude & Gemini nativ?",
+      "publishedAt": "2026-08-22T06:09:16.071Z",
+      "updatedAt": null,
+      "contentTypeLabel": "Vergleich",
+      "tags": [
+        {
+          "id": "ai-visibility-audit",
+          "label": "AI Visibility Audit",
+          "slug": "ai-visibility-audit"
+        },
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
+        }
+      ]
+    },
     {
       "publicSlug": "neue-ki-modelle-ai-visibility",
       "canonicalPath": "/blog/neue-ki-modelle-ai-visibility",
@@ -60,32 +86,6 @@
       ]
     },
     {
-      "publicSlug": "die-besten-ai-visibility-audits-fuer-kmu",
-      "canonicalPath": "/blog/die-besten-ai-visibility-audits-fuer-kmu",
-      "title": "Die besten AI Visibility Audits für KMU: Welcher Ansatz passt zu deinem Unternehmen?",
-      "description": "Welche Audit-Ansätze für KMU sinnvoll sind — ohne automatischen Eigenprodukt-Sieg.",
-      "publishedAt": "2026-08-13T12:00:00.000Z",
-      "updatedAt": null,
-      "contentTypeLabel": "Vergleich",
-      "tags": [
-        {
-          "id": "ai-visibility-audit",
-          "label": "AI Visibility Audit",
-          "slug": "ai-visibility-audit"
-        },
-        {
-          "id": "ai-visibility",
-          "label": "AI Visibility",
-          "slug": "ai-visibility"
-        },
-        {
-          "id": "chatgpt",
-          "label": "ChatGPT",
-          "slug": "chatgpt"
-        }
-      ]
-    },
-    {
       "publicSlug": "warum-chatgpt-dich-nicht-empfiehlt",
       "canonicalPath": "/blog/warum-chatgpt-dich-nicht-empfiehlt",
       "title": "Warum empfiehlt dich ChatGPT nicht? 6 mögliche Erklärungen – und wie du herausfindest, welche zutrifft",
@@ -108,6 +108,32 @@
           "id": "ai-search",
           "label": "AI Search",
           "slug": "ai-search"
+        }
+      ]
+    },
+    {
+      "publicSlug": "die-besten-ai-visibility-audits-fuer-kmu",
+      "canonicalPath": "/blog/die-besten-ai-visibility-audits-fuer-kmu",
+      "title": "Die besten AI Visibility Audits für KMU: Welcher Ansatz passt zu deinem Unternehmen?",
+      "description": "Welche Audit-Ansätze für KMU sinnvoll sind — ohne automatischen Eigenprodukt-Sieg.",
+      "publishedAt": "2026-08-13T12:00:00.000Z",
+      "updatedAt": null,
+      "contentTypeLabel": "Vergleich",
+      "tags": [
+        {
+          "id": "ai-visibility-audit",
+          "label": "AI Visibility Audit",
+          "slug": "ai-visibility-audit"
+        },
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
         }
       ]
     }
