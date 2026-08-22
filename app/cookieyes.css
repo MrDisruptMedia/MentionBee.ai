@@ -37,7 +37,7 @@
 
 @media (max-width: 767px) {
   .cky-btn-revisit-wrapper.cky-revisit-bottom-left {
-    bottom: calc(7.5rem + env(safe-area-inset-bottom, 0px)) !important;
+    bottom: calc(7.25rem + env(safe-area-inset-bottom, 0px)) !important;
     left: 16px !important;
   }
 }
