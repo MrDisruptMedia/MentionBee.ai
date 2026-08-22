@@ -2,15 +2,33 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 
 const hiddenPathPrefixes = ["/report", "/free-report", "/checkout", "/order"];
 const HERO_CTA_SELECTOR = "[data-hero-cta]";
 
+function subscribeNoop() {
+  return () => {};
+}
+
+function getClientSnapshot() {
+  return true;
+}
+
+function getServerSnapshot() {
+  return false;
+}
+
 export function MobileStickyCta() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const isClient = useSyncExternalStore(subscribeNoop, getClientSnapshot, getServerSnapshot);
   const [heroCtaInView, setHeroCtaInView] = useState(true);
+  const [hasMeasuredHeroCta, setHasMeasuredHeroCta] = useState(false);
+
+  if (!isHome && hasMeasuredHeroCta) {
+    setHasMeasuredHeroCta(false);
+  }
 
   useEffect(() => {
     if (!isHome) return;
@@ -21,6 +39,7 @@ export function MobileStickyCta() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setHeroCtaInView(entry.isIntersecting);
+        setHasMeasuredHeroCta(true);
       },
       { threshold: 0 },
     );
@@ -32,7 +51,11 @@ export function MobileStickyCta() {
     return null;
   }
 
-  const hideSticky = isHome && heroCtaInView;
+  // SSR HTML does not see pathname "/". Hide until the client has measured
+  // the homepage Hero CTA, or until we know we are on another page.
+  const hideSticky = isHome
+    ? !hasMeasuredHeroCta || heroCtaInView
+    : !isClient;
 
   return (
     <div
