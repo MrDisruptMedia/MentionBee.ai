@@ -24,6 +24,7 @@ export function Hero({ pricing }: { pricing: PublicPricing }) {
           <div className="flex flex-col gap-3">
             <Link
               href="/report"
+              data-hero-cta=""
               className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3.5 text-center text-sm font-semibold text-mention-dark shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark sm:w-auto"
             >
               Meine Sichtbarkeit prüfen →

@@ -21,6 +21,11 @@
   background-color: #f5c842 !important;
 }
 
+/* CookieYes revisit.svg uses fill="white" (for the default blue circle). */
+.cky-btn-revisit img {
+  filter: brightness(0);
+}
+
 @media (max-width: 767px) {
   .cky-btn-revisit,
   #cky-btn-revisit,
