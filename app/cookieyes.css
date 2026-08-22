@@ -23,22 +23,20 @@
 
 /*
   CookieYes revisit.svg is an <img> with fill="white" (for the default blue circle).
-  White-on-yellow is invisible; the asset is not currentColor. Mask it in #1A1A2E.
+  It is not currentColor, so white-on-yellow disappears. Darken the existing asset.
+  Do not set bottom/left on .cky-btn-revisit — it is position:relative and would
+  shift the icon out of the yellow wrapper.
 */
 .cky-btn-revisit {
-  background-color: #1a1a2e !important;
-  -webkit-mask: url("https://cdn-cookieyes.com/assets/images/revisit.svg") center / 22px 22px no-repeat;
-  mask: url("https://cdn-cookieyes.com/assets/images/revisit.svg") center / 22px 22px no-repeat;
+  background-color: transparent !important;
 }
 
 .cky-btn-revisit img {
-  opacity: 0 !important;
+  filter: brightness(0);
 }
 
 @media (max-width: 767px) {
-  .cky-btn-revisit,
-  #cky-btn-revisit,
-  .cky-revisit-bottom-left {
+  .cky-btn-revisit-wrapper.cky-revisit-bottom-left {
     bottom: calc(7.5rem + env(safe-area-inset-bottom, 0px)) !important;
     left: 16px !important;
   }
