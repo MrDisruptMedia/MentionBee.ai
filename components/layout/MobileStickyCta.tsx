@@ -36,9 +36,11 @@ export function MobileStickyCta() {
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-50 box-border max-w-full border-t border-zinc-200 bg-white/95 px-4 py-3 backdrop-blur md:hidden${
-        hideSticky ? " hidden" : ""
-      }`}
+      className={
+        hideSticky
+          ? "fixed inset-x-0 bottom-0 z-50 box-border max-w-full border-t border-zinc-200 bg-white/95 px-4 py-3 backdrop-blur hidden md:hidden"
+          : "fixed inset-x-0 bottom-0 z-50 box-border max-w-full border-t border-zinc-200 bg-white/95 px-4 py-3 backdrop-blur md:hidden"
+      }
       style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom, 0px))" }}
     >
       <Link
