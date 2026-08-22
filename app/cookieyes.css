@@ -21,9 +21,18 @@
   background-color: #f5c842 !important;
 }
 
-/* CookieYes revisit.svg uses fill="white" (for the default blue circle). */
+/*
+  CookieYes revisit.svg is an <img> with fill="white" (for the default blue circle).
+  White-on-yellow is invisible; the asset is not currentColor. Mask it in #1A1A2E.
+*/
+.cky-btn-revisit {
+  background-color: #1a1a2e !important;
+  -webkit-mask: url("https://cdn-cookieyes.com/assets/images/revisit.svg") center / 22px 22px no-repeat;
+  mask: url("https://cdn-cookieyes.com/assets/images/revisit.svg") center / 22px 22px no-repeat;
+}
+
 .cky-btn-revisit img {
-  filter: brightness(0);
+  opacity: 0 !important;
 }
 
 @media (max-width: 767px) {
