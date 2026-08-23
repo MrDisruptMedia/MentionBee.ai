@@ -64,7 +64,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-12">
           <div className="max-w-sm">
-            <MentionBeeBrand logoClassName="h-auto w-[160px] max-w-full shrink-0 object-contain" />
+            <MentionBeeBrand logoClassName="h-auto w-[176px] max-w-full shrink-0 object-contain" />
             <p className="mt-3 text-sm leading-relaxed text-mention-gray">
               AI Visibility Audit – finde heraus, warum KI deine Konkurrenz empfiehlt und dich nicht.
             </p>

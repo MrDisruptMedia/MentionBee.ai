@@ -17,7 +17,7 @@ export function MentionBeeLogoMark({ className }: MentionBeeLogoMarkProps) {
       height={LOGO_HEIGHT}
       fetchPriority="high"
       decoding="async"
-      className={className ?? "h-auto w-[160px] max-w-full shrink-0 object-contain"}
+      className={className ?? "h-auto w-[176px] max-w-full shrink-0 object-contain"}
     />
   );
 }
