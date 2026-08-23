@@ -42,6 +42,6 @@
   }
 
   html[data-mobile-sticky-cta="visible"] .cky-btn-revisit-wrapper.cky-revisit-bottom-left {
-    bottom: calc(0.6rem + env(safe-area-inset-bottom, 0px)) !important;
+    bottom: calc(0.125rem + env(safe-area-inset-bottom, 0px)) !important;
   }
 }
