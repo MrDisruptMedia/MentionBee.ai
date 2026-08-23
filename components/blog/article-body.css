@@ -6,6 +6,15 @@
   min-width: 0;
 }
 
+/*
+  Next.js scrolls the new /blog/[slug] segment into view on client navigation.
+  The segment sits below the sticky header, so without a scroll margin the
+  header covers category/tags (settled scrollY ≈ header height).
+*/
+.mb-article-root {
+  scroll-margin-top: 6rem;
+}
+
 .mb-article-root .mb-article-body {
   font-size: 1.125rem;
   line-height: 1.75;
