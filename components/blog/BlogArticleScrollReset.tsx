@@ -27,7 +27,7 @@ export function BlogArticleScrollReset() {
 
     const started = performance.now();
     const onScroll = () => {
-      if (performance.now() - started < 250 && window.scrollY > 0) {
+      if (performance.now() - started < 400 && window.scrollY > 0) {
         reset();
       }
     };
@@ -35,7 +35,7 @@ export function BlogArticleScrollReset() {
     const timeout = window.setTimeout(() => {
       reset();
       window.removeEventListener("scroll", onScroll);
-    }, 250);
+    }, 400);
 
     return () => {
       clearTimeout(timeout);
