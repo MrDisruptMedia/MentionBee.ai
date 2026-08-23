@@ -2,7 +2,7 @@ type MentionBeeLogoMarkProps = {
   className?: string;
 };
 
-/** Displayed at `h-10` (~40px). viewBox 1433.63×451.59 ≈ 3.17:1. */
+/** Intrinsic SVG size. Display width is set in CSS to keep 3.1746:1. */
 const LOGO_WIDTH = 1434;
 const LOGO_HEIGHT = 452;
 
@@ -17,7 +17,7 @@ export function MentionBeeLogoMark({ className }: MentionBeeLogoMarkProps) {
       height={LOGO_HEIGHT}
       fetchPriority="high"
       decoding="async"
-      className={className ?? "h-10 w-auto max-w-full shrink-0 object-contain"}
+      className={className ?? "h-auto w-[160px] max-w-full shrink-0 object-contain"}
     />
   );
 }

@@ -33,9 +33,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200/90 bg-white shadow-sm">
-      <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 lg:grid-cols-[auto_1fr_auto] lg:gap-6">
+      <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-2 lg:grid-cols-[auto_1fr_auto] lg:gap-6">
         <div className="min-w-0 justify-self-start">
-          <MentionBeeBrand />
+          <MentionBeeBrand logoClassName="h-auto w-[143px] max-w-full shrink-0 object-contain lg:w-[160px]" />
         </div>
 
         <nav
