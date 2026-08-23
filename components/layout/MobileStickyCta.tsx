@@ -47,15 +47,29 @@ export function MobileStickyCta() {
     return () => observer.disconnect();
   }, [isHome]);
 
-  if (hiddenPathPrefixes.some((prefix) => pathname.startsWith(prefix))) {
-    return null;
-  }
+  const hiddenOnPath = hiddenPathPrefixes.some((prefix) => pathname.startsWith(prefix));
 
   // SSR HTML does not see pathname "/". Hide until the client has measured
   // the homepage Hero CTA, or until we know we are on another page.
   const hideSticky = isHome
     ? !hasMeasuredHeroCta || heroCtaInView
     : !isClient;
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (!hiddenOnPath && !hideSticky) {
+      root.setAttribute("data-mobile-sticky-cta", "visible");
+    } else {
+      root.removeAttribute("data-mobile-sticky-cta");
+    }
+    return () => {
+      root.removeAttribute("data-mobile-sticky-cta");
+    };
+  }, [hiddenOnPath, hideSticky]);
+
+  if (hiddenOnPath) {
+    return null;
+  }
 
   return (
     <div
@@ -74,7 +88,7 @@ export function MobileStickyCta() {
       </Link>
       <Link
         href="/free-report"
-        className="mt-1 flex min-h-10 w-full items-center justify-center text-center text-xs text-mention-gray underline-offset-4 hover:underline"
+        className="mt-1 flex min-h-10 w-full items-center justify-center px-14 text-center text-xs text-mention-gray underline-offset-4 hover:underline"
       >
         oder Gratis-Check starten
       </Link>
