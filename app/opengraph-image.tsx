@@ -6,6 +6,11 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  const beeMarkBytes = await fetch(new URL("./icon.png", import.meta.url)).then((res) =>
+    res.arrayBuffer(),
+  );
+  const beeMark = `data:image/png;base64,${Buffer.from(beeMarkBytes).toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -25,11 +30,18 @@ export default async function Image() {
         <div style={{ display: "flex", alignItems: "center", marginBottom: "48px" }}>
           <div
             style={{
-              fontSize: "52px",
-              marginRight: "16px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: 80,
+              height: 80,
+              marginRight: 16,
+              borderRadius: 16,
+              background: "#FFFFFF",
             }}
           >
-            🐝
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={beeMark} alt="" width={64} height={64} />
           </div>
           <div
             style={{
