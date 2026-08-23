@@ -51,33 +51,68 @@ export function WhatWeAnalyze() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto min-w-0 max-w-3xl">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
-            Vom „
-            <span className="relative inline-block max-w-full sm:whitespace-nowrap">
-              Wir werden nicht genannt“
-              <svg
-                className="pointer-events-none absolute left-0 -bottom-[0.2em] h-[0.36em] w-[96%] max-w-full overflow-hidden sm:-bottom-[0.16em] sm:h-[0.34em] sm:overflow-visible"
-                viewBox="0 0 400 16"
-                fill="none"
-                preserveAspectRatio="none"
-                aria-hidden
-              >
-                <path
-                  d="M5 9.55 C 16 8.9, 29 10.15, 47 9.05 C 61 9.7, 74 8.65, 93 9.45 C 118 9.1, 139 10.2, 163 8.85 C 186 9.9, 207 8.7, 236 9.5 C 258 9.05, 281 10.05, 309 9.15 C 332 9.65, 351 8.8, 376 9.4"
-                  stroke="#FFC400"
-                  strokeWidth="4.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M11 10.2 C 33 9.35, 59 10.55, 90 9.5 C 121 10.4, 152 8.95, 189 10.1 C 223 9.2, 261 10.45, 298 9.35 C 328 10.15, 351 9.25, 369 9.7"
-                  stroke="#FFC400"
-                  strokeWidth="3.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>{" "}
-            zur konkreten Diagnose.
+            <span className="contents sm:hidden">
+              Vom{" "}
+              <span className="whitespace-nowrap">„Wir werden</span>{" "}
+              <span className="whitespace-nowrap">
+                <span className="relative inline-block">
+                  {"nicht genannt"}
+                  <svg
+                    className="pointer-events-none absolute left-0 -bottom-[0.2em] h-[0.36em] w-full overflow-hidden"
+                    viewBox="0 0 400 16"
+                    fill="none"
+                    preserveAspectRatio="none"
+                    aria-hidden
+                  >
+                    <path
+                      d="M5 9.55 C 16 8.9, 29 10.15, 47 9.05 C 61 9.7, 74 8.65, 93 9.45 C 118 9.1, 139 10.2, 163 8.85 C 186 9.9, 207 8.7, 236 9.5 C 258 9.05, 281 10.05, 309 9.15 C 332 9.65, 351 8.8, 376 9.4"
+                      stroke="#FFC400"
+                      strokeWidth="4.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M11 10.2 C 33 9.35, 59 10.55, 90 9.5 C 121 10.4, 152 8.95, 189 10.1 C 223 9.2, 261 10.45, 298 9.35 C 328 10.15, 351 9.25, 369 9.7"
+                      stroke="#FFC400"
+                      strokeWidth="3.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>{`“`}
+              </span>
+              <br />
+              zur konkreten Diagnose.
+            </span>
+            <span className="hidden sm:contents">
+              Vom „
+              <span className="relative inline-block max-w-full sm:whitespace-nowrap">
+                Wir werden nicht genannt“
+                <svg
+                  className="pointer-events-none absolute left-0 -bottom-[0.2em] h-[0.36em] w-[96%] max-w-full overflow-hidden sm:-bottom-[0.16em] sm:h-[0.34em] sm:overflow-visible"
+                  viewBox="0 0 400 16"
+                  fill="none"
+                  preserveAspectRatio="none"
+                  aria-hidden
+                >
+                  <path
+                    d="M5 9.55 C 16 8.9, 29 10.15, 47 9.05 C 61 9.7, 74 8.65, 93 9.45 C 118 9.1, 139 10.2, 163 8.85 C 186 9.9, 207 8.7, 236 9.5 C 258 9.05, 281 10.05, 309 9.15 C 332 9.65, 351 8.8, 376 9.4"
+                    stroke="#FFC400"
+                    strokeWidth="4.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M11 10.2 C 33 9.35, 59 10.55, 90 9.5 C 121 10.4, 152 8.95, 189 10.1 C 223 9.2, 261 10.45, 298 9.35 C 328 10.15, 351 9.25, 369 9.7"
+                    stroke="#FFC400"
+                    strokeWidth="3.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>{" "}
+              zur konkreten Diagnose.
+            </span>
           </h2>
           <p className="mt-4 text-base leading-relaxed text-mention-gray sm:text-lg">
             Der AI Visibility Audit untersucht sechs Messbereiche – von KI-Präsenz & Sichtbarkeit und Inhalten
