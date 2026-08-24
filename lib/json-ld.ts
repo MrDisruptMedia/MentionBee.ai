@@ -70,20 +70,3 @@ export function auditServiceJsonLd(pricing: PublicPricing) {
 
 export const MEMS_REVIEW_QUOTE =
   "„Der Report offenbarte den dringenden Handlungsbedarf für unseren Webauftritt. Daraufhin haben wir unsere Website neu gestaltet – seitdem erhalten wir messbar mehr verwertbare Anfragen.“";
-
-export function memsReviewJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    reviewBody: MEMS_REVIEW_QUOTE,
-    author: {
-      "@type": "Person",
-      name: "Markus Nägele",
-      affiliation: {
-        "@type": "Organization",
-        name: "MEMS AG",
-      },
-    },
-    itemReviewed: { "@id": AUDIT_SERVICE_ID },
-  };
-}
