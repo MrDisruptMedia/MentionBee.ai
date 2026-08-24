@@ -6,7 +6,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
-  const beeMarkBytes = await fetch(new URL("./icon.png", import.meta.url)).then((res) =>
+  const beeMarkBytes = await fetch(new URL("../public/icon.png", import.meta.url)).then((res) =>
     res.arrayBuffer(),
   );
   const beeMark = `data:image/png;base64,${Buffer.from(beeMarkBytes).toString("base64")}`;

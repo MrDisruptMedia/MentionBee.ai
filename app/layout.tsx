@@ -19,10 +19,15 @@ const inter = Inter({
 const gtmId = "GTM-W25FQX2Z";
 const cookieYesWebsiteKey = "6d5a7a5e98f2f8277ca2fd1785c55485";
 
-// Favicon: Next.js nutzt `app/icon.png` (Bienen-Mark) automatisch.
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://mentionbee.ai"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48", type: "image/x-icon" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   title: "MentionBee – AI Visibility Audit",
   description:
     "Warum empfiehlt KI deine Konkurrenz – dich aber nicht? MentionBee zeigt dir, warum ChatGPT, Claude, Gemini & Co. dein Unternehmen (noch) nicht empfehlen – und was du tun kannst.",
