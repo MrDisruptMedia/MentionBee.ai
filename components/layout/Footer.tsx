@@ -83,6 +83,9 @@ export function Footer() {
                       key={item.label}
                       href="#"
                       className="cky-banner-element text-mention-dark/90 transition-colors hover:text-mention-gray"
+                      onClick={(event) => {
+                        event.preventDefault();
+                      }}
                     >
                       {item.label}
                     </a>
