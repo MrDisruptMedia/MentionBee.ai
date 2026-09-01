@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T08:41:19.460Z",
+  "generatedAt": "2026-09-01T09:34:24.375Z",
   "articles": [
+    {
+      "publicSlug": "7-fehler-ki-sichtbarkeit",
+      "canonicalPath": "/blog/7-fehler-ki-sichtbarkeit",
+      "title": "Die 7 größten Fehler bei der KI-Sichtbarkeit (und wie du sie vermeidest)",
+      "description": "Sieben wiederkehrende Fehler bei der KI-Sichtbarkeit — von robots.txt über Content-Struktur bis falschem Monitoring — und wie du sie vermeidest.",
+      "publishedAt": "2026-09-01T09:30:00.000Z",
+      "updatedAt": null,
+      "contentTypeLabel": "Diagnose-Guide",
+      "tags": [
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
+        },
+        {
+          "id": "ai-search",
+          "label": "AI Search",
+          "slug": "ai-search"
+        }
+      ]
+    },
     {
       "publicSlug": "ai-visibility-vs-seo-2026",
       "canonicalPath": "/blog/ai-visibility-vs-seo-2026",
