@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T06:14:43.376Z",
+  "generatedAt": "2026-09-01T07:54:17.581Z",
   "articles": [
+    {
+      "publicSlug": "ai-visibility-vs-seo-2026",
+      "canonicalPath": "/blog/ai-visibility-vs-seo-2026",
+      "title": "AI Visibility vs. SEO: Was sich 2026 wirklich ändert",
+      "description": "SEO bringt dich in den Kandidatenpool – ausgewählt wirst du anders. Was sich 2026 zwischen klassischer Suche und KI-Antworten wirklich verändert.",
+      "publishedAt": "2026-09-01T08:00:00.000Z",
+      "updatedAt": null,
+      "contentTypeLabel": "Entscheidungshilfe",
+      "tags": [
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "geo",
+          "label": "GEO",
+          "slug": "geo"
+        },
+        {
+          "id": "ai-search",
+          "label": "AI Search",
+          "slug": "ai-search"
+        }
+      ]
+    },
     {
       "publicSlug": "otterly-ai-alternative-mentionbee",
       "canonicalPath": "/blog/otterly-ai-alternative-mentionbee",
