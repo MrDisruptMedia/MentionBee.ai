@@ -27,7 +27,10 @@ export function getLatestPublishedArticles(limit: number): PublicArticle[] {
 export function listPublicArticles(): PublicArticle[] {
   if (!existsSync(BLOG_DIR)) return [];
   return readdirSync(BLOG_DIR)
-    .filter((f) => f.endsWith(".json") && f !== "index.json")
+    .filter(
+      (f) =>
+        f.endsWith(".json") && f !== "index.json" && f !== "image-manifest.json",
+    )
     .map((f) => JSON.parse(readFileSync(path.join(BLOG_DIR, f), "utf8")) as PublicArticle)
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 }

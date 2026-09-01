@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "basePathRecommendation": "/images/blog",
+  "formats": {
+    "master": { "width": 1672, "height": 941, "extension": "png", "usage": "archive" },
+    "hero": { "width": 1600, "height": 900, "extension": "webp", "usage": "article hero" },
+    "card": { "width": 800, "height": 450, "extension": "webp", "usage": "blog cards" },
+    "social": { "width": 1200, "height": 630, "extension": "jpg", "usage": "Open Graph and LinkedIn" }
+  },
+  "articles": [
+    {
+      "slug": "7-fehler-ki-sichtbarkeit",
+      "url": "https://mentionbee.ai/blog/7-fehler-ki-sichtbarkeit",
+      "alt": "Sieben unterbrochene und fehlgeleitete Signalwege zwischen einer Website und einer KI-Antwort",
+      "files": {
+        "master": "7-fehler-ki-sichtbarkeit-master.png",
+        "hero": "7-fehler-ki-sichtbarkeit-hero.webp",
+        "card": "7-fehler-ki-sichtbarkeit-card.webp",
+        "social": "7-fehler-ki-sichtbarkeit-social.jpg"
+      }
+    },
+    {
+      "slug": "ai-visibility-vs-seo-2026",
+      "url": "https://mentionbee.ai/blog/ai-visibility-vs-seo-2026",
+      "alt": "Suchergebnisse und eine KI-Antwort als zwei verbundene Systeme zur Auswahl von Anbietern",
+      "files": {
+        "master": "ai-visibility-vs-seo-2026-master.png",
+        "hero": "ai-visibility-vs-seo-2026-hero.webp",
+        "card": "ai-visibility-vs-seo-2026-card.webp",
+        "social": "ai-visibility-vs-seo-2026-social.jpg"
+      }
+    },
+    {
+      "slug": "otterly-ai-alternative-mentionbee",
+      "url": "https://mentionbee.ai/blog/otterly-ai-alternative-mentionbee",
+      "alt": "Gegenüberstellung eines laufenden Monitoring-Dashboards und einer detaillierten diagnostischen Analyse",
+      "files": {
+        "master": "otterly-ai-alternative-mentionbee-master.png",
+        "hero": "otterly-ai-alternative-mentionbee-hero.webp",
+        "card": "otterly-ai-alternative-mentionbee-card.webp",
+        "social": "otterly-ai-alternative-mentionbee-social.jpg"
+      }
+    },
+    {
+      "slug": "neue-ki-modelle-ai-visibility",
+      "url": "https://mentionbee.ai/blog/neue-ki-modelle-ai-visibility",
+      "alt": "Olaf Kunz hält zwei Schilder mit den Modellnamen Opus 5 und Fable 5 und vergleicht sie",
+      "files": {
+        "master": "neue-ki-modelle-ai-visibility-master.png",
+        "hero": "neue-ki-modelle-ai-visibility-hero.webp",
+        "card": "neue-ki-modelle-ai-visibility-card.webp",
+        "social": "neue-ki-modelle-ai-visibility-social.jpg"
+      }
+    },
+    {
+      "slug": "die-besten-ai-visibility-audits-fuer-kmu",
+      "url": "https://mentionbee.ai/blog/die-besten-ai-visibility-audits-fuer-kmu",
+      "alt": "Vier unterschiedliche Diagnoseperspektiven untersuchen die Website eines kleinen Unternehmens",
+      "files": {
+        "master": "die-besten-ai-visibility-audits-fuer-kmu-master.png",
+        "hero": "die-besten-ai-visibility-audits-fuer-kmu-hero.webp",
+        "card": "die-besten-ai-visibility-audits-fuer-kmu-card.webp",
+        "social": "die-besten-ai-visibility-audits-fuer-kmu-social.jpg"
+      }
+    },
+    {
+      "slug": "ai-visibility-audit-oder-monitoring",
+      "url": "https://mentionbee.ai/blog/ai-visibility-audit-oder-monitoring",
+      "alt": "Ein einmaliger diagnostischer Blick auf eine Website neben einer fortlaufenden Messkurve",
+      "files": {
+        "master": "ai-visibility-audit-oder-monitoring-master.png",
+        "hero": "ai-visibility-audit-oder-monitoring-hero.webp",
+        "card": "ai-visibility-audit-oder-monitoring-card.webp",
+        "social": "ai-visibility-audit-oder-monitoring-social.jpg"
+      }
+    },
+    {
+      "slug": "warum-chatgpt-dich-nicht-empfiehlt",
+      "url": "https://mentionbee.ai/blog/warum-chatgpt-dich-nicht-empfiehlt",
+      "alt": "Mehrere Anbieter werden für eine KI-Antwort ausgewählt, während ein weiterer Anbieter anhand möglicher Ursachen untersucht wird",
+      "files": {
+        "master": "warum-chatgpt-dich-nicht-empfiehlt-master.png",
+        "hero": "warum-chatgpt-dich-nicht-empfiehlt-hero.webp",
+        "card": "warum-chatgpt-dich-nicht-empfiehlt-card.webp",
+        "social": "warum-chatgpt-dich-nicht-empfiehlt-social.jpg"
+      }
+    }
+  ]
+}

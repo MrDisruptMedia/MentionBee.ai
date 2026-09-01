@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { ArticleExperience } from "@/components/blog/ArticleExperience";
 import { getPublicArticleBySlug, listPublicArticles } from "@/lib/blog";
+import { getBlogImages } from "@/lib/blog-images";
 import { absoluteUrl } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -21,6 +22,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = absoluteUrl(article.canonicalPath);
   const title = article.title;
   const description = article.description;
+  const images = getBlogImages(article.publicSlug);
+  const socialImage = images
+    ? {
+        url: absoluteUrl(images.social.src),
+        width: images.social.width,
+        height: images.social.height,
+      }
+    : { url: absoluteUrl("/opengraph-image"), width: 1200, height: 630 };
 
   return {
     title,
@@ -37,13 +46,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt || article.publishedAt,
       authors: [article.author.name],
-      images: [{ url: absoluteUrl("/opengraph-image"), width: 1200, height: 630 }],
+      images: [socialImage],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [absoluteUrl("/opengraph-image")],
+      images: [socialImage.url],
     },
   };
 }

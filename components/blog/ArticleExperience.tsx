@@ -1,13 +1,15 @@
 import "./article-body.css";
 
+import Image from "next/image";
 import Link from "next/link";
 
 import type { PublicArticle } from "@/content/blog/types";
+import { getBlogImages } from "@/lib/blog-images";
 import { buildBlogPostingJsonLd, formatDeDate } from "@/lib/blog-seo";
 
 export function ArticleExperience({ article }: { article: PublicArticle }) {
   const jsonLd = buildBlogPostingJsonLd(article);
-  const showHero = Boolean(article.hero?.src && article.hero.status === "APPROVED");
+  const images = getBlogImages(article.publicSlug);
 
   return (
     <>
@@ -52,15 +54,18 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
               ) : null}
               <span>{article.readingMinutes} Min. Lesezeit</span>
             </div>
-            {showHero && article.hero?.src ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={article.hero.src}
-                alt={article.hero.alt || ""}
-                className="mt-6 w-full max-h-[420px] object-cover"
-                width={article.hero.width || undefined}
-                height={article.hero.height || undefined}
-              />
+            {images ? (
+              <div className="relative mt-6 aspect-video w-full overflow-hidden rounded-xl bg-mention-light">
+                <Image
+                  src={images.hero.src}
+                  alt={images.hero.alt ?? images.alt}
+                  width={images.hero.width}
+                  height={images.hero.height}
+                  sizes="(max-width: 768px) 100vw, 42rem"
+                  className="h-full w-full object-cover"
+                  priority
+                />
+              </div>
             ) : null}
           </header>
 

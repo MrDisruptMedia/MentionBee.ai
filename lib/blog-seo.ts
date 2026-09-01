@@ -1,9 +1,11 @@
 import { SITE_ORIGIN, absoluteUrl } from "@/lib/site";
 import type { PublicArticle } from "@/content/blog/types";
+import { getBlogImages } from "@/lib/blog-images";
 
 export function buildBlogPostingJsonLd(article: PublicArticle): Record<string, unknown> {
   const url = absoluteUrl(article.canonicalPath);
   const authorUrl = absoluteUrl(`/autor/${article.author.slug}`);
+  const images = getBlogImages(article.publicSlug);
 
   return {
     "@context": "https://schema.org",
@@ -56,6 +58,16 @@ export function buildBlogPostingJsonLd(article: PublicArticle): Record<string, u
         },
         articleBody: article.markdownBody,
         keywords: article.tags.map((t) => t.label).join(", "),
+        ...(images
+          ? {
+              image: {
+                "@type": "ImageObject",
+                url: absoluteUrl(images.social.src),
+                width: images.social.width,
+                height: images.social.height,
+              },
+            }
+          : {}),
       },
     ],
   };
