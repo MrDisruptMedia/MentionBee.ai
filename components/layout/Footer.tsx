@@ -41,6 +41,7 @@ const columns: FooterCol[] = [
       { label: "AGB", href: "/agb" },
       { label: "Impressum", href: "/impressum" },
       { label: "llms.txt", href: "/llms.txt" },
+      { label: "Cookie-Einstellungen", href: "#" },
     ],
   },
 ];
@@ -77,7 +78,15 @@ export function Footer() {
               </p>
               <nav aria-label={col.heading} className="mt-4 flex flex-col gap-2.5 text-sm">
                 {col.links.map((item) =>
-                  item.href === "/llms.txt" ? (
+                  item.href === "#" ? (
+                    <a
+                      key={item.label}
+                      href="#"
+                      className="cky-banner-element text-mention-dark/90 transition-colors hover:text-mention-gray"
+                    >
+                      {item.label}
+                    </a>
+                  ) : item.href === "/llms.txt" ? (
                     <a
                       key={item.href}
                       href={item.href}
