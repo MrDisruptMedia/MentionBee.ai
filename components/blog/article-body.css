@@ -139,6 +139,17 @@
   line-height: 1;
 }
 
+/* Solution lead-in ("So vermeidest du den Fehler:") — honey checkmark */
+.mb-article-root .mb-avoidance-check {
+  display: inline-block;
+  margin-right: 0.4rem;
+  color: var(--primary, #ffc400);
+  font-size: 1.05em;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: -0.05em;
+}
+
 .mb-article-root .mb-body-toc-hidden,
 .mb-article-root .mb-body-lead-hidden,
 .mb-article-root .mb-body-sources-hidden {
