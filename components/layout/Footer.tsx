@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { SVGProps } from "react";
 
+import { CookieSettingsLink } from "@/components/layout/CookieSettingsLink";
 import { MentionBeeBrand } from "@/components/layout/mention-bee-brand";
 
 type FooterCol = { heading: string; links: { label: string; href: string }[] };
@@ -79,16 +80,7 @@ export function Footer() {
               <nav aria-label={col.heading} className="mt-4 flex flex-col gap-2.5 text-sm">
                 {col.links.map((item) =>
                   item.href === "#" ? (
-                    <a
-                      key={item.label}
-                      href="#"
-                      className="cky-banner-element text-mention-dark/90 transition-colors hover:text-mention-gray"
-                      onClick={(event) => {
-                        event.preventDefault();
-                      }}
-                    >
-                      {item.label}
-                    </a>
+                    <CookieSettingsLink key={item.label} />
                   ) : item.href === "/llms.txt" ? (
                     <a
                       key={item.href}
