@@ -88,8 +88,55 @@
 }
 
 .mb-article-root .mb-toc-link:hover {
-  border-bottom-color: #ffc400;
+  border-bottom-color: var(--primary, #ffc400);
   background-color: rgba(255, 196, 0, 0.12);
+}
+
+.mb-article-root .mb-toc-label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.mb-article-root .mb-toc-list,
+.mb-article-root .mb-toc-list li {
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+.mb-article-root .mb-h2-back-to-toc {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.85rem 0 0.65rem;
+  padding-top: 0.15rem;
+}
+
+.mb-article-root .mb-back-to-toc-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--primary, #ffc400);
+  text-decoration: none;
+  border: 1px solid color-mix(in srgb, var(--primary, #ffc400) 55%, transparent);
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--primary, #ffc400) 10%, transparent);
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    transform 120ms ease;
+}
+
+.mb-article-root .mb-back-to-toc-link:hover {
+  background: color-mix(in srgb, var(--primary, #ffc400) 18%, transparent);
+  border-color: var(--primary, #ffc400);
+  transform: translateY(-1px);
+}
+
+.mb-article-root .mb-back-to-toc-icon {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .mb-article-root .mb-body-toc-hidden,

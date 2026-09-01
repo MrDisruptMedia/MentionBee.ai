@@ -66,15 +66,16 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
 
           {article.toc.length > 0 ? (
             <nav
+              id="inhalt"
               aria-label="Inhaltsverzeichnis"
-              className="mb-8 rounded-xl border border-zinc-200 bg-mention-light px-4 py-4"
+              className="mb-toc-nav mb-8 scroll-mt-24 rounded-xl border border-zinc-200 bg-mention-light px-4 py-4"
             >
-              <p className="mb-2 text-xs font-semibold tracking-wide text-mention-gray uppercase">
+              <p className="mb-toc-label mb-2 text-sm font-semibold tracking-wide text-mention-gray uppercase">
                 Inhalt
               </p>
-              <ol className="m-0 list-decimal space-y-1.5 pl-5">
+              <ol className="mb-toc-list m-0 list-decimal space-y-1.5 pl-5 text-sm">
                 {article.toc.map((h) => (
-                  <li key={h.id}>
+                  <li key={h.id} className="text-sm leading-snug">
                     <a
                       href={`#${h.id}`}
                       className="mb-toc-link text-sm font-medium text-mention-dark no-underline"
