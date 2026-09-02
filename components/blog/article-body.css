@@ -33,13 +33,12 @@
   color: #1a1a2e;
   margin: 2.4rem 0 0.85rem;
   scroll-margin-top: 96px;
-  padding-top: 0.35rem;
-  border-top: 1px solid #eef0f3;
 }
 
-.mb-article-root .mb-article-body h2:first-of-type {
-  border-top: none;
-  padding-top: 0;
+/* Fine divider only before FAQ sections (semantic marker from publishing HTML). */
+.mb-article-root .mb-article-body h2[data-mb-section="faq"] {
+  border-top: 1px solid #eef0f3;
+  padding-top: 0.35rem;
 }
 
 .mb-article-root .mb-article-body h3 {

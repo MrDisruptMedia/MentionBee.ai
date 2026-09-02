@@ -104,7 +104,7 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
           />
 
           {article.sources.length > 0 ? (
-            <section className="mt-10 border-t border-zinc-200 pt-6" aria-label="Quellen">
+            <section className="mt-10 pt-6" aria-label="Quellen">
               <h2 className="!text-xl !font-semibold">Quellen und weiterführende Informationen</h2>
               <ul className="mt-3 space-y-2 text-sm leading-relaxed text-mention-gray">
                 {article.sources.map((s) => (
@@ -145,7 +145,10 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
             </Link>
           </aside>
 
-          <section className="mt-10 border-t border-zinc-200 pt-8">
+          <section
+            className="mb-author-box mt-10 border-t border-zinc-200 pt-8"
+            aria-label="Autor"
+          >
             <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">Autor</p>
             <h2 className="!mt-2 !text-xl !font-semibold">{article.author.name}</h2>
             {article.author.role ? (
@@ -165,7 +168,7 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
           </section>
 
           {article.related.length > 0 ? (
-            <section className="mt-10 border-t border-zinc-200 pt-8">
+            <section className="mt-10 pt-8" aria-label="Verwandte Artikel">
               <h2 className="!text-xl !font-semibold">Das könnte dich auch interessieren</h2>
               <ul className="mt-4 space-y-4">
                 {article.related.map((r) => (
