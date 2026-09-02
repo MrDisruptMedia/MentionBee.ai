@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T09:49:38.010Z",
+  "generatedAt": "2026-09-02T12:11:44.205Z",
   "articles": [
     {
       "publicSlug": "7-fehler-ki-sichtbarkeit",
@@ -58,9 +58,9 @@
       "publicSlug": "otterly-ai-alternative-mentionbee",
       "canonicalPath": "/blog/otterly-ai-alternative-mentionbee",
       "title": "Otterly.ai Alternative: MentionBee im Vergleich",
-      "description": "Otterly.ai vs. MentionBee — ehrlicher Vergleich für AI-Sichtbarkeit im DACH-Raum: laufendes Monitoring-Abo oder einmaliger Audit mit Claude & Gemini nativ?",
+      "description": "Otterly.ai vs. MentionBee — Monitoring-Abo oder einmaliger Audit mit Fix-Liste? Ehrlicher Vergleich für DACH-KMU, inkl. Preisleiter und nativer Claude-/Gemini-Abdeckung.",
       "publishedAt": "2026-08-22T06:09:16.071Z",
-      "updatedAt": null,
+      "updatedAt": "2026-09-02T12:00:00.000Z",
       "contentTypeLabel": "Vergleich",
       "tags": [
         {
