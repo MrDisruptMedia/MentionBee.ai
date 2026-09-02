@@ -19,26 +19,30 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
       />
       <div className="mb-article-root mx-auto w-full min-w-0 max-w-6xl px-4 py-10 md:py-14">
         <article className="mx-auto w-full min-w-0 max-w-[42rem]">
-          <header className="mb-8">
-            {article.contentTypeLabel ? (
-              <p className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-xs font-semibold tracking-wide text-gray-900 uppercase">
-                {article.contentTypeLabel}
-              </p>
-            ) : null}
-            {article.tags.length > 0 ? (
-              <p className="mb-3 flex flex-wrap gap-x-3 gap-y-1 text-xs font-medium tracking-wide text-mention-gray uppercase">
-                {article.tags.map((t) => (
-                  <span key={t.id}>{t.label}</span>
-                ))}
-              </p>
-            ) : null}
-            <h1 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl md:text-[2.5rem] md:leading-[1.15]">
+          <header className="mb-8 flex flex-col">
+            <div className="order-1">
+              {article.contentTypeLabel ? (
+                <p className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-xs font-semibold tracking-wide text-gray-900 uppercase">
+                  {article.contentTypeLabel}
+                </p>
+              ) : null}
+              {article.tags.length > 0 ? (
+                <p className="mb-3 flex flex-wrap gap-x-3 gap-y-1 text-xs font-medium tracking-wide text-mention-gray uppercase">
+                  {article.tags.map((t) => (
+                    <span key={t.id}>{t.label}</span>
+                  ))}
+                </p>
+              ) : null}
+            </div>
+            <h1 className="order-2 font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl md:text-[2.5rem] md:leading-[1.15]">
               {article.h1}
             </h1>
             {article.lead ? (
-              <p className="mt-4 text-lg leading-relaxed text-mention-gray md:text-xl">{article.lead}</p>
+              <p className="order-4 mt-7 text-lg leading-relaxed text-mention-gray md:order-3 md:mt-4 md:text-xl">
+                {article.lead}
+              </p>
             ) : null}
-            <div className="mt-5 flex flex-wrap gap-x-4 gap-y-1 text-sm text-mention-gray">
+            <div className="order-5 mt-5 flex flex-wrap gap-x-4 gap-y-1 text-sm text-mention-gray md:order-4">
               <span>
                 Von{" "}
                 <Link
@@ -55,7 +59,7 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
               <span>{article.readingMinutes} Min. Lesezeit</span>
             </div>
             {images ? (
-              <div className="relative mt-6 aspect-video w-full overflow-hidden rounded-xl bg-mention-light">
+              <div className="relative order-3 mt-6 aspect-video w-full min-w-0 overflow-hidden rounded-xl bg-mention-light md:order-5">
                 <Image
                   src={images.hero.src}
                   alt={images.hero.alt ?? images.alt}
