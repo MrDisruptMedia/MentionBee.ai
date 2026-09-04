@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-04T09:30:12.217Z",
+  "generatedAt": "2026-09-04T09:30:15.826Z",
   "articles": [
     {
       "publicSlug": "7-fehler-ki-sichtbarkeit",
@@ -112,32 +112,6 @@
       ]
     },
     {
-      "publicSlug": "die-besten-ai-visibility-audits-fuer-kmu",
-      "canonicalPath": "/blog/die-besten-ai-visibility-audits-fuer-kmu",
-      "title": "Die besten AI Visibility Audits für KMU: Welcher Ansatz passt zu deinem Unternehmen?",
-      "description": "Welche Audit-Ansätze für KMU sinnvoll sind — ohne automatischen Eigenprodukt-Sieg.",
-      "publishedAt": "2026-08-16T13:10:00.000Z",
-      "updatedAt": null,
-      "contentTypeLabel": "Vergleich",
-      "tags": [
-        {
-          "id": "ai-visibility-audit",
-          "label": "AI Visibility Audit",
-          "slug": "ai-visibility-audit"
-        },
-        {
-          "id": "ai-visibility",
-          "label": "AI Visibility",
-          "slug": "ai-visibility"
-        },
-        {
-          "id": "chatgpt",
-          "label": "ChatGPT",
-          "slug": "chatgpt"
-        }
-      ]
-    },
-    {
       "publicSlug": "ai-visibility-audit-oder-monitoring",
       "canonicalPath": "/blog/ai-visibility-audit-oder-monitoring",
       "title": "Audit oder Monitoring? So entscheidest du bei AI Visibility",
@@ -160,6 +134,32 @@
           "id": "ai-monitoring",
           "label": "AI Monitoring",
           "slug": "ai-monitoring"
+        }
+      ]
+    },
+    {
+      "publicSlug": "die-besten-ai-visibility-audits-fuer-kmu",
+      "canonicalPath": "/blog/die-besten-ai-visibility-audits-fuer-kmu",
+      "title": "Die besten AI Visibility Audits für KMU: Welcher Ansatz passt zu deinem Unternehmen?",
+      "description": "Welche Audit-Ansätze für KMU sinnvoll sind — ohne automatischen Eigenprodukt-Sieg.",
+      "publishedAt": "2026-08-16T13:10:00.000Z",
+      "updatedAt": null,
+      "contentTypeLabel": "Vergleich",
+      "tags": [
+        {
+          "id": "ai-visibility-audit",
+          "label": "AI Visibility Audit",
+          "slug": "ai-visibility-audit"
+        },
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
         }
       ]
     },
