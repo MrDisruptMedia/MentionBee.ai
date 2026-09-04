@@ -49,3 +49,49 @@ export function getAuthorFromArticles(authorSlug: string): {
   if (articles.length === 0) return null;
   return { author: articles[0].author, articles };
 }
+
+/** Default profile photo for known authors (marketing public path). */
+export function authorProfileImageSrc(
+  author: Pick<PublicArticle["author"], "slug" | "profileImage">,
+): string | null {
+  if (author.profileImage) return author.profileImage;
+  if (author.slug === "olaf-kunz") return "/images/autor-olaf-kunz.png";
+  return null;
+}
+
+export type RelatedArticleCardData = {
+  publicSlug: string;
+  canonicalPath: string;
+  title: string;
+  description?: string;
+  publishedAt: string;
+  contentTypeLabel: string | null;
+};
+
+/** Enrich related stubs with index fields needed for BlogArticleCard. */
+export function resolveRelatedArticleCards(
+  related: PublicArticle["related"],
+): RelatedArticleCardData[] {
+  const byPath = new Map(
+    loadBlogIndex().articles.map((a) => [a.canonicalPath, a] as const),
+  );
+  const out: RelatedArticleCardData[] = [];
+  for (const r of related) {
+    const entry = byPath.get(r.publicPath);
+    const publicSlug =
+      entry?.publicSlug ||
+      (r.publicPath.startsWith("/blog/")
+        ? r.publicPath.slice("/blog/".length)
+        : "");
+    if (!publicSlug) continue;
+    out.push({
+      publicSlug,
+      canonicalPath: r.publicPath,
+      title: r.title || entry?.title || publicSlug,
+      description: r.excerpt || entry?.description,
+      publishedAt: entry?.publishedAt || new Date(0).toISOString(),
+      contentTypeLabel: entry?.contentTypeLabel ?? null,
+    });
+  }
+  return out;
+}

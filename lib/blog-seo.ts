@@ -46,6 +46,13 @@ export function buildBlogPostingJsonLd(article: PublicArticle): Record<string, u
           "@type": "Person",
           name: article.author.name,
           url: authorUrl,
+          ...(article.author.profileImage || article.author.slug === "olaf-kunz"
+            ? {
+                image: absoluteUrl(
+                  article.author.profileImage || "/images/autor-olaf-kunz.png",
+                ),
+              }
+            : {}),
         },
         publisher: {
           "@type": "Organization",

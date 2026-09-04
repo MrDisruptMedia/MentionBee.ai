@@ -3,13 +3,20 @@ import "./article-body.css";
 import Image from "next/image";
 import Link from "next/link";
 
+import { BlogArticleCard } from "@/components/blog/BlogArticleCard";
 import type { PublicArticle } from "@/content/blog/types";
+import {
+  authorProfileImageSrc,
+  resolveRelatedArticleCards,
+} from "@/lib/blog";
 import { getBlogImages } from "@/lib/blog-images";
 import { buildBlogPostingJsonLd, formatDeDate } from "@/lib/blog-seo";
 
 export function ArticleExperience({ article }: { article: PublicArticle }) {
   const jsonLd = buildBlogPostingJsonLd(article);
   const images = getBlogImages(article.publicSlug);
+  const authorImage = authorProfileImageSrc(article.author);
+  const relatedCards = resolveRelatedArticleCards(article.related);
 
   return (
     <>
@@ -128,20 +135,22 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
           ) : null}
 
           <aside
-            className="mt-10 rounded-2xl border border-zinc-200 bg-mention-light px-6 py-7"
-            aria-label="Kostenlosen Report anfordern"
+            className="mt-10 rounded-2xl px-6 py-8 text-white"
+            style={{ backgroundColor: "#141C2D" }}
+            aria-label="AI Visibility Report bestellen"
           >
-            <h2 className="!m-0 !border-0 !p-0 !text-xl !font-bold text-mention-dark">
-              Finde heraus, ob KI deine Marke empfiehlt.
+            <h2 className="!m-0 !border-0 !p-0 !text-xl !font-bold text-white md:!text-2xl">
+              Vollständigen AI Visibility Report bestellen
             </h2>
-            <p className="mt-2 text-sm leading-relaxed text-mention-gray md:text-base">
-              In 2 Minuten anfordern – Ergebnis per E-Mail.
+            <p className="mt-3 text-sm leading-relaxed text-white/80 md:text-base">
+              Priorisierte Massnahmen für ChatGPT, Claude, Gemini und Perplexity — inkl.
+              SEO-Analyse.
             </p>
             <Link
-              href="/free-report"
-              className="mt-5 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-gray-900 no-underline shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark hover:shadow-md"
+              href="/report"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-gray-900 no-underline shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark hover:shadow-md"
             >
-              Kostenlosen Report anfordern →
+              Report bestellen →
             </Link>
           </aside>
 
@@ -149,39 +158,58 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
             className="mb-author-box mt-10 border-t border-zinc-200 pt-8"
             aria-label="Autor"
           >
-            <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">Autor</p>
-            <h2 className="!mt-2 !text-xl !font-semibold">{article.author.name}</h2>
-            {article.author.role ? (
-              <p className="text-sm text-mention-gray">{article.author.role}</p>
-            ) : null}
-            {article.author.shortBio ? (
-              <p className="mt-3 text-sm leading-relaxed text-mention-dark md:text-base">
-                {article.author.shortBio}
-              </p>
-            ) : null}
-            <Link
-              href={`/autor/${article.author.slug}`}
-              className="mt-3 inline-block text-sm font-medium text-mention-dark underline decoration-primary underline-offset-2"
-            >
-              Mehr von {article.author.name}
-            </Link>
+            <div className="flex gap-4 sm:gap-5">
+              {authorImage ? (
+                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full bg-mention-light sm:h-24 sm:w-24">
+                  <Image
+                    src={authorImage}
+                    alt={article.author.name}
+                    width={96}
+                    height={96}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ) : null}
+              <div className="min-w-0">
+                <p className="text-xs font-semibold tracking-wide text-mention-gray uppercase">
+                  Autor
+                </p>
+                <h2 className="!mt-2 !text-xl !font-semibold">{article.author.name}</h2>
+                {article.author.role ? (
+                  <p className="text-sm text-mention-gray">{article.author.role}</p>
+                ) : null}
+                {article.author.shortBio ? (
+                  <p className="mt-3 text-sm leading-relaxed text-mention-dark md:text-base">
+                    {article.author.shortBio}
+                  </p>
+                ) : null}
+                <Link
+                  href={`/autor/${article.author.slug}`}
+                  className="mt-3 inline-block text-sm font-medium text-mention-dark underline decoration-primary underline-offset-2"
+                >
+                  Mehr von {article.author.name}
+                </Link>
+              </div>
+            </div>
           </section>
 
-          {article.related.length > 0 ? (
+          {relatedCards.length > 0 ? (
             <section className="mt-10 pt-8" aria-label="Verwandte Artikel">
               <h2 className="!text-xl !font-semibold">Das könnte dich auch interessieren</h2>
-              <ul className="mt-4 space-y-4">
-                {article.related.map((r) => (
-                  <li key={r.publicPath}>
-                    <Link
-                      href={r.publicPath}
-                      className="text-base font-semibold text-mention-dark no-underline hover:text-mention-gray"
-                    >
-                      {r.title}
-                    </Link>
-                    {r.excerpt ? (
-                      <p className="mt-1 text-sm leading-relaxed text-mention-gray">{r.excerpt}</p>
-                    ) : null}
+              <ul
+                className="mt-5 grid gap-6 sm:grid-cols-2"
+                role="list"
+              >
+                {relatedCards.map((r) => (
+                  <li key={r.publicSlug}>
+                    <BlogArticleCard
+                      publicSlug={r.publicSlug}
+                      canonicalPath={r.canonicalPath}
+                      title={r.title}
+                      description={r.description}
+                      publishedAt={r.publishedAt}
+                      contentTypeLabel={r.contentTypeLabel}
+                    />
                   </li>
                 ))}
               </ul>
