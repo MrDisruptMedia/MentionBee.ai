@@ -185,6 +185,20 @@
   color: #374151;
 }
 
+.mb-article-root .mb-article-body .mb-inline-figure {
+  margin: 1.5rem 0;
+  padding: 0;
+  border: 0;
+}
+
+.mb-article-root .mb-article-body img.mb-inline-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem; /* matches hero rounded-xl */
+}
+
 .mb-article-root .cev2-table-wrap {
   display: block;
   box-sizing: border-box;
