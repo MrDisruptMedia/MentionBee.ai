@@ -186,11 +186,22 @@
 }
 
 .mb-article-root .mb-article-body .mb-inline-figure {
+  position: relative;
   margin: 2rem auto;
   padding: 0;
   border: 0;
   max-width: 42rem;
   width: 100%;
+}
+
+.mb-article-root .mb-article-body .mb-img-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: zoom-in;
 }
 
 .mb-article-root .mb-article-body img.mb-inline-img {
@@ -202,6 +213,31 @@
   margin-right: auto;
   border-radius: 0.75rem; /* matches hero rounded-xl */
   cursor: zoom-in;
+}
+
+.mb-article-root .mb-article-body .mb-img-wrap img.mb-inline-img {
+  margin: 0;
+}
+
+.mb-article-root .mb-article-body .mb-img-zoom-hint {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  pointer-events: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.mb-article-root .mb-article-body .mb-img-zoom-hint svg {
+  display: block;
 }
 
 /* Simple fullscreen lightbox for inline screenshots (no external lib). */
