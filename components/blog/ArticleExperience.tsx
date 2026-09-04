@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { BlogArticleCard } from "@/components/blog/BlogArticleCard";
+import { BlogLightbox } from "@/components/blog/BlogLightbox";
 import type { PublicArticle } from "@/content/blog/types";
 import {
   authorProfileImageSrc,
@@ -217,6 +218,7 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
           ) : null}
         </article>
       </div>
+      <BlogLightbox />
     </>
   );
 }

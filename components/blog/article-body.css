@@ -201,6 +201,57 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 0.75rem; /* matches hero rounded-xl */
+  cursor: zoom-in;
+}
+
+/* Simple fullscreen lightbox for inline screenshots (no external lib). */
+.mb-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: zoom-out;
+}
+
+.mb-lightbox-img {
+  display: block;
+  max-width: 95vw;
+  max-height: 95vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  cursor: default;
+  touch-action: pinch-zoom;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.mb-lightbox-close {
+  position: fixed;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 10001;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.mb-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .mb-article-root .cev2-table-wrap {
