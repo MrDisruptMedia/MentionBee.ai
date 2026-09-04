@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { FAQ } from "@/components/marketing/FAQ";
 import { FinalCTA } from "@/components/marketing/FinalCTA";
 import { Hero } from "@/components/marketing/Hero";
@@ -9,6 +11,11 @@ import { WhatWeAnalyze } from "@/components/marketing/WhatWeAnalyze";
 import { WhatYouGetSection } from "@/components/marketing/WhatYouGetSection";
 import { getLatestPublishedArticles } from "@/lib/blog";
 import { fetchPublicPricing } from "@/lib/public-pricing";
+import { canonicalUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl("/") },
+};
 
 export default async function Home() {
   const pricing = await fetchPublicPricing();

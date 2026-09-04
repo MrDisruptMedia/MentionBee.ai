@@ -3,10 +3,13 @@ import { Suspense } from "react";
 
 import { OrderCompleteForm } from "@/components/order/OrderCompleteForm";
 
+import { canonicalUrl } from "@/lib/site";
+
 export const metadata: Metadata = {
   title: "Report einrichten | MentionBee",
   description: "Ergänze die Angaben für deinen MentionBee AI Visibility Report.",
   robots: { index: false, follow: false },
+  alternates: { canonical: canonicalUrl("/order/complete") },
 };
 
 export default function OrderCompletePage() {

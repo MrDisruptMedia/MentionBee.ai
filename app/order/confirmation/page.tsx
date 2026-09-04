@@ -3,10 +3,13 @@ import { Suspense } from "react";
 
 import { OrderConfirmationContent } from "@/components/order/OrderConfirmationContent";
 
+import { canonicalUrl } from "@/lib/site";
+
 export const metadata: Metadata = {
   title: "Report wird erstellt | MentionBee",
   description: "Dein MentionBee AI Visibility Report ist in Bearbeitung.",
   robots: { index: false, follow: false },
+  alternates: { canonical: canonicalUrl("/order/confirmation") },
 };
 
 export default function OrderConfirmationPage() {

@@ -1,7 +1,10 @@
 import Link from "next/link";
 
+import { canonicalUrl } from "@/lib/site";
+
 export const metadata = {
   title: "AGB | MentionBee.ai",
+  alternates: { canonical: canonicalUrl("/agb") },
 };
 
 export default function AgbPage() {

@@ -5,11 +5,13 @@ import { AlertCircle, CheckCircle, Lock, XCircle } from "lucide-react";
 import { SampleReportDeepDiveCta } from "@/components/marketing/SampleReportDeepDiveCta";
 import { TrackFunnelView } from "@/components/analytics/TrackFunnelView";
 import { FUNNEL_EVENTS } from "@/lib/analytics/data-layer";
+import { canonicalUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Beispielreport – Disrupt Media | MentionBee",
   description:
     "So sieht ein vollständiger AI-Visibility-Report aus: Score, KI-Sichtbarkeit, Modul-Details (PKI, Tech SEO, Schema, UX, MSS) und Top-Maßnahmen.",
+  alternates: { canonical: canonicalUrl("/sample-report") },
 };
 
 const modules = [

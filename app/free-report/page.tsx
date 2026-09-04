@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Check } from "lucide-react";
 
 import { FreeReportForm } from "@/components/forms/FreeReportForm";
+import { canonicalUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Kostenloser AI Visibility Report | MentionBee",
   description:
     "Kostenloser Check: Sieh, ob ChatGPT, Claude, Gemini und Perplexity deine Marke nennen – mit Sichtbarkeits-Score, Wettbewerbsvergleich und ersten Empfehlungen per E-Mail.",
+  alternates: { canonical: canonicalUrl("/free-report") },
 };
 
 const bullets = [

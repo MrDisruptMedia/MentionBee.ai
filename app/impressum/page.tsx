@@ -1,5 +1,8 @@
+import { canonicalUrl } from "@/lib/site";
+
 export const metadata = {
   title: "Impressum | MentionBee.ai",
+  alternates: { canonical: canonicalUrl("/impressum") },
 };
 
 export default function ImpressumPage() {

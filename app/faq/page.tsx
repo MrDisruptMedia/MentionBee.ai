@@ -9,11 +9,13 @@ import {
 import { faqFullPageSections, getAllFaqFullPageItems } from "@/content/faq-full-page";
 import { applyPricingTemplates } from "@/lib/apply-pricing-templates";
 import { fetchPublicPricing } from "@/lib/public-pricing";
+import { canonicalUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "FAQ – Häufige Fragen | MentionBee.ai",
   description:
     "Alles über MentionBee, AI Visibility, GEO, Reports und Preise – häufig gestellte Fragen mit klaren Antworten.",
+  alternates: { canonical: canonicalUrl("/faq") },
 };
 
 export default async function FaqPage() {

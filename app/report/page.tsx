@@ -8,11 +8,13 @@ import { TrackFunnelView } from "@/components/analytics/TrackFunnelView";
 import { FUNNEL_EVENTS } from "@/lib/analytics/data-layer";
 import { auditServiceJsonLd } from "@/lib/json-ld";
 import { fetchPublicPricing } from "@/lib/public-pricing";
+import { canonicalUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "AI Visibility Audit | MentionBee",
   description:
     "Einmaliger AI Visibility Audit: 3–6 kaufnahe Fragen über ChatGPT, Claude, Gemini und Perplexity, bis zu 3 Wettbewerber, 68+ Signale und 10 priorisierte Massnahmen. Innerhalb von 24 Stunden.",
+  alternates: { canonical: canonicalUrl("/report") },
 };
 
 const featureBullets = [

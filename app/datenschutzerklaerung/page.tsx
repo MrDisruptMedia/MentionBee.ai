@@ -1,5 +1,8 @@
+import { canonicalUrl } from "@/lib/site";
+
 export const metadata = {
   title: "Datenschutzerklärung | MentionBee.ai",
+  alternates: { canonical: canonicalUrl("/datenschutzerklaerung") },
 };
 
 export default function DatenschutzerklaerungPage() {

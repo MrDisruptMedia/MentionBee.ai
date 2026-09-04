@@ -7,3 +7,10 @@ export function absoluteUrl(path: string): string {
   const p = path.startsWith("/") ? path : `/${path}`;
   return `${SITE_ORIGIN}${p}`;
 }
+
+/** Non-www HTTPS canonical. Homepage has no trailing slash. */
+export function canonicalUrl(path: string = "/"): string {
+  if (!path || path === "/") return SITE_ORIGIN;
+  const p = path.startsWith("/") ? path : `/${path}`;
+  return `${SITE_ORIGIN}${p.replace(/\/+$/, "")}`;
+}
