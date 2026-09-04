@@ -18,7 +18,7 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="mb-article-root mx-auto w-full min-w-0 max-w-6xl px-4 py-10 md:py-14">
-        <article className="mx-auto w-full min-w-0 max-w-[42rem]">
+        <article className="mx-auto w-full min-w-0 max-w-[50.5rem]">
           <header className="mb-8 flex flex-col">
             <div className="order-1">
               {article.contentTypeLabel ? (
@@ -65,7 +65,7 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
                   alt={images.hero.alt ?? images.alt}
                   width={images.hero.width}
                   height={images.hero.height}
-                  sizes="(max-width: 768px) 100vw, 42rem"
+                  sizes="(max-width: 768px) 100vw, 50.5rem"
                   className="h-full w-full object-cover"
                   priority
                 />

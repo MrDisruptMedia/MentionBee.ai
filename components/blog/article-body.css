@@ -186,9 +186,11 @@
 }
 
 .mb-article-root .mb-article-body .mb-inline-figure {
-  margin: 1.5rem 0;
+  margin: 2rem auto;
   padding: 0;
   border: 0;
+  max-width: 42rem;
+  width: 100%;
 }
 
 .mb-article-root .mb-article-body img.mb-inline-img {
@@ -196,6 +198,8 @@
   width: 100%;
   max-width: 100%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 0.75rem; /* matches hero rounded-xl */
 }
 
