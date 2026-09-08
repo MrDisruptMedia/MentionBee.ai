@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-07T08:21:29.080Z",
+  "generatedAt": "2026-09-08T10:09:05.720Z",
   "articles": [
+    {
+      "publicSlug": "peec-ai-alternative-mentionbee",
+      "canonicalPath": "/blog/peec-ai-alternative-mentionbee",
+      "title": "Peec.ai Alternative: MentionBee im Vergleich",
+      "description": "Peec.ai vs. MentionBee — Agentur-Monitoring oder einmaliger KMU-Audit? Ehrlicher Praxistest mit Divenio, inkl. Claude-Lücke, Preisen und Handlungsempfehlungen.",
+      "publishedAt": "2026-09-08T10:08:05.276Z",
+      "updatedAt": "2026-09-08T10:08:05.276Z",
+      "contentTypeLabel": "Vergleich",
+      "tags": [
+        {
+          "id": "ai-visibility-audit",
+          "label": "AI Visibility Audit",
+          "slug": "ai-visibility-audit"
+        },
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
+        }
+      ]
+    },
     {
       "publicSlug": "7-fehler-ki-sichtbarkeit",
       "canonicalPath": "/blog/7-fehler-ki-sichtbarkeit",
