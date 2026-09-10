@@ -2,12 +2,43 @@
   "version": 1,
   "basePathRecommendation": "/images/blog",
   "formats": {
-    "master": { "width": 1672, "height": 941, "extension": "png", "usage": "archive" },
-    "hero": { "width": 1600, "height": 900, "extension": "webp", "usage": "article hero" },
-    "card": { "width": 800, "height": 450, "extension": "webp", "usage": "blog cards" },
-    "social": { "width": 1200, "height": 630, "extension": "jpg", "usage": "Open Graph and LinkedIn" }
+    "master": {
+      "width": 1672,
+      "height": 941,
+      "extension": "png",
+      "usage": "archive"
+    },
+    "hero": {
+      "width": 1600,
+      "height": 900,
+      "extension": "webp",
+      "usage": "article hero"
+    },
+    "card": {
+      "width": 800,
+      "height": 450,
+      "extension": "webp",
+      "usage": "blog cards"
+    },
+    "social": {
+      "width": 1200,
+      "height": 630,
+      "extension": "jpg",
+      "usage": "Open Graph and LinkedIn"
+    }
   },
   "articles": [
+    {
+      "slug": "eeat-faelschbar-ki-sichtbarkeit",
+      "url": "https://mentionbee.ai/blog/eeat-faelschbar-ki-sichtbarkeit",
+      "alt": "Autorenvitrine und digitale Glaubwürdigkeitssignale — E-E-A-T als fälschbares System",
+      "files": {
+        "master": "eeat-faelschbar-ki-sichtbarkeit-master.png",
+        "hero": "eeat-faelschbar-ki-sichtbarkeit-hero.webp",
+        "card": "eeat-faelschbar-ki-sichtbarkeit-card.webp",
+        "social": "eeat-faelschbar-ki-sichtbarkeit-social.jpg"
+      }
+    },
     {
       "slug": "7-fehler-ki-sichtbarkeit",
       "url": "https://mentionbee.ai/blog/7-fehler-ki-sichtbarkeit",

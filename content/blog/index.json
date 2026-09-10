@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T10:44:01.443Z",
+  "generatedAt": "2026-09-10T22:48:26.517Z",
   "articles": [
+    {
+      "publicSlug": "eeat-faelschbar-ki-sichtbarkeit",
+      "canonicalPath": "/blog/eeat-faelschbar-ki-sichtbarkeit",
+      "title": "E-E-A-T ist fälschbar: Was Google und KI-Systeme über Glaubwürdigkeit wirklich erkennen können",
+      "description": "E-E-A-T ist kein Score und keine Checkliste. Suchmaschinen und KI sehen nur digitale Spuren — und Spuren lassen sich legen. Was Glaubwürdigkeit wirklich braucht.",
+      "publishedAt": "2026-09-10T22:48:07.958Z",
+      "updatedAt": "2026-09-10T22:48:07.958Z",
+      "contentTypeLabel": "Hintergrund",
+      "tags": [
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "eeat",
+          "label": "E-E-A-T",
+          "slug": "eeat"
+        },
+        {
+          "id": "ai-search",
+          "label": "AI Search",
+          "slug": "ai-search"
+        }
+      ]
+    },
     {
       "publicSlug": "peec-ai-alternative-mentionbee",
       "canonicalPath": "/blog/peec-ai-alternative-mentionbee",
