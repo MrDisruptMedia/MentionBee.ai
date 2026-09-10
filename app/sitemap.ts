@@ -11,6 +11,11 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
   { url: `${MENTIONBEE_SITE_ORIGIN}/sample-report`, changeFrequency: "monthly", priority: 0.7 },
   { url: `${MENTIONBEE_SITE_ORIGIN}/faq`, changeFrequency: "monthly", priority: 0.75 },
   { url: `${MENTIONBEE_SITE_ORIGIN}/blog`, changeFrequency: "weekly", priority: 0.85 },
+  {
+    url: `${MENTIONBEE_SITE_ORIGIN}/studie/ai-visibility-2026`,
+    changeFrequency: "yearly",
+    priority: 0.9,
+  },
   { url: `${MENTIONBEE_SITE_ORIGIN}/autor/olaf-kunz`, changeFrequency: "monthly", priority: 0.5 },
   { url: `${MENTIONBEE_SITE_ORIGIN}/impressum`, changeFrequency: "yearly", priority: 0.3 },
   { url: `${MENTIONBEE_SITE_ORIGIN}/agb`, changeFrequency: "yearly", priority: 0.3 },
