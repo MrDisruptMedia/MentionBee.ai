@@ -19,7 +19,11 @@ export function MentionBeeBrand({ asLink = true, className, logoClassName }: Men
 
   if (asLink) {
     return (
-      <Link href="/" className="justify-self-start text-left">
+      <Link
+        href="/"
+        aria-label="MentionBee – zur Startseite"
+        className="relative z-10 inline-flex max-w-full text-left"
+      >
         {inner}
       </Link>
     );
