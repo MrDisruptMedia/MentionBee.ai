@@ -225,14 +225,15 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
               </div>
             </div>
           </section>
+        </article>
 
           {relatedCards.length > 0 ? (
-            <section className="mt-10 pt-8" aria-label="Verwandte Artikel">
+            <section
+              className="mx-auto mt-10 w-full min-w-0 max-w-6xl pt-8"
+              aria-label="Verwandte Artikel"
+            >
               <h2 className="!text-xl !font-semibold">Das könnte dich auch interessieren</h2>
-              <ul
-                className="mt-5 grid gap-6 sm:grid-cols-2"
-                role="list"
-              >
+              <ul className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" role="list">
                 {relatedCards.map((r) => (
                   <li key={r.publicSlug}>
                     <BlogArticleCard
@@ -248,7 +249,6 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
               </ul>
             </section>
           ) : null}
-        </article>
       </div>
       <BlogLightbox />
     </>
