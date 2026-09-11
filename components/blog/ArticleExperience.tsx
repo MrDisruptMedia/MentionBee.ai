@@ -27,6 +27,7 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
       />
       <div className="mb-article-root mx-auto w-full min-w-0 max-w-6xl px-4 py-10 md:py-14">
         <article className="mx-auto w-full min-w-0 max-w-[50.5rem]">
+          {/* Fixed post structure: chrome → hero → intro(lead) → TOC → body */}
           <header className="mb-8 flex flex-col">
             <div className="order-1">
               {article.contentTypeLabel ? (
@@ -45,12 +46,25 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
             <h1 className="order-2 font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl md:text-[2.5rem] md:leading-[1.15]">
               {article.h1}
             </h1>
+            {images ? (
+              <div className="relative order-3 mt-6 aspect-video w-full min-w-0 overflow-hidden rounded-xl bg-mention-light">
+                <Image
+                  src={images.hero.src}
+                  alt={images.hero.alt ?? images.alt}
+                  width={images.hero.width}
+                  height={images.hero.height}
+                  sizes="(max-width: 768px) 100vw, 50.5rem"
+                  className="h-full w-full object-cover"
+                  priority
+                />
+              </div>
+            ) : null}
             {article.lead ? (
-              <p className="order-4 mt-7 text-lg leading-relaxed text-mention-gray md:order-3 md:mt-4 md:text-xl">
+              <p className="order-4 mt-7 text-lg leading-relaxed text-mention-gray md:text-xl">
                 {article.lead}
               </p>
             ) : null}
-            <div className="order-5 mt-5 flex flex-wrap gap-x-4 gap-y-1 text-sm text-mention-gray md:order-4">
+            <div className="order-5 mt-5 flex flex-wrap gap-x-4 gap-y-1 text-sm text-mention-gray">
               <span>
                 Von{" "}
                 <Link
@@ -66,19 +80,6 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
               ) : null}
               <span>{article.readingMinutes} Min. Lesezeit</span>
             </div>
-            {images ? (
-              <div className="relative order-3 mt-6 aspect-video w-full min-w-0 overflow-hidden rounded-xl bg-mention-light md:order-5">
-                <Image
-                  src={images.hero.src}
-                  alt={images.hero.alt ?? images.alt}
-                  width={images.hero.width}
-                  height={images.hero.height}
-                  sizes="(max-width: 768px) 100vw, 50.5rem"
-                  className="h-full w-full object-cover"
-                  priority
-                />
-              </div>
-            ) : null}
           </header>
 
           {article.toc.length > 0 ? (

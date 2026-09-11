@@ -1,6 +1,11 @@
 /**
  * PublicArticle — ready-to-render blog content for the marketing site.
  * Produced by the engine PublicArticle materializer (Phase 1: one-shot copy).
+ *
+ * Render order (ArticleExperience): chrome (type/tags/H1) → hero → lead/intro
+ * → structured TOC → markdownBody. SoT bodies: no duplicate H1/byline; short
+ * intro (max ~3–4 sentences, no "In diesem Artikel zeige ich…"); then
+ * `## In diesem Artikel` list; then H2 sections. Prefer LF line endings.
  */
 
 export type PublicArticleAuthor = {

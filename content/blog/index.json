@@ -1,7 +1,38 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-10T22:58:12.693Z",
+  "generatedAt": "2026-09-11T07:43:06.166Z",
   "articles": [
+    {
+      "publicSlug": "stille-umsatzvernichtung-ki-sichtbarkeit",
+      "canonicalPath": "/blog/stille-umsatzvernichtung-ki-sichtbarkeit",
+      "title": "Die stille Umsatzvernichtung – Warum du in KI-Antworten fehlst, ohne es zu merken",
+      "description": "Deine Kunden fragen KI-Systeme nach Empfehlungen – und wenn du nicht genannt wirst, erfährst du es nicht einmal. Warum das passiert und was du dagegen tun kannst.",
+      "publishedAt": "2026-09-11T07:42:32.727Z",
+      "updatedAt": "2026-09-11T07:42:32.727Z",
+      "contentTypeLabel": "Diagnose-Guide",
+      "tags": [
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "geo",
+          "label": "GEO",
+          "slug": "geo"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
+        },
+        {
+          "id": "perplexity",
+          "label": "Perplexity",
+          "slug": "perplexity"
+        }
+      ]
+    },
     {
       "publicSlug": "eeat-faelschbar-ki-sichtbarkeit",
       "canonicalPath": "/blog/eeat-faelschbar-ki-sichtbarkeit",
@@ -60,7 +91,7 @@
       "title": "Die 7 größten Fehler bei der KI-Sichtbarkeit (und wie du sie vermeidest)",
       "description": "Sieben wiederkehrende Fehler bei der KI-Sichtbarkeit — von robots.txt über Content-Struktur bis falschem Monitoring — und wie du sie vermeidest.",
       "publishedAt": "2026-09-01T09:30:00.000Z",
-      "updatedAt": null,
+      "updatedAt": "2026-09-11T07:42:32.727Z",
       "contentTypeLabel": "Diagnose-Guide",
       "tags": [
         {
@@ -86,7 +117,7 @@
       "title": "AI Visibility vs. SEO: Was sich 2026 wirklich ändert",
       "description": "SEO bringt dich in den Kandidatenpool – ausgewählt wirst du anders. Was sich 2026 zwischen klassischer Suche und KI-Antworten wirklich verändert.",
       "publishedAt": "2026-09-01T08:00:00.000Z",
-      "updatedAt": null,
+      "updatedAt": "2026-09-11T07:42:32.727Z",
       "contentTypeLabel": "Entscheidungshilfe",
       "tags": [
         {
@@ -221,7 +252,7 @@
       "title": "Warum empfiehlt dich ChatGPT nicht? 6 mögliche Erklärungen – und wie du herausfindest, welche zutrifft",
       "description": "Sechs diagnostische Erklärungen, warum ChatGPT dich nicht empfiehlt — und wie du prüfst, welche zutrifft.",
       "publishedAt": "2026-08-15T14:10:29.149Z",
-      "updatedAt": null,
+      "updatedAt": "2026-09-11T07:43:04.097Z",
       "contentTypeLabel": "Diagnose-Guide",
       "tags": [
         {

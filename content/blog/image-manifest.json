@@ -29,6 +29,17 @@
   },
   "articles": [
     {
+      "slug": "stille-umsatzvernichtung-ki-sichtbarkeit",
+      "url": "https://mentionbee.ai/blog/stille-umsatzvernichtung-ki-sichtbarkeit",
+      "alt": "Geschäftsmann vor KI-Antwortkarten — Wettbewerber genannt, das eigene Unternehmen fehlt",
+      "files": {
+        "master": "stille-umsatzvernichtung-ki-sichtbarkeit-hero.jpg",
+        "hero": "stille-umsatzvernichtung-ki-sichtbarkeit-hero.webp",
+        "card": "stille-umsatzvernichtung-ki-sichtbarkeit-card.webp",
+        "social": "stille-umsatzvernichtung-ki-sichtbarkeit-social.jpg"
+      }
+    },
+    {
       "slug": "eeat-faelschbar-ki-sichtbarkeit",
       "url": "https://mentionbee.ai/blog/eeat-faelschbar-ki-sichtbarkeit",
       "alt": "Autorenvitrine und digitale Glaubwürdigkeitssignale — E-E-A-T als fälschbares System",
