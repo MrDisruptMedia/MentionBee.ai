@@ -13,11 +13,35 @@ import {
 import { getBlogImages } from "@/lib/blog-images";
 import { buildBlogPostingJsonLd, formatDeDate } from "@/lib/blog-seo";
 
+/**
+ * Split bodyHtml so intro (before editorial TOC / first H2) can render
+ * above the structured TOC nav, with the rest of the article below.
+ */
+function splitIntroAndRest(bodyHtml: string): { introHtml: string; restHtml: string } {
+  const html = bodyHtml || "";
+  const hiddenToc = html.match(/<div\b[^>]*\bmb-body-toc-hidden\b[^>]*>/i);
+  if (hiddenToc?.index != null && hiddenToc.index > 0) {
+    return {
+      introHtml: html.slice(0, hiddenToc.index).trim(),
+      restHtml: html.slice(hiddenToc.index).trim(),
+    };
+  }
+  const firstH2 = html.match(/<h2\b/i);
+  if (firstH2?.index != null && firstH2.index > 0) {
+    return {
+      introHtml: html.slice(0, firstH2.index).trim(),
+      restHtml: html.slice(firstH2.index).trim(),
+    };
+  }
+  return { introHtml: "", restHtml: html };
+}
+
 export function ArticleExperience({ article }: { article: PublicArticle }) {
   const jsonLd = buildBlogPostingJsonLd(article);
   const images = getBlogImages(article.publicSlug);
   const authorImage = authorProfileImageSrc(article.author);
   const relatedCards = resolveRelatedArticleCards(article.related);
+  const { introHtml, restHtml } = splitIntroAndRest(article.bodyHtml);
 
   return (
     <>
@@ -27,9 +51,9 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
       />
       <div className="mb-article-root mx-auto w-full min-w-0 max-w-6xl px-4 py-10 md:py-14">
         <article className="mx-auto w-full min-w-0 max-w-[50.5rem]">
-          {/* Fixed post structure: chrome → hero → intro(lead) → TOC → body */}
+          {/* Fixed order: type → tags → H1 → lead → author → hero → (intro+TOC+body below) */}
           <header className="mb-8 flex flex-col">
-            <div className="order-1">
+            <div>
               {article.contentTypeLabel ? (
                 <p className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-xs font-semibold tracking-wide text-gray-900 uppercase">
                   {article.contentTypeLabel}
@@ -43,28 +67,15 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
                 </p>
               ) : null}
             </div>
-            <h1 className="order-2 font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl md:text-[2.5rem] md:leading-[1.15]">
+            <h1 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl md:text-[2.5rem] md:leading-[1.15]">
               {article.h1}
             </h1>
-            {images ? (
-              <div className="relative order-3 mt-6 aspect-video w-full min-w-0 overflow-hidden rounded-xl bg-mention-light">
-                <Image
-                  src={images.hero.src}
-                  alt={images.hero.alt ?? images.alt}
-                  width={images.hero.width}
-                  height={images.hero.height}
-                  sizes="(max-width: 768px) 100vw, 50.5rem"
-                  className="h-full w-full object-cover"
-                  priority
-                />
-              </div>
-            ) : null}
             {article.lead ? (
-              <p className="order-4 mt-7 text-lg leading-relaxed text-mention-gray md:text-xl">
+              <p className="mt-4 text-lg leading-relaxed text-mention-gray md:text-xl">
                 {article.lead}
               </p>
             ) : null}
-            <div className="order-5 mt-5 flex flex-wrap gap-x-4 gap-y-1 text-sm text-mention-gray">
+            <div className="mt-5 flex flex-wrap gap-x-4 gap-y-1 text-sm text-mention-gray">
               <span>
                 Von{" "}
                 <Link
@@ -80,7 +91,27 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
               ) : null}
               <span>{article.readingMinutes} Min. Lesezeit</span>
             </div>
+            {images ? (
+              <div className="relative mt-6 aspect-video w-full min-w-0 overflow-hidden rounded-xl bg-mention-light">
+                <Image
+                  src={images.hero.src}
+                  alt={images.hero.alt ?? images.alt}
+                  width={images.hero.width}
+                  height={images.hero.height}
+                  sizes="(max-width: 768px) 100vw, 50.5rem"
+                  className="h-full w-full object-cover"
+                  priority
+                />
+              </div>
+            ) : null}
           </header>
+
+          {introHtml ? (
+            <div
+              className="mb-article-body mb-article-intro"
+              dangerouslySetInnerHTML={{ __html: introHtml }}
+            />
+          ) : null}
 
           {article.toc.length > 0 ? (
             <nav
@@ -109,7 +140,7 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
           <div
             className="mb-article-body"
             data-reader-hash={article.readerHash}
-            dangerouslySetInnerHTML={{ __html: article.bodyHtml }}
+            dangerouslySetInnerHTML={{ __html: restHtml }}
           />
 
           {article.sources.length > 0 ? (
