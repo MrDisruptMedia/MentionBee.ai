@@ -184,11 +184,34 @@
 }
 
 .mb-article-root .mb-article-body blockquote {
-  margin: 1.4rem 0;
-  padding: 0.85rem 1rem;
-  border-left: 3px solid #94a3b8;
+  margin: 1.6rem 0;
+  padding: 1.05rem 1.2rem 1.05rem 1.3rem;
+  border-left: 4px solid var(--primary, #ffc400);
   background: #f9fafb;
-  color: #374151;
+  border-radius: 0 0.4rem 0.4rem 0;
+  color: #1a1a2e;
+}
+
+.mb-article-root .mb-article-body blockquote > p,
+.mb-article-root .mb-article-body blockquote .mb-bq-quote {
+  margin: 0;
+  font-style: italic;
+  color: #1a1a2e;
+  line-height: 1.65;
+}
+
+.mb-article-root .mb-article-body blockquote > p + p,
+.mb-article-root .mb-article-body blockquote .mb-bq-quote + .mb-bq-quote {
+  margin-top: 0.55rem;
+}
+
+.mb-article-root .mb-article-body blockquote .mb-bq-attr,
+.mb-article-root .mb-article-body blockquote > p.mb-bq-attr {
+  margin-top: 0.7rem;
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #6b7280;
 }
 
 .mb-article-root .mb-article-body .mb-inline-figure {
