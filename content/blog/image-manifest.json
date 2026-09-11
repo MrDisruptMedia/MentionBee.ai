@@ -29,6 +29,17 @@
   },
   "articles": [
     {
+      "slug": "llms-txt-ki-sichtbarkeit",
+      "url": "https://mentionbee.ai/blog/llms-txt-ki-sichtbarkeit",
+      "alt": "llms.txt als Brücke zwischen Website und KI-Systemen — ChatGPT, Claude, Gemini, Perplexity",
+      "files": {
+        "master": "llms-txt-ki-sichtbarkeit-master.png",
+        "hero": "llms-txt-ki-sichtbarkeit-hero.webp",
+        "card": "llms-txt-ki-sichtbarkeit-card.webp",
+        "social": "llms-txt-ki-sichtbarkeit-social.jpg"
+      }
+    },
+    {
       "slug": "stille-umsatzvernichtung-ki-sichtbarkeit",
       "url": "https://mentionbee.ai/blog/stille-umsatzvernichtung-ki-sichtbarkeit",
       "alt": "Geschäftsmann vor KI-Antwortkarten — Wettbewerber genannt, das eigene Unternehmen fehlt",

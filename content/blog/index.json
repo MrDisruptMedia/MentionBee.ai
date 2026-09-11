@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T08:14:04.541Z",
+  "generatedAt": "2026-09-11T13:02:11.006Z",
   "articles": [
+    {
+      "publicSlug": "llms-txt-ki-sichtbarkeit",
+      "canonicalPath": "/blog/llms-txt-ki-sichtbarkeit",
+      "title": "llms.txt: Warum alle falsch liegen — und beide Seiten recht haben",
+      "description": "Vier Studien zeigen: llms.txt verbessert KI-Sichtbarkeit nicht messbar. Trotzdem kann die Datei sinnvoll sein — als Infrastruktur und Chat-Kontext, nicht als Rankingfaktor.",
+      "publishedAt": "2026-09-12T08:00:00.000Z",
+      "updatedAt": "2026-09-11T13:00:10.855Z",
+      "contentTypeLabel": "Hintergrund",
+      "tags": [
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "llms-txt",
+          "label": "llms.txt",
+          "slug": "llms-txt"
+        },
+        {
+          "id": "ai-search",
+          "label": "AI Search",
+          "slug": "ai-search"
+        }
+      ]
+    },
     {
       "publicSlug": "stille-umsatzvernichtung-ki-sichtbarkeit",
       "canonicalPath": "/blog/stille-umsatzvernichtung-ki-sichtbarkeit",
@@ -39,7 +65,7 @@
       "title": "E-E-A-T ist fälschbar: Was Google und KI-Systeme über Glaubwürdigkeit wirklich erkennen können",
       "description": "E-E-A-T ist kein Score und keine Checkliste. Suchmaschinen und KI sehen nur digitale Spuren — und Spuren lassen sich legen. Was Glaubwürdigkeit wirklich braucht.",
       "publishedAt": "2026-09-10T22:48:07.958Z",
-      "updatedAt": "2026-09-11T08:13:52.491Z",
+      "updatedAt": "2026-09-11T13:00:10.855Z",
       "contentTypeLabel": "Hintergrund",
       "tags": [
         {
@@ -91,7 +117,7 @@
       "title": "Die 7 größten Fehler bei der KI-Sichtbarkeit (und wie du sie vermeidest)",
       "description": "Sieben wiederkehrende Fehler bei der KI-Sichtbarkeit — von robots.txt über Content-Struktur bis falschem Monitoring — und wie du sie vermeidest.",
       "publishedAt": "2026-09-01T09:30:00.000Z",
-      "updatedAt": "2026-09-11T07:42:32.727Z",
+      "updatedAt": "2026-09-11T13:00:10.855Z",
       "contentTypeLabel": "Diagnose-Guide",
       "tags": [
         {
@@ -200,7 +226,7 @@
       "title": "Audit oder Monitoring? So entscheidest du bei AI Visibility",
       "description": "Wann ein einmaliger AI Visibility Audit reicht — und wann wiederholtes Monitoring sinnvoller ist.",
       "publishedAt": "2026-08-16T13:10:00.000Z",
-      "updatedAt": null,
+      "updatedAt": "2026-09-11T07:42:32.727Z",
       "contentTypeLabel": "Entscheidungshilfe",
       "tags": [
         {
