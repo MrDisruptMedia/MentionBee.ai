@@ -21,6 +21,12 @@
   color: #1a1a2e;
 }
 
+/* Intro slot (before structured TOC): presentation weight, not content emphasis. */
+.mb-article-root .mb-article-intro,
+.mb-article-root .mb-article-intro p {
+  font-weight: 700;
+}
+
 .mb-article-root .mb-article-body h1 {
   display: none;
 }

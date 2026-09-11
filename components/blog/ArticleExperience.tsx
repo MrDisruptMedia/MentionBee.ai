@@ -108,7 +108,7 @@ export function ArticleExperience({ article }: { article: PublicArticle }) {
 
           {introHtml ? (
             <div
-              className="mb-article-body mb-article-intro"
+              className="mb-article-body mb-article-intro font-bold"
               dangerouslySetInnerHTML={{ __html: introHtml }}
             />
           ) : null}
