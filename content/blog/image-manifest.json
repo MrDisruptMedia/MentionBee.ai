@@ -29,6 +29,17 @@
   },
   "articles": [
     {
+      "slug": "googeln-war-gestern-wie-kunden-2026-unternehmen-finden",
+      "url": "https://mentionbee.ai/blog/googeln-war-gestern-wie-kunden-2026-unternehmen-finden",
+      "alt": "Von Google-Suche zu ChatGPT-Empfehlung: Wie sich die Kundensuche 2026 verändert",
+      "files": {
+        "master": "googeln-war-gestern-wie-kunden-2026-unternehmen-finden-master.png",
+        "hero": "googeln-war-gestern-wie-kunden-2026-unternehmen-finden-hero.webp",
+        "card": "googeln-war-gestern-wie-kunden-2026-unternehmen-finden-card.webp",
+        "social": "googeln-war-gestern-wie-kunden-2026-unternehmen-finden-social.jpg"
+      }
+    },
+    {
       "slug": "llms-txt-ki-sichtbarkeit",
       "url": "https://mentionbee.ai/blog/llms-txt-ki-sichtbarkeit",
       "alt": "llms.txt als Brücke zwischen Website und KI-Systemen — ChatGPT, Claude, Gemini, Perplexity",

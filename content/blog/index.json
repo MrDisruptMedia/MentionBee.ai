@@ -1,7 +1,38 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T13:02:11.006Z",
+  "generatedAt": "2026-09-13T19:48:18.839Z",
   "articles": [
+    {
+      "publicSlug": "googeln-war-gestern-wie-kunden-2026-unternehmen-finden",
+      "canonicalPath": "/blog/googeln-war-gestern-wie-kunden-2026-unternehmen-finden",
+      "title": "Googeln war gestern? Wie Kunden 2026 Unternehmen, Produkte und Dienstleister finden",
+      "description": "Google verschwindet nicht. Aber zwischen Kundenbedürfnis und Kaufentscheidung schiebt sich eine neue Instanz: KI-Systeme, die recherchieren, vergleichen und empfehlen.",
+      "publishedAt": "2026-09-13T08:00:00.000Z",
+      "updatedAt": "2026-09-13T19:47:44.791Z",
+      "contentTypeLabel": "Hintergrund",
+      "tags": [
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "ai-search",
+          "label": "AI Search",
+          "slug": "ai-search"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
+        },
+        {
+          "id": "geo",
+          "label": "GEO",
+          "slug": "geo"
+        }
+      ]
+    },
     {
       "publicSlug": "llms-txt-ki-sichtbarkeit",
       "canonicalPath": "/blog/llms-txt-ki-sichtbarkeit",
@@ -117,7 +148,7 @@
       "title": "Die 7 größten Fehler bei der KI-Sichtbarkeit (und wie du sie vermeidest)",
       "description": "Sieben wiederkehrende Fehler bei der KI-Sichtbarkeit — von robots.txt über Content-Struktur bis falschem Monitoring — und wie du sie vermeidest.",
       "publishedAt": "2026-09-01T09:30:00.000Z",
-      "updatedAt": "2026-09-11T13:00:10.855Z",
+      "updatedAt": "2026-09-13T19:47:44.791Z",
       "contentTypeLabel": "Diagnose-Guide",
       "tags": [
         {
@@ -143,7 +174,7 @@
       "title": "AI Visibility vs. SEO: Was sich 2026 wirklich ändert",
       "description": "SEO bringt dich in den Kandidatenpool – ausgewählt wirst du anders. Was sich 2026 zwischen klassischer Suche und KI-Antworten wirklich verändert.",
       "publishedAt": "2026-09-01T08:00:00.000Z",
-      "updatedAt": "2026-09-11T07:42:32.727Z",
+      "updatedAt": "2026-09-13T19:47:44.791Z",
       "contentTypeLabel": "Entscheidungshilfe",
       "tags": [
         {
@@ -169,7 +200,7 @@
       "title": "Otterly.ai Alternative: MentionBee im Vergleich",
       "description": "Otterly.ai vs. MentionBee — Monitoring-Abo oder einmaliger Audit mit Fix-Liste? Ehrlicher Vergleich für DACH-KMU, inkl. Preisleiter und nativer Claude-/Gemini-Abdeckung.",
       "publishedAt": "2026-08-22T06:09:16.071Z",
-      "updatedAt": "2026-09-04T08:40:00.000Z",
+      "updatedAt": "2026-09-13T19:47:44.791Z",
       "contentTypeLabel": "Vergleich",
       "tags": [
         {
