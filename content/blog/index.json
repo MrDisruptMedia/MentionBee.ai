@@ -1,14 +1,45 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T08:58:23.886Z",
+  "generatedAt": "2026-09-14T09:51:58.078Z",
   "articles": [
+    {
+      "publicSlug": "chatgpt-selbsttest-was-weiss-ki-ueber-mein-unternehmen",
+      "canonicalPath": "/blog/chatgpt-selbsttest-was-weiss-ki-ueber-mein-unternehmen",
+      "title": "Was weiss ChatGPT über dein Unternehmen? Der 10-Minuten-Selbsttest",
+      "description": "Fünf einfache Fragen zeigen dir, ob ChatGPT dein Unternehmen kennt, richtig versteht – und bei potenziellen Kunden überhaupt in Betracht zieht.",
+      "publishedAt": "2026-09-14T08:00:00.000Z",
+      "updatedAt": "2026-09-14T09:51:54.134Z",
+      "contentTypeLabel": "Diagnose-Guide",
+      "tags": [
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
+        },
+        {
+          "id": "ai-search",
+          "label": "AI Search",
+          "slug": "ai-search"
+        },
+        {
+          "id": "geo",
+          "label": "GEO",
+          "slug": "geo"
+        }
+      ]
+    },
     {
       "publicSlug": "googeln-war-gestern-wie-kunden-2026-unternehmen-finden",
       "canonicalPath": "/blog/googeln-war-gestern-wie-kunden-2026-unternehmen-finden",
       "title": "Googeln war gestern? Wie Kunden 2026 Unternehmen, Produkte und Dienstleister finden",
       "description": "Google verschwindet nicht. Aber zwischen Kundenbedürfnis und Kaufentscheidung schiebt sich eine neue Instanz: KI-Systeme, die recherchieren, vergleichen und empfehlen.",
       "publishedAt": "2026-09-13T08:00:00.000Z",
-      "updatedAt": "2026-09-13T19:47:44.791Z",
+      "updatedAt": "2026-09-14T09:51:54.134Z",
       "contentTypeLabel": "Hintergrund",
       "tags": [
         {
@@ -148,7 +179,7 @@
       "title": "Die 7 größten Fehler bei der KI-Sichtbarkeit (und wie du sie vermeidest)",
       "description": "Sieben wiederkehrende Fehler bei der KI-Sichtbarkeit — von robots.txt über Content-Struktur bis falschem Monitoring — und wie du sie vermeidest.",
       "publishedAt": "2026-09-01T09:30:00.000Z",
-      "updatedAt": "2026-09-13T19:47:44.791Z",
+      "updatedAt": "2026-09-14T09:51:54.134Z",
       "contentTypeLabel": "Diagnose-Guide",
       "tags": [
         {

@@ -29,6 +29,17 @@
   },
   "articles": [
     {
+      "slug": "chatgpt-selbsttest-was-weiss-ki-ueber-mein-unternehmen",
+      "url": "https://mentionbee.ai/blog/chatgpt-selbsttest-was-weiss-ki-ueber-mein-unternehmen",
+      "alt": "5 Fragen an ChatGPT: Selbsttest zur AI Visibility deines Unternehmens",
+      "files": {
+        "master": "chatgpt-selbsttest-was-weiss-ki-ueber-mein-unternehmen-master.png",
+        "hero": "chatgpt-selbsttest-was-weiss-ki-ueber-mein-unternehmen-hero.webp",
+        "card": "chatgpt-selbsttest-was-weiss-ki-ueber-mein-unternehmen-card.webp",
+        "social": "chatgpt-selbsttest-was-weiss-ki-ueber-mein-unternehmen-social.jpg"
+      }
+    },
+    {
       "slug": "googeln-war-gestern-wie-kunden-2026-unternehmen-finden",
       "url": "https://mentionbee.ai/blog/googeln-war-gestern-wie-kunden-2026-unternehmen-finden",
       "alt": "Von Google-Suche zu ChatGPT-Empfehlung: Wie sich die Kundensuche 2026 verändert",
