@@ -223,6 +223,14 @@
   width: 100%;
 }
 
+.mb-article-root .mb-article-body .mb-img-caption {
+  margin: 0.65rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #6b7280;
+  text-align: center;
+}
+
 .mb-article-root .mb-article-body .mb-img-wrap {
   position: relative;
   display: block;
