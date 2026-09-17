@@ -29,6 +29,17 @@
   },
   "articles": [
     {
+      "slug": "wie-kunden-chatgpt-fragen-ki-sichtbarkeit",
+      "url": "https://mentionbee.ai/blog/wie-kunden-chatgpt-fragen-ki-sichtbarkeit",
+      "alt": "Google-Suche vs. ChatGPT-Konversation: Wie sich das Suchverhalten verändert und was das für AI Visibility bedeutet",
+      "files": {
+        "master": "wie-kunden-chatgpt-fragen-ki-sichtbarkeit-hero.png",
+        "hero": "wie-kunden-chatgpt-fragen-ki-sichtbarkeit-hero.png",
+        "card": "wie-kunden-chatgpt-fragen-ki-sichtbarkeit-hero.png",
+        "social": "wie-kunden-chatgpt-fragen-ki-sichtbarkeit-hero.png"
+      }
+    },
+    {
       "slug": "konkurrent-chatgpt-claude-gemini-sichtbar-ich-nicht",
       "url": "https://mentionbee.ai/blog/konkurrent-chatgpt-claude-gemini-sichtbar-ich-nicht",
       "alt": "Drei Wettbewerber werden von ChatGPT, Claude und Gemini empfohlen — das eigene Unternehmen fehlt in den KI-Antworten",
