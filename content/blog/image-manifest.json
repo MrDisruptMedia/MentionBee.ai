@@ -29,6 +29,17 @@
   },
   "articles": [
     {
+      "slug": "konkurrent-chatgpt-claude-gemini-sichtbar-ich-nicht",
+      "url": "https://mentionbee.ai/blog/konkurrent-chatgpt-claude-gemini-sichtbar-ich-nicht",
+      "alt": "Drei Wettbewerber werden von ChatGPT, Claude und Gemini empfohlen — das eigene Unternehmen fehlt in den KI-Antworten",
+      "files": {
+        "master": "konkurrent-chatgpt-claude-gemini-sichtbar-ich-nicht-hero.png",
+        "hero": "konkurrent-chatgpt-claude-gemini-sichtbar-ich-nicht-hero.png",
+        "card": "konkurrent-chatgpt-claude-gemini-sichtbar-ich-nicht-hero.png",
+        "social": "konkurrent-chatgpt-claude-gemini-sichtbar-ich-nicht-hero.png"
+      }
+    },
+    {
       "slug": "chatgpt-selbsttest-was-weiss-ki-ueber-mein-unternehmen",
       "url": "https://mentionbee.ai/blog/chatgpt-selbsttest-was-weiss-ki-ueber-mein-unternehmen",
       "alt": "5 Fragen an ChatGPT: Selbsttest zur AI Visibility deines Unternehmens",

@@ -511,6 +511,16 @@ export function AiVisibilityStudy2026Page() {
           <p>
             Mindestens genauso wichtig ist: <strong>Wer nimmt diesen Platz ein?</strong>
           </p>
+          <p>
+            Warum das passiert, erklären wir im{" "}
+            <Link
+              href="/blog/konkurrent-chatgpt-claude-gemini-sichtbar-ich-nicht"
+              className="font-medium text-mention-dark underline underline-offset-2"
+            >
+              Blog
+            </Link>
+            .
+          </p>
 
           <h3 className="!mt-8 font-heading text-xl font-semibold text-mention-dark">
             2. Welche unerwarteten Anbieter tauchen auf?
