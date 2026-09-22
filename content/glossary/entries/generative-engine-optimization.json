@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "GENERATIVE_ENGINE_OPTIMIZATION",
+  "slug": "generative-engine-optimization",
+  "term": "Generative Engine Optimization",
+  "abbreviation": "GEO",
+  "aliases": ["GEO", "Generative Engine Optimisation"],
+  "shortDefinition": "GEO bezeichnet Praktiken, mit denen Unternehmen Inhalte und digitale Signale so aufbereiten, dass generative KI-Systeme sie erkennen, korrekt einordnen und in Antworten berücksichtigen können.",
+  "termOrigin": "emerging",
+  "seoTitle": "GEO (Generative Engine Optimization) erklärt | MentionBee Glossar",
+  "metaDescription": "GEO ist Generative Engine Optimization: die Arbeit an Inhalten und Signalen, damit KI-Systeme eine Marke verstehen und in Antworten berücksichtigen.",
+  "relatedConceptKeys": ["AI_VISIBILITY", "STRUCTURED_DATA", "ENTITY", "LLMS_TXT"],
+  "relatedArticles": [
+    { "title": "AI Visibility vs. SEO 2026", "path": "/blog/ai-visibility-vs-seo-2026" },
+    { "title": "FAQ zu AI Visibility und GEO", "path": "/faq" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Was GEO bedeutet\n\n**Generative Engine Optimization (GEO)** ist ein aufkommender Sammelbegriff. Gemeint ist die Optimierung für Systeme, die Antworten **generieren**, statt nur Trefferlisten auszuspielen: ChatGPT, Claude, Gemini, Perplexity und ähnliche Assistenten.\n\nDer Begriff ist nicht genormt. Anbieter und Agenturen füllen ihn unterschiedlich. Manche meinen Content-Formate, andere technische Crawler-Zugang, wieder andere PR und externe Erwähnungen. Sauber getrennt:\n\n- **SEO** zielt auf Suchmaschinen-Ergebnisseiten.\n- **GEO** zielt auf die Verarbeitung durch generative Systeme.\n- **AI Visibility** ist das, was danach in der Antwort sichtbar wird.\n\n## Was GEO in der Praxis umfasst\n\nHilfreich sind Signale, die Maschinen eindeutig lesen können: klare Leistungsbeschreibungen, konsistente Unternehmensdaten, strukturierte Daten, nachvollziehbare Quellen, und Inhalte, die Fragen beantworten statt nur Keywords zu wiederholen.\n\nWeniger hilfreich ist, GEO als magischen Ranking-Hebel zu verkaufen. Generative Systeme haben keine öffentliche, stabile «Position 1». Sie wählen, fassen zusammen und formulieren – oft ohne die Website zu zitieren.\n\n## Was GEO nicht ist\n\nGEO ersetzt kein verständliches Angebot. Wenn die Website unklar macht, für wen das Unternehmen arbeitet, können weder Suchmaschine noch KI zuverlässig empfehlen. GEO ist auch kein Ersatz für messbare AI Visibility: Optimierung ohne Messung bleibt Vermutung.\n\n## MentionBee-Kontext\n\nMentionBee behandelt GEO als **Handlungsfeld**, AI Visibility als **Messgrösse**. Reports zeigen zuerst, ob und wie die Marke in KI-Antworten vorkommt, und leiten Massnahmen ab – inklusive Inhalt, Struktur und externen Signalen. llms.txt oder Schema können Teil dieser Massnahmen sein; sie sind keine Garantie für Empfehlungen."
+}

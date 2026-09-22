@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "AI_CITATION",
+  "slug": "quellenverweis",
+  "term": "Quellenverweis in KI-Systemen",
+  "aliases": ["Citation", "KI-Zitation", "Quellenangabe in AI Search"],
+  "shortDefinition": "Ein Quellenverweis in KI-Systemen ist ein sichtbarer Hinweis auf eine Webseite oder Publikation, die die Antwort stützen soll. Er ist nicht dasselbe wie eine Markenempfehlung.",
+  "termOrigin": "emerging",
+  "seoTitle": "Quellenverweis und Citation in KI-Antworten | MentionBee Glossar",
+  "metaDescription": "Was Citations in ChatGPT, Perplexity und ähnlichen Systemen bedeuten, warum sie unvollständig sein können, und wie sie sich von Erwähnung und Empfehlung unterscheiden.",
+  "relatedConceptKeys": ["AI_SEARCH", "MENTION", "AI_RECOMMENDATION", "GENERATIVE_ENGINE_OPTIMIZATION"],
+  "relatedArticles": [
+    { "title": "Wie Kunden 2026 Unternehmen finden", "path": "/blog/googeln-war-gestern-wie-kunden-2026-unternehmen-finden" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Was eine Citation hier meint\n\nIn klassischen Texten ist eine Citation ein Quellenbeleg. In AI Search zeigt ein **Quellenverweis** oft eine URL, eine Karte oder eine Fussnote neben der generierten Antwort. Der Sprachgebrauch ist **emerging**: Produkte unterscheiden sich stark, und nicht jede Antwort hat sichtbare Quellen.\n\n## Citation ist nicht Empfehlung\n\nEine Seite kann zitiert werden, ohne dass die Marke als Anbieter vorgeschlagen wird. Umgekehrt kann eine Marke empfohlen werden, ohne dass die Firmenwebsite als Quelle erscheint. Wer nur «wurden wir zitiert?» zählt, misst Traffic-Potenzial aus Nachweisen – nicht zwingend Auswahl in der Antwort.\n\n## Unsicherheit\n\nSysteme können Quellen bündeln, weglassen, falsch zuordnen oder aus Suche anreichern, die der sichtbare Text nicht vollständig widerspiegelt. Deshalb sind Citations ein **indikatorisches** Signal, kein vollständiges Abbild der internen Retrieval-Schritte.\n\n## MentionBee-Kontext\n\nMentionBee-Audits konzentrieren sich auf das, was in der Antwort **über die Marke gesagt wird** (Erwähnung, Empfehlung, Kontext), nicht primär auf vollständige Citation-Graphen. Quellenverweise bleiben nützlich als GEO-Thema: zitierfähige, klare Seiten erhöhen die Chance, als Beleg aufzutauchen – ohne Garantie."
+}

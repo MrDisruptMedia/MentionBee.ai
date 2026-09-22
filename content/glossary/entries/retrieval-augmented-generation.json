@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "RETRIEVAL_AUGMENTED_GENERATION",
+  "slug": "retrieval-augmented-generation",
+  "term": "Retrieval-Augmented Generation",
+  "abbreviation": "RAG",
+  "aliases": ["RAG", "abrufgestützte Generierung"],
+  "shortDefinition": "RAG verbindet ein Sprachmodell mit einem Dokumentabruf: Zuerst werden Passagen gesucht, danach formuliert das Modell die Antwort. Der Begriff ist etabliert, für das MentionBee-Käuferglossar V1 aber zu generisch.",
+  "termOrigin": "established",
+  "seoTitle": "RAG (Retrieval-Augmented Generation) | MentionBee Glossar",
+  "metaDescription": "Kurzdefinition von RAG. Dieser Eintrag ist in Glossary V1 nicht öffentlich, weil er ein allgemeines KI-Architekturthema ist.",
+  "relatedConceptKeys": ["LARGE_LANGUAGE_MODEL", "AI_CITATION", "AI_SEARCH"],
+  "relatedArticles": [],
+  "status": "draft",
+  "publishedAt": null,
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Warum dieser Eintrag zurückgestellt ist\n\n**Retrieval-Augmented Generation (RAG)** ist ein etabliertes Architekturmuster: Abruf plus Generierung. Für Käufer von AI Visibility ist die sichtbare Frage «Werde ich erwähnt oder empfohlen?» wichtiger als die interne Retrieval-Technik eines Produkts.\n\nQuellenverweise in KI-Systemen decken den praxisnahen Teil ab. Eine eigene öffentliche RAG-Enzyklopädie-Seite würde das Glossar vom editorialen Zentrum wegziehen.\n\nV2 kann den Eintrag nachziehen, wenn MentionBee RAG im Report oder in der Methodik ausdrücklich als Käuferbegriff braucht."
+}

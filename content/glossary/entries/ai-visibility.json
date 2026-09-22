@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "AI_VISIBILITY",
+  "slug": "ai-visibility",
+  "term": "AI Visibility",
+  "shortTerm": "KI-Sichtbarkeit",
+  "aliases": ["KI-Sichtbarkeit", "AI-Sichtbarkeit", "Sichtbarkeit in KI-Systemen"],
+  "shortDefinition": "AI Visibility beschreibt, ob und wie ein Unternehmen in Antworten von KI-Systemen wie ChatGPT, Claude, Gemini oder Perplexity vorkommt, wenn potenzielle Kunden kaufnahe Fragen stellen.",
+  "termOrigin": "emerging",
+  "seoTitle": "AI Visibility: Was KI-Sichtbarkeit bedeutet | MentionBee Glossar",
+  "metaDescription": "AI Visibility ist die Sichtbarkeit einer Marke in KI-Antworten. Definition, Abgrenzung zu SEO und warum Erwähnung nicht gleich Empfehlung ist.",
+  "relatedConceptKeys": ["GENERATIVE_ENGINE_OPTIMIZATION", "MENTION_VS_RECOMMENDATION", "AI_VISIBILITY_AUDIT", "AI_SEARCH"],
+  "relatedArticles": [
+    { "title": "AI Visibility vs. SEO 2026", "path": "/blog/ai-visibility-vs-seo-2026" },
+    { "title": "Deep-Dive Report", "path": "/report" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Was AI Visibility bedeutet\n\nAI Visibility (deutsch oft **KI-Sichtbarkeit**) beschreibt die Präsenz einer Marke in den Antworten generativer KI-Systeme. Die zentrale Frage ist nicht «Rankt die Website auf Google?», sondern: **Wird das Unternehmen genannt, richtig eingeordnet und empfohlen, wenn jemand eine KI fragt?**\n\nDer Begriff ist noch nicht einheitlich definiert. Manche meinen damit nur, ob ein Name überhaupt erscheint. Andere – und so verwendet MentionBee den Begriff – unterscheiden zusätzlich, **wie** die Marke vorkommt: als beiläufige Erwähnung, als relevante Einordnung oder als konkrete Empfehlung.\n\n## Warum das für Unternehmen zählt\n\nImmer mehr Recherche- und Vorauswahl passiert in Chat- und Antwortsystemen. Wer dort nicht vorkommt, verliert keine Google-Position, die man im Search Console-Report sieht – sondern eine Empfehlung, von der das Unternehmen oft nichts erfährt.\n\nTypische Käuferfragen sind lokal, vergleichend oder problemorientiert: Wer liefert in der Region, welche Alternative gibt es, welches Angebot passt. KI-Systeme beantworten solche Fragen mit einer kurzen Liste oder einer Begründung – nicht mit zehn blauen Links.\n\n## Abgrenzung zu SEO und GEO\n\nKlassisches **SEO** optimiert Auffindbarkeit in Suchmaschinen. **GEO** (Generative Engine Optimization) beschreibt Praktiken, Inhalte und Signale so aufzubereiten, dass generative Systeme sie verarbeiten können. AI Visibility ist das **Ergebnis**: die gemessene oder beobachtete Präsenz in konkreten Antworten.\n\nEine starke Google-Sichtbarkeit hilft oft, ist aber keine Garantie. KI-Systeme fassen Quellen zusammen, filtern und formulieren neu. Eine Marke kann technisch gut ranken und in der KI-Antwort trotzdem fehlen – oder genannt, aber nicht empfohlen werden.\n\n## MentionBee-Kontext\n\nMentionBee misst AI Visibility über kaufnahe Fragen an mehrere KI-Systeme und klassifiziert Antworten unter anderem als empfohlen, erwähnt oder nicht erwähnt. Der Deep-Dive Report verbindet diese Messung mit Website-, Schema- und Marktsignalen. Details zur Methodik stehen im Report, nicht in dieser Begriffsseite.\n\nAI Visibility ist damit kein Rankingplatz, sondern ein **Antwort-Bild**: Wird die Marke gefunden, verstanden, erwähnt – und empfohlen?"
+}

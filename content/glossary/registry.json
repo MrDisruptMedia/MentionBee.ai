@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "locale": "de",
+  "generatedAt": "2026-09-22T12:00:00.000Z",
+  "source": "mentionbee-website/content/glossary",
+  "entries": [
+    {
+      "conceptKey": "AI_SEARCH",
+      "slug": "ai-search",
+      "term": "AI Search",
+      "aliases": [
+        "KI-Suche",
+        "AI-Suche",
+        "antwortbasierte Suche"
+      ],
+      "shortDefinition": "AI Search bezeichnet Suche und Recherche, bei der KI-Systeme Antworten formulieren statt nur Linklisten zu zeigen – oft mit Quellen, oft ohne.",
+      "canonicalPath": "/ai-glossar/ai-search",
+      "relatedConceptKeys": [
+        "AI_VISIBILITY",
+        "AI_CITATION",
+        "PROMPT",
+        "GENERATIVE_ENGINE_OPTIMIZATION"
+      ],
+      "relatedArticlePaths": [
+        "/blog/googeln-war-gestern-wie-kunden-2026-unternehmen-finden"
+      ],
+      "termOrigin": "emerging",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "AI_VISIBILITY",
+      "slug": "ai-visibility",
+      "term": "AI Visibility",
+      "aliases": [
+        "KI-Sichtbarkeit",
+        "AI-Sichtbarkeit",
+        "Sichtbarkeit in KI-Systemen"
+      ],
+      "shortDefinition": "AI Visibility beschreibt, ob und wie ein Unternehmen in Antworten von KI-Systemen wie ChatGPT, Claude, Gemini oder Perplexity vorkommt, wenn potenzielle Kunden kaufnahe Fragen stellen.",
+      "canonicalPath": "/ai-glossar/ai-visibility",
+      "relatedConceptKeys": [
+        "GENERATIVE_ENGINE_OPTIMIZATION",
+        "MENTION_VS_RECOMMENDATION",
+        "AI_VISIBILITY_AUDIT",
+        "AI_SEARCH"
+      ],
+      "relatedArticlePaths": [
+        "/blog/ai-visibility-vs-seo-2026",
+        "/report"
+      ],
+      "termOrigin": "emerging",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "AI_VISIBILITY_AUDIT",
+      "slug": "ai-visibility-audit",
+      "term": "AI Visibility Audit",
+      "aliases": [
+        "KI-Sichtbarkeits-Audit",
+        "AI-Visibility-Audit"
+      ],
+      "shortDefinition": "Ein AI Visibility Audit ist eine einmalige, strukturierte Bestandsaufnahme, ob und wie eine Marke in KI-Antworten vorkommt – plus Einordnung, warum das so ist und was sich ändern lässt.",
+      "canonicalPath": "/ai-glossar/ai-visibility-audit",
+      "relatedConceptKeys": [
+        "AI_VISIBILITY",
+        "AI_VISIBILITY_SCORE",
+        "ASA",
+        "GENERATIVE_ENGINE_OPTIMIZATION"
+      ],
+      "relatedArticlePaths": [
+        "/compare/ai-visibility-audit-vs-monitoring",
+        "/compare/best-ai-visibility-audits-sme",
+        "/report"
+      ],
+      "termOrigin": "emerging",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "AI_VISIBILITY_SCORE",
+      "slug": "ai-visibility-score",
+      "term": "AI Visibility Score",
+      "aliases": [
+        "KI-Sichtbarkeits-Score",
+        "MentionBee Score"
+      ],
+      "shortDefinition": "Der AI Visibility Score ist bei MentionBee eine verdichtete Kennzahl aus gemessenen KI-Antworten und weiteren Modulen – kein branchenweiter Standardindex.",
+      "canonicalPath": "/ai-glossar/ai-visibility-score",
+      "relatedConceptKeys": [
+        "ASA",
+        "AI_VISIBILITY",
+        "SHARE_OF_VOICE",
+        "AI_VISIBILITY_AUDIT"
+      ],
+      "relatedArticlePaths": [
+        "/sample-report",
+        "/report"
+      ],
+      "termOrigin": "mentionbee",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "ASA",
+      "slug": "asa",
+      "term": "ASA",
+      "abbreviation": "ASA",
+      "aliases": [
+        "KI-Präsenz-Messung",
+        "LLM + ASA"
+      ],
+      "shortDefinition": "ASA ist bei MentionBee die Messung von KI-Antworten über mehrere Fragen und Systeme: Wird die Marke erwähnt, eingeordnet oder empfohlen – und liegt überhaupt eine Antwort vor?",
+      "canonicalPath": "/ai-glossar/asa",
+      "relatedConceptKeys": [
+        "AI_VISIBILITY",
+        "AI_VISIBILITY_SCORE",
+        "SHARE_OF_VOICE",
+        "MENTION_VS_RECOMMENDATION"
+      ],
+      "relatedArticlePaths": [
+        "/sample-report",
+        "/report"
+      ],
+      "termOrigin": "mentionbee",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "EEAT",
+      "slug": "e-e-a-t",
+      "term": "E-E-A-T",
+      "abbreviation": "E-E-A-T",
+      "aliases": [
+        "EEAT",
+        "Experience Expertise Authoritativeness Trustworthiness"
+      ],
+      "shortDefinition": "E-E-A-T steht für Experience, Expertise, Authoritativeness und Trustworthiness – ein Qualitätsrahmen aus der Google-Suche, der beschreibt, ob Inhalte erfahrungsbasiert, fachkundig, autoritativ und vertrauenswürdig wirken.",
+      "canonicalPath": "/ai-glossar/e-e-a-t",
+      "relatedConceptKeys": [
+        "STRUCTURED_DATA",
+        "ENTITY",
+        "AI_VISIBILITY",
+        "GENERATIVE_ENGINE_OPTIMIZATION"
+      ],
+      "relatedArticlePaths": [
+        "/blog/eeat-faelschbar-ki-sichtbarkeit"
+      ],
+      "termOrigin": "established",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "ENTITY",
+      "slug": "entitaet",
+      "term": "Entität",
+      "aliases": [
+        "Entity",
+        "Wissensobjekt",
+        "Marke als Entität"
+      ],
+      "shortDefinition": "Eine Entität ist ein eindeutig identifizierbares Ding in einem Wissensgraphen – zum Beispiel ein Unternehmen, ein Ort oder eine Person. KI- und Suchsysteme ordnen Aussagen solchen Objekten zu.",
+      "canonicalPath": "/ai-glossar/entitaet",
+      "relatedConceptKeys": [
+        "STRUCTURED_DATA",
+        "SCHEMA_ORG",
+        "GENERATIVE_ENGINE_OPTIMIZATION",
+        "AI_VISIBILITY"
+      ],
+      "relatedArticlePaths": [
+        "/blog/ai-visibility-vs-seo-2026"
+      ],
+      "termOrigin": "established",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "MENTION",
+      "slug": "erwaehnung",
+      "term": "Erwähnung",
+      "aliases": [
+        "Mention",
+        "Nennung",
+        "erwähnt"
+      ],
+      "shortDefinition": "Eine Erwähnung liegt vor, wenn ein KI-System die Marke in der Antwort nennt, ohne sie zwingend als empfohlene Lösung darzustellen.",
+      "canonicalPath": "/ai-glossar/erwaehnung",
+      "relatedConceptKeys": [
+        "AI_RECOMMENDATION",
+        "MENTION_VS_RECOMMENDATION",
+        "AI_VISIBILITY"
+      ],
+      "relatedArticlePaths": [
+        "/blog/warum-chatgpt-dich-nicht-empfiehlt"
+      ],
+      "termOrigin": "established",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "MENTION_VS_RECOMMENDATION",
+      "slug": "mention-vs-recommendation",
+      "term": "Erwähnung vs. Empfehlung",
+      "aliases": [
+        "Mention vs Recommendation",
+        "Nennung versus Empfehlung"
+      ],
+      "shortDefinition": "Erwähnung heisst, dass die Marke in der KI-Antwort vorkommt. Empfehlung heisst, dass sie als passende Option für die Frage vorgeschlagen wird. Beides ist nicht dasselbe.",
+      "canonicalPath": "/ai-glossar/mention-vs-recommendation",
+      "relatedConceptKeys": [
+        "MENTION",
+        "AI_RECOMMENDATION",
+        "AI_VISIBILITY",
+        "AI_VISIBILITY_SCORE"
+      ],
+      "relatedArticlePaths": [
+        "/blog/warum-chatgpt-dich-nicht-empfiehlt",
+        "/report"
+      ],
+      "termOrigin": "mentionbee",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "GENERATIVE_ENGINE_OPTIMIZATION",
+      "slug": "generative-engine-optimization",
+      "term": "Generative Engine Optimization",
+      "abbreviation": "GEO",
+      "aliases": [
+        "GEO",
+        "Generative Engine Optimisation"
+      ],
+      "shortDefinition": "GEO bezeichnet Praktiken, mit denen Unternehmen Inhalte und digitale Signale so aufbereiten, dass generative KI-Systeme sie erkennen, korrekt einordnen und in Antworten berücksichtigen können.",
+      "canonicalPath": "/ai-glossar/generative-engine-optimization",
+      "relatedConceptKeys": [
+        "AI_VISIBILITY",
+        "STRUCTURED_DATA",
+        "ENTITY",
+        "LLMS_TXT"
+      ],
+      "relatedArticlePaths": [
+        "/blog/ai-visibility-vs-seo-2026",
+        "/faq"
+      ],
+      "termOrigin": "emerging",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "JACCARD_SIMILARITY",
+      "slug": "jaccard-similarity",
+      "term": "Jaccard-Ähnlichkeit",
+      "aliases": [
+        "Jaccard Similarity",
+        "Jaccard-Index",
+        "Jaccard-Koeffizient"
+      ],
+      "shortDefinition": "Die Jaccard-Ähnlichkeit misst, wie stark sich zwei Mengen überschneiden: Schnittmenge geteilt durch Vereinigungsmenge. In der AI Visibility kann sie zeigen, wie ähnlich zwei Empfehlungs- oder Erwähnungsmengen sind.",
+      "canonicalPath": "/ai-glossar/jaccard-similarity",
+      "relatedConceptKeys": [
+        "AI_RECOMMENDATION",
+        "SHARE_OF_VOICE",
+        "ASA",
+        "AI_VISIBILITY"
+      ],
+      "relatedArticlePaths": [
+        "/report"
+      ],
+      "termOrigin": "established",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "AI_RECOMMENDATION",
+      "slug": "ki-empfehlung",
+      "term": "KI-Empfehlung",
+      "aliases": [
+        "AI Recommendation",
+        "Empfehlung durch KI",
+        "direkt empfohlen"
+      ],
+      "shortDefinition": "Eine KI-Empfehlung liegt vor, wenn ein System eine Marke nicht nur nennt, sondern als geeignete Option für die gestellte Frage vorschlägt oder nahelegt.",
+      "canonicalPath": "/ai-glossar/ki-empfehlung",
+      "relatedConceptKeys": [
+        "MENTION",
+        "MENTION_VS_RECOMMENDATION",
+        "AI_VISIBILITY",
+        "PROMPT"
+      ],
+      "relatedArticlePaths": [
+        "/blog/warum-chatgpt-dich-nicht-empfiehlt",
+        "/report"
+      ],
+      "termOrigin": "emerging",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "LARGE_LANGUAGE_MODEL",
+      "slug": "large-language-model",
+      "term": "Large Language Model",
+      "abbreviation": "LLM",
+      "aliases": [
+        "grosses Sprachmodell",
+        "Sprachmodell"
+      ],
+      "shortDefinition": "Ein Large Language Model (LLM) ist ein KI-Modell, das Sprache vorhersagt und daraus Antworten erzeugt. Chat-Produkte wie ChatGPT bauen darauf auf – sind aber mehr als nur das Modell.",
+      "canonicalPath": "/ai-glossar/large-language-model",
+      "relatedConceptKeys": [
+        "AI_SEARCH",
+        "PROMPT",
+        "AI_CITATION",
+        "AI_VISIBILITY"
+      ],
+      "relatedArticlePaths": [
+        "/blog/neue-ki-modelle-ai-visibility"
+      ],
+      "termOrigin": "established",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "LLMS_TXT",
+      "slug": "llms-txt",
+      "term": "llms.txt",
+      "aliases": [
+        "LLM-Textdatei",
+        "llms.txt-Standard"
+      ],
+      "shortDefinition": "llms.txt ist eine vorgeschlagene Textdatei im Website-Root, die KI-Systemen eine kurze, kuratierte Orientierung über das Angebot geben soll – vergleichbar mit einer lesbaren Landkarte, nicht mit einem Rankinghebel.",
+      "canonicalPath": "/ai-glossar/llms-txt",
+      "relatedConceptKeys": [
+        "GENERATIVE_ENGINE_OPTIMIZATION",
+        "STRUCTURED_DATA",
+        "LARGE_LANGUAGE_MODEL",
+        "AI_VISIBILITY"
+      ],
+      "relatedArticlePaths": [
+        "/blog/llms-txt-ki-sichtbarkeit"
+      ],
+      "termOrigin": "emerging",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "PROMPT",
+      "slug": "prompt",
+      "term": "Prompt",
+      "aliases": [
+        "KI-Frage",
+        "Eingabeaufforderung",
+        "Testfrage"
+      ],
+      "shortDefinition": "Ein Prompt ist die Eingabe an ein KI-System – die Frage oder Anweisung, auf die die Antwort folgt. Für AI Visibility sind vor allem kaufnahe Prompts relevant.",
+      "canonicalPath": "/ai-glossar/prompt",
+      "relatedConceptKeys": [
+        "AI_SEARCH",
+        "LARGE_LANGUAGE_MODEL",
+        "AI_VISIBILITY",
+        "ASA"
+      ],
+      "relatedArticlePaths": [
+        "/blog/wie-kunden-chatgpt-fragen-ki-sichtbarkeit"
+      ],
+      "termOrigin": "established",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "AI_CITATION",
+      "slug": "quellenverweis",
+      "term": "Quellenverweis in KI-Systemen",
+      "aliases": [
+        "Citation",
+        "KI-Zitation",
+        "Quellenangabe in AI Search"
+      ],
+      "shortDefinition": "Ein Quellenverweis in KI-Systemen ist ein sichtbarer Hinweis auf eine Webseite oder Publikation, die die Antwort stützen soll. Er ist nicht dasselbe wie eine Markenempfehlung.",
+      "canonicalPath": "/ai-glossar/quellenverweis",
+      "relatedConceptKeys": [
+        "AI_SEARCH",
+        "MENTION",
+        "AI_RECOMMENDATION",
+        "GENERATIVE_ENGINE_OPTIMIZATION"
+      ],
+      "relatedArticlePaths": [
+        "/blog/googeln-war-gestern-wie-kunden-2026-unternehmen-finden"
+      ],
+      "termOrigin": "emerging",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "SCHEMA_ORG",
+      "slug": "schema-org",
+      "term": "Schema.org",
+      "aliases": [
+        "Schema Markup",
+        "schema.org-Vokabular"
+      ],
+      "shortDefinition": "Schema.org ist ein gemeinsames Vokabular für strukturierte Daten im Web. Es definiert Typen und Eigenschaften, mit denen Seiten Organisation, Artikel oder Ereignisse beschreiben können.",
+      "canonicalPath": "/ai-glossar/schema-org",
+      "relatedConceptKeys": [
+        "STRUCTURED_DATA",
+        "ENTITY",
+        "EEAT",
+        "LLMS_TXT"
+      ],
+      "relatedArticlePaths": [
+        "/report"
+      ],
+      "termOrigin": "established",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "SHARE_OF_VOICE",
+      "slug": "share-of-voice",
+      "term": "Share of Voice",
+      "abbreviation": "SoV",
+      "aliases": [
+        "Share of Voice in KI-Antworten",
+        "Erwähnungsanteil"
+      ],
+      "shortDefinition": "Share of Voice beschreibt den Anteil der Aufmerksamkeit, den eine Marke in einem definierten Set von Erwähnungen erhält – bei MentionBee bezogen auf gemessene KI-Antworten, nicht auf TV-Werbung.",
+      "canonicalPath": "/ai-glossar/share-of-voice",
+      "relatedConceptKeys": [
+        "ASA",
+        "MENTION",
+        "AI_RECOMMENDATION",
+        "AI_VISIBILITY"
+      ],
+      "relatedArticlePaths": [
+        "/sample-report"
+      ],
+      "termOrigin": "established",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    },
+    {
+      "conceptKey": "STRUCTURED_DATA",
+      "slug": "strukturierte-daten",
+      "term": "Strukturierte Daten",
+      "aliases": [
+        "Structured Data",
+        "strukturierte Auszeichnung"
+      ],
+      "shortDefinition": "Strukturierte Daten sind maschinenlesbare Angaben auf einer Website – oft als JSON-LD – damit Suchmaschinen und andere Systeme Organisation, Angebot oder Artikel eindeutig interpretieren können.",
+      "canonicalPath": "/ai-glossar/strukturierte-daten",
+      "relatedConceptKeys": [
+        "SCHEMA_ORG",
+        "ENTITY",
+        "EEAT",
+        "GENERATIVE_ENGINE_OPTIMIZATION"
+      ],
+      "relatedArticlePaths": [
+        "/faq",
+        "/report"
+      ],
+      "termOrigin": "established",
+      "status": "published",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "updatedAt": "2026-09-22T12:00:00.000Z"
+    }
+  ]
+}

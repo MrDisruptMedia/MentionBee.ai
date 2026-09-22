@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "AI_RECOMMENDATION",
+  "slug": "ki-empfehlung",
+  "term": "KI-Empfehlung",
+  "aliases": ["AI Recommendation", "Empfehlung durch KI", "direkt empfohlen"],
+  "shortDefinition": "Eine KI-Empfehlung liegt vor, wenn ein System eine Marke nicht nur nennt, sondern als geeignete Option für die gestellte Frage vorschlägt oder nahelegt.",
+  "termOrigin": "emerging",
+  "seoTitle": "KI-Empfehlung: Wenn ChatGPT eine Marke vorschlägt | MentionBee Glossar",
+  "metaDescription": "KI-Empfehlung heisst: Die Marke wird vorgeschlagen, nicht nur erwähnt. Unterschied zur blossen Nennung und warum das für Käuferfragen zählt.",
+  "relatedConceptKeys": ["MENTION", "MENTION_VS_RECOMMENDATION", "AI_VISIBILITY", "PROMPT"],
+  "relatedArticles": [
+    { "title": "Warum ChatGPT dich nicht empfiehlt", "path": "/blog/warum-chatgpt-dich-nicht-empfiehlt" },
+    { "title": "Deep-Dive Report", "path": "/report" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Was eine KI-Empfehlung ist\n\nEine **KI-Empfehlung** ist mehr als das Auftauchen eines Namens. Das System stellt die Marke als passende Antwort auf die Nutzerfrage dar – zum Beispiel als konkreten Vorschlag, als «gute Option» oder in einer kurzen Auswahlliste mit Begründung.\n\nOb etwas «Empfehlung» ist, bleibt Interpretationssache. Es gibt keinen Branchenstandard. MentionBee verwendet dafür in Reports unter anderem die Klasse **aktiv empfohlen** (im Englischen «directly recommended»): Die Marke wird im relevanten Kontext vorgeschlagen, nicht nur beiläufig genannt.\n\n## Warum der Unterschied zur Erwähnung zählt\n\nKäufer wollen eine Entscheidungshilfe. Eine Erwähnung in einem langen Absatz kann unsichtbar bleiben. Eine Empfehlung verkürzt den Weg zur Kontaktaufnahme. Wer nur «genannt» wird, steht oft neben vielen anderen – oder in einem neutralen Überblick ohne Handlungsimpuls.\n\n## Was keine Empfehlung ist\n\nKein Beleg für eine Empfehlung sind: der Markenname in einer Aufzählung ohne Bewertung, ein Zitat aus der Firmenwebsite ohne Auswahl, oder eine Nennung im falschen Branchenkontext. Ebenso wenig beweist ein einzelner Chat, den das Unternehmen selbst führt.\n\n## MentionBee-Kontext\n\nIm Deep-Dive werden Antworten entlang sichtbarer Evidenz klassifiziert. Die Report-Begriffe «aktiv empfohlen», «erwähnt», «schwach erwähnt», «nur Marke» und «nicht erwähnt» sind **MentionBee-Klassen**, keine ISO-Norm. Sie machen den Unterschied zwischen Nennung und Empfehlung operationalisierbar.\n\nVertiefung, warum Systeme eine Marke oft nicht vorschlagen, steht im Artikel zur fehlenden ChatGPT-Empfehlung – nicht in dieser Definition."
+}

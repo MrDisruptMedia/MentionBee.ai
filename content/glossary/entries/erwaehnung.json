@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "MENTION",
+  "slug": "erwaehnung",
+  "term": "Erwähnung",
+  "aliases": ["Mention", "Nennung", "erwähnt"],
+  "shortDefinition": "Eine Erwähnung liegt vor, wenn ein KI-System die Marke in der Antwort nennt, ohne sie zwingend als empfohlene Lösung darzustellen.",
+  "termOrigin": "established",
+  "seoTitle": "Erwähnung in KI-Antworten | MentionBee Glossar",
+  "metaDescription": "Erwähnung heisst: Die Marke kommt in der KI-Antwort vor. Das ist nicht automatisch eine Empfehlung. Klassen und Abgrenzung im MentionBee-Kontext.",
+  "relatedConceptKeys": ["AI_RECOMMENDATION", "MENTION_VS_RECOMMENDATION", "AI_VISIBILITY"],
+  "relatedArticles": [
+    { "title": "Warum ChatGPT dich nicht empfiehlt", "path": "/blog/warum-chatgpt-dich-nicht-empfiehlt" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Was eine Erwähnung ist\n\n**Erwähnung** (englisch *mention*) bedeutet: Der Markenname oder eine eindeutige Bezeichnung erscheint in der Antwort. Das Wort selbst ist alltäglich und etabliert. In der AI Visibility wird es fachlich genutzt, um Präsenz von **Auswahl** zu trennen.\n\nEine Erwähnung kann stark oder schwach sein. Sie kann im richtigen Geschäftskontext stehen oder daneben. Sie kann mit einer Empfehlung zusammenfallen – muss aber nicht.\n\n## Stufen, die MentionBee unterscheidet\n\nIn Reports nutzt MentionBee feinere Klassen als nur «genannt / nicht genannt»:\n\n- **Erwähnt** – die Marke kommt im relevanten Zusammenhang vor.\n- **Schwach erwähnt** – die Nennung ist dünn oder wenig belastbar.\n- **Nur Marke** – der Name taucht auf, ohne dass Angebot oder Kontext greifen.\n- **Nicht erwähnt** – in dieser Antwort kommt die Marke nicht vor.\n- **Nicht gemessen** – für diese Zelle liegt keine Antwort vor (zum Beispiel nach einem Provider-Fehler). Das ist etwas anderes als «nicht erwähnt».\n\nDiese Stufen sind **MentionBee-Terminologie**, aufgesetzt auf den etablierten Mention-Begriff.\n\n## Praktische Relevanz\n\nWer nur zählt, ob der Name irgendwo steht, überschätzt oft die Sichtbarkeit. Eine blosse Nennung in einem Absatz über eine andere Branche hilft Käufern kaum. Umgekehrt kann eine klare Erwähnung ohne Superlative trotzdem nützlich sein, wenn die Einordnung stimmt.\n\n## Abgrenzung\n\nErwähnung ≠ Empfehlung. Erwähnung ≠ Messung. Fehlt eine KI-Antwort technisch, darf das nicht als «die Marke wurde nicht genannt» verkauft werden."
+}

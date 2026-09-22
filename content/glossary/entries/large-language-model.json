@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "LARGE_LANGUAGE_MODEL",
+  "slug": "large-language-model",
+  "term": "Large Language Model",
+  "abbreviation": "LLM",
+  "aliases": ["grosses Sprachmodell", "Sprachmodell"],
+  "shortDefinition": "Ein Large Language Model (LLM) ist ein KI-Modell, das Sprache vorhersagt und daraus Antworten erzeugt. Chat-Produkte wie ChatGPT bauen darauf auf – sind aber mehr als nur das Modell.",
+  "termOrigin": "established",
+  "seoTitle": "LLM (Large Language Model) erklärt | MentionBee Glossar",
+  "metaDescription": "Was ein Large Language Model ist, wie es sich von Chat-Produkten unterscheidet, und warum das für AI Visibility und Empfehlungen relevant ist.",
+  "relatedConceptKeys": ["AI_SEARCH", "PROMPT", "AI_CITATION", "AI_VISIBILITY"],
+  "relatedArticles": [
+    { "title": "Neue KI-Modelle und AI Visibility", "path": "/blog/neue-ki-modelle-ai-visibility" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Was ein LLM ist\n\nEin **Large Language Model (LLM)** ist ein statistisches Sprachmodell mit sehr vielen Parametern. Es sagt fortlaufend wahrscheinliche nächste Tokens voraus. Daraus entstehen Texte, Zusammenfassungen und vermeintliches «Wissen». Der Begriff ist etabliert.\n\nWas Nutzerinnen als ChatGPT, Claude, Gemini oder Perplexity erleben, ist meist ein **Produkt**: Modell plus Suche, Werkzeuge, Sicherheitsregeln, Speicher und Oberfläche. Die Antwort ist deshalb nicht «das LLM allein».\n\n## Was das für Marken bedeutet\n\nEmpfehlungen entstehen nicht, weil eine Website «im Modell gespeichert» ist wie in einer Datenbank. Training, Abruf aktueller Quellen, Systemhinweise und die konkrete Frage wirken zusammen. Deshalb können Antworten schwanken, und deshalb ändert ein neues Modell manchmal das Bild – ohne dass die Website sich geändert hat.\n\nUnsicherheit bleibt: Anbieter veröffentlichen die genaue Auswahlmechanik nicht vollständig. Wer behauptet, ein bestimmtes Schema-Tag «garantiere» eine LLM-Empfehlung, überzieht.\n\n## MentionBee-Kontext\n\nMentionBee misst sichtbare Produktantworten, nicht das nackte Basismodell. Modellwechsel können AI Visibility verschieben; das ist ein Grund, mehrere Systeme zu prüfen statt eines einzelnen Chats. Die Einordnung aktueller Modellwechsel gehört in den Artikel, nicht in diese Definition."
+}

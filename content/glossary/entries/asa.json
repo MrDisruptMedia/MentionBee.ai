@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "ASA",
+  "slug": "asa",
+  "term": "ASA",
+  "abbreviation": "ASA",
+  "aliases": ["KI-Präsenz-Messung", "LLM + ASA"],
+  "shortDefinition": "ASA ist bei MentionBee die Messung von KI-Antworten über mehrere Fragen und Systeme: Wird die Marke erwähnt, eingeordnet oder empfohlen – und liegt überhaupt eine Antwort vor?",
+  "termOrigin": "mentionbee",
+  "seoTitle": "ASA: KI-Antwortmessung bei MentionBee | Glossar",
+  "metaDescription": "ASA ist ein MentionBee-Messverfahren für KI-Antworten, kein Branchenstandard. Was die Matrix aus Fragen und Systemen zeigt – und was fehlende Zellen bedeuten.",
+  "relatedConceptKeys": ["AI_VISIBILITY", "AI_VISIBILITY_SCORE", "SHARE_OF_VOICE", "MENTION_VS_RECOMMENDATION"],
+  "relatedArticles": [
+    { "title": "Beispielreport", "path": "/sample-report" },
+    { "title": "Deep-Dive Report", "path": "/report" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Was ASA bei MentionBee ist\n\n**ASA** ist **MentionBee-Terminologie**, kein etablierter Branchenbegriff. Im Report erscheint das zugehörige Modul öffentlich als **KI-Präsenz & Sichtbarkeit**. Intern verbindet MentionBee die LLM-Auswertung mit einer Matrix aus Testfragen und KI-Systemen (ChatGPT, Claude, Gemini, Perplexity).\n\nJede Zelle dieser Matrix ist eine Antwort auf eine konkrete Frage in einem konkreten System. Aus den Zellen ergibt sich, ob die Marke aktiv empfohlen, erwähnt, schwach erwähnt, nur als Name, im falschen Kontext oder gar nicht vorkommt.\n\n## Was ASA nicht ist\n\nASA ist kein öffentlicher Rankingplatz, kein Google-Index und keine Garantie, dass «die KI das Unternehmen kennt». Es ist eine **Stichprobe unter kontrollierten Fragen**. Andere Tools messen anders; Vergleiche zwischen Anbietern ohne identische Prompts sind nicht belastbar.\n\n## Fehlende Messung ist nicht «nicht erwähnt»\n\nWenn für eine Zelle keine Antwort vorliegt – etwa nach einem technischen Fehler – darf das nicht als «die Marke wurde nicht genannt» gezählt werden. MentionBee unterscheidet **nicht gemessen** von **nicht erwähnt**. Das ist methodisch wichtig und Teil der ASA-Logik.\n\n## Praktische Relevanz\n\nFür Käuferfragen zählt die Verteilung über Systeme, nicht ein einzelner Chat. ASA macht sichtbar, wo Empfehlung, blosse Nennung oder Leere liegt. Share of Voice und der AI Visibility Score nutzen diese Ebene – verdichten sie aber weiter.\n\nDie genaue Fragenzahl und Gewichtung stehen im jeweiligen Report, nicht in dieser Begriffsseite."
+}

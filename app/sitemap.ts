@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 
 import { PUBLISHED_ROUTES } from "@/content/published-routes";
 import { loadBlogIndex } from "@/lib/blog";
+import { GLOSSARY_INDEX_PATH, glossaryTermPath } from "@/lib/glossary/canonical";
+import { glossarySitemapEntries } from "@/lib/glossary/sitemap-entries";
+import { listPublishedGlossaryEntries } from "@/lib/glossary/registry";
 import { MENTIONBEE_SITE_ORIGIN } from "@/lib/site-origin";
 
 const STATIC_ROUTES: MetadataRoute.Sitemap = [
@@ -48,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return { ...e, lastModified: now };
   });
 
-  return [...staticWithDates, ...dynamicEntries, ...blogEntries];
+  return [...staticWithDates, ...dynamicEntries, ...blogEntries, ...glossarySitemapEntries()];
 }
 
 /** Used by Revenue OS production verification tests. */
@@ -56,5 +59,8 @@ export function sitemapIncludesPath(path: string): boolean {
   const normalized = path.startsWith("/") ? path : `/${path}`;
   if (PUBLISHED_ROUTES.some((r) => r.path === normalized)) return true;
   if (normalized === "/blog" || normalized === "/autor/olaf-kunz") return true;
-  return loadBlogIndex().articles.some((a) => a.canonicalPath === normalized);
+  if (loadBlogIndex().articles.some((a) => a.canonicalPath === normalized)) return true;
+  if (normalized === GLOSSARY_INDEX_PATH) return true;
+  if (listPublishedGlossaryEntries().some((e) => glossaryTermPath(e.slug) === normalized)) return true;
+  return glossarySitemapEntries().some((entry) => entry.url === `${MENTIONBEE_SITE_ORIGIN}${normalized}`);
 }

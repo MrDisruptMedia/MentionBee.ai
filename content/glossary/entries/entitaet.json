@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "ENTITY",
+  "slug": "entitaet",
+  "term": "Entität",
+  "aliases": ["Entity", "Wissensobjekt", "Marke als Entität"],
+  "shortDefinition": "Eine Entität ist ein eindeutig identifizierbares Ding in einem Wissensgraphen – zum Beispiel ein Unternehmen, ein Ort oder eine Person. KI- und Suchsysteme ordnen Aussagen solchen Objekten zu.",
+  "termOrigin": "established",
+  "seoTitle": "Entität (Entity) in Suche und KI | MentionBee Glossar",
+  "metaDescription": "Was eine Entität ist, warum klare Unternehmensdaten für Suche und KI zählen, und wie das mit Schema.org und AI Visibility zusammenhängt.",
+  "relatedConceptKeys": ["STRUCTURED_DATA", "SCHEMA_ORG", "GENERATIVE_ENGINE_OPTIMIZATION", "AI_VISIBILITY"],
+  "relatedArticles": [
+    { "title": "AI Visibility vs. SEO 2026", "path": "/blog/ai-visibility-vs-seo-2026" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Was eine Entität ist\n\nIn Suche und Wissensgraphen ist eine **Entität** ein Objekt mit Identität: die Firma X, nicht nur das Wort «X» auf einer Seite. Der Fachbegriff ist etabliert (Knowledge Graph, Named Entity).\n\nSysteme versuchen zu klären: Ist «Adler» ein Verlag, eine Apotheke oder ein Vogel? Ohne eindeutige Merkmale entstehen Verwechslungen – in Suchergebnissen und in KI-Antworten.\n\n## Warum das für Unternehmen zählt\n\nKaufnahe Fragen brauchen eine saubere Zuordnung: Branche, Ort, Angebot, rechtlicher Name, Website. Widersprüchliche NAP-Daten, wechselnde Schreibweisen oder fehlende Organisationseinträge erschweren diese Zuordnung.\n\nEine klare Entität bedeutet nicht automatisch eine Empfehlung. Sie ist eine Voraussetzung dafür, dass die Marke überhaupt korrekt in den richtigen Kontext gesetzt wird.\n\n## Verbindung zu strukturierten Daten\n\nSchema.org-Auszeichnungen, konsistente Impressumsangaben und wiedererkennbare Beschreibungen helfen Maschinen, dieselbe Entität wiederzufinden. Sie ersetzen keine verständliche Positionierung auf der Website.\n\n## MentionBee-Kontext\n\nWenn KI-Antworten die Marke in der falschen Branche einordnen («falsche Branche» in MentionBee-Klassen), ist oft die Entitätsklarheit Teil des Problems. Reports prüfen unter anderem strukturierte Daten und inhaltliche Klarheit; das Glossar definiert nur den Begriff."
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "STRUCTURED_DATA",
+  "slug": "strukturierte-daten",
+  "term": "Strukturierte Daten",
+  "aliases": ["Structured Data", "strukturierte Auszeichnung"],
+  "shortDefinition": "Strukturierte Daten sind maschinenlesbare Angaben auf einer Website – oft als JSON-LD – damit Suchmaschinen und andere Systeme Organisation, Angebot oder Artikel eindeutig interpretieren können.",
+  "termOrigin": "established",
+  "seoTitle": "Strukturierte Daten (Structured Data) | MentionBee Glossar",
+  "metaDescription": "Strukturierte Daten machen Website-Inhalte maschinenlesbar. Was JSON-LD leistet, was es nicht garantiert, und wie das zu Schema.org und KI-Sichtbarkeit passt.",
+  "relatedConceptKeys": ["SCHEMA_ORG", "ENTITY", "EEAT", "GENERATIVE_ENGINE_OPTIMIZATION"],
+  "relatedArticles": [
+    { "title": "FAQ zu AI Visibility und GEO", "path": "/faq" },
+    { "title": "Deep-Dive Report", "path": "/report" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Was strukturierte Daten sind\n\n**Strukturierte Daten** beschreiben Fakten in einem festen Format statt nur in Fliesstext. Im Web ist JSON-LD mit Schema.org-Typen der übliche Weg: Organisation, LocalBusiness, Article, FAQPage und andere. Der Begriff ist etabliert.\n\nMaschinen müssen nicht raten, ob eine Zeichenkette eine Adresse, eine Öffnungszeit oder ein Produktpreis ist.\n\n## Nutzen – und Grenze\n\nKorrekte, zur sichtbaren Seite passende Auszeichnung kann Rich Results in der Suche unterstützen und Entitäten klarer machen. Fehlerhafte, unsichtbare oder widersprüchliche Markup-Daten schaden eher, als dass sie «KI-Ranking» erzeugen.\n\nEs gibt **keinen Beleg**, dass ein bestimmtes JSON-LD-Snippet eine ChatGPT-Empfehlung erzwingt. Strukturierte Daten sind ein Signal unter vielen.\n\n## Gute Praxis\n\nNur auszeichnen, was auf der Seite stimmt. Canonical, Impressum und Organisation konsistent halten. Keine FAQPage-Auszeichnung ohne sichtbare FAQs. Kein Schema erfinden, das das Angebot aufbläht.\n\n## MentionBee-Kontext\n\nIm Deep-Dive gehören Schema- und Vertrauenssignale zum Modul **Vertrauen & Expertise**. MentionBee prüft, ob maschinenlesbare Hinweise vorhanden und stimmig sind – nicht, ob «mehr Markup» automatisch mehr KI-Nennungen bringt."
+}

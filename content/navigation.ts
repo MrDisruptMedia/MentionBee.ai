@@ -9,6 +9,7 @@ export const headerNavigation: NavItem[] = [
   { label: "Beispielreport", href: "/sample-report" },
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
+  { label: "Glossar", href: "/ai-glossar" },
 ];
 
 export const mainNavigation: NavItem[] = [

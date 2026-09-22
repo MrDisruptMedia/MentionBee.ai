@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "AI_SEARCH",
+  "slug": "ai-search",
+  "term": "AI Search",
+  "aliases": ["KI-Suche", "AI-Suche", "antwortbasierte Suche"],
+  "shortDefinition": "AI Search bezeichnet Suche und Recherche, bei der KI-Systeme Antworten formulieren statt nur Linklisten zu zeigen – oft mit Quellen, oft ohne.",
+  "termOrigin": "emerging",
+  "seoTitle": "AI Search: KI-Suche erklärt | MentionBee Glossar",
+  "metaDescription": "AI Search ist Suche über KI-Antworten statt klassischer Trefferlisten. Was das für Auffindbarkeit und Empfehlungen von Unternehmen bedeutet.",
+  "relatedConceptKeys": ["AI_VISIBILITY", "AI_CITATION", "PROMPT", "GENERATIVE_ENGINE_OPTIMIZATION"],
+  "relatedArticles": [
+    { "title": "Wie Kunden 2026 Unternehmen finden", "path": "/blog/googeln-war-gestern-wie-kunden-2026-unternehmen-finden" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Was AI Search bedeutet\n\n**AI Search** beschreibt Recherche über generative Systeme: Die Nutzerin stellt eine Frage in natürlicher Sprache und erhält eine zusammengefasste Antwort. Manche Produkte blenden Quellen ein, andere nicht. Der Übergang zu «klassischer Suche mit KI-Übersicht» ist fliessend – der Begriff ist deshalb **emerging**, nicht genormt.\n\nGemeinsam ist: Die Maschine **wählt und verdichtet**. Sichtbarkeit hängt nicht nur davon ab, ob eine Seite indexiert ist, sondern ob sie in die synthetisierte Antwort aufgenommen wird.\n\n## Unterschied zur klassischen Suche\n\nIn der klassischen Suche konkurrieren Titel, Snippets und Rankings um den Klick. In der AI Search konkurrieren Marken um **Nennung und Auswahl** in einem kurzen Text. Ein zehnter Platz in Google kann noch Traffic bringen. In einer KI-Antwort mit drei genannten Anbietern ist «Platz 10» oft unsichtbar.\n\n## Was Unternehmen daraus ableiten sollten\n\nWer nur an Keywords und Meta-Tags denkt, unterschätzt die Frage hinter der Frage: Welches Problem löst das Angebot, für wen, in welcher Region? KI-Systeme beantworten oft genau diese Käuferfragen.\n\nUnsicherheit bleibt: Antworten schwanken, Modelle ändern sich, Quellenangaben sind unvollständig. Deshalb ist einzelne «Frag ChatGPT einmal»-Tests kein zuverlässiges Bild.\n\n## MentionBee-Kontext\n\nMentionBee ordnet AI Search als Umfeld ein, in dem AI Visibility gemessen wird: mehrere kaufnahe Prompts, mehrere Systeme. Das Glossar definiert den Begriff; vertiefende Einordnung, wie Kunden 2026 suchen, gehört in den dazugehörigen Artikel."
+}

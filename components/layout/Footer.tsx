@@ -33,6 +33,7 @@ const columns: FooterCol[] = [
       { label: "So funktioniert's", href: "/#so-funktionierts" },
       { label: "Blog", href: "/blog" },
       { label: "FAQ", href: "/faq" },
+      { label: "AI-Glossar", href: "/ai-glossar" },
     ],
   },
   {

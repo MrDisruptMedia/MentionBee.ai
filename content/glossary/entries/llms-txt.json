@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "LLMS_TXT",
+  "slug": "llms-txt",
+  "term": "llms.txt",
+  "aliases": ["LLM-Textdatei", "llms.txt-Standard"],
+  "shortDefinition": "llms.txt ist eine vorgeschlagene Textdatei im Website-Root, die KI-Systemen eine kurze, kuratierte Orientierung über das Angebot geben soll – vergleichbar mit einer lesbaren Landkarte, nicht mit einem Rankinghebel.",
+  "termOrigin": "emerging",
+  "seoTitle": "llms.txt erklärt | MentionBee Glossar",
+  "metaDescription": "Was llms.txt ist, was die Datei leisten kann und was nicht. Ein aufkommendes Signal für KI-Crawler – ohne garantierte Empfehlung in ChatGPT.",
+  "relatedConceptKeys": ["GENERATIVE_ENGINE_OPTIMIZATION", "STRUCTURED_DATA", "LARGE_LANGUAGE_MODEL", "AI_VISIBILITY"],
+  "relatedArticles": [
+    { "title": "llms.txt und KI-Sichtbarkeit", "path": "/blog/llms-txt-ki-sichtbarkeit" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Was llms.txt sein soll\n\n**llms.txt** ist ein aufkommender, noch nicht einheitlich umgesetzter Vorschlag: eine Markdown- oder Textdatei unter `https://example.com/llms.txt`, die das Unternehmen, zentrale Seiten und Fakten knapp beschreibt. Der Gedanke: Sprachmodelle und KI-Crawler sollen eine klare, vom Betreiber kuratierte Zusammenfassung vorfinden.\n\nDer Begriff ist **emerging**. Es gibt keine Garantie, dass jedes KI-Produkt die Datei liest oder sie gegenüber der restlichen Website bevorzugt.\n\n## Was llms.txt nicht ist\n\nKein Ersatz für eine verständliche Website, kein robots.txt und kein Beweis für AI Visibility. Eine Datei voller Werbesätze ohne Links zu echten Leistungsseiten hilft wenig. Erfundene Statistiken in llms.txt sind genauso problematisch wie auf der Homepage.\n\n## Sinnvolle Nutzung\n\nKurz sagen, wer das Unternehmen ist, für wen es arbeitet, welche Seiten die Quelle der Wahrheit sind. Fakten müssen zur live Website passen. MentionBee veröffentlicht selbst eine llms.txt unter mentionbee.ai/llms.txt – als Orientierung, nicht als magisches Signal.\n\n## MentionBee-Kontext\n\nTechnische Prüfungen können das Vorhandensein der Datei erfassen. Ob sie Empfehlungen verändert, ist empirisch nicht pauschal belegt. Der Artikel zu llms.txt vertieft Anwendung und Grenzen; dieses Glossar hält die Definition."
+}

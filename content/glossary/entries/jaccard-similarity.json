@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "contentType": "glossary",
+  "locale": "de",
+  "conceptKey": "JACCARD_SIMILARITY",
+  "slug": "jaccard-similarity",
+  "term": "Jaccard-Ähnlichkeit",
+  "aliases": ["Jaccard Similarity", "Jaccard-Index", "Jaccard-Koeffizient"],
+  "shortDefinition": "Die Jaccard-Ähnlichkeit misst, wie stark sich zwei Mengen überschneiden: Schnittmenge geteilt durch Vereinigungsmenge. In der AI Visibility kann sie zeigen, wie ähnlich zwei Empfehlungs- oder Erwähnungsmengen sind.",
+  "termOrigin": "established",
+  "seoTitle": "Jaccard-Ähnlichkeit erklärt | MentionBee Glossar",
+  "metaDescription": "Jaccard-Ähnlichkeit ist ein etablierter Mengenvergleich. Wie MentionBee ihn methodisch nutzt – und warum leere Mengen nicht einfach als «identisch» gelten.",
+  "relatedConceptKeys": ["AI_RECOMMENDATION", "SHARE_OF_VOICE", "ASA", "AI_VISIBILITY"],
+  "relatedArticles": [
+    { "title": "Deep-Dive Report", "path": "/report" }
+  ],
+  "status": "published",
+  "publishedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "authorId": "olaf-kunz",
+  "markdownBody": "## Die Formel, ohne Mystik\n\nDie **Jaccard-Ähnlichkeit** (Jaccard-Index) ist ein etablierter Wert zwischen 0 und 1: Grösse der Schnittmenge zweier Mengen geteilt durch die Grösse der Vereinigung. Zwei identische Mengen ergeben 1, disjunkte Mengen 0.\n\nBeispiel: System A empfiehlt {Alpha, Beta}, System B {Beta, Gamma}. Schnitt {Beta}, Vereinigung {Alpha, Beta, Gamma} → Jaccard 1/3.\n\n## Warum das in der AI Visibility vorkommt\n\nWenn man vergleicht, welche Marken zwei KI-Systeme empfehlen oder erwähnen, braucht man ein einfaches Überlappungsmass. Jaccard ist dafür geeignet, weil es Mengen vergleicht, nicht Ranglisten.\n\n## Eine methodische Falle\n\nZwei **leere** Mengen sind mathematisch oft als identisch definiert (Jaccard 1). Für Empfehlungen wäre das irreführend: «Beide Systeme empfehlen niemanden» ist keine hohe Übereinstimmung der Empfehlungen. MentionBee behandelt in Studienkontexten leere Fälle deshalb gesondert statt sie als perfekte Ähnlichkeit zu verkaufen. Das ist eine **methodische Festlegung**, kein Widerspruch zur klassischen Formel.\n\n## Was Jaccard nicht misst\n\nKeine Qualität der Begründung, keine Reihenfolge, keine Stärke der Empfehlung. Nur Mengenüberlappung. Wer Jaccard als «wie ähnlich ChatGPT und Claude denken» liest, überinterpretiert."
+}
