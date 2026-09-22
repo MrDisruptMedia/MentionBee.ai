@@ -29,6 +29,13 @@ describe("glossary V1", () => {
     assert.equal(new Set(all.map((e) => e.slug)).size, all.length);
     assert.equal(new Set(all.map((e) => e.conceptKey)).size, all.length);
     assert.ok(published.length >= 15 && published.length <= 20);
+    const mentionVsRec = published.find((e) => e.conceptKey === "MENTION_VS_RECOMMENDATION");
+    assert.equal(mentionVsRec?.termOrigin, "emerging");
+    const score = published.find((e) => e.conceptKey === "AI_VISIBILITY_SCORE");
+    assert.equal(score?.termOrigin, "mentionbee");
+    const asa = published.find((e) => e.conceptKey === "ASA");
+    assert.equal(asa?.termOrigin, "mentionbee");
+    assert.equal(getPublishedGlossaryBySlug("retrieval-augmented-generation"), null);
   });
 
   it("groups A–Z without empty letters and uses canonical URLs", () => {

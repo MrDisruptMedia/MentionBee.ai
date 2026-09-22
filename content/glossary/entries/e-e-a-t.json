@@ -10,14 +10,22 @@
   "shortDefinition": "E-E-A-T steht für Experience, Expertise, Authoritativeness und Trustworthiness – ein Qualitätsrahmen aus der Google-Suche, der beschreibt, ob Inhalte erfahrungsbasiert, fachkundig, autoritativ und vertrauenswürdig wirken.",
   "termOrigin": "established",
   "seoTitle": "E-E-A-T erklärt: Erfahrung, Expertise, Autorität, Vertrauen | MentionBee Glossar",
-  "metaDescription": "E-E-A-T ist Googles Qualitätsrahmen für Erfahrung, Expertise, Autorität und Vertrauen. Was er bedeutet, was er nicht ist, und wie MentionBee Vertrauenssignale einordnet.",
-  "relatedConceptKeys": ["STRUCTURED_DATA", "ENTITY", "AI_VISIBILITY", "GENERATIVE_ENGINE_OPTIMIZATION"],
+  "metaDescription": "E-E-A-T ist Googles Qualitätsrahmen, kein einzelner Rankingfaktor und keine Garantie für KI-Empfehlungen. Was er bedeutet und wie MentionBee Vertrauenssignale einordnet.",
+  "relatedConceptKeys": ["STRUCTURED_DATA", "ENTITY", "AI_VISIBILITY"],
   "relatedArticles": [
-    { "title": "E-E-A-T und KI-Sichtbarkeit", "path": "/blog/eeat-faelschbar-ki-sichtbarkeit" }
+    { "title": "E-E-A-T ist fälschbar: Was Google und KI-Systeme über Glaubwürdigkeit wirklich erkennen können", "path": "/blog/eeat-faelschbar-ki-sichtbarkeit" }
+  ],
+  "sources": [
+    {
+      "title": "Creating helpful, reliable, people-first content",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "publisher": "Google Search Central",
+      "note": "Google beschreibt E-E-A-T als Konzept hinter Qualitätsbewertung, ausdrücklich nicht als einzelnen Rankingfaktor."
+    }
   ],
   "status": "published",
   "publishedAt": "2026-09-22T12:00:00.000Z",
-  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T15:00:00.000Z",
   "authorId": "olaf-kunz",
-  "markdownBody": "## Was E-E-A-T bedeutet\n\n**E-E-A-T** fasst vier Qualitätsdimensionen zusammen, die Google in Qualitätsrichtlinien für Bewerter beschreibt: Erfahrung, Fachwissen, Autorität, Vertrauenswürdigkeit. Der Begriff ist in der SEO-Praxis etabliert, aber **kein einzelner Rankingfaktor mit öffentlich bekannter Formel**.\n\nErfahrung (das zweite E) betont, dass jemand ein Thema selbst genutzt oder durchlebt hat – nicht nur zusammengeschrieben.\n\n## Was E-E-A-T nicht ist\n\nKein Zertifikat, kein Score, den man «auf 100» bringen kann, und keine Garantie für KI-Empfehlungen. Wer E-E-A-T nur als Badge oder Autorenbox ohne Substanz nachbildet, erzeugt Kulisse.\n\nFür KI-Systeme sind Vertrauenssignale ebenfalls relevant, aber nicht identisch mit Googles Rater-Guidelines. Übertragung 1:1 ist eine Annahme, keine Messung.\n\n## Praktische Substanz\n\nNachvollziehbare Autorenschaft, echte Fallbeispiele, klare Verantwortlichkeit, konsistente Firmendaten, Bewertungen und Fachinhalte, die Fragen beantworten. Das sind handwerkliche Signale – unabhängig vom Akronym.\n\n## MentionBee-Kontext\n\nIm Report heisst das Modul öffentlich **Vertrauen & Expertise** und prüft unter anderem strukturierte Daten und maschinenlesbare Expertise-Hinweise. MentionBee verkauft E-E-A-T nicht als Geheimformel. Vertiefung, warum nachgeahmtes E-E-A-T wenig nützt, steht im Artikel – hier bleibt die Definition."
+  "markdownBody": "## Was E-E-A-T bedeutet\n\n**E-E-A-T** fasst vier Qualitätsdimensionen zusammen, die Google in den Qualitätsrichtlinien für Bewerter und in der Search-Dokumentation beschreibt: Erfahrung, Fachwissen, Autorität, Vertrauenswürdigkeit. Der Begriff ist in der SEO-Praxis etabliert, aber **kein einzelner Rankingfaktor mit öffentlich bekannter Formel**. Google selbst betont, dass Vertrauen der zentrale Aspekt ist und E-E-A-T kein isolierter Score.\n\nErfahrung (das zweite E) betont, dass jemand ein Thema selbst genutzt oder durchlebt hat – nicht nur zusammengeschrieben.\n\n## Was E-E-A-T nicht ist\n\nKein Zertifikat, kein Score, den man «auf 100» bringen kann, und keine Garantie für KI-Empfehlungen. Wer E-E-A-T nur als Badge oder Autorenbox ohne Substanz nachbildet, erzeugt Kulisse.\n\nOb dieselben Signale KI-Systeme steuern wie Google Search, ist **nicht 1:1 belegt**. Übertragung ist eine Annahme, keine Messung.\n\n## Praktische Substanz\n\nNachvollziehbare Autorenschaft, echte Fallbeispiele, klare Verantwortlichkeit, konsistente Firmendaten, Bewertungen und Fachinhalte, die Fragen beantworten. Das sind handwerkliche Signale – unabhängig vom Akronym.\n\n## MentionBee-Kontext\n\nIm Report heisst das Modul öffentlich **Vertrauen & Expertise** und prüft unter anderem strukturierte Daten und maschinenlesbare Expertise-Hinweise. MentionBee verkauft E-E-A-T nicht als Geheimformel. Vertiefung, warum nachgeahmtes E-E-A-T wenig nützt, steht im Artikel."
 }

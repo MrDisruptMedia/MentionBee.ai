@@ -5,6 +5,7 @@ import {
   GlossaryBreadcrumb,
   GlossaryRelatedArticles,
   GlossaryRelatedTerms,
+  GlossarySources,
 } from "@/components/glossary/GlossaryChrome";
 import { GlossaryOriginBadge } from "@/components/glossary/GlossaryOriginBadge";
 import { getGlossaryAuthor } from "@/content/glossary/authors";
@@ -107,6 +108,7 @@ export default async function GlossaryTermPage({
 
         <GlossaryRelatedTerms terms={related.map((item) => ({ slug: item.slug, term: item.term }))} />
         <GlossaryRelatedArticles articles={entry.relatedArticles} />
+        <GlossarySources sources={entry.sources} />
       </article>
     </>
   );

@@ -47,12 +47,12 @@ export default function GlossaryIndexPage() {
         </div>
       </section>
 
-      <div className="mx-auto w-full max-w-3xl px-4 py-14 md:py-20">
+      <div className="mx-auto w-full max-w-3xl px-4 py-10 md:py-14">
         {published.length === 0 ? (
           <p className="text-mention-gray">{glossaryUiCopy.emptyIndex}</p>
         ) : (
           groups.map((group) => (
-            <section key={group.letter} id={`letter-${group.letter}`} className="mb-12 scroll-mt-28">
+            <section key={group.letter} id={`letter-${group.letter}`} className="mb-8 scroll-mt-28 last:mb-0">
               <h2 className="font-heading text-2xl font-semibold text-mention-dark">{group.letter}</h2>
               <ul className="mt-4 divide-y divide-zinc-200 rounded-2xl border border-zinc-200 bg-white">
                 {group.entries.map((entry) => (

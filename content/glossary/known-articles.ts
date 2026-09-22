@@ -23,4 +23,6 @@ export const KNOWN_PUBLIC_ARTICLE_PATHS: readonly string[] = [
   "/blog/neue-ki-modelle-ai-visibility",
   "/blog/ai-visibility-audit-oder-monitoring",
   "/blog/die-besten-ai-visibility-audits-fuer-kmu",
+  "/blog/konkurrent-chatgpt-claude-gemini-sichtbar-ich-nicht",
+  "/blog/stille-umsatzvernichtung-ki-sichtbarkeit",
 ];

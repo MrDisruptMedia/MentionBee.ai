@@ -6,18 +6,17 @@
   "slug": "ai-visibility-score",
   "term": "AI Visibility Score",
   "aliases": ["KI-Sichtbarkeits-Score", "MentionBee Score"],
-  "shortDefinition": "Der AI Visibility Score ist bei MentionBee eine verdichtete Kennzahl aus gemessenen KI-Antworten und weiteren Modulen – kein branchenweiter Standardindex.",
+  "shortDefinition": "Der AI Visibility Score ist bei MentionBee eine produktspezifische Gesamtzahl aus gemessenen KI-Antworten und weiteren Prüfbereichen – kein branchenweiter Standardindex.",
   "termOrigin": "mentionbee",
   "seoTitle": "AI Visibility Score (MentionBee) | Glossar",
-  "metaDescription": "Was der AI Visibility Score bei MentionBee misst, was er nicht ist, und warum er keine allgemeine Branchennorm darstellt.",
+  "metaDescription": "Der AI Visibility Score ist MentionBees eigene verdichtete Kennzahl. Es gibt keinen universalen Branchenindex dieses Namens. Was er darstellt – und was nicht.",
   "relatedConceptKeys": ["ASA", "AI_VISIBILITY", "SHARE_OF_VOICE", "AI_VISIBILITY_AUDIT"],
   "relatedArticles": [
-    { "title": "Beispielreport", "path": "/sample-report" },
-    { "title": "Deep-Dive Report", "path": "/report" }
+    { "title": "Beispielreport: So liest du MentionBees Gesamtwert", "path": "/sample-report" }
   ],
   "status": "published",
   "publishedAt": "2026-09-22T12:00:00.000Z",
-  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T15:00:00.000Z",
   "authorId": "olaf-kunz",
-  "markdownBody": "## Was der Score ist – und was nicht\n\n**AI Visibility Score** klingt nach einem universalen Index. Es gibt keinen solchen Branchenstandard. Jeder Anbieter gewichtet anders.\n\nBei MentionBee ist der Score ein **produktspezifischer Gesamtwert**. Er verdichtet unter anderem die KI-Präsenz (Modul «KI-Präsenz & Sichtbarkeit», intern LLM + ASA) mit weiteren Prüfbereichen wie inhaltlicher Klarheit, Technik, Schema/E-E-A-T, Nutzerführung und externen Marktsignalen. Die Labels im Report sind bewusst verständlich formuliert; die technischen Modulnamen bleiben intern nachvollziehbar.\n\n## Wie man ihn lesen sollte\n\nEin Score ist eine **Verdichtung**, keine vollständige Erklärung. Zwei Unternehmen mit ähnlichem Gesamtwert können in KI-Antworten sehr unterschiedlich dastehen: das eine oft erwähnt, das andere selten, aber empfohlen. Deshalb gehören Klassifikation der Antworten und qualitative Hinweise dazu.\n\nFehlende Messzellen dürfen den Score nicht so tun, als wäre «nicht erwähnt» gemessen worden. MentionBee unterscheidet fehlende Messung von echter Nicht-Nennung.\n\n## Missbrauch vermeiden\n\nDer Score eignet sich zum Einordnen eines Audits, nicht als öffentlich vergleichbares «Ranking der Schweizer KMU». Ohne identische Fragen, Systeme und Zeitpunkt sind Vergleiche zwischen Tools irreführend.\n\n## MentionBee-Kontext\n\nDie genaue Gewichtung und die Skala stehen im Report. Dieses Glossar hält fest: Der Begriff ist **MentionBee-spezifisch**, auch wenn andere denselben Namen für andere Rechenwege nutzen."
+  "markdownBody": "## Was der Score ist – und was nicht\n\n**AI Visibility Score** klingt nach einem universalen Index. Es gibt **keinen solchen Branchenstandard**. Andere Anbieter können denselben Namen für andere Rechenwege nutzen.\n\nBei MentionBee ist der Score ein **eigener, produktspezifischer Gesamtwert**. Er verdichtet die gemessene KI-Präsenz mit weiteren Prüfbereichen der Website und des Marktumfelds – öffentlich unter anderem als KI-Präsenz & Sichtbarkeit, Inhalte & Verständlichkeit, technische Grundlagen, Vertrauen & Expertise, Nutzererlebnis und externe Marktsignale. Die genaue Gewichtung gehört in den Report, nicht in ein öffentliches Glossar.\n\n## Wie man ihn lesen sollte\n\nEin Score ist eine **Verdichtung**, keine vollständige Erklärung. Zwei Unternehmen mit ähnlichem Gesamtwert können in KI-Antworten sehr unterschiedlich dastehen: das eine oft erwähnt, das andere selten, aber empfohlen. Deshalb gehören Klassifikation der Antworten und qualitative Hinweise dazu.\n\nFehlende Messzellen dürfen den Score nicht so tun, als wäre «nicht erwähnt» gemessen worden. MentionBee unterscheidet fehlende Messung von echter Nicht-Nennung.\n\n## Was der Score nicht ist\n\nKein öffentlich vergleichbares Ranking der Schweizer KMU. Kein Nachweis, dass ein höherer Wert «mehr Kunden» erzeugt. Ohne identische Fragen, Systeme und Zeitpunkt sind Vergleiche zwischen Tools irreführend.\n\nShare of Voice und Empfehlungsanteil sind andere Grössen. Der Score darf sie nicht ersetzen.\n\n## MentionBee-Kontext\n\nDieses Glossar hält fest: Der Name ist hier **MentionBee-spezifisch**. Die Skala und Modulgewichte stehen im jeweiligen Report."
 }

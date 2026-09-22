@@ -9,14 +9,20 @@
   "shortDefinition": "Schema.org ist ein gemeinsames Vokabular für strukturierte Daten im Web. Es definiert Typen und Eigenschaften, mit denen Seiten Organisation, Artikel oder Ereignisse beschreiben können.",
   "termOrigin": "established",
   "seoTitle": "Schema.org erklärt | MentionBee Glossar",
-  "metaDescription": "Schema.org ist das Standardvokabular für strukturierte Daten. Welche Rolle es für Suche, Entitäten und AI Visibility spielt – ohne Garantieversprechen.",
-  "relatedConceptKeys": ["STRUCTURED_DATA", "ENTITY", "EEAT", "LLMS_TXT"],
-  "relatedArticles": [
-    { "title": "Deep-Dive Report", "path": "/report" }
+  "metaDescription": "Schema.org ist das Standardvokabular für strukturierte Daten. Welche Rolle es für Suche und Entitäten spielt – ohne Garantie für KI-Empfehlungen.",
+  "relatedConceptKeys": ["STRUCTURED_DATA", "ENTITY", "EEAT"],
+  "relatedArticles": [],
+  "sources": [
+    {
+      "title": "Schema.org vocabulary",
+      "url": "https://schema.org/",
+      "publisher": "Schema.org",
+      "note": "Primärquelle des Vokabulars."
+    }
   ],
   "status": "published",
   "publishedAt": "2026-09-22T12:00:00.000Z",
-  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T15:00:00.000Z",
   "authorId": "olaf-kunz",
-  "markdownBody": "## Was Schema.org ist\n\n**Schema.org** ist ein von grossen Suchanbietern getragenes Vokabular. Es legt fest, wie man Dinge wie `Organization`, `Person` oder `FAQPage` benennt. Der Standard ist etabliert; die Unterstützung einzelner Typen in Suchoberflächen ändert sich.\n\nSchema.org ist nicht «das Ranking-Geheimnis von Google» und auch nicht ein KI-Protokoll. Es ist eine **gemeinsame Sprache** für Markup.\n\n## Beziehung zu strukturierten Daten\n\nStrukturierte Daten sind das Format (häufig JSON-LD). Schema.org ist das Wörterbuch darin. Beides zusammen ergibt maschinenlesbare Aussagen über die Seite.\n\n## Für AI Visibility\n\nKlare Organisationsdaten können helfen, die Entität zu stabilisieren. Ob ein bestimmtes KI-Produkt Schema.org direkt einliest, ist produktabhängig und nicht vollständig öffentlich dokumentiert. Deshalb: Markup pflegen, weil es der Website und der Suche nützt – nicht weil ein Blog «Schema = ChatGPT-Empfehlung» behauptet.\n\n## MentionBee-Kontext\n\nMentionBee behandelt Schema als Teil der Vertrauens- und Maschinenlesbarkeit, nicht als eigenen Marketing-Hebel mit erfundenen Erfolgsquoten."
+  "markdownBody": "## Was Schema.org ist\n\n**Schema.org** ist ein von grossen Suchanbietern getragenes Vokabular. Es legt fest, wie man Dinge wie Organization, Person oder FAQPage benennt. Der Standard ist etabliert; die Unterstützung einzelner Typen in Suchoberflächen ändert sich.\n\nSchema.org ist nicht «das Ranking-Geheimnis von Google» und auch nicht ein KI-Protokoll. Es ist eine **gemeinsame Sprache** für Markup.\n\n## Beziehung zu strukturierten Daten\n\nStrukturierte Daten sind das Format (häufig JSON-LD). Schema.org ist das Wörterbuch darin. Beides zusammen ergibt maschinenlesbare Aussagen über die Seite.\n\n## Für AI Visibility\n\nKlare Organisationsdaten können die Entität eindeutiger machen. Ob ein bestimmtes KI-Produkt Schema.org direkt einliest, ist produktabhängig und nicht vollständig öffentlich dokumentiert. Deshalb: Markup pflegen, weil es der Website und der Suche nützt – nicht weil ein Blog «Schema = ChatGPT-Empfehlung» behauptet.\n\n## MentionBee-Kontext\n\nMentionBee behandelt Schema als Teil der Vertrauens- und Maschinenlesbarkeit, nicht als eigenen Marketing-Hebel mit erfundenen Erfolgsquoten."
 }

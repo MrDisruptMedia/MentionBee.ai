@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import type { GlossarySource } from "@/content/glossary/types";
 import { glossaryUiCopy } from "@/content/glossary/ui-copy";
 import { GLOSSARY_INDEX_PATH, glossaryTermPath } from "@/lib/glossary/canonical";
 
@@ -101,5 +102,36 @@ export function GlossaryRelatedArticles({
         ))}
       </ul>
     </nav>
+  );
+}
+
+export function GlossarySources({ sources }: { sources?: GlossarySource[] }) {
+  if (!sources || sources.length === 0) return null;
+  return (
+    <section className="mt-10 border-t border-zinc-200 pt-8">
+      <h2 className="font-heading text-lg font-semibold text-mention-dark">
+        {glossaryUiCopy.sourcesHeading}
+      </h2>
+      <ul className="mt-4 space-y-3 text-sm leading-relaxed text-mention-gray">
+        {sources.map((source) => (
+          <li key={`${source.title}-${source.url ?? "no-url"}`}>
+            {source.url ? (
+              <a
+                href={source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-primary underline underline-offset-2 hover:text-primary-dark"
+              >
+                {source.title}
+              </a>
+            ) : (
+              <span className="font-medium text-mention-dark">{source.title}</span>
+            )}
+            {source.publisher ? <span> — {source.publisher}</span> : null}
+            {source.note ? <span className="block mt-0.5">{source.note}</span> : null}
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

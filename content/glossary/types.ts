@@ -17,6 +17,13 @@ export type GlossaryRelatedArticle = {
   path: string;
 };
 
+export type GlossarySource = {
+  title: string;
+  url?: string;
+  publisher?: string;
+  note?: string;
+};
+
 export type GlossaryEntry = {
   schemaVersion: typeof GLOSSARY_SCHEMA_VERSION;
   contentType: typeof GLOSSARY_CONTENT_TYPE;
@@ -34,6 +41,7 @@ export type GlossaryEntry = {
   metaDescription: string;
   relatedConceptKeys: string[];
   relatedArticles: GlossaryRelatedArticle[];
+  sources?: GlossarySource[];
   status: GlossaryPublicationStatus;
   publishedAt: string | null;
   updatedAt: string | null;

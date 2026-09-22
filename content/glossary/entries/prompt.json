@@ -9,14 +9,14 @@
   "shortDefinition": "Ein Prompt ist die Eingabe an ein KI-System – die Frage oder Anweisung, auf die die Antwort folgt. Für AI Visibility sind vor allem kaufnahe Prompts relevant.",
   "termOrigin": "established",
   "seoTitle": "Prompt: KI-Frage und Testinput erklärt | MentionBee Glossar",
-  "metaDescription": "Was ein Prompt ist, warum die Formulierung die KI-Antwort verändert, und welche Rolle Testfragen in der AI-Visibility-Messung spielen.",
-  "relatedConceptKeys": ["AI_SEARCH", "LARGE_LANGUAGE_MODEL", "AI_VISIBILITY", "ASA"],
+  "metaDescription": "Was ein Prompt ist, warum die Formulierung die Antwort verändern kann, und welche Rolle Testfragen in der AI-Visibility-Messung spielen.",
+  "relatedConceptKeys": ["AI_SEARCH", "ASA", "AI_VISIBILITY", "LARGE_LANGUAGE_MODEL"],
   "relatedArticles": [
-    { "title": "Wie Kunden ChatGPT fragen", "path": "/blog/wie-kunden-chatgpt-fragen-ki-sichtbarkeit" }
+    { "title": "Wir wissen nicht, wie deine Kunden ChatGPT fragen. Und das ist das eigentliche Problem.", "path": "/blog/wie-kunden-chatgpt-fragen-ki-sichtbarkeit" }
   ],
   "status": "published",
   "publishedAt": "2026-09-22T12:00:00.000Z",
-  "updatedAt": "2026-09-22T12:00:00.000Z",
+  "updatedAt": "2026-09-22T15:00:00.000Z",
   "authorId": "olaf-kunz",
-  "markdownBody": "## Was ein Prompt ist\n\nEin **Prompt** ist die Texteingabe an ein Sprachmodell oder ein darauf aufbauendes Produkt: eine Frage, eine Aufgabe, oft mit Kontext. Der Begriff ist in der KI-Praxis etabliert.\n\nFür Unternehmen zählt weniger Prompt-Engineering als Hobby, sondern: **Welche Fragen stellen mögliche Kunden wirklich?** «Wer macht Treuhand in Winterthur?» führt zu anderen Antworten als «Erkläre Treuhand».\n\n## Warum Formulierung die Sichtbarkeit verändert\n\nDieselbe Marke kann in einer engen lokalen Frage erscheinen und in einer generischen Branchenfrage fehlen. Systeme reagieren auf Sprache, Region, Vergleichswörter und implizite Kriterien («zuverlässig», «für KMU», «ohne Abo»).\n\nEin einzelner Selbsttest («ChatGPT, kennst du uns?») ist deshalb kein Audit. Die Frage ist voreingenommen, der Chat oft mit Markenkontext gefüllt.\n\n## MentionBee-Kontext\n\nMentionBee verwendet kaufnahe Testfragen – intern oft nach Typen wie Marke, Vergleich und Problem – über mehrere Systeme. Die Prompts sind Teil der Messung, nicht das Produkt, das Käufer «optimieren» sollen. Wer Inhalte schreibt, sollte echte Käuferfragen beantworten; das ist GEO-Arbeit, nicht Prompt-Tricks gegenüber dem eigenen Chat.\n\nVertiefung, wie Kundinnen tatsächlich fragen, gehört in den entsprechenden Artikel."
+  "markdownBody": "## Was ein Prompt ist\n\nEin **Prompt** ist die Texteingabe an ein Sprachmodell oder ein darauf aufbauendes Produkt: eine Frage, eine Aufgabe, oft mit Kontext. Der Begriff ist in der KI-Praxis etabliert.\n\nFür Unternehmen zählt weniger Prompt-Engineering als Hobby, sondern: **Welche Fragen stellen mögliche Kunden wirklich?** «Wer macht Treuhand in Winterthur?» führt zu anderen Antworten als «Erkläre Treuhand».\n\n## Warum Formulierung die gemessene Sichtbarkeit verändert\n\nDieselbe Marke kann in einer engen lokalen Frage erscheinen und in einer generischen Branchenfrage fehlen. Systeme reagieren auf Sprache, Region, Vergleichswörter und implizite Kriterien.\n\nEin einzelner Selbsttest («ChatGPT, kennst du uns?») ist deshalb kein Audit. Die Frage ist voreingenommen, der Chat oft mit Markenkontext gefüllt.\n\n## MentionBee-Kontext\n\nMentionBee verwendet kaufnahe Testfragen – intern oft nach Typen wie Marke, Vergleich und Problem – über mehrere Systeme. Die Prompts sind Teil der Messung, nicht das Produkt, das Käufer «optimieren» sollen. Wer Inhalte schreibt, sollte echte Käuferfragen beantworten; das ist GEO-Arbeit, nicht Prompt-Tricks gegenüber dem eigenen Chat."
 }

@@ -112,6 +112,29 @@ export function validateGlossaryEntries(entries: GlossaryEntry[]): GlossaryValid
       }
     }
 
+    if (entry.relatedConceptKeys.length > 5) {
+      issues.push({
+        severity: "warning",
+        file,
+        message: `relatedConceptKeys has ${entry.relatedConceptKeys.length} items (aim 3–5)`,
+      });
+    }
+
+    if (entry.sources) {
+      if (!Array.isArray(entry.sources)) {
+        issues.push({ severity: "error", file, message: "sources must be an array" });
+      } else {
+        for (const source of entry.sources) {
+          if (!source.title?.trim()) {
+            issues.push({ severity: "error", file, message: "source missing title" });
+          }
+          if (source.url && !/^https:\/\//.test(source.url)) {
+            issues.push({ severity: "error", file, message: `source URL must be https: ${source.url}` });
+          }
+        }
+      }
+    }
+
     if (/ß/.test(`${entry.term}${entry.shortDefinition}${entry.markdownBody}`)) {
       issues.push({ severity: "warning", file, message: "Contains ß; Swiss copy uses ss" });
     }

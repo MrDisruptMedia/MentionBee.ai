@@ -15,7 +15,10 @@ export const glossaryCandidateClassification = {
     AI_SEARCH: { grade: "B", reason: "Context for how customers find companies via AI." },
     AI_RECOMMENDATION: { grade: "A", reason: "Core buyer outcome." },
     MENTION: { grade: "A", reason: "Needed to separate presence from recommendation." },
-    MENTION_VS_RECOMMENDATION: { grade: "A", reason: "Canonical MentionBee distinction." },
+    MENTION_VS_RECOMMENDATION: {
+      grade: "A",
+      reason: "Conceptual distinction is emerging/industry; MentionBee operationalizes it.",
+    },
     AI_VISIBILITY_AUDIT: { grade: "A", reason: "Product-relevant buyer decision." },
     AI_VISIBILITY_SCORE: { grade: "A", reason: "Product metric; must be marked MentionBee-specific." },
     ASA: { grade: "A", reason: "MentionBee measurement layer; must not look like an industry standard." },
