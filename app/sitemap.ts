@@ -1,57 +1,67 @@
 import type { MetadataRoute } from "next";
 
 import { PUBLISHED_ROUTES } from "@/content/published-routes";
-import { loadBlogIndex } from "@/lib/blog";
+import { STUDY_DATE_PUBLISHED } from "@/content/research/ai-visibility-2026";
+import { getAuthorFromArticles, loadBlogIndex } from "@/lib/blog";
 import { GLOSSARY_INDEX_PATH, glossaryTermPath } from "@/lib/glossary/canonical";
 import { glossarySitemapEntries } from "@/lib/glossary/sitemap-entries";
 import { listPublishedGlossaryEntries } from "@/lib/glossary/registry";
 import { MENTIONBEE_SITE_ORIGIN } from "@/lib/site-origin";
 
-const STATIC_ROUTES: MetadataRoute.Sitemap = [
-  { url: `${MENTIONBEE_SITE_ORIGIN}`, changeFrequency: "weekly", priority: 1 },
-  { url: `${MENTIONBEE_SITE_ORIGIN}/free-report`, changeFrequency: "monthly", priority: 0.9 },
-  { url: `${MENTIONBEE_SITE_ORIGIN}/report`, changeFrequency: "monthly", priority: 0.8 },
-  { url: `${MENTIONBEE_SITE_ORIGIN}/sample-report`, changeFrequency: "monthly", priority: 0.7 },
-  { url: `${MENTIONBEE_SITE_ORIGIN}/faq`, changeFrequency: "monthly", priority: 0.75 },
-  { url: `${MENTIONBEE_SITE_ORIGIN}/blog`, changeFrequency: "weekly", priority: 0.85 },
-  {
-    url: `${MENTIONBEE_SITE_ORIGIN}/studie/ai-visibility-2026`,
-    changeFrequency: "yearly",
-    priority: 0.9,
-  },
-  { url: `${MENTIONBEE_SITE_ORIGIN}/autor/olaf-kunz`, changeFrequency: "monthly", priority: 0.5 },
-  { url: `${MENTIONBEE_SITE_ORIGIN}/impressum`, changeFrequency: "yearly", priority: 0.3 },
-  { url: `${MENTIONBEE_SITE_ORIGIN}/agb`, changeFrequency: "yearly", priority: 0.3 },
-  { url: `${MENTIONBEE_SITE_ORIGIN}/datenschutzerklaerung`, changeFrequency: "yearly", priority: 0.3 },
-];
+function siteUrl(path: string): string {
+  if (!path || path === "/") return MENTIONBEE_SITE_ORIGIN;
+  const p = path.startsWith("/") ? path : `/${path}`;
+  return `${MENTIONBEE_SITE_ORIGIN}${p}`;
+}
+
+function contentDate(raw: string | null | undefined): Date | undefined {
+  if (!raw) return undefined;
+  const date = new Date(raw);
+  return Number.isNaN(date.getTime()) ? undefined : date;
+}
+
+function latestContentDate(
+  items: Array<{ updatedAt?: string | null; publishedAt?: string | null }>,
+): Date | undefined {
+  let latest: Date | undefined;
+  for (const item of items) {
+    const date = contentDate(item.updatedAt || item.publishedAt);
+    if (date && (!latest || date > latest)) latest = date;
+  }
+  return latest;
+}
+
+function sitemapEntry(path: string, lastModified?: Date): MetadataRoute.Sitemap[number] {
+  return lastModified ? { url: siteUrl(path), lastModified } : { url: siteUrl(path) };
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   const blog = loadBlogIndex();
+  const author = getAuthorFromArticles("olaf-kunz");
 
-  const dynamicEntries: MetadataRoute.Sitemap = PUBLISHED_ROUTES.map((route) => ({
-    url: `${MENTIONBEE_SITE_ORIGIN}${route.path.startsWith("/") ? route.path : `/${route.path}`}`,
-    lastModified: route.publishedAt ? new Date(route.publishedAt) : now,
-    changeFrequency: route.changeFrequency ?? "monthly",
-    priority: route.priority ?? 0.7,
-  }));
+  const staticEntries: MetadataRoute.Sitemap = [
+    sitemapEntry("/"),
+    sitemapEntry("/free-report"),
+    sitemapEntry("/report"),
+    sitemapEntry("/sample-report"),
+    sitemapEntry("/faq"),
+    sitemapEntry("/blog", latestContentDate(blog.articles)),
+    sitemapEntry("/studie/ai-visibility-2026", contentDate(STUDY_DATE_PUBLISHED)),
+    sitemapEntry("/autor/olaf-kunz", latestContentDate(author?.articles ?? [])),
+    sitemapEntry("/impressum"),
+    sitemapEntry("/agb"),
+    sitemapEntry("/datenschutzerklaerung"),
+  ];
 
-  const blogEntries: MetadataRoute.Sitemap = blog.articles.map((a) => ({
-    url: `${MENTIONBEE_SITE_ORIGIN}${a.canonicalPath}`,
-    lastModified: new Date(a.updatedAt || a.publishedAt),
-    changeFrequency: "monthly",
-    priority: 0.8,
-  }));
+  const compareEntries: MetadataRoute.Sitemap = PUBLISHED_ROUTES.map((route) =>
+    sitemapEntry(route.path, contentDate(route.publishedAt)),
+  );
 
-  const staticWithDates = STATIC_ROUTES.map((e) => {
-    if (e.url === `${MENTIONBEE_SITE_ORIGIN}/blog` || e.url.endsWith("/autor/olaf-kunz")) {
-      const fromBlog = blog.articles[0]?.publishedAt;
-      return { ...e, lastModified: fromBlog ? new Date(fromBlog) : now };
-    }
-    return { ...e, lastModified: now };
-  });
+  const blogEntries: MetadataRoute.Sitemap = blog.articles.map((article) =>
+    sitemapEntry(article.canonicalPath, contentDate(article.updatedAt || article.publishedAt)),
+  );
 
-  return [...staticWithDates, ...dynamicEntries, ...blogEntries, ...glossarySitemapEntries()];
+  return [...staticEntries, ...compareEntries, ...blogEntries, ...glossarySitemapEntries()];
 }
 
 /** Used by Revenue OS production verification tests. */

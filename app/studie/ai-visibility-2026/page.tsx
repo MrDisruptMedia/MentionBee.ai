@@ -5,6 +5,7 @@ import {
   STUDY_CANONICAL_PATH,
   STUDY_PDF_PATH,
 } from "@/components/research/AiVisibilityStudy2026Page";
+import { STUDY_DATE_PUBLISHED } from "@/content/research/ai-visibility-2026";
 import { ORGANIZATION_ID, organizationNode } from "@/lib/json-ld";
 import { absoluteUrl, SITE_ORIGIN } from "@/lib/site";
 
@@ -12,7 +13,6 @@ const PAGE_URL = absoluteUrl(STUDY_CANONICAL_PATH);
 const OG_TITLE = "AI Visibility Study 2026: Das KI-Wettbewerbsfeld | MentionBee";
 const OG_DESCRIPTION =
   "MentionBee analysiert 1’164 KI-Antworten von ChatGPT, Claude, Gemini und Perplexity. Die Studie zeigt, wie stark sich KI-Wettbewerbsfelder unterscheiden und verändern.";
-const DATE_PUBLISHED = "2026-09-10";
 const AUTHOR_URL = absoluteUrl("/autor/olaf-kunz");
 const OG_IMAGE = absoluteUrl("/mentionbee-ai-visibility-study-2026-og.png");
 
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     description: OG_DESCRIPTION,
     locale: "de_DE",
     siteName: "MentionBee",
-    publishedTime: DATE_PUBLISHED,
-    modifiedTime: DATE_PUBLISHED,
+    publishedTime: STUDY_DATE_PUBLISHED,
+    modifiedTime: STUDY_DATE_PUBLISHED,
     authors: [AUTHOR_URL],
     images: [
       {
@@ -61,8 +61,8 @@ function studyJsonLd() {
         headline: "Deine Wettbewerberliste ist nicht das KI-Wettbewerbsfeld",
         name: "MentionBee AI Visibility Study 2026",
         description: OG_DESCRIPTION,
-        datePublished: DATE_PUBLISHED,
-        dateModified: DATE_PUBLISHED,
+        datePublished: STUDY_DATE_PUBLISHED,
+        dateModified: STUDY_DATE_PUBLISHED,
         inLanguage: "de-CH",
         isAccessibleForFree: true,
         mainEntityOfPage: {

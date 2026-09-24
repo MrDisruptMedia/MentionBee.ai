@@ -13,15 +13,15 @@ export function glossarySitemapEntries(): MetadataRoute.Sitemap {
       const date = new Date(raw);
       return !latest || date > latest ? date : latest;
     }, undefined),
-    changeFrequency: "weekly",
-    priority: 0.8,
   };
 
   const terms: MetadataRoute.Sitemap = published.map((entry) => ({
     url: glossaryCanonicalUrl(glossaryTermPath(entry.slug)),
-    lastModified: entry.updatedAt ? new Date(entry.updatedAt) : entry.publishedAt ? new Date(entry.publishedAt) : undefined,
-    changeFrequency: "monthly",
-    priority: 0.64,
+    lastModified: entry.updatedAt
+      ? new Date(entry.updatedAt)
+      : entry.publishedAt
+        ? new Date(entry.publishedAt)
+        : undefined,
   }));
 
   return [index, ...terms];
