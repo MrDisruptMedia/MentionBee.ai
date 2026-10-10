@@ -1,7 +1,38 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T18:15:57.377Z",
+  "generatedAt": "2026-10-10T18:41:52.663Z",
   "articles": [
+    {
+      "publicSlug": "ki-suche-sichtbare-wettbewerber-wechseln",
+      "canonicalPath": "/blog/ki-suche-sichtbare-wettbewerber-wechseln",
+      "title": "KI-Suche: Deine sichtbaren Wettbewerber wechseln in zwei Wochen",
+      "description": "Ein stabiler Sichtbarkeitswert kann täuschen: In 58,1 % der verglichenen Anbieter-Sets änderte sich die Zusammensetzung. Das zeigt unsere Studie mit 1'164 KI-Antworten.",
+      "publishedAt": "2026-10-10T18:40:00.000Z",
+      "updatedAt": "2026-10-10T18:40:00.000Z",
+      "contentTypeLabel": "Studie",
+      "tags": [
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "slug": "claude"
+        },
+        {
+          "id": "geo",
+          "label": "GEO",
+          "slug": "geo"
+        }
+      ]
+    },
     {
       "publicSlug": "wie-kunden-chatgpt-fragen-ki-sichtbarkeit",
       "canonicalPath": "/blog/wie-kunden-chatgpt-fragen-ki-sichtbarkeit",
