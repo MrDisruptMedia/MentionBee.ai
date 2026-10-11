@@ -37,11 +37,12 @@ function splitIntroAndRest(bodyHtml: string): { introHtml: string; restHtml: str
 }
 
 function fallbackHeroFromArticle(article: PublicArticle) {
-  const src = article.hero?.src;
-  if (!src) return null;
-  const alt = article.hero.alt || article.h1;
-  const width = article.hero.width || 1600;
-  const height = article.hero.height || 900;
+  const hero = article.hero;
+  const src = hero?.src;
+  if (!hero || !src) return null;
+  const alt = hero.alt || article.h1;
+  const width = hero.width || 1600;
+  const height = hero.height || 900;
   return {
     slug: article.publicSlug,
     alt,
