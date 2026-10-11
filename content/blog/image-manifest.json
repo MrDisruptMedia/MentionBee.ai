@@ -29,6 +29,17 @@
   },
   "articles": [
     {
+      "slug": "ki-suche-sichtbare-wettbewerber-wechseln",
+      "url": "https://mentionbee.ai/blog/ki-suche-sichtbare-wettbewerber-wechseln",
+      "alt": "ChatGPT, Claude, Gemini und Perplexity zeigen unterschiedliche Anbieterlisten, die auf dasselbe Unternehmen als wechselndes KI-Wettbewerbsfeld zulaufen",
+      "files": {
+        "master": "ki-suche-sichtbare-wettbewerber-wechseln-master.png",
+        "hero": "ki-suche-sichtbare-wettbewerber-wechseln-hero.webp",
+        "card": "ki-suche-sichtbare-wettbewerber-wechseln-card.webp",
+        "social": "ki-suche-sichtbare-wettbewerber-wechseln-social.jpg"
+      }
+    },
+    {
       "slug": "wie-kunden-chatgpt-fragen-ki-sichtbarkeit",
       "url": "https://mentionbee.ai/blog/wie-kunden-chatgpt-fragen-ki-sichtbarkeit",
       "alt": "Google-Suche vs. ChatGPT-Konversation: Wie sich das Suchverhalten verändert und was das für AI Visibility bedeutet",
