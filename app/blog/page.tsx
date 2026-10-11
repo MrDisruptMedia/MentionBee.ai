@@ -51,8 +51,8 @@ export default function BlogIndexPage() {
               <BlogArticleCard
                 publicSlug={article.publicSlug}
                 canonicalPath={article.canonicalPath}
-                title={article.title}
-                description={article.description}
+                title={article.cardTitle ?? article.title}
+                description={article.cardExcerpt ?? article.description}
                 publishedAt={article.publishedAt}
                 contentTypeLabel={article.contentTypeLabel}
               />

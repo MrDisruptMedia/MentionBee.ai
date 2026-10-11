@@ -61,6 +61,8 @@ export type PublicArticle = {
   title: string;
   h1: string;
   description: string;
+  cardTitle?: string;
+  cardExcerpt?: string;
   markdownBody: string;
   bodyHtml: string;
   lead: string | null;

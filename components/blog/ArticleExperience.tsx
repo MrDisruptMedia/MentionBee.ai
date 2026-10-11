@@ -36,9 +36,24 @@ function splitIntroAndRest(bodyHtml: string): { introHtml: string; restHtml: str
   return { introHtml: "", restHtml: html };
 }
 
+function fallbackHeroFromArticle(article: PublicArticle) {
+  const src = article.hero?.src;
+  if (!src) return null;
+  const alt = article.hero.alt || article.h1;
+  const width = article.hero.width || 1600;
+  const height = article.hero.height || 900;
+  return {
+    slug: article.publicSlug,
+    alt,
+    hero: { src, width, height, alt },
+    card: { src, width, height, alt },
+    social: { src, width, height },
+  };
+}
+
 export function ArticleExperience({ article }: { article: PublicArticle }) {
   const jsonLd = buildBlogPostingJsonLd(article);
-  const images = getBlogImages(article.publicSlug);
+  const images = getBlogImages(article.publicSlug) ?? fallbackHeroFromArticle(article);
   const authorImage = authorProfileImageSrc(article.author);
   const relatedCards = resolveRelatedArticleCards(article.related);
   const { introHtml, restHtml } = splitIntroAndRest(article.bodyHtml);
