@@ -40,6 +40,8 @@ export function OrderCompleteForm() {
   const [lastName, setLastName] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [industry, setIndustry] = useState("");
+  const [queryLanguage, setQueryLanguage] = useState<"" | "de" | "en">("");
+  const [targetMarket, setTargetMarket] = useState<"" | "CH" | "DE" | "AT" | "INTL">("");
   const [competitors, setCompetitors] = useState(["", "", ""]);
   const [questions, setQuestions] = useState<string[]>([]);
   const [selected, setSelected] = useState<Set<number>>(new Set());
@@ -82,7 +84,7 @@ export function OrderCompleteForm() {
   }, [url, email, firstName, lastName, companyName, industry, competitors]);
 
   async function loadQuestions() {
-    if (!url.trim() || !industry) return;
+    if (!url.trim() || !industry || !queryLanguage) return;
     setLoadingState("loading-questions");
     setQuestionsLoaded(false);
     setSelected(new Set());
@@ -110,6 +112,7 @@ export function OrderCompleteForm() {
             industry,
             content: crawledContent,
             brandName: companyName.trim() || undefined,
+            queryLanguage,
           }),
         });
         const suggestData = (await suggestRes.json()) as {
@@ -153,6 +156,7 @@ export function OrderCompleteForm() {
             industry,
             content: crawledContent,
             brandName: companyName.trim() || undefined,
+            queryLanguage,
           }),
         });
         const suggestData = (await suggestRes.json()) as {
@@ -195,7 +199,7 @@ export function OrderCompleteForm() {
   }
 
   async function handleSubmit() {
-    if (!url.trim() || !email.trim() || !firstName.trim() || !lastName.trim() || !companyName.trim() || !industry) {
+    if (!url.trim() || !email.trim() || !firstName.trim() || !lastName.trim() || !companyName.trim() || !industry || !queryLanguage || !targetMarket) {
       setError("Bitte fülle alle Pflichtfelder aus.");
       return;
     }
@@ -232,6 +236,8 @@ export function OrderCompleteForm() {
           lastName: lastName.trim(),
           companyName: companyName.trim(),
           industry,
+          queryLanguage,
+          targetMarket,
           competitors: competitors.map((c) => c.trim()).filter(Boolean),
           questions: useCustomOnly ? customs : selectedFromSuggested,
           custom_question_1: useCustomOnly ? "" : (customs[0] ?? ""),
@@ -368,6 +374,41 @@ export function OrderCompleteForm() {
 
       <section className={sectionClassName}>
         <h2 className="mb-1 text-base font-semibold text-mention-dark">
+          Abfragesprache und Zielmarkt <span className="text-red-500">*</span>
+        </h2>
+        <p className="mb-4 text-sm text-mention-gray">
+          In welcher Sprache und aus welchem Land fragen deine Kunden die KI?
+        </p>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <select
+            aria-label="Abfragesprache"
+            required
+            value={queryLanguage}
+            onChange={(e) => setQueryLanguage(e.target.value as typeof queryLanguage)}
+            className={inputClassName}
+          >
+            <option value="" disabled>Bitte Sprache auswählen</option>
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+          </select>
+          <select
+            aria-label="Zielmarkt"
+            required
+            value={targetMarket}
+            onChange={(e) => setTargetMarket(e.target.value as typeof targetMarket)}
+            className={inputClassName}
+          >
+            <option value="" disabled>Bitte Zielmarkt auswählen</option>
+            <option value="CH">Schweiz</option>
+            <option value="DE">Deutschland</option>
+            <option value="AT">Österreich</option>
+            <option value="INTL">International</option>
+          </select>
+        </div>
+      </section>
+
+      <section className={sectionClassName}>
+        <h2 className="mb-1 text-base font-semibold text-mention-dark">
           Wettbewerber <span className="font-normal text-mention-gray">(optional, bis zu 3)</span>
         </h2>
         <p className="mb-3 text-sm text-mention-gray">
@@ -405,10 +446,10 @@ export function OrderCompleteForm() {
         {!questionsLoaded ? (
           <button
             type="button"
-            disabled={!url.trim() || !industry || isLoadingQuestions}
+            disabled={!url.trim() || !industry || !queryLanguage || isLoadingQuestions}
             onClick={() => void loadQuestions()}
             className={`rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition ${
-              url.trim() && industry && !isLoadingQuestions
+              url.trim() && industry && queryLanguage && !isLoadingQuestions
                 ? "bg-primary text-mention-dark hover:bg-primary-dark"
                 : "cursor-not-allowed bg-zinc-300"
             }`}
@@ -470,8 +511,8 @@ export function OrderCompleteForm() {
           </>
         )}
 
-        {!url.trim() || !industry ? (
-          <p className="mt-3 text-sm text-mention-gray/80">Bitte zuerst URL und Branche ausfüllen.</p>
+        {!url.trim() || !industry || !queryLanguage ? (
+          <p className="mt-3 text-sm text-mention-gray/80">Bitte zuerst URL, Branche und Abfragesprache ausfüllen.</p>
         ) : null}
       </section>
 
@@ -484,7 +525,7 @@ export function OrderCompleteForm() {
       <button
         type="button"
         onClick={() => void handleSubmit()}
-        disabled={isSubmitting}
+        disabled={isSubmitting || !queryLanguage || !targetMarket}
         className={`w-full rounded-lg px-8 py-4 font-semibold text-white transition ${
           isSubmitting
             ? "cursor-not-allowed bg-zinc-300"

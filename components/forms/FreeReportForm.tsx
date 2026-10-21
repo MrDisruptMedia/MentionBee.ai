@@ -13,6 +13,8 @@ export function FreeReportForm() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
+  const [queryLanguage, setQueryLanguage] = useState<"" | "de" | "en">("");
+  const [targetMarket, setTargetMarket] = useState<"" | "CH" | "DE" | "AT" | "INTL">("");
   const [marketingConsent, setMarketingConsent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -32,6 +34,8 @@ export function FreeReportForm() {
           lastName: lastName.trim(),
           email: email.trim(),
           website: website.trim(),
+          queryLanguage,
+          targetMarket,
           marketingConsent,
         }),
       });
@@ -142,6 +146,50 @@ export function FreeReportForm() {
               />
             </div>
 
+            <div>
+              <p className="mb-2 text-sm text-mention-gray">
+                In welcher Sprache und aus welchem Land fragen deine Kunden die KI?
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="queryLanguage" className="text-sm font-medium text-mention-dark">
+                    Abfragesprache <span className="text-red-600">*</span>
+                  </label>
+                  <select
+                    id="queryLanguage"
+                    name="queryLanguage"
+                    required
+                    value={queryLanguage}
+                    onChange={(e) => setQueryLanguage(e.target.value as typeof queryLanguage)}
+                    className="mt-1.5 w-full rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-mention-dark outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
+                  >
+                    <option value="" disabled>Bitte auswählen</option>
+                    <option value="de">Deutsch</option>
+                    <option value="en">English</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="targetMarket" className="text-sm font-medium text-mention-dark">
+                    Zielmarkt <span className="text-red-600">*</span>
+                  </label>
+                  <select
+                    id="targetMarket"
+                    name="targetMarket"
+                    required
+                    value={targetMarket}
+                    onChange={(e) => setTargetMarket(e.target.value as typeof targetMarket)}
+                    className="mt-1.5 w-full rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-mention-dark outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
+                  >
+                    <option value="" disabled>Bitte auswählen</option>
+                    <option value="CH">Schweiz</option>
+                    <option value="DE">Deutschland</option>
+                    <option value="AT">Österreich</option>
+                    <option value="INTL">International</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
             <label className="flex cursor-pointer gap-3 text-sm leading-snug text-mention-gray">
               <input
                 type="checkbox"
@@ -166,7 +214,7 @@ export function FreeReportForm() {
 
             <button
               type="submit"
-              disabled={isLoading}
+              disabled={isLoading || !queryLanguage || !targetMarket}
               className="mt-2 w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark disabled:pointer-events-none disabled:opacity-60"
             >
               {isLoading ? "Wird analysiert..." : "Kostenlosen Report anfordern →"}
