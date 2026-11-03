@@ -32,6 +32,7 @@ const columns: FooterCol[] = [
       { label: "Beispielreport", href: "/sample-report" },
       { label: "So funktioniert's", href: "/#so-funktionierts" },
       { label: "Blog", href: "/blog" },
+      { label: "KI-Index", href: "/ki-index" },
       { label: "FAQ", href: "/faq" },
       { label: "AI-Glossar", href: "/ai-glossar" },
     ],

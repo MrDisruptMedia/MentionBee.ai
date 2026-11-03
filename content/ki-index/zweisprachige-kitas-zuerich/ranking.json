@@ -1,0 +1,2181 @@
+{
+  "slug": "zweisprachige-kitas-zuerich",
+  "month": "2026-11",
+  "branche": "Kinderbetreuung",
+  "stadt": "Zürich",
+  "denominator": 72,
+  "collectedFrom": "2026-11-03T09:25:38.287Z",
+  "collectedTo": "2026-11-03T09:30:36.508Z",
+  "questions": [
+    {
+      "id": "q1",
+      "lang": "de",
+      "text": "Welche deutsch-englische Kita in Zürich kannst du empfehlen?"
+    },
+    {
+      "id": "q2",
+      "lang": "de",
+      "text": "Wir suchen für unsere zweijährige Tochter eine zweisprachige Kita in Zürich, Deutsch und Englisch, mit Ganztagesbetreuung. Was gibt es da?"
+    },
+    {
+      "id": "q3",
+      "lang": "en",
+      "text": "We're moving to Zurich with our 3-year-old. Which bilingual German-English daycares would you recommend?"
+    },
+    {
+      "id": "q4",
+      "lang": "de",
+      "text": "Welche bilingualen Kitas in Zürich haben bei Eltern einen guten Ruf?"
+    },
+    {
+      "id": "q5",
+      "lang": "de",
+      "text": "Lohnt sich eine zweisprachige Kita in Zürich, und welche Anbieter kommen dafür in Frage?"
+    },
+    {
+      "id": "q6",
+      "lang": "de",
+      "text": "Gibt es in Zürich zweisprachige Kitas, die auch subventionierte Plätze der Stadt anbieten?"
+    }
+  ],
+  "models": {
+    "claude": "claude-sonnet-4-6",
+    "chatgpt": "gpt-5-search-api",
+    "gemini": "gemini-2.5-flash",
+    "perplexity": "sonar"
+  },
+  "method": {
+    "identity": "Kanonische Marke aus dem Anbieternamen. Standort ist Metadatum. Eine fehlende Website blockiert keine Zuordnung. Verzeichnis- und Betreiberdomains begründen keine Identität.",
+    "dedupe": "Pro Antwort zählt jede kanonische Marke höchstens einmal. Ist sie in derselben Antwort empfohlen und nur erwähnt, zählt nur die Empfehlung.",
+    "denominator": "Empfehlungsquote = gerundet(Empfehlungen / 72 * 100). Der Nenner bleibt 72.",
+    "rank": "Rang = 1 + Anzahl Anbieter mit strikt höherer Empfehlungszahl. Gleichstand behält denselben Rang und wird alphabetisch nach Name sortiert.",
+    "top3ShareOfRecommendations": "Summe der Empfehlungen der ersten drei Zeilen mit mindestens einer Empfehlung, geteilt durch die Summe aller Empfehlungen.",
+    "unresolved": "Einträge mit mehreren echten Marken bleiben aussen vor und stehen unter unklare Zuordnungen."
+  },
+  "completeness": {
+    "ok": 72,
+    "expected": 72
+  },
+  "costs": {
+    "mentionsUsd": 3.320723,
+    "extractionUsd": 0.288026,
+    "totalUsd": 3.608749,
+    "capUsd": 5
+  },
+  "metrics": {
+    "recommendedProviderCount": 42,
+    "totalRecommendations": 427,
+    "top3ShareOfRecommendations": 0.3325526932084309,
+    "providersRecommendedByAll4Models": [
+      "KiddieLand",
+      "Akidemy",
+      "Little Star Day School",
+      "Bärlis",
+      "Kita Allegra",
+      "KiTa Blüemli",
+      "Kita zum Waidberg",
+      "Children First",
+      "Tandem IMS",
+      "globegarden",
+      "Little Green House"
+    ]
+  },
+  "providers": [
+    {
+      "rank": 1,
+      "id": "kiddieland",
+      "name": "KiddieLand",
+      "website": "https://kiddieland.ch",
+      "locations": [
+        "Wipkingen"
+      ],
+      "recommendedCount": 54,
+      "empfehlungsquote": 75,
+      "modelsRecommending": 4,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 6,
+      "questions": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.12646370023419204,
+      "aliases": [
+        "KiddieLand – Bilingual Daycare & Kindergarten",
+        "KiddieLand – Bilingual Daycare + Kindergarten",
+        "KiddieLand – Bilinguale Kita & Kindergarten",
+        "KiddieLand – Zürich Wipkingen",
+        "KiddieLand (Wipkingen, Zürich)",
+        "KiddieLand Bilingual Childcare",
+        "KiddieLand Bilingual Childcare & Kindergarten",
+        "KiddieLand Bilingual Daycare & Kindergarten",
+        "KiddieLand Bilingual Daycare & Kindergarten Zürich",
+        "KiddieLand Bilingual Daycare + Kindergarten",
+        "KiddieLand Bilingual Daycare + Kindergarten Zürich",
+        "KiddieLand, Wipkingen"
+      ]
+    },
+    {
+      "rank": 2,
+      "id": "akidemy",
+      "name": "Akidemy",
+      "website": "https://www.akidemy.ch",
+      "locations": [],
+      "recommendedCount": 45,
+      "empfehlungsquote": 63,
+      "modelsRecommending": 4,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 6,
+      "questions": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "mentionedOnlyCount": 1,
+      "shareOfRecommendations": 0.1053864168618267,
+      "aliases": [
+        "Akidemy – Bilingual Daycare",
+        "Akidemy – Bilinguale Kitas in Zürich und Umgebung",
+        "Akidemy – Bilinguale KiTas Zürich",
+        "Akidemy Kita",
+        "Akidemy KiTa"
+      ]
+    },
+    {
+      "rank": 3,
+      "id": "little-star",
+      "name": "Little Star Day School",
+      "website": "https://littlestar.ch",
+      "locations": [
+        "Sihlcity",
+        "Wollishofen"
+      ],
+      "recommendedCount": 43,
+      "empfehlungsquote": 60,
+      "modelsRecommending": 4,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 6,
+      "questions": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.10070257611241218,
+      "aliases": [
+        "Little Star",
+        "Little Star Day School – Sihlcity",
+        "Little Star Day School – Sihlcity nursery",
+        "Little Star Day School – Sihlcity Nursery",
+        "Little Star Day School – Wollishofen",
+        "Little Star Day School in Wollishofen",
+        "Little Star Day School Wollishofen"
+      ]
+    },
+    {
+      "rank": 4,
+      "id": "baerlis",
+      "name": "Bärlis",
+      "website": "https://baerlis.ch",
+      "locations": [
+        "Kreis 6"
+      ],
+      "recommendedCount": 31,
+      "empfehlungsquote": 43,
+      "modelsRecommending": 4,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 5,
+      "questions": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.07259953161592506,
+      "aliases": [
+        "Bärlis / Villa Bärlis",
+        "Bärlis/Villa Bärlis",
+        "Kita Bärlis",
+        "Kita Bärlis – Zürich Kreis 6",
+        "Kita Bärlis / Villa Bärlis",
+        "KITA BÄRLIS / VILLA BÄRLIS, Zürich 6",
+        "Kita Bärlis und Villa Bärlis",
+        "Villa Bärlis",
+        "VILLA BÄRLIS",
+        "Villa Bärlis / Bärlis Kitas"
+      ]
+    },
+    {
+      "rank": 5,
+      "id": "allegra",
+      "name": "Kita Allegra",
+      "website": "https://kitaallegra.ch/kita-beckenhof-zurich",
+      "locations": [
+        "Beckenhof",
+        "Kreis 6"
+      ],
+      "recommendedCount": 30,
+      "empfehlungsquote": 42,
+      "modelsRecommending": 4,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 5,
+      "questions": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.0702576112412178,
+      "aliases": [
+        "Allegra",
+        "Allegra Beckenhof",
+        "Allegra Beckenhof / pop e poppa",
+        "Allegra Beckenhof, pop e poppa",
+        "allegra Kita",
+        "Kita allegra",
+        "Kita Allegra – Zürich Beckenhof",
+        "Kita Allegra (Beckenhof)",
+        "Kita Allegra (pop e poppa)",
+        "Kita Allegra (pop e poppa) Beckenhof",
+        "Kita Allegra Beckenhof",
+        "Kita Allegra by pop e poppa",
+        "Kita Allegra by pop e poppa – Beckenhof Zürich",
+        "Kita Allegra by pop e poppa (Beckenhof, Kreis 6)",
+        "Kita Allegra by pop e poppa (Beckenhof, Zürich)",
+        "Kita Allegra by pop e poppa Beckenhof",
+        "pop e poppa"
+      ]
+    },
+    {
+      "rank": 6,
+      "id": "bluemli",
+      "name": "KiTa Blüemli",
+      "website": "https://kitabluemli.ch",
+      "locations": [
+        "Witikon"
+      ],
+      "recommendedCount": 27,
+      "empfehlungsquote": 38,
+      "modelsRecommending": 4,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 6,
+      "questions": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.06323185011709602,
+      "aliases": [
+        "Bilinguale Kinderkrippe Blüemli – Waldkinderkrippe (Witikon, Zürich)",
+        "Blüemli",
+        "Kinderkrippe Blüemli",
+        "Kita Blüemli",
+        "KiTa Blüemli – Bilingual Forest Daycare",
+        "KiTa Blüemli – Bilinguale Waldkinderkrippe",
+        "Kita Blüemli – Witikon",
+        "KiTa Blüemli – Zürich Witikon",
+        "Kita Blüemli (Bilingual Forest Daycare)",
+        "KiTa Blüemli (Forest Daycare & regular)",
+        "Kita Blüemli (Waldkinderkrippe)"
+      ]
+    },
+    {
+      "rank": 7,
+      "id": "waidberg",
+      "name": "Kita zum Waidberg",
+      "website": "https://www.kitazumwaidberg.ch",
+      "locations": [
+        "Wipkingen"
+      ],
+      "recommendedCount": 25,
+      "empfehlungsquote": 35,
+      "modelsRecommending": 4,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 3,
+      "questions": [
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.0585480093676815,
+      "aliases": [
+        "Kita zum Waidberg (Wipkingen, Zürich)",
+        "Kita zum Waidberg in Zürich-Wipkingen"
+      ]
+    },
+    {
+      "rank": 8,
+      "id": "children-first",
+      "name": "Children First",
+      "website": "https://childrenfirst.ch",
+      "locations": [
+        "Oerlikon",
+        "Seefeld"
+      ],
+      "recommendedCount": 24,
+      "empfehlungsquote": 33,
+      "modelsRecommending": 4,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 5,
+      "questions": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.05620608899297424,
+      "aliases": [
+        "Children First - Seefeld",
+        "Children First – Bilingual Daycare & School",
+        "Children First – Seefeld",
+        "Children First – Seefeld / Oerlikon",
+        "Children First — Seefeld"
+      ]
+    },
+    {
+      "rank": 9,
+      "id": "tandem-ims",
+      "name": "Tandem IMS",
+      "website": "https://www.tandem-ims.ch/en/kindergarten",
+      "locations": [],
+      "recommendedCount": 19,
+      "empfehlungsquote": 26,
+      "modelsRecommending": 4,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 5,
+      "questions": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.04449648711943794,
+      "aliases": [
+        "Tandem IMS Kindergarten",
+        "TANDem IMS Kindergarten",
+        "Tandem IMS Kindergarten Zurich",
+        "Tandem IMS Kinderkrippe",
+        "Tandem IMS Nursery"
+      ]
+    },
+    {
+      "rank": 10,
+      "id": "globegarden",
+      "name": "globegarden",
+      "website": null,
+      "locations": [
+        "Alfred Escher",
+        "Bellerivestrasse",
+        "Fluntern",
+        "Limmattalstrasse",
+        "Nägelistrasse",
+        "Neugasse",
+        "Oerlikon",
+        "Sihlcity",
+        "Talacker",
+        "Thurgauerstrasse"
+      ],
+      "recommendedCount": 17,
+      "empfehlungsquote": 24,
+      "modelsRecommending": 4,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 6,
+      "questions": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "mentionedOnlyCount": 1,
+      "shareOfRecommendations": 0.03981264637002342,
+      "aliases": [
+        "Globegarden",
+        "globegarden Alfred Escher",
+        "globegarden Bellerivestrasse",
+        "globegarden Fluntern",
+        "globegarden Limmattalstrasse",
+        "globegarden Nägelistrasse",
+        "globegarden Neugasse",
+        "globegarden Sihlcity",
+        "globegarden Talacker",
+        "globegarden Thurgauerstrasse",
+        "globegarden Thurgauerstrasse, Oerlikon (Stadtkreis 11)"
+      ]
+    },
+    {
+      "rank": 11,
+      "id": "wings-school",
+      "name": "Wings School",
+      "website": "https://wingsschool.ch",
+      "locations": [
+        "Wiedikon"
+      ],
+      "recommendedCount": 12,
+      "empfehlungsquote": 17,
+      "modelsRecommending": 2,
+      "models": [
+        "claude",
+        "gemini"
+      ],
+      "questionsRecommending": 3,
+      "questions": [
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.02810304449648712,
+      "aliases": [
+        "Wings School – Bilingual Daycare & Kindergarten",
+        "Wings School – Daycare Zürich Wiedikon",
+        "Wings School – Kinderkrippe Zürich Wiedikon"
+      ]
+    },
+    {
+      "rank": 12,
+      "id": "joey",
+      "name": "Joey Kinderkrippe",
+      "website": null,
+      "locations": [
+        "Wollishofen"
+      ],
+      "recommendedCount": 10,
+      "empfehlungsquote": 14,
+      "modelsRecommending": 2,
+      "models": [
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 3,
+      "questions": [
+        "q1",
+        "q2",
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.0234192037470726,
+      "aliases": [
+        "Joey Kinderkrippe Wollishofen",
+        "Joey Kinderkrippe Zürich Wollishofen"
+      ]
+    },
+    {
+      "rank": 13,
+      "id": "little-green-house",
+      "name": "Little Green House",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 8,
+      "empfehlungsquote": 11,
+      "modelsRecommending": 4,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
+      "questionsRecommending": 3,
+      "questions": [
+        "q1",
+        "q4",
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.01873536299765808,
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "id": "little-learners",
+      "name": "Little Learners",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 8,
+      "empfehlungsquote": 11,
+      "modelsRecommending": 2,
+      "models": [
+        "chatgpt",
+        "gemini"
+      ],
+      "questionsRecommending": 4,
+      "questions": [
+        "q1",
+        "q2",
+        "q3",
+        "q6"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.01873536299765808,
+      "aliases": [
+        "Little Learners Bilingual Daycare",
+        "Little Learners Daycare & Preschool",
+        "Little Learners Kita",
+        "Little Learners Kita, Hort und Spielgruppe"
+      ]
+    },
+    {
+      "rank": 15,
+      "id": "crossing-borders",
+      "name": "Crossing Borders",
+      "website": "https://crossing-borders.ch",
+      "locations": [
+        "Manegg"
+      ],
+      "recommendedCount": 7,
+      "empfehlungsquote": 10,
+      "modelsRecommending": 1,
+      "models": [
+        "claude"
+      ],
+      "questionsRecommending": 3,
+      "questions": [
+        "q1",
+        "q2",
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.01639344262295082,
+      "aliases": [
+        "Crossing Borders – Bilinguale Kita",
+        "Crossing Borders – Bilinguale Kita Zürich Manegg",
+        "Crossing Borders Bilinguale Kita",
+        "Crossing Borders Bilinguale Kita (Zürich Manegg)"
+      ]
+    },
+    {
+      "rank": 15,
+      "id": "sonnenblumen",
+      "name": "Sonnenblumen Kindergarten",
+      "website": "https://sonnenblumen-kindergarten.ch",
+      "locations": [],
+      "recommendedCount": 7,
+      "empfehlungsquote": 10,
+      "modelsRecommending": 3,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini"
+      ],
+      "questionsRecommending": 4,
+      "questions": [
+        "q1",
+        "q2",
+        "q4",
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.01639344262295082,
+      "aliases": [
+        "Sonnenblumen Kindergarten (Children First)"
+      ]
+    },
+    {
+      "rank": 17,
+      "id": "swiss-international",
+      "name": "SIS Swiss International School",
+      "website": "https://swissinternationalschool.ch",
+      "locations": [
+        "Männedorf"
+      ],
+      "recommendedCount": 6,
+      "empfehlungsquote": 8,
+      "modelsRecommending": 3,
+      "models": [
+        "claude",
+        "chatgpt",
+        "gemini"
+      ],
+      "questionsRecommending": 3,
+      "questions": [
+        "q1",
+        "q3",
+        "q4"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.01405152224824356,
+      "aliases": [
+        "SIS Männedorf-Zürich",
+        "SIS Swiss International School – Bilingual Kindergarten",
+        "SIS Swiss International School Zürich"
+      ]
+    },
+    {
+      "rank": 18,
+      "id": "yemaya",
+      "name": "Kita Yemayá",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 5,
+      "empfehlungsquote": 7,
+      "modelsRecommending": 1,
+      "models": [
+        "chatgpt"
+      ],
+      "questionsRecommending": 2,
+      "questions": [
+        "q4",
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.0117096018735363,
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "id": "pasitos",
+      "name": "Pasitos",
+      "website": "https://www.kindergartenpasitos.ch",
+      "locations": [],
+      "recommendedCount": 5,
+      "empfehlungsquote": 7,
+      "modelsRecommending": 2,
+      "models": [
+        "claude",
+        "chatgpt"
+      ],
+      "questionsRecommending": 2,
+      "questions": [
+        "q4",
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.0117096018735363,
+      "aliases": [
+        "PASITOS",
+        "Pasitos – Kindergarten / Krippe",
+        "PASITOS / Guarderia",
+        "Pasitos Kindergarten",
+        "Pasitos Kindergarten & Kita"
+      ]
+    },
+    {
+      "rank": 20,
+      "id": "dayschool",
+      "name": "Dayschool",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 4,
+      "empfehlungsquote": 6,
+      "modelsRecommending": 1,
+      "models": [
+        "gemini"
+      ],
+      "questionsRecommending": 2,
+      "questions": [
+        "q1",
+        "q2"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00936768149882904,
+      "aliases": [
+        "Dayschool (Privat Kindergarten)"
+      ]
+    },
+    {
+      "rank": 20,
+      "id": "magic-fish",
+      "name": "MAGIC FISH",
+      "website": null,
+      "locations": [
+        "Fluntern"
+      ],
+      "recommendedCount": 4,
+      "empfehlungsquote": 6,
+      "modelsRecommending": 1,
+      "models": [
+        "chatgpt"
+      ],
+      "questionsRecommending": 2,
+      "questions": [
+        "q4",
+        "q6"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00936768149882904,
+      "aliases": [
+        "Kita MAGIC FISH",
+        "Kita MAGIC FISH (Fluntern, Zürich)"
+      ]
+    },
+    {
+      "rank": 22,
+      "id": "abc-schools",
+      "name": "ABC Schools",
+      "website": "https://abc-daycare.ch",
+      "locations": [],
+      "recommendedCount": 3,
+      "empfehlungsquote": 4,
+      "modelsRecommending": 1,
+      "models": [
+        "claude"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q2"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00702576112412178,
+      "aliases": [
+        "ABC Daycare Schools",
+        "ABC Schools (abc-daycare)"
+      ]
+    },
+    {
+      "rank": 22,
+      "id": "regenbogen",
+      "name": "Kita Regenbogen",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 3,
+      "empfehlungsquote": 4,
+      "modelsRecommending": 1,
+      "models": [
+        "gemini"
+      ],
+      "questionsRecommending": 2,
+      "questions": [
+        "q3",
+        "q4"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00702576112412178,
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "id": "kinderparadies",
+      "name": "Krippe Kinderparadies",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 3,
+      "empfehlungsquote": 4,
+      "modelsRecommending": 1,
+      "models": [
+        "gemini"
+      ],
+      "questionsRecommending": 2,
+      "questions": [
+        "q3",
+        "q4"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00702576112412178,
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "id": "parkside",
+      "name": "Parkside School",
+      "website": "https://www.acassa.ch",
+      "locations": [],
+      "recommendedCount": 3,
+      "empfehlungsquote": 4,
+      "modelsRecommending": 1,
+      "models": [
+        "chatgpt"
+      ],
+      "questionsRecommending": 2,
+      "questions": [
+        "q3",
+        "q6"
+      ],
+      "mentionedOnlyCount": 1,
+      "shareOfRecommendations": 0.00702576112412178,
+      "aliases": [
+        "Kita Parkside School"
+      ]
+    },
+    {
+      "rank": 22,
+      "id": "playground",
+      "name": "PLAYground education",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 3,
+      "empfehlungsquote": 4,
+      "modelsRecommending": 1,
+      "models": [
+        "gemini"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q3"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00702576112412178,
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "id": "seven-bears",
+      "name": "7 Bears Kindergarten",
+      "website": "https://7-bears.ch/kindergarten",
+      "locations": [],
+      "recommendedCount": 2,
+      "empfehlungsquote": 3,
+      "modelsRecommending": 1,
+      "models": [
+        "chatgpt"
+      ],
+      "questionsRecommending": 2,
+      "questions": [
+        "q1",
+        "q2"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00468384074941452,
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "id": "iszn",
+      "name": "ISZN",
+      "website": "https://www.iszn.ch/early-years",
+      "locations": [],
+      "recommendedCount": 2,
+      "empfehlungsquote": 3,
+      "modelsRecommending": 1,
+      "models": [
+        "chatgpt"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q3"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00468384074941452,
+      "aliases": [
+        "ISZN (International School Zurich North) – Early Years",
+        "ISZN Early Years"
+      ]
+    },
+    {
+      "rank": 27,
+      "id": "kids-and-co",
+      "name": "kids & co",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 2,
+      "empfehlungsquote": 3,
+      "modelsRecommending": 1,
+      "models": [
+        "perplexity"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q1"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00468384074941452,
+      "aliases": [
+        "kids & co City"
+      ]
+    },
+    {
+      "rank": 27,
+      "id": "maerliwaelt",
+      "name": "Kita Märliwält",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 2,
+      "empfehlungsquote": 3,
+      "modelsRecommending": 1,
+      "models": [
+        "perplexity"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q3"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00468384074941452,
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "id": "sonne-montessori",
+      "name": "Sonne Montessori Kindergarten",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 2,
+      "empfehlungsquote": 3,
+      "modelsRecommending": 1,
+      "models": [
+        "gemini"
+      ],
+      "questionsRecommending": 2,
+      "questions": [
+        "q3",
+        "q4"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00468384074941452,
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "id": "abc-learning-tree",
+      "name": "ABC Learning Tree",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 1,
+      "empfehlungsquote": 1,
+      "modelsRecommending": 1,
+      "models": [
+        "gemini"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q2"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00234192037470726,
+      "aliases": [
+        "ABC Learning Tree Kita & Kindergarten Zürich"
+      ]
+    },
+    {
+      "rank": 32,
+      "id": "kimi",
+      "name": "KiMi Krippen",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 1,
+      "empfehlungsquote": 1,
+      "modelsRecommending": 1,
+      "models": [
+        "gemini"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q4"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00234192037470726,
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "id": "bambino",
+      "name": "Kita Bambino Learncare",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 1,
+      "empfehlungsquote": 1,
+      "modelsRecommending": 1,
+      "models": [
+        "gemini"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q3"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00234192037470726,
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "id": "chrabelschloss",
+      "name": "KiTa Chrabelschloss",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 1,
+      "empfehlungsquote": 1,
+      "modelsRecommending": 1,
+      "models": [
+        "gemini"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q6"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00234192037470726,
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "id": "wunderkind",
+      "name": "Kita Wunderkind",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 1,
+      "empfehlungsquote": 1,
+      "modelsRecommending": 1,
+      "models": [
+        "chatgpt"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q1"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00234192037470726,
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "id": "zauberfloete",
+      "name": "Kita Zauberflöte",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 1,
+      "empfehlungsquote": 1,
+      "modelsRecommending": 1,
+      "models": [
+        "claude"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00234192037470726,
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "id": "farbhof",
+      "name": "Kita zum Farbhof",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 1,
+      "empfehlungsquote": 1,
+      "modelsRecommending": 1,
+      "models": [
+        "claude"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q6"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00234192037470726,
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "id": "meadows",
+      "name": "Meadows Montessori Kindergarten",
+      "website": "https://meadows-montessori.ch",
+      "locations": [],
+      "recommendedCount": 1,
+      "empfehlungsquote": 1,
+      "modelsRecommending": 1,
+      "models": [
+        "chatgpt"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q1"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00234192037470726,
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "id": "obs",
+      "name": "OBS (Open Bilingual School)",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 1,
+      "empfehlungsquote": 1,
+      "modelsRecommending": 1,
+      "models": [
+        "claude"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q5"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00234192037470726,
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "id": "pop-e-poppa",
+      "name": "pop e poppa",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 1,
+      "empfehlungsquote": 1,
+      "modelsRecommending": 1,
+      "models": [
+        "gemini"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q4"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00234192037470726,
+      "aliases": [
+        "Pop e Poppa"
+      ]
+    },
+    {
+      "rank": 32,
+      "id": "trinity",
+      "name": "Trinity Montessori",
+      "website": null,
+      "locations": [],
+      "recommendedCount": 1,
+      "empfehlungsquote": 1,
+      "modelsRecommending": 1,
+      "models": [
+        "gemini"
+      ],
+      "questionsRecommending": 1,
+      "questions": [
+        "q2"
+      ],
+      "mentionedOnlyCount": 0,
+      "shareOfRecommendations": 0.00234192037470726,
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "id": "kita-buesi",
+      "name": "kita-buesi.ch",
+      "website": "https://www.kita-buesi.ch/information/tarife-subventionen",
+      "locations": [],
+      "recommendedCount": 0,
+      "empfehlungsquote": 0,
+      "modelsRecommending": 0,
+      "models": [],
+      "questionsRecommending": 0,
+      "questions": [],
+      "mentionedOnlyCount": 1,
+      "shareOfRecommendations": 0,
+      "aliases": []
+    }
+  ],
+  "merges": [
+    {
+      "from": "7 Bears Kindergarten",
+      "id": "seven-bears",
+      "to": "7 Bears Kindergarten",
+      "reason": "Markenname 7 Bears Kindergarten."
+    },
+    {
+      "from": "ABC Daycare Schools",
+      "id": "abc-schools",
+      "to": "ABC Schools",
+      "reason": "Markenname ABC Schools."
+    },
+    {
+      "from": "ABC Learning Tree Kita & Kindergarten Zürich",
+      "id": "abc-learning-tree",
+      "to": "ABC Learning Tree",
+      "reason": "Markenname ABC Learning Tree."
+    },
+    {
+      "from": "ABC Schools",
+      "id": "abc-schools",
+      "to": "ABC Schools",
+      "reason": "Markenname ABC Schools."
+    },
+    {
+      "from": "ABC Schools (abc-daycare)",
+      "id": "abc-schools",
+      "to": "ABC Schools",
+      "reason": "Markenname ABC Schools."
+    },
+    {
+      "from": "Akidemy",
+      "id": "akidemy",
+      "to": "Akidemy",
+      "reason": "Markenname Akidemy."
+    },
+    {
+      "from": "Akidemy – Bilingual Daycare",
+      "id": "akidemy",
+      "to": "Akidemy",
+      "reason": "Markenname Akidemy."
+    },
+    {
+      "from": "Akidemy – Bilinguale Kitas in Zürich und Umgebung",
+      "id": "akidemy",
+      "to": "Akidemy",
+      "reason": "Markenname Akidemy."
+    },
+    {
+      "from": "Akidemy – Bilinguale KiTas Zürich",
+      "id": "akidemy",
+      "to": "Akidemy",
+      "reason": "Markenname Akidemy."
+    },
+    {
+      "from": "Akidemy Kita",
+      "id": "akidemy",
+      "to": "Akidemy",
+      "reason": "Markenname Akidemy."
+    },
+    {
+      "from": "Akidemy KiTa",
+      "id": "akidemy",
+      "to": "Akidemy",
+      "reason": "Markenname Akidemy."
+    },
+    {
+      "from": "Allegra",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra."
+    },
+    {
+      "from": "Allegra Beckenhof",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra. Standort (Beckenhof) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Allegra Beckenhof / pop e poppa",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra. Standort (Beckenhof) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Allegra Beckenhof, pop e poppa",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra. Standort (Beckenhof) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "allegra Kita",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra."
+    },
+    {
+      "from": "Bärlis",
+      "id": "baerlis",
+      "to": "Bärlis",
+      "reason": "Markenname Bärlis."
+    },
+    {
+      "from": "Bärlis / Villa Bärlis",
+      "id": "baerlis",
+      "to": "Bärlis",
+      "reason": "Bärlis und Villa Bärlis sind in den Antworten eine Kita mit zwei Standorten."
+    },
+    {
+      "from": "Bärlis/Villa Bärlis",
+      "id": "baerlis",
+      "to": "Bärlis",
+      "reason": "Bärlis und Villa Bärlis sind in den Antworten eine Kita mit zwei Standorten."
+    },
+    {
+      "from": "Bilinguale Kinderkrippe Blüemli – Waldkinderkrippe (Witikon, Zürich)",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli. Standort (Witikon) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Blüemli",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli."
+    },
+    {
+      "from": "Children First",
+      "id": "children-first",
+      "to": "Children First",
+      "reason": "Markenname Children First."
+    },
+    {
+      "from": "Children First - Seefeld",
+      "id": "children-first",
+      "to": "Children First",
+      "reason": "Markenname Children First. Standort (Seefeld) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Children First – Bilingual Daycare & School",
+      "id": "children-first",
+      "to": "Children First",
+      "reason": "Markenname Children First."
+    },
+    {
+      "from": "Children First – Seefeld",
+      "id": "children-first",
+      "to": "Children First",
+      "reason": "Markenname Children First. Standort (Seefeld) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Children First – Seefeld / Oerlikon",
+      "id": "children-first",
+      "to": "Children First",
+      "reason": "Markenname Children First. Standort (Oerlikon, Seefeld) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Children First — Seefeld",
+      "id": "children-first",
+      "to": "Children First",
+      "reason": "Markenname Children First. Standort (Seefeld) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Crossing Borders",
+      "id": "crossing-borders",
+      "to": "Crossing Borders",
+      "reason": "Markenname Crossing Borders."
+    },
+    {
+      "from": "Crossing Borders – Bilinguale Kita",
+      "id": "crossing-borders",
+      "to": "Crossing Borders",
+      "reason": "Markenname Crossing Borders."
+    },
+    {
+      "from": "Crossing Borders – Bilinguale Kita Zürich Manegg",
+      "id": "crossing-borders",
+      "to": "Crossing Borders",
+      "reason": "Markenname Crossing Borders. Standort (Manegg) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Crossing Borders Bilinguale Kita",
+      "id": "crossing-borders",
+      "to": "Crossing Borders",
+      "reason": "Markenname Crossing Borders."
+    },
+    {
+      "from": "Crossing Borders Bilinguale Kita (Zürich Manegg)",
+      "id": "crossing-borders",
+      "to": "Crossing Borders",
+      "reason": "Markenname Crossing Borders. Standort (Manegg) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Dayschool",
+      "id": "dayschool",
+      "to": "Dayschool",
+      "reason": "Markenname Dayschool."
+    },
+    {
+      "from": "Dayschool (Privat Kindergarten)",
+      "id": "dayschool",
+      "to": "Dayschool",
+      "reason": "Markenname Dayschool."
+    },
+    {
+      "from": "globegarden",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden."
+    },
+    {
+      "from": "Globegarden",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden."
+    },
+    {
+      "from": "globegarden Alfred Escher",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden. Standort (Alfred Escher) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "globegarden Bellerivestrasse",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden. Standort (Bellerivestrasse) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "globegarden Fluntern",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden. Standort (Fluntern) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "globegarden Limmattalstrasse",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden. Standort (Limmattalstrasse) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "globegarden Nägelistrasse",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden. Standort (Nägelistrasse) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "globegarden Neugasse",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden. Standort (Neugasse) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "globegarden Sihlcity",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden. Standort (Sihlcity) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "globegarden Talacker",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden. Standort (Talacker) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "globegarden Thurgauerstrasse",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden. Standort (Thurgauerstrasse) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "globegarden Thurgauerstrasse, Oerlikon (Stadtkreis 11)",
+      "id": "globegarden",
+      "to": "globegarden",
+      "reason": "Markenname globegarden. Standort (Thurgauerstrasse, Oerlikon) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "ISZN (International School Zurich North) – Early Years",
+      "id": "iszn",
+      "to": "ISZN",
+      "reason": "Markenname ISZN."
+    },
+    {
+      "from": "ISZN Early Years",
+      "id": "iszn",
+      "to": "ISZN",
+      "reason": "Markenname ISZN."
+    },
+    {
+      "from": "Joey Kinderkrippe",
+      "id": "joey",
+      "to": "Joey Kinderkrippe",
+      "reason": "Markenname Joey Kinderkrippe."
+    },
+    {
+      "from": "Joey Kinderkrippe Wollishofen",
+      "id": "joey",
+      "to": "Joey Kinderkrippe",
+      "reason": "Markenname Joey Kinderkrippe. Standort (Wollishofen) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Joey Kinderkrippe Zürich Wollishofen",
+      "id": "joey",
+      "to": "Joey Kinderkrippe",
+      "reason": "Markenname Joey Kinderkrippe. Standort (Wollishofen) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "KiddieLand",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand."
+    },
+    {
+      "from": "KiddieLand – Bilingual Daycare & Kindergarten",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand."
+    },
+    {
+      "from": "KiddieLand – Bilingual Daycare + Kindergarten",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand."
+    },
+    {
+      "from": "KiddieLand – Bilinguale Kita & Kindergarten",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand."
+    },
+    {
+      "from": "KiddieLand – Zürich Wipkingen",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand. Standort (Wipkingen) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "KiddieLand (Wipkingen, Zürich)",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand. Standort (Wipkingen) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "KiddieLand Bilingual Childcare",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand."
+    },
+    {
+      "from": "KiddieLand Bilingual Childcare & Kindergarten",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand."
+    },
+    {
+      "from": "KiddieLand Bilingual Daycare & Kindergarten",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand."
+    },
+    {
+      "from": "KiddieLand Bilingual Daycare & Kindergarten Zürich",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand."
+    },
+    {
+      "from": "KiddieLand Bilingual Daycare + Kindergarten",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand."
+    },
+    {
+      "from": "KiddieLand Bilingual Daycare + Kindergarten Zürich",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand."
+    },
+    {
+      "from": "KiddieLand, Wipkingen",
+      "id": "kiddieland",
+      "to": "KiddieLand",
+      "reason": "Markenname KiddieLand. Standort (Wipkingen) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "kids & co City",
+      "id": "kids-and-co",
+      "to": "kids & co",
+      "reason": "Markenname kids & co."
+    },
+    {
+      "from": "KiMi Krippen",
+      "id": "kimi",
+      "to": "KiMi Krippen",
+      "reason": "Markenname KiMi Krippen."
+    },
+    {
+      "from": "Kinderkrippe Blüemli",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli."
+    },
+    {
+      "from": "Kita allegra",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra."
+    },
+    {
+      "from": "Kita Allegra",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra."
+    },
+    {
+      "from": "Kita Allegra – Zürich Beckenhof",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra. Standort (Beckenhof) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita Allegra (Beckenhof)",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra. Standort (Beckenhof) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita Allegra (pop e poppa)",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra."
+    },
+    {
+      "from": "Kita Allegra (pop e poppa) Beckenhof",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra. Standort (Beckenhof) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita Allegra Beckenhof",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra. Standort (Beckenhof) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita Allegra by pop e poppa",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra."
+    },
+    {
+      "from": "Kita Allegra by pop e poppa – Beckenhof Zürich",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra. Standort (Beckenhof) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita Allegra by pop e poppa (Beckenhof, Kreis 6)",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra. Standort (Beckenhof, Kreis 6) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita Allegra by pop e poppa (Beckenhof, Zürich)",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra. Standort (Beckenhof) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita Allegra by pop e poppa Beckenhof",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Markenname Kita Allegra. Standort (Beckenhof) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita Bambino Learncare",
+      "id": "bambino",
+      "to": "Kita Bambino Learncare",
+      "reason": "Markenname Kita Bambino Learncare."
+    },
+    {
+      "from": "Kita Bärlis",
+      "id": "baerlis",
+      "to": "Bärlis",
+      "reason": "Markenname Bärlis."
+    },
+    {
+      "from": "Kita Bärlis – Zürich Kreis 6",
+      "id": "baerlis",
+      "to": "Bärlis",
+      "reason": "Markenname Bärlis. Standort (Kreis 6) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita Bärlis / Villa Bärlis",
+      "id": "baerlis",
+      "to": "Bärlis",
+      "reason": "Bärlis und Villa Bärlis sind in den Antworten eine Kita mit zwei Standorten."
+    },
+    {
+      "from": "KITA BÄRLIS / VILLA BÄRLIS, Zürich 6",
+      "id": "baerlis",
+      "to": "Bärlis",
+      "reason": "Bärlis und Villa Bärlis sind in den Antworten eine Kita mit zwei Standorten."
+    },
+    {
+      "from": "Kita Bärlis und Villa Bärlis",
+      "id": "baerlis",
+      "to": "Bärlis",
+      "reason": "Bärlis und Villa Bärlis sind in den Antworten eine Kita mit zwei Standorten."
+    },
+    {
+      "from": "Kita Blüemli",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli."
+    },
+    {
+      "from": "KiTa Blüemli",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli."
+    },
+    {
+      "from": "KiTa Blüemli – Bilingual Forest Daycare",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli."
+    },
+    {
+      "from": "KiTa Blüemli – Bilinguale Waldkinderkrippe",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli."
+    },
+    {
+      "from": "Kita Blüemli – Witikon",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli. Standort (Witikon) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "KiTa Blüemli – Zürich Witikon",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli. Standort (Witikon) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita Blüemli (Bilingual Forest Daycare)",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli."
+    },
+    {
+      "from": "KiTa Blüemli (Forest Daycare & regular)",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli."
+    },
+    {
+      "from": "Kita Blüemli (Waldkinderkrippe)",
+      "id": "bluemli",
+      "to": "KiTa Blüemli",
+      "reason": "Markenname KiTa Blüemli."
+    },
+    {
+      "from": "KiTa Chrabelschloss",
+      "id": "chrabelschloss",
+      "to": "KiTa Chrabelschloss",
+      "reason": "Markenname KiTa Chrabelschloss."
+    },
+    {
+      "from": "Kita MAGIC FISH",
+      "id": "magic-fish",
+      "to": "MAGIC FISH",
+      "reason": "Markenname MAGIC FISH."
+    },
+    {
+      "from": "Kita MAGIC FISH (Fluntern, Zürich)",
+      "id": "magic-fish",
+      "to": "MAGIC FISH",
+      "reason": "Markenname MAGIC FISH. Standort (Fluntern) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita Märliwält",
+      "id": "maerliwaelt",
+      "to": "Kita Märliwält",
+      "reason": "Markenname Kita Märliwält."
+    },
+    {
+      "from": "Kita Parkside School",
+      "id": "parkside",
+      "to": "Parkside School",
+      "reason": "Markenname Parkside School."
+    },
+    {
+      "from": "Kita Regenbogen",
+      "id": "regenbogen",
+      "to": "Kita Regenbogen",
+      "reason": "Markenname Kita Regenbogen."
+    },
+    {
+      "from": "Kita Wunderkind",
+      "id": "wunderkind",
+      "to": "Kita Wunderkind",
+      "reason": "Markenname Kita Wunderkind."
+    },
+    {
+      "from": "Kita Yemayá",
+      "id": "yemaya",
+      "to": "Kita Yemayá",
+      "reason": "Markenname Kita Yemayá."
+    },
+    {
+      "from": "Kita Zauberflöte",
+      "id": "zauberfloete",
+      "to": "Kita Zauberflöte",
+      "reason": "Markenname Kita Zauberflöte."
+    },
+    {
+      "from": "Kita zum Farbhof",
+      "id": "farbhof",
+      "to": "Kita zum Farbhof",
+      "reason": "Markenname Kita zum Farbhof."
+    },
+    {
+      "from": "Kita zum Waidberg",
+      "id": "waidberg",
+      "to": "Kita zum Waidberg",
+      "reason": "Markenname Kita zum Waidberg."
+    },
+    {
+      "from": "Kita zum Waidberg (Wipkingen, Zürich)",
+      "id": "waidberg",
+      "to": "Kita zum Waidberg",
+      "reason": "Markenname Kita zum Waidberg. Standort (Wipkingen) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Kita zum Waidberg in Zürich-Wipkingen",
+      "id": "waidberg",
+      "to": "Kita zum Waidberg",
+      "reason": "Markenname Kita zum Waidberg. Standort (Wipkingen) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "kita-buesi.ch",
+      "id": "kita-buesi",
+      "to": "kita-buesi.ch",
+      "reason": "Markenname kita-buesi.ch."
+    },
+    {
+      "from": "Krippe Kinderparadies",
+      "id": "kinderparadies",
+      "to": "Krippe Kinderparadies",
+      "reason": "Markenname Krippe Kinderparadies."
+    },
+    {
+      "from": "Little Green House",
+      "id": "little-green-house",
+      "to": "Little Green House",
+      "reason": "Markenname Little Green House."
+    },
+    {
+      "from": "Little Learners",
+      "id": "little-learners",
+      "to": "Little Learners",
+      "reason": "Markenname Little Learners."
+    },
+    {
+      "from": "Little Learners Bilingual Daycare",
+      "id": "little-learners",
+      "to": "Little Learners",
+      "reason": "Markenname Little Learners."
+    },
+    {
+      "from": "Little Learners Daycare & Preschool",
+      "id": "little-learners",
+      "to": "Little Learners",
+      "reason": "Markenname Little Learners."
+    },
+    {
+      "from": "Little Learners Kita",
+      "id": "little-learners",
+      "to": "Little Learners",
+      "reason": "Markenname Little Learners."
+    },
+    {
+      "from": "Little Learners Kita, Hort und Spielgruppe",
+      "id": "little-learners",
+      "to": "Little Learners",
+      "reason": "Markenname Little Learners."
+    },
+    {
+      "from": "Little Star",
+      "id": "little-star",
+      "to": "Little Star Day School",
+      "reason": "Markenname Little Star Day School."
+    },
+    {
+      "from": "Little Star Day School",
+      "id": "little-star",
+      "to": "Little Star Day School",
+      "reason": "Markenname Little Star Day School."
+    },
+    {
+      "from": "Little Star Day School – Sihlcity",
+      "id": "little-star",
+      "to": "Little Star Day School",
+      "reason": "Markenname Little Star Day School. Standort (Sihlcity) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Little Star Day School – Sihlcity nursery",
+      "id": "little-star",
+      "to": "Little Star Day School",
+      "reason": "Markenname Little Star Day School. Standort (Sihlcity) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Little Star Day School – Sihlcity Nursery",
+      "id": "little-star",
+      "to": "Little Star Day School",
+      "reason": "Markenname Little Star Day School. Standort (Sihlcity) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Little Star Day School – Wollishofen",
+      "id": "little-star",
+      "to": "Little Star Day School",
+      "reason": "Markenname Little Star Day School. Standort (Wollishofen) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Little Star Day School in Wollishofen",
+      "id": "little-star",
+      "to": "Little Star Day School",
+      "reason": "Markenname Little Star Day School. Standort (Wollishofen) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Little Star Day School Wollishofen",
+      "id": "little-star",
+      "to": "Little Star Day School",
+      "reason": "Markenname Little Star Day School. Standort (Wollishofen) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "MAGIC FISH",
+      "id": "magic-fish",
+      "to": "MAGIC FISH",
+      "reason": "Markenname MAGIC FISH."
+    },
+    {
+      "from": "Meadows Montessori Kindergarten",
+      "id": "meadows",
+      "to": "Meadows Montessori Kindergarten",
+      "reason": "Markenname Meadows Montessori Kindergarten."
+    },
+    {
+      "from": "OBS (Open Bilingual School)",
+      "id": "obs",
+      "to": "OBS (Open Bilingual School)",
+      "reason": "Markenname OBS (Open Bilingual School)."
+    },
+    {
+      "from": "Parkside School",
+      "id": "parkside",
+      "to": "Parkside School",
+      "reason": "Markenname Parkside School."
+    },
+    {
+      "from": "PASITOS",
+      "id": "pasitos",
+      "to": "Pasitos",
+      "reason": "Markenname Pasitos."
+    },
+    {
+      "from": "Pasitos – Kindergarten / Krippe",
+      "id": "pasitos",
+      "to": "Pasitos",
+      "reason": "Markenname Pasitos."
+    },
+    {
+      "from": "PASITOS / Guarderia",
+      "id": "pasitos",
+      "to": "Pasitos",
+      "reason": "Guarderia ist der spanische Name derselben Kita Pasitos."
+    },
+    {
+      "from": "Pasitos Kindergarten",
+      "id": "pasitos",
+      "to": "Pasitos",
+      "reason": "Markenname Pasitos."
+    },
+    {
+      "from": "Pasitos Kindergarten & Kita",
+      "id": "pasitos",
+      "to": "Pasitos",
+      "reason": "Markenname Pasitos."
+    },
+    {
+      "from": "PLAYground education",
+      "id": "playground",
+      "to": "PLAYground education",
+      "reason": "Markenname PLAYground education."
+    },
+    {
+      "from": "pop e poppa",
+      "id": "allegra",
+      "to": "Kita Allegra",
+      "reason": "Dieselbe Zeile nennt pop e poppa zusammen mit Allegra."
+    },
+    {
+      "from": "Pop e Poppa",
+      "id": "pop-e-poppa",
+      "to": "pop e poppa",
+      "reason": "pop e poppa steht ohne Allegra in derselben Nennung und bleibt eine eigene Marke."
+    },
+    {
+      "from": "SIS Männedorf-Zürich",
+      "id": "swiss-international",
+      "to": "SIS Swiss International School",
+      "reason": "Markenname SIS Swiss International School. Standort (Männedorf) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "SIS Swiss International School",
+      "id": "swiss-international",
+      "to": "SIS Swiss International School",
+      "reason": "Markenname SIS Swiss International School."
+    },
+    {
+      "from": "SIS Swiss International School – Bilingual Kindergarten",
+      "id": "swiss-international",
+      "to": "SIS Swiss International School",
+      "reason": "Markenname SIS Swiss International School."
+    },
+    {
+      "from": "SIS Swiss International School Zürich",
+      "id": "swiss-international",
+      "to": "SIS Swiss International School",
+      "reason": "Markenname SIS Swiss International School."
+    },
+    {
+      "from": "Sonne Montessori Kindergarten",
+      "id": "sonne-montessori",
+      "to": "Sonne Montessori Kindergarten",
+      "reason": "Markenname Sonne Montessori Kindergarten."
+    },
+    {
+      "from": "Sonnenblumen Kindergarten",
+      "id": "sonnenblumen",
+      "to": "Sonnenblumen Kindergarten",
+      "reason": "Markenname Sonnenblumen Kindergarten."
+    },
+    {
+      "from": "Sonnenblumen Kindergarten (Children First)",
+      "id": "sonnenblumen",
+      "to": "Sonnenblumen Kindergarten",
+      "reason": "Hauptname ist Sonnenblumen Kindergarten. Children First steht nur zusätzlich und wird nicht mitgezählt."
+    },
+    {
+      "from": "Tandem IMS",
+      "id": "tandem-ims",
+      "to": "Tandem IMS",
+      "reason": "Markenname Tandem IMS."
+    },
+    {
+      "from": "Tandem IMS Kindergarten",
+      "id": "tandem-ims",
+      "to": "Tandem IMS",
+      "reason": "Markenname Tandem IMS."
+    },
+    {
+      "from": "TANDem IMS Kindergarten",
+      "id": "tandem-ims",
+      "to": "Tandem IMS",
+      "reason": "Markenname Tandem IMS."
+    },
+    {
+      "from": "Tandem IMS Kindergarten Zurich",
+      "id": "tandem-ims",
+      "to": "Tandem IMS",
+      "reason": "Markenname Tandem IMS."
+    },
+    {
+      "from": "Tandem IMS Kinderkrippe",
+      "id": "tandem-ims",
+      "to": "Tandem IMS",
+      "reason": "Markenname Tandem IMS."
+    },
+    {
+      "from": "Tandem IMS Nursery",
+      "id": "tandem-ims",
+      "to": "Tandem IMS",
+      "reason": "Markenname Tandem IMS."
+    },
+    {
+      "from": "Trinity Montessori",
+      "id": "trinity",
+      "to": "Trinity Montessori",
+      "reason": "Markenname Trinity Montessori."
+    },
+    {
+      "from": "Villa Bärlis",
+      "id": "baerlis",
+      "to": "Bärlis",
+      "reason": "Bärlis und Villa Bärlis sind in den Antworten eine Kita mit zwei Standorten."
+    },
+    {
+      "from": "VILLA BÄRLIS",
+      "id": "baerlis",
+      "to": "Bärlis",
+      "reason": "Bärlis und Villa Bärlis sind in den Antworten eine Kita mit zwei Standorten."
+    },
+    {
+      "from": "Villa Bärlis / Bärlis Kitas",
+      "id": "baerlis",
+      "to": "Bärlis",
+      "reason": "Bärlis und Villa Bärlis sind in den Antworten eine Kita mit zwei Standorten."
+    },
+    {
+      "from": "Wings School",
+      "id": "wings-school",
+      "to": "Wings School",
+      "reason": "Markenname Wings School."
+    },
+    {
+      "from": "Wings School – Bilingual Daycare & Kindergarten",
+      "id": "wings-school",
+      "to": "Wings School",
+      "reason": "Markenname Wings School."
+    },
+    {
+      "from": "Wings School – Daycare Zürich Wiedikon",
+      "id": "wings-school",
+      "to": "Wings School",
+      "reason": "Markenname Wings School. Standort (Wiedikon) ist Metadatum, keine eigene Zeile."
+    },
+    {
+      "from": "Wings School – Kinderkrippe Zürich Wiedikon",
+      "id": "wings-school",
+      "to": "Wings School",
+      "reason": "Markenname Wings School. Standort (Wiedikon) ist Metadatum, keine eigene Zeile."
+    }
+  ],
+  "unresolved": [
+    {
+      "name": "Akidemy / globegarden",
+      "reason": "Ein Eintrag nennt mehrere Marken (Akidemy, globegarden). Nicht automatisch aufgeteilt.",
+      "answers": [
+        "q2|perplexity|1",
+        "q2|perplexity|2",
+        "q2|perplexity|3",
+        "q5|perplexity|1"
+      ]
+    }
+  ]
+}

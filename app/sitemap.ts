@@ -6,6 +6,7 @@ import { getAuthorFromArticles, loadBlogIndex } from "@/lib/blog";
 import { GLOSSARY_INDEX_PATH, glossaryTermPath } from "@/lib/glossary/canonical";
 import { glossarySitemapEntries } from "@/lib/glossary/sitemap-entries";
 import { listPublishedGlossaryEntries } from "@/lib/glossary/registry";
+import { kitaIndexDraft } from "@/lib/ki-index/zweisprachige-kitas-zuerich";
 import { MENTIONBEE_SITE_ORIGIN } from "@/lib/site-origin";
 
 function siteUrl(path: string): string {
@@ -38,6 +39,7 @@ function sitemapEntry(path: string, lastModified?: Date): MetadataRoute.Sitemap[
 export default function sitemap(): MetadataRoute.Sitemap {
   const blog = loadBlogIndex();
   const author = getAuthorFromArticles("olaf-kunz");
+  const kiIndexDate = contentDate(kitaIndexDraft.collectedAt);
 
   const staticEntries: MetadataRoute.Sitemap = [
     sitemapEntry("/"),
@@ -46,6 +48,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     sitemapEntry("/sample-report"),
     sitemapEntry("/faq"),
     sitemapEntry("/blog", latestContentDate(blog.articles)),
+    sitemapEntry("/ki-index", kiIndexDate),
+    sitemapEntry("/ki-index/zweisprachige-kitas-zuerich", kiIndexDate),
     sitemapEntry("/studie/ai-visibility-2026", contentDate(STUDY_DATE_PUBLISHED)),
     sitemapEntry("/autor/olaf-kunz", latestContentDate(author?.articles ?? [])),
     sitemapEntry("/impressum"),
@@ -69,6 +73,7 @@ export function sitemapIncludesPath(path: string): boolean {
   const normalized = path.startsWith("/") ? path : `/${path}`;
   if (PUBLISHED_ROUTES.some((r) => r.path === normalized)) return true;
   if (normalized === "/blog" || normalized === "/autor/olaf-kunz") return true;
+  if (normalized === "/ki-index" || normalized === "/ki-index/zweisprachige-kitas-zuerich") return true;
   if (loadBlogIndex().articles.some((a) => a.canonicalPath === normalized)) return true;
   if (normalized === GLOSSARY_INDEX_PATH) return true;
   if (listPublishedGlossaryEntries().some((e) => glossaryTermPath(e.slug) === normalized)) return true;
