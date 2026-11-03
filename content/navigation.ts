@@ -9,7 +9,6 @@ export const headerNavigation: NavItem[] = [
   { label: "Beispielreport", href: "/sample-report" },
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
-  { label: "KI-Index", href: "/ki-index" },
 ];
 
 export const mainNavigation: NavItem[] = [

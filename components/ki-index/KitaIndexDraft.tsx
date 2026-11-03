@@ -24,8 +24,11 @@ function RankingList({ rows }: { rows: IndexProviderRow[] }) {
                 )}
                 <span className="ki-rank-quote">{row.empfehlungsquote}&nbsp;%</span>
               </div>
-              <p className="ki-rank-abs">
+              <p className="ki-rank-abs" title={row.modelNames || undefined}>
                 {row.recommendedCount} von {kitaIndexDraft.denominator}
+                {row.modelsRecommending == null
+                  ? null
+                  : ` (${row.modelsRecommending} von ${kitaIndexDraft.modelCount} KI-Systemen)`}
               </p>
               <div className="ki-rank-track" aria-hidden="true">
                 <div className="ki-rank-bar" style={{ width: `${row.barPercent}%` }} />

@@ -32,6 +32,8 @@ type StoredProvider = {
   website: string | null;
   recommendedCount: number;
   empfehlungsquote: number;
+  modelsRecommending?: number;
+  models?: string[];
 };
 
 type StoredRanking = {
@@ -54,6 +56,8 @@ export type IndexProviderRow = {
   recommendedCount: number;
   empfehlungsquote: number;
   barPercent: number;
+  modelsRecommending: number | null;
+  modelNames: string;
 };
 
 function hostOf(website: string): string | null {
@@ -103,6 +107,19 @@ function assertPublicationShape(): void {
 
 assertPublicationShape();
 
+const MODEL_LABEL_BY_KEY: Record<string, string> = {
+  claude: "Claude",
+  chatgpt: "ChatGPT",
+  gemini: "Gemini",
+  perplexity: "Perplexity",
+};
+
+function modelLabel(key: string): string {
+  return MODEL_LABEL_BY_KEY[key] ?? key;
+}
+
+const modelCount = Object.keys(ranking.models).length;
+
 const recommended: IndexProviderRow[] = ranking.providers
   .filter((row) => row.recommendedCount > 0)
   .map((row) => ({
@@ -113,6 +130,8 @@ const recommended: IndexProviderRow[] = ranking.providers
     recommendedCount: row.recommendedCount,
     empfehlungsquote: row.empfehlungsquote,
     barPercent: row.empfehlungsquote,
+    modelsRecommending: typeof row.modelsRecommending === "number" ? row.modelsRecommending : null,
+    modelNames: (row.models ?? []).map(modelLabel).join(", "),
   }));
 
 const leader = recommended[0];
@@ -132,6 +151,7 @@ const ENGLISH_QUESTION_DE =
 
 export const kitaIndexDraft = {
   denominator: DENOMINATOR,
+  modelCount,
   collectedAt: ranking.collectedFrom!,
   title: "Welche zweisprachigen Kitas in Zürich empfehlen KI-Systeme?",
   lead: "Wir haben ChatGPT, Claude, Gemini und Perplexity sechs Fragen zu deutsch-englischen Kinderbetreuungsangeboten in Zürich gestellt. Aus den 72 Antworten ergibt sich ein klares Bild: Einige Anbieter werden besonders häufig empfohlen.",

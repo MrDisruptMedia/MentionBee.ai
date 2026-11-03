@@ -9,6 +9,13 @@ test("der veröffentlichte Kita-Index behält die November-Zahlen", () => {
   assert.equal(kitaIndexDraft.providers[0]?.name, "KiddieLand");
   assert.equal(kitaIndexDraft.providers[0]?.recommendedCount, 54);
   assert.equal(kitaIndexDraft.providers[0]?.empfehlungsquote, 75);
+  assert.equal(kitaIndexDraft.modelCount, 4);
+  assert.equal(kitaIndexDraft.providers[0]?.modelsRecommending, 4);
+  assert.equal(kitaIndexDraft.providers[0]?.modelNames, "Claude, ChatGPT, Gemini, Perplexity");
+  assert.equal(
+    kitaIndexDraft.providers.filter((row) => row.modelsRecommending === kitaIndexDraft.modelCount).length,
+    11,
+  );
   assert.equal(kitaIndexDraft.providers.filter((row) => row.recommendedCount > 0).length, 42);
   assert.equal(kitaIndexDraft.collectedLabel, "3. November 2026");
   assert.equal(kiIndexListings.length, 1);
