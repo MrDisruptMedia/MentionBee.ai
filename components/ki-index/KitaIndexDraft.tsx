@@ -124,7 +124,7 @@ export function KitaIndexDraft() {
           border-radius: 12px;
           display: block;
         }
-        .ki-prose, .ki-result, .ki-questions, .ki-method {
+        .ki-prose, .ki-result, .ki-questions {
           font-family: Georgia, "Times New Roman", serif;
           font-size: 1.125rem;
           line-height: 1.75;
@@ -141,12 +141,12 @@ export function KitaIndexDraft() {
           border: 0;
           padding: 0;
         }
-        .ki-questions, .ki-method {
+        .ki-questions {
           margin: 0;
           padding-left: 1.25rem;
+          list-style: disc;
         }
-        .ki-questions { list-style: disc; }
-        .ki-questions li, .ki-method li { margin: 0.45rem 0; }
+        .ki-questions li { margin: 0.45rem 0; }
         .ki-rank-list { list-style: none; margin: 0; padding: 0; }
         .ki-rank-item {
           padding: 16px 0 18px;
@@ -303,11 +303,11 @@ export function KitaIndexDraft() {
           ) : null}
 
           <h2>Methodik</h2>
-          <ul className="ki-method">
-            {kitaIndexDraft.methodology.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          {kitaIndexDraft.methodology.map((paragraph) => (
+            <p key={paragraph} className="ki-prose">
+              {paragraph}
+            </p>
+          ))}
 
           <aside className="ki-note">
             <p>

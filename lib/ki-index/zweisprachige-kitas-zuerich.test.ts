@@ -2,7 +2,13 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import { kitaIndexRelatedArticle, kiIndexListings } from "./catalog";
-import { kitaIndexDraft, rankingSpread, readingMinutesFromText } from "./zweisprachige-kitas-zuerich";
+import {
+  collectionWindowSentence,
+  germanRoughDuration,
+  kitaIndexDraft,
+  rankingSpread,
+  readingMinutesFromText,
+} from "./zweisprachige-kitas-zuerich";
 import { sitemapIncludesPath } from "../../app/sitemap";
 
 test("der veröffentlichte Kita-Index behält die November-Zahlen", () => {
@@ -23,6 +29,27 @@ test("der veröffentlichte Kita-Index behält die November-Zahlen", () => {
   assert.equal(kitaIndexRelatedArticle.href, "/blog/ki-suche-sichtbare-wettbewerber-wechseln");
   assert.equal(readingMinutesFromText(""), null);
   assert.equal(/Gesprächshistorie|persönliche Informationen/.test(kitaIndexDraft.methodology.join(" ")), false);
+  assert.equal(kitaIndexDraft.methodology.length, 3);
+  assert.equal(
+    germanRoughDuration("2026-11-03T09:25:38.287Z", "2026-11-03T09:30:36.508Z"),
+    "rund 5 Minuten",
+  );
+  assert.equal(
+    kitaIndexDraft.methodology[0],
+    "Am 3. November 2026 haben wir vier KI-Systemen – Claude (claude-sonnet-4-6), ChatGPT (gpt-5-search-api), Gemini (gemini-2.5-flash) und Perplexity (sonar) – die sechs Fragen oben gestellt, jede dreimal. Jede der 72 Abfragen war ein eigener Aufruf über die Schnittstelle des Anbieters, mit Websuche und ohne Gesprächsverlauf: Das System wusste bei keiner Antwort, was es vorher geantwortet hatte. Die Abfragen liefen innerhalb von rund 5 Minuten, teilweise gleichzeitig.",
+  );
+  assert.equal(
+    kitaIndexDraft.methodology[1],
+    "Als Empfehlung zählt, wenn ein System eine Kita als passende Antwort auf die Frage nennt, auch als Teil einer Liste. Wird sie nur erwähnt, etwa mit einem Vorbehalt, zählt das nicht. Pro Antwort zählt jede Marke höchstens einmal. Verschiedene Schreibweisen und Standorte derselben Marke haben wir zusammengeführt. Vier Nennungen, die «Akidemy / globegarden» in einem Atemzug nannten, ohne klar zu trennen, haben wir keiner der beiden Marken angerechnet. Die Empfehlungsquote ist der Anteil der 72 Antworten, in denen eine Kita empfohlen wurde.",
+  );
+  assert.equal(
+    kitaIndexDraft.methodology[2],
+    "Die drei Durchläufe zeigen, wie stark die Antworten auf dieselbe Frage schwanken – nicht, wie sie sich über Wochen verändern. Das zeigt erst der monatliche Vergleich. In den Chat-Apps derselben Anbieter kann dieselbe Frage zudem anders beantwortet werden, etwa weil dort Einstellungen oder frühere Gespräche mitspielen.",
+  );
+  assert.equal(
+    collectionWindowSentence("2026-11-03T09:25:38.287Z", "2026-11-03T09:30:36.508Z", false),
+    "Die Abfragen liefen innerhalb von rund 5 Minuten.",
+  );
   assert.equal(sitemapIncludesPath("/ki-index"), true);
   assert.equal(sitemapIncludesPath("/ki-index/zweisprachige-kitas-zuerich"), true);
   assert.equal(kitaIndexDraft.spread.n, 42);

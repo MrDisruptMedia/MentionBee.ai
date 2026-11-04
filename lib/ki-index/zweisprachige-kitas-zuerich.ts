@@ -39,6 +39,7 @@ type StoredProvider = {
 type StoredRanking = {
   denominator: number;
   collectedFrom: string | null;
+  collectedTo: string | null;
   questions: Array<{ id: string; lang: string; text: string }>;
   models: Record<string, string>;
   providers: StoredProvider[];
@@ -171,6 +172,91 @@ export function rankingSpread(rows: IndexProviderRow[], modelCount: number): {
   return { n, k, m, e, sentence };
 }
 
+const TIMES = [
+  "nullmal",
+  "einmal",
+  "zweimal",
+  "dreimal",
+  "viermal",
+  "fünfmal",
+  "sechsmal",
+  "siebenmal",
+  "achtmal",
+  "neunmal",
+  "zehnmal",
+];
+
+function germanTimes(value: number): string {
+  return TIMES[value] ?? `${value}-mal`;
+}
+
+function capitalize(value: string): string {
+  return value ? value.charAt(0).toLocaleUpperCase("de-CH") + value.slice(1) : value;
+}
+
+function joinWithUnd(items: string[]): string {
+  if (items.length <= 1) return items[0] ?? "";
+  return `${items.slice(0, -1).join(", ")} und ${items.at(-1)}`;
+}
+
+/** Grobe Spanne vom ersten bis zum letzten gespeicherten Call. */
+export function germanRoughDuration(fromIso: string, toIso: string): string {
+  const ms = Date.parse(toIso) - Date.parse(fromIso);
+  if (!Number.isFinite(ms) || ms < 0) {
+    throw new Error("Der Zeitraum der Abfragen fehlt.");
+  }
+  const minutes = ms / 60_000;
+  if (minutes < 1.5) {
+    const seconds = Math.max(1, Math.round(ms / 1000));
+    return seconds === 1 ? "rund 1 Sekunde" : `rund ${seconds} Sekunden`;
+  }
+  const rounded = Math.round(minutes);
+  return rounded === 1 ? "rund 1 Minute" : `rund ${rounded} Minuten`;
+}
+
+export function collectionWindowSentence(
+  fromIso: string,
+  toIso: string,
+  partlySimultaneous: boolean,
+): string {
+  const simultaneous = partlySimultaneous ? ", teilweise gleichzeitig" : "";
+  return `Die Abfragen liefen innerhalb von ${germanRoughDuration(fromIso, toIso)}${simultaneous}.`;
+}
+
+const MODEL_KEYS = ["claude", "chatgpt", "gemini", "perplexity"] as const;
+
+/** Die Abschlusszeiten der 72 Calls überlappen bei drei gleichzeitigen Workern. */
+const CALLS_PARTLY_SIMULTANEOUS = true;
+
+function indexMethodology(partlySimultaneous: boolean): string[] {
+  if (!ranking.collectedFrom || !ranking.collectedTo) {
+    throw new Error("Der Zeitraum der Abfragen fehlt.");
+  }
+  const collectedLabel = new Intl.DateTimeFormat("de-CH", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "Europe/Zurich",
+  }).format(new Date(ranking.collectedFrom));
+  const questionCount = ranking.questions.length;
+  const answerCount = ranking.completeness.ok;
+  const runsPerQuestion = answerCount / (questionCount * modelCount);
+  if (!Number.isInteger(runsPerQuestion) || runsPerQuestion < 1) {
+    throw new Error("Die Zahl der Durchläufe geht nicht in den Antworten auf.");
+  }
+  const ambiguous = ranking.unresolved.find((row) => row.name === "Akidemy / globegarden");
+  if (!ambiguous) throw new Error("Die mehrdeutige Zuordnung fehlt.");
+  const systems = joinWithUnd(MODEL_KEYS.map((key) => `${modelLabel(key)} (${ranking.models[key]})`));
+  const mentions = ambiguous.answers.length;
+  const mentionLead = `${capitalize(germanCardinal(mentions))} ${mentions === 1 ? "Nennung" : "Nennungen"}`;
+  const mentionVerb = mentions === 1 ? "nannte" : "nannten";
+  return [
+    `Am ${collectedLabel} haben wir ${germanCardinal(modelCount)} KI-Systemen – ${systems} – die ${germanCardinal(questionCount)} Fragen oben gestellt, jede ${germanTimes(runsPerQuestion)}. Jede der ${answerCount} Abfragen war ein eigener Aufruf über die Schnittstelle des Anbieters, mit Websuche und ohne Gesprächsverlauf: Das System wusste bei keiner Antwort, was es vorher geantwortet hatte. ${collectionWindowSentence(ranking.collectedFrom, ranking.collectedTo, partlySimultaneous)}`,
+    `Als Empfehlung zählt, wenn ein System eine Kita als passende Antwort auf die Frage nennt, auch als Teil einer Liste. Wird sie nur erwähnt, etwa mit einem Vorbehalt, zählt das nicht. Pro Antwort zählt jede Marke höchstens einmal. Verschiedene Schreibweisen und Standorte derselben Marke haben wir zusammengeführt. ${mentionLead}, die «${ambiguous.name}» in einem Atemzug ${mentionVerb}, ohne klar zu trennen, haben wir keiner der beiden Marken angerechnet. Die Empfehlungsquote ist der Anteil der ${answerCount} Antworten, in denen eine Kita empfohlen wurde.`,
+    `Die ${germanCardinal(runsPerQuestion)} Durchläufe zeigen, wie stark die Antworten auf dieselbe Frage schwanken – nicht, wie sie sich über Wochen verändern. Das zeigt erst der monatliche Vergleich. In den Chat-Apps derselben Anbieter kann dieselbe Frage zudem anders beantwortet werden, etwa weil dort Einstellungen oder frühere Gespräche mitspielen.`,
+  ];
+}
+
 export const kitaIndexDraft = {
   denominator: DENOMINATOR,
   modelCount,
@@ -205,16 +291,7 @@ export const kitaIndexDraft = {
     { label: "Gemini", modelId: ranking.models.gemini },
     { label: "Perplexity", modelId: ranking.models.perplexity },
   ],
-  methodology: [
-    "Erhebung am 3. November 2026.",
-    `Vier Modelle: Claude (${ranking.models.claude}), ChatGPT (${ranking.models.chatgpt}), Gemini (${ranking.models.gemini}) und Perplexity (${ranking.models.perplexity}).`,
-    "72 gespeicherte Antworten.",
-    "Gezählt werden Empfehlungen je Marke. In einer Antwort zählt jede Marke höchstens einmal.",
-    "Empfehlungsquote = Antworten mit Empfehlung / 72.",
-    "Namens- und Standortvarianten wurden zusammengeführt.",
-    "Vier mehrdeutige Nennungen «Akidemy / globegarden» wurden keiner der beiden Marken zugerechnet.",
-    "Die Antworten stammen aus einzelnen API-Abfragen mit Websuche. In den Chat-Anwendungen derselben Anbieter kann dieselbe Frage anders beantwortet werden.",
-  ],
+  methodology: indexMethodology(CALLS_PARTLY_SIMULTANEOUS),
   einordnung:
     "Der Index misst die Sichtbarkeit in den untersuchten KI-Antworten. Er bewertet nicht die Betreuungsqualität. Andere Fragen, Modelle oder Erhebungszeitpunkte können andere Ergebnisse liefern.",
   providers: recommended,
