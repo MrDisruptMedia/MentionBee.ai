@@ -292,6 +292,7 @@ export function KitaIndexDraft() {
             </p>
           ))}
 
+          <p className="ki-prose">{kitaIndexDraft.spread.sentence}</p>
           <h2>Ranking</h2>
           <RankingList rows={shown} />
           {rest.length > 0 ? (

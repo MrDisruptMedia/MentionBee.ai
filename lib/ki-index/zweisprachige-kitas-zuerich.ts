@@ -149,6 +149,28 @@ const gapPhrase = recommendationGap === 1 ? "eine Empfehlung" : `${gapWords} Emp
 const ENGLISH_QUESTION_DE =
   "Wir ziehen mit unserem dreijährigen Kind nach Zürich. Welche deutsch-englischsprachigen Kitas würdest du empfehlen?";
 
+const CARDINALS = ["null", "ein", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn"];
+
+function germanCardinal(value: number): string {
+  return CARDINALS[value] ?? String(value);
+}
+
+export function rankingSpread(rows: IndexProviderRow[], modelCount: number): {
+  n: number;
+  k: number;
+  m: number;
+  e: number;
+  sentence: string;
+} {
+  const n = rows.length;
+  const k = rows.filter((row) => row.modelsRecommending === modelCount).length;
+  const e = rows.filter((row) => row.modelsRecommending === 1).length;
+  const m = n - k;
+  const exclusive = e === 0 ? "" : ` – ${e} davon nennt nur ein einziges System`;
+  const sentence = `${m} der ${n} empfohlenen Anbieter fehlen bei mindestens einem der ${germanCardinal(modelCount)} KI-Systeme${exclusive}. Welche Kitas man zu sehen bekommt, hängt also stark davon ab, welche KI man fragt.`;
+  return { n, k, m, e, sentence };
+}
+
 export const kitaIndexDraft = {
   denominator: DENOMINATOR,
   modelCount,
@@ -196,6 +218,7 @@ export const kitaIndexDraft = {
   einordnung:
     "Der Index misst die Sichtbarkeit in den untersuchten KI-Antworten. Er bewertet nicht die Betreuungsqualität. Andere Fragen, Modelle oder Erhebungszeitpunkte können andere Ergebnisse liefern.",
   providers: recommended,
+  spread: rankingSpread(recommended, modelCount),
 };
 
 /** Gleicher Lesetakt wie die Blog-Beiträge: 220 Wörter je Minute. */
