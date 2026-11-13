@@ -29,6 +29,17 @@
   },
   "articles": [
     {
+      "slug": "unternehmen-bei-chatgpt-eintragen-business-hub",
+      "url": "https://mentionbee.ai/blog/unternehmen-bei-chatgpt-eintragen-business-hub",
+      "alt": "Illustration eines Unternehmensprofils im ChatGPT Business Hub mit gelbem Schlüssel und einer Chat-Ansicht.",
+      "files": {
+        "master": "unternehmen-bei-chatgpt-eintragen-business-hub-master.png",
+        "hero": "unternehmen-bei-chatgpt-eintragen-business-hub-hero.webp",
+        "card": "unternehmen-bei-chatgpt-eintragen-business-hub-card.webp",
+        "social": "unternehmen-bei-chatgpt-eintragen-business-hub-social.jpg"
+      }
+    },
+    {
       "slug": "ki-suche-sichtbare-wettbewerber-wechseln",
       "url": "https://mentionbee.ai/blog/ki-suche-sichtbare-wettbewerber-wechseln",
       "alt": "ChatGPT, Claude, Gemini und Perplexity zeigen unterschiedliche Anbieterlisten, die auf dasselbe Unternehmen als wechselndes KI-Wettbewerbsfeld zulaufen",

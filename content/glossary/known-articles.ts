@@ -20,6 +20,7 @@ export const KNOWN_PUBLIC_ARTICLE_PATHS: readonly string[] = [
   "/blog/7-fehler-ki-sichtbarkeit",
   "/blog/wie-kunden-chatgpt-fragen-ki-sichtbarkeit",
   "/blog/chatgpt-selbsttest-was-weiss-ki-ueber-mein-unternehmen",
+  "/blog/unternehmen-bei-chatgpt-eintragen-business-hub",
   "/blog/neue-ki-modelle-ai-visibility",
   "/blog/ai-visibility-audit-oder-monitoring",
   "/blog/die-besten-ai-visibility-audits-fuer-kmu",

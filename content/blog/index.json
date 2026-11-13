@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T08:41:39.633Z",
+  "generatedAt": "2026-11-13T12:00:00.000Z",
   "articles": [
+    {
+      "publicSlug": "unternehmen-bei-chatgpt-eintragen-business-hub",
+      "canonicalPath": "/blog/unternehmen-bei-chatgpt-eintragen-business-hub",
+      "title": "Unternehmen bei ChatGPT eintragen: Business Hub im Test",
+      "description": "ChatGPT Business Hub im Praxistest: So richtest du dein Unternehmensprofil ein. Mit Screenshots, Hinweisen für Schweizer KMU und den Grenzen der Insights.",
+      "publishedAt": "2026-11-13T08:00:00.000Z",
+      "updatedAt": "2026-11-13T08:00:00.000Z",
+      "contentTypeLabel": "Diagnose-Guide",
+      "tags": [
+        {
+          "id": "chatgpt",
+          "label": "ChatGPT",
+          "slug": "chatgpt"
+        },
+        {
+          "id": "ai-visibility",
+          "label": "AI Visibility",
+          "slug": "ai-visibility"
+        },
+        {
+          "id": "business-hub",
+          "label": "Business Hub",
+          "slug": "business-hub"
+        }
+      ]
+    },
     {
       "publicSlug": "ki-suche-sichtbare-wettbewerber-wechseln",
       "canonicalPath": "/blog/ki-suche-sichtbare-wettbewerber-wechseln",
@@ -39,7 +65,7 @@
       "title": "Wir wissen nicht, wie deine Kunden ChatGPT fragen. Und das ist das eigentliche Problem.",
       "description": "Wer nicht weiss, wie seine Kunden fragen, muss dafür sorgen, dass er trotzdem zur Antwort gehört.",
       "publishedAt": "2026-09-17T18:00:00.000Z",
-      "updatedAt": "2026-09-17T18:00:00.000Z",
+      "updatedAt": "2026-11-13T12:00:00.000Z",
       "contentTypeLabel": "Hintergrund",
       "tags": [
         {
@@ -101,7 +127,7 @@
       "title": "Was weiss ChatGPT über dein Unternehmen? Der 10-Minuten-Selbsttest",
       "description": "Fünf einfache Fragen zeigen dir, ob ChatGPT dein Unternehmen kennt, richtig versteht – und bei potenziellen Kunden überhaupt in Betracht zieht.",
       "publishedAt": "2026-09-14T08:00:00.000Z",
-      "updatedAt": "2026-09-14T09:51:54.134Z",
+      "updatedAt": "2026-11-13T12:00:00.000Z",
       "contentTypeLabel": "Diagnose-Guide",
       "tags": [
         {
@@ -407,7 +433,7 @@
       "title": "Audit oder Monitoring? So entscheidest du bei AI Visibility",
       "description": "Wann ein einmaliger AI Visibility Audit reicht — und wann wiederholtes Monitoring sinnvoller ist.",
       "publishedAt": "2026-08-16T13:10:00.000Z",
-      "updatedAt": "2026-09-11T07:42:32.727Z",
+      "updatedAt": "2026-11-13T12:00:00.000Z",
       "contentTypeLabel": "Entscheidungshilfe",
       "tags": [
         {
@@ -433,7 +459,7 @@
       "title": "Warum empfiehlt dich ChatGPT nicht? 6 mögliche Erklärungen – und wie du herausfindest, welche zutrifft",
       "description": "Sechs diagnostische Erklärungen, warum ChatGPT dich nicht empfiehlt — und wie du prüfst, welche zutrifft.",
       "publishedAt": "2026-08-15T14:10:29.149Z",
-      "updatedAt": "2026-09-11T07:43:04.097Z",
+      "updatedAt": "2026-11-13T12:00:00.000Z",
       "contentTypeLabel": "Diagnose-Guide",
       "tags": [
         {

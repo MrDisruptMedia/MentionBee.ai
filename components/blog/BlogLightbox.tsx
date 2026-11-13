@@ -60,10 +60,10 @@ export function BlogLightbox() {
   const close = useCallback(() => setOpen(null), []);
 
   useEffect(() => {
-    const root = document.querySelector(".mb-article-body");
-    if (!root) return;
+    const roots = Array.from(document.querySelectorAll(".mb-article-body"));
+    if (roots.length === 0) return;
 
-    const unwrap = ensureZoomWraps(root);
+    const unwraps = roots.map((root) => ensureZoomWraps(root));
 
     const onClick = (event: Event) => {
       const target = event.target;
@@ -80,10 +80,10 @@ export function BlogLightbox() {
       setOpen({ src, alt: img.alt || "" });
     };
 
-    root.addEventListener("click", onClick);
+    for (const root of roots) root.addEventListener("click", onClick);
     return () => {
-      root.removeEventListener("click", onClick);
-      unwrap();
+      for (const root of roots) root.removeEventListener("click", onClick);
+      for (const unwrap of unwraps) unwrap();
     };
   }, []);
 
