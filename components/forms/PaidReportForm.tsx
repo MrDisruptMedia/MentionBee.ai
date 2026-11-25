@@ -77,7 +77,7 @@ export function PaidReportForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-0 flex flex-col gap-4">
+    <form onSubmit={handleSubmit} className="mt-0 flex flex-col gap-3">
       <div>
         <label htmlFor="paid-email" className="text-sm font-medium text-mention-dark">
           E-Mail <span className="text-red-600">*</span>
@@ -90,7 +90,7 @@ export function PaidReportForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="mt-1.5 w-full rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-mention-dark outline-none ring-zinc-200 transition focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
+          className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-4 py-2 text-mention-dark outline-none ring-zinc-200 transition focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
         />
       </div>
 
@@ -108,14 +108,14 @@ export function PaidReportForm() {
           placeholder="https://www.example.com"
           value={website}
           onChange={(e) => setWebsite(e.target.value)}
-          className="mt-1.5 w-full rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-mention-dark outline-none ring-zinc-200 transition placeholder:text-mention-gray focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
+          className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-4 py-2 text-mention-dark outline-none ring-zinc-200 transition placeholder:text-mention-gray focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
         />
       </div>
 
       <button
         type="submit"
         disabled={isLoading || pricingLoading}
-        className="mt-2 w-full rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark hover:shadow-lg disabled:pointer-events-none disabled:opacity-60"
+        className="mt-1 w-full rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary-dark hover:shadow-lg disabled:pointer-events-none disabled:opacity-60"
       >
         {isLoading
           ? "Wird vorbereitet..."

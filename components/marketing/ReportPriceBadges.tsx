@@ -18,8 +18,8 @@ export function ReportPriceBadges({ variant }: { variant: Variant }) {
   }
 
   return (
-    <div className="mt-4 flex flex-col gap-0.5">
-      <span className="text-3xl font-bold text-primary">{sale}</span>
+    <div className="mt-1 flex flex-col gap-0.5">
+      <span className="text-3xl font-bold text-mention-dark">{sale}</span>
     </div>
   );
 }
