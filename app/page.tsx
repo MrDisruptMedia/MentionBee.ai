@@ -10,20 +10,18 @@ import { ProblemSection } from "@/components/marketing/ProblemSection";
 import { WhatWeAnalyze } from "@/components/marketing/WhatWeAnalyze";
 import { WhatYouGetSection } from "@/components/marketing/WhatYouGetSection";
 import { getLatestPublishedArticles } from "@/lib/blog";
-import { fetchPublicPricing } from "@/lib/public-pricing";
 import { canonicalUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl("/") },
 };
 
-export default async function Home() {
-  const pricing = await fetchPublicPricing();
+export default function Home() {
   const latestPosts = getLatestPublishedArticles(3);
 
   return (
     <>
-      <Hero pricing={pricing} />
+      <Hero />
       <ProblemSection />
       <WhatWeAnalyze />
       <MemsTestimonial />
@@ -31,7 +29,7 @@ export default async function Home() {
       <PricingRiskSection />
       <FAQ />
       <LatestPostsSection articles={latestPosts} />
-      <FinalCTA pricing={pricing} />
+      <FinalCTA />
     </>
   );
 }

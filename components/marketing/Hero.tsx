@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 import { HeroReportExcerpt } from "@/components/marketing/HeroReportExcerpt";
-import type { PublicPricing } from "@/lib/public-pricing";
+import { VisitorOfferPrice } from "@/components/marketing/VisitorOfferPrice";
 
-export function Hero({ pricing }: { pricing: PublicPricing }) {
+export function Hero() {
   return (
     <section className="border-b border-zinc-200/80 bg-white">
       <div className="mx-auto flex max-w-6xl flex-col justify-center gap-8 px-4 py-10 max-lg:items-start sm:gap-12 sm:py-16 lg:grid lg:min-h-[80vh] lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-20">
@@ -29,9 +29,11 @@ export function Hero({ pricing }: { pricing: PublicPricing }) {
             >
               Meine Sichtbarkeit prüfen →
             </Link>
-            <p className="text-sm text-mention-gray">
-              Einmaliger Report · {pricing.deepDivePriceFormatted} · Konkrete Massnahmen statt Abo
-            </p>
+            <VisitorOfferPrice
+              before="Einmaliger Report · "
+              after=" · Konkrete Massnahmen statt Abo"
+              className="text-sm text-mention-gray"
+            />
           </div>
         </div>
 
