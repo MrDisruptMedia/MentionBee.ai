@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import {
-  PRICING_FALLBACK,
   PRICING_PLACEHOLDER,
   getClientPricingApiUrl,
   parsePublicPricingFromJson,
@@ -29,7 +28,7 @@ export function usePublicPricing(): {
     const url = getClientPricingApiUrl() || "/api/public/pricing";
 
     let cancelled = false;
-    void fetch(url, { credentials: "omit" })
+    void fetch(url, { credentials: "omit", cache: "no-store" })
       .then((r) => {
         if (!r.ok) throw new Error(`pricing ${r.status}`);
         return r.json();
@@ -47,7 +46,7 @@ export function usePublicPricing(): {
       })
       .catch(() => {
         if (!cancelled) {
-          setPricing(PRICING_FALLBACK);
+          setPricing(PRICING_PLACEHOLDER);
           setIsFallback(true);
         }
       })

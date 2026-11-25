@@ -48,26 +48,20 @@ export function parsePublicPricingFromJson(body: unknown): PublicPricing | null 
   const b = body as Record<string, unknown>;
 
   const deepDivePriceFormatted = String(b.deepDivePriceFormatted ?? b.deepDiveDisplay ?? "").trim();
-  const deepDiveRegularPriceFormatted = String(b.deepDiveRegularPriceFormatted ?? "").trim();
 
   const raw = b.deepDivePrice;
   const num = typeof raw === "number" ? raw : Number(raw);
-  const deepDivePrice = Number.isFinite(num) && num >= 0 ? num : PRICING_FALLBACK.deepDivePrice;
+  const deepDivePrice = Number.isFinite(num) && num >= 0 ? num : 0;
 
-  const rawR = b.deepDiveRegularPrice;
-  const numR = typeof rawR === "number" ? rawR : Number(rawR);
-  const deepDiveRegularPrice = Number.isFinite(numR) && numR >= 0 ? numR : PRICING_FALLBACK.deepDiveRegularPrice;
-
-  const currency = String(b.currency ?? "EUR").trim().toUpperCase() || PRICING_FALLBACK.currency;
+  const currency = String(b.currency ?? "").trim().toUpperCase();
 
   if (!deepDivePriceFormatted) return null;
 
   return {
     deepDivePrice,
     deepDivePriceFormatted,
-    deepDiveRegularPrice,
-    deepDiveRegularPriceFormatted:
-      deepDiveRegularPriceFormatted || PRICING_FALLBACK.deepDiveRegularPriceFormatted,
+    deepDiveRegularPrice: 0,
+    deepDiveRegularPriceFormatted: "",
     currency,
   };
 }
@@ -75,16 +69,14 @@ export function parsePublicPricingFromJson(body: unknown): PublicPricing | null 
 /** Server: zentrale Preise für JSON-LD / FAQ — Base-URL = AI-Visibility-Deployment. */
 export async function fetchPublicPricing(): Promise<PublicPricing> {
   const base = getPricingApiBaseUrl();
-  if (!base) return PRICING_FALLBACK;
+  if (!base) return PRICING_PLACEHOLDER;
 
   try {
-    const res = await fetch(`${base}/api/public/pricing`, {
-      next: { revalidate: 120 },
-    });
-    if (!res.ok) return PRICING_FALLBACK;
+    const res = await fetch(`${base}/api/public/pricing`, { cache: "no-store" });
+    if (!res.ok) return PRICING_PLACEHOLDER;
     const body: unknown = await res.json();
-    return parsePublicPricingFromJson(body) ?? PRICING_FALLBACK;
+    return parsePublicPricingFromJson(body) ?? PRICING_PLACEHOLDER;
   } catch {
-    return PRICING_FALLBACK;
+    return PRICING_PLACEHOLDER;
   }
 }
