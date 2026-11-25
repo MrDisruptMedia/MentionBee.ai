@@ -115,8 +115,8 @@ export function WhatWeAnalyze() {
             </span>
           </h2>
           <p className="mt-4 text-base leading-relaxed text-mention-gray sm:text-lg">
-            Der AI Visibility Audit untersucht sechs Messbereiche – von KI-Präsenz & Sichtbarkeit und Inhalten
-            bis zu Technik, Vertrauen und externen Marktsignalen.
+            Das MentionBee KI-Sichtbarkeits-Audit mit konkretem Massnahmenplan zeigt, wo du in KI-Antworten
+            auftauchst, welche Wettbewerber genannt werden und welche Verbesserungen zuerst sinnvoll sind.
           </p>
         </div>
 

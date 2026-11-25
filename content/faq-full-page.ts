@@ -118,7 +118,7 @@ export const faqFullPageSections: FaqFullPageSection[] = [
         id: "umfang-analyse",
         question: "Wie umfangreich ist die Analyse?",
         answerText:
-          "Ein typischer MentionBee-Report wertet über 120 Datenpunkte aus. Dazu gehören deine Sichtbarkeit bei kaufnahen Fragen in vier KI-Systemen, die Erwähnungen relevanter Wettbewerber sowie mehr als 60 Prüfungen deiner Inhalte, Website, technischen Voraussetzungen, Vertrauens- und Marktsignale. Die genaue Zahl variiert je nach Anzahl der untersuchten Fragen und Wettbewerber.",
+          "Das MentionBee KI-Sichtbarkeits-Audit mit konkretem Massnahmenplan prüft 3 bis 6 kaufnahe Fragen in ChatGPT, Claude, Gemini und Perplexity, vergleicht bis zu 3 Wettbewerber und priorisiert 10 Verbesserungen. Den Online-Report erhältst du innerhalb von 24 Stunden.",
       },
       {
         id: "gratis-report-inhalt",
@@ -130,13 +130,13 @@ export const faqFullPageSections: FaqFullPageSection[] = [
         id: "deep-dive-inhalt",
         question: "Was ist im MentionBee-Report enthalten?",
         answerText:
-          "Nach dem AI Visibility Audit erhältst du einen individuellen Online-Report: 3–6 kaufnahe Fragen, getestet über ChatGPT, Claude, Gemini und Perplexity, bis zu 3 Wettbewerber im direkten Vergleich, 68+ Website-, Trust- und Marktsignale sowie 10 priorisierte Massnahmen. Lieferung innerhalb von 24 Stunden per E-Mail-Link.",
+          "Im MentionBee KI-Sichtbarkeits-Audit mit konkretem Massnahmenplan siehst du, wo dein Unternehmen in ChatGPT, Claude, Gemini und Perplexity auftaucht, welche von bis zu 3 Wettbewerbern stattdessen genannt werden und welche 10 Verbesserungen zuerst sinnvoll sind. Den Online-Report erhältst du innerhalb von 24 Stunden per E-Mail-Link.",
       },
       {
         id: "was-fuer-deep-dive-preis",
         question: "Was bekomme ich für {{DEEP_DIVE_PRICE}}?",
         answerText:
-          "Einen einmaligen AI Visibility Audit mit individuellem Online-Report: Sichtbarkeit in ChatGPT, Claude, Gemini und Perplexity, Wettbewerbsvergleich, Website-, Trust- und Marktsignale sowie 10 priorisierte Massnahmen. Kein Abo, Lieferung innerhalb von 24 Stunden.",
+          "Ein einmaliges MentionBee KI-Sichtbarkeits-Audit mit konkretem Massnahmenplan: Sichtbarkeit in ChatGPT, Claude, Gemini und Perplexity, Vergleich von bis zu 3 Wettbewerbern und 10 priorisierte Verbesserungen. Kein Abo. Den Online-Report erhältst du innerhalb von 24 Stunden.",
       },
       {
         id: "wettbewerber-angeben",

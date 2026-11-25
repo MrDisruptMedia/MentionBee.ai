@@ -20,12 +20,10 @@ function CheckItem({ children }: { children: React.ReactNode }) {
 const deepDiveItems = [
   "siehst du, bei welchen Kauf-Fragen du nicht auftauchst",
   "erkennst du, welche Wettbewerber KI stattdessen empfiehlt",
-  "verstehst du, welche Quellen und Inhalte dir fehlen",
-  "bekommst du 10 priorisierte Massnahmen",
-  "erhältst du einen priorisierten Massnahmenplan",
-  "untersuchst du 68+ Website-, Trust- und Marktsignale",
-  "analysieren wir 3–5 kaufnahe Fragen über ChatGPT, Claude, Gemini und Perplexity",
-  "erhältst du deinen individuellen Online-Report innerhalb von 24 Stunden",
+  "vergleichen wir bis zu 3 Wettbewerber",
+  "prüfen wir 3 bis 6 kaufnahe Fragen in ChatGPT, Claude, Gemini und Perplexity",
+  "bekommst du 10 priorisierte Verbesserungen",
+  "erhältst du den Online-Report innerhalb von 24 Stunden",
 ] as const;
 
 export function FreeVsPaid() {
@@ -36,11 +34,12 @@ export function FreeVsPaid() {
     <section className="border-b border-zinc-200/80 bg-mention-light py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl">
-          Kostenloser Report vs. Deep-Dive Report
+          Kostenloser Report vs. MentionBee KI-Sichtbarkeits-Audit
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-mention-gray">
-          Der kostenlose Report zeigt dir, ob du sichtbar bist. Der Deep-Dive zeigt dir, warum du gewinnst oder
-          verlierst – und was du als Nächstes ändern solltest.
+          Der kostenlose Report zeigt dir, ob du sichtbar bist. Das MentionBee KI-Sichtbarkeits-Audit mit
+          konkretem Massnahmenplan zeigt dir, warum du gewinnst oder verlierst – und was du als Nächstes
+          ändern solltest.
         </p>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2 lg:gap-8">
@@ -66,7 +65,9 @@ export function FreeVsPaid() {
             <span className="absolute top-4 right-4 rounded-full bg-primary px-3 py-1 text-xs font-bold text-gray-900 sm:top-6 sm:right-6">
               Empfohlen
             </span>
-            <h3 className="pr-24 font-heading text-xl font-semibold text-mention-dark">Deep-Dive Report</h3>
+            <h3 className="pr-24 font-heading text-xl font-semibold text-mention-dark">
+              MentionBee KI-Sichtbarkeits-Audit
+            </h3>
 
             <div className="mt-4 inline-flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-xl border border-primary/25 bg-primary/5 px-4 py-3">
               <span className="min-h-[2rem] min-w-[5.5rem] text-2xl font-bold text-primary tabular-nums">

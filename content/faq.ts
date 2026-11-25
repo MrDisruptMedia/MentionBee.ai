@@ -55,6 +55,6 @@ export const faqEntries: FaqEntry[] = [
     id: "umfang-analyse",
     question: "Wie umfangreich ist die Analyse?",
     answer:
-      "Ein typischer MentionBee-Report wertet über 120 Datenpunkte aus. Dazu gehören deine Sichtbarkeit bei kaufnahen Fragen in vier KI-Systemen, die Erwähnungen relevanter Wettbewerber sowie mehr als 60 Prüfungen deiner Inhalte, Website, technischen Voraussetzungen, Vertrauens- und Marktsignale. Die genaue Zahl variiert je nach Anzahl der untersuchten Fragen und Wettbewerber.",
+          "Das MentionBee KI-Sichtbarkeits-Audit mit konkretem Massnahmenplan prüft 3 bis 6 kaufnahe Fragen in ChatGPT, Claude, Gemini und Perplexity, vergleicht bis zu 3 Wettbewerber und priorisiert 10 Verbesserungen. Den Online-Report erhältst du innerhalb von 24 Stunden.",
   },
 ];

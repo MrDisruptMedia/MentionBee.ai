@@ -11,21 +11,19 @@ import { fetchPublicPricing } from "@/lib/public-pricing";
 import { canonicalUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "AI Visibility Audit | MentionBee",
+  title: "MentionBee KI-Sichtbarkeits-Audit",
   description:
-    "Einmaliger AI Visibility Audit: 3–6 kaufnahe Fragen über ChatGPT, Claude, Gemini und Perplexity, bis zu 3 Wettbewerber, 68+ Signale und 10 priorisierte Massnahmen. Innerhalb von 24 Stunden.",
+    "Das musst du ändern, damit KI dein Unternehmen empfiehlt. MentionBee KI-Sichtbarkeits-Audit mit konkretem Massnahmenplan. Deine Analyse mit Wettbewerbsvergleich und 10 priorisierten Massnahmen – als Online-Report.",
   alternates: { canonical: canonicalUrl("/report") },
 };
 
 const featureBullets = [
-  "3–6 kaufnahe Fragen für dein Unternehmen und deinen Markt",
-  "Analyse über 4 KI-Systeme (ChatGPT · Claude · Gemini · Perplexity)",
-  "Wettbewerbsvergleich gegen bis zu 3 Anbieter",
-  "68+ Website-, Trust- und Marktsignale",
-  "10 priorisierte Massnahmen",
-  "Individueller Online-Report per E-Mail-Link",
-  "Teilbarer Report-Link für dein Team",
-  "Innerhalb von 24 Stunden",
+  "Du siehst, bei welchen Kauf-Fragen ChatGPT, Claude, Gemini und Perplexity dein Unternehmen nennen.",
+  "Du siehst, welche Wettbewerber stattdessen empfohlen werden. Verglichen werden bis zu drei.",
+  "Geprüft werden 3 bis 6 kaufnahe Fragen in diesen vier Systemen.",
+  "Du bekommst 10 priorisierte Verbesserungen.",
+  "Den Online-Report erhältst du per Link, auch zum Teilen im Team.",
+  "Lieferung innerhalb von 24 Stunden.",
 ] as const;
 
 export default async function ReportPage() {
@@ -43,14 +41,14 @@ export default async function ReportPage() {
       {/* Hero */}
       <header className="mx-auto max-w-3xl text-center">
         <p className="mx-auto mb-6 w-fit rounded-full border border-zinc-200/90 bg-mention-light px-3 py-1 text-xs font-semibold tracking-wide text-mention-dark uppercase">
-          AI Visibility Audit · Einmalig · Kein Abo
+          MentionBee KI-Sichtbarkeits-Audit mit konkretem Massnahmenplan · Einmalig · Kein Abo
         </p>
         <h1 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl lg:text-5xl">
-          AI Visibility Audit
+          Das musst du ändern, damit KI dein Unternehmen empfiehlt.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-mention-gray sm:text-xl">
-          Der vollständige Audit deiner Sichtbarkeit in KI-Antworten – mit Wettbewerbsvergleich,
-          Ursachenanalyse und priorisierten Massnahmen.
+          Erfahre, bei welchen Kundenfragen deine Konkurrenz auftaucht, wo dein Unternehmen fehlt und
+          welche Verbesserungen du zuerst angehen solltest.
         </p>
       </header>
 
@@ -59,7 +57,7 @@ export default async function ReportPage() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:items-start lg:gap-12">
           <div>
             <h2 className="font-heading text-2xl font-bold text-mention-dark sm:text-3xl">
-              Im Audit enthalten:
+              Deine Analyse mit Wettbewerbsvergleich und 10 priorisierten Massnahmen – als Online-Report.
             </h2>
             <ul className="mt-6 flex flex-col gap-3" role="list">
               {featureBullets.map((line) => (
@@ -107,10 +105,10 @@ export default async function ReportPage() {
           <article className="flex flex-col gap-3 rounded-2xl border border-zinc-100 bg-white/80 p-6 shadow-sm">
             <Search className="size-9 text-primary" strokeWidth={2} aria-hidden />
             <h3 className="font-heading text-lg font-semibold text-mention-dark">
-              Vollständige KI-Analyse
+              Wo du in KI-Antworten auftauchst
             </h3>
             <p className="text-sm leading-relaxed text-mention-gray">
-              3–6 kaufnahe Fragen – getestet über ChatGPT, Claude, Gemini und Perplexity.
+              3 bis 6 kaufnahe Fragen in ChatGPT, Claude, Gemini und Perplexity.
             </p>
           </article>
           <article className="flex flex-col gap-3 rounded-2xl border border-zinc-100 bg-white/80 p-6 shadow-sm">
@@ -119,8 +117,7 @@ export default async function ReportPage() {
               Wettbewerbsvergleich
             </h3>
             <p className="text-sm leading-relaxed text-mention-gray">
-              Bis zu 3 Wettbewerber im direkten Vergleich. Du siehst genau, wo du stehst und wer dich
-              aussticht.
+              Bis zu 3 Wettbewerber. Du siehst, wen die KI statt dir empfiehlt.
             </p>
           </article>
           <article className="flex flex-col gap-3 rounded-2xl border border-zinc-100 bg-white/80 p-6 shadow-sm">
@@ -129,8 +126,7 @@ export default async function ReportPage() {
               10 priorisierte Massnahmen
             </h3>
             <p className="text-sm leading-relaxed text-mention-gray">
-              Konkrete nächste Schritte – priorisiert danach, womit du sinnvollerweise anfangen
-              solltest.
+              10 Verbesserungen, geordnet danach, womit du sinnvollerweise anfängst.
             </p>
           </article>
         </div>

@@ -64,11 +64,11 @@ export function auditServiceJsonLd(pricing: PublicPricing) {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": AUDIT_SERVICE_ID,
-    name: "AI Visibility Audit",
+    name: "MentionBee KI-Sichtbarkeits-Audit",
     url: AUDIT_SERVICE_URL,
     provider: { "@id": ORGANIZATION_ID },
     description:
-      "Einmaliger AI Visibility Audit: Analyse der Sichtbarkeit in ChatGPT, Claude, Gemini und Perplexity sowie relevanter Website-, Trust- und Marktsignale. Das Ergebnis ist ein individueller Online-Report mit 10 priorisierten Massnahmen. Kein Abo. Lieferung innerhalb von 24 Stunden.",
+      "MentionBee KI-Sichtbarkeits-Audit mit konkretem Massnahmenplan. Deine Analyse mit Wettbewerbsvergleich und 10 priorisierten Massnahmen – als Online-Report. Kein Abo. Lieferung innerhalb von 24 Stunden.",
     offers: [
       offerNode(pricing.priceChf, "CHF"),
       offerNode(pricing.priceEur, "EUR"),
