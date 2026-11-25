@@ -5,6 +5,10 @@ export type PublicPricing = {
   deepDiveRegularPrice: number;
   deepDiveRegularPriceFormatted: string;
   currency: string;
+  priceChf: number;
+  priceEur: number;
+  /** Neutrale Angabe beider Settings, unabhängig vom Besucher- oder Serverland. */
+  blogPriceFormatted: string;
 };
 
 /**
@@ -17,6 +21,9 @@ export const PRICING_FALLBACK: PublicPricing = {
   deepDiveRegularPrice: 249,
   deepDiveRegularPriceFormatted: "€ 249",
   currency: "EUR",
+  priceChf: 0,
+  priceEur: 0,
+  blogPriceFormatted: "",
 };
 
 /** Kein Verkaufspreis — nur Layout-Platzhalter, bis `/api/public/pricing` geantwortet hat. */
@@ -26,6 +33,9 @@ export const PRICING_PLACEHOLDER: PublicPricing = {
   deepDiveRegularPrice: 0,
   deepDiveRegularPriceFormatted: "",
   currency: "",
+  priceChf: 0,
+  priceEur: 0,
+  blogPriceFormatted: "",
 };
 
 export function getPricingApiBaseUrl(): string {
@@ -48,14 +58,17 @@ export function parsePublicPricingFromJson(body: unknown): PublicPricing | null 
   const b = body as Record<string, unknown>;
 
   const deepDivePriceFormatted = String(b.deepDivePriceFormatted ?? b.deepDiveDisplay ?? "").trim();
+  const blogPriceFormatted = String(b.blogPriceFormatted ?? "").trim();
 
   const raw = b.deepDivePrice;
   const num = typeof raw === "number" ? raw : Number(raw);
   const deepDivePrice = Number.isFinite(num) && num >= 0 ? num : 0;
+  const priceChf = majorAmount(b.priceChf);
+  const priceEur = majorAmount(b.priceEur);
 
   const currency = String(b.currency ?? "").trim().toUpperCase();
 
-  if (!deepDivePriceFormatted) return null;
+  if (!deepDivePriceFormatted && !blogPriceFormatted) return null;
 
   return {
     deepDivePrice,
@@ -63,7 +76,15 @@ export function parsePublicPricingFromJson(body: unknown): PublicPricing | null 
     deepDiveRegularPrice: 0,
     deepDiveRegularPriceFormatted: "",
     currency,
+    priceChf,
+    priceEur,
+    blogPriceFormatted,
   };
+}
+
+function majorAmount(value: unknown): number {
+  const num = typeof value === "number" ? value : Number(value);
+  return Number.isFinite(num) && num >= 0 ? num : 0;
 }
 
 /** Server: zentrale Preise für JSON-LD / FAQ — Base-URL = AI-Visibility-Deployment. */

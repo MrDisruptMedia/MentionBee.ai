@@ -47,6 +47,18 @@ export function siteGraphJsonLd() {
   };
 }
 
+function offerNode(price: number, currency: "CHF" | "EUR") {
+  if (!Number.isFinite(price) || price <= 0) return null;
+  return {
+    "@type": "Offer" as const,
+    url: AUDIT_SERVICE_URL,
+    price,
+    priceCurrency: currency,
+    availability: "https://schema.org/InStock",
+    seller: { "@id": ORGANIZATION_ID },
+  };
+}
+
 export function auditServiceJsonLd(pricing: PublicPricing) {
   return {
     "@context": "https://schema.org",
@@ -57,14 +69,10 @@ export function auditServiceJsonLd(pricing: PublicPricing) {
     provider: { "@id": ORGANIZATION_ID },
     description:
       "Einmaliger AI Visibility Audit: Analyse der Sichtbarkeit in ChatGPT, Claude, Gemini und Perplexity sowie relevanter Website-, Trust- und Marktsignale. Das Ergebnis ist ein individueller Online-Report mit 10 priorisierten Massnahmen. Kein Abo. Lieferung innerhalb von 24 Stunden.",
-    offers: {
-      "@type": "Offer",
-      url: AUDIT_SERVICE_URL,
-      price: pricing.deepDivePrice,
-      priceCurrency: pricing.currency,
-      availability: "https://schema.org/InStock",
-      seller: { "@id": ORGANIZATION_ID },
-    },
+    offers: [
+      offerNode(pricing.priceChf, "CHF"),
+      offerNode(pricing.priceEur, "EUR"),
+    ].filter((offer) => offer !== null),
   };
 }
 
