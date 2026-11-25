@@ -13,7 +13,7 @@ import { canonicalUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "MentionBee KI-Sichtbarkeits-Audit",
   description:
-    "Das musst du ändern, damit KI dein Unternehmen empfiehlt. MentionBee KI-Sichtbarkeits-Audit mit konkretem Massnahmenplan. Deine Analyse mit Wettbewerbsvergleich und 10 priorisierten Massnahmen – als Online-Report.",
+    "MentionBee zeigt dir, bei welchen Kundenfragen deine Konkurrenz auftaucht und wo dein Unternehmen fehlt. Du erhältst eine Analyse deiner Website und deines Online-Auftritts – mit 10 konkreten Massnahmen, nach Priorität geordnet.",
   alternates: { canonical: canonicalUrl("/report") },
 };
 
@@ -40,15 +40,14 @@ export default async function ReportPage() {
       <TrackFunnelView event={FUNNEL_EVENTS.VIEW_PAID_REPORT} />
       {/* Hero */}
       <header className="mx-auto max-w-3xl text-center">
-        <p className="mx-auto mb-6 w-fit rounded-full border border-zinc-200/90 bg-mention-light px-3 py-1 text-xs font-semibold tracking-wide text-mention-dark uppercase">
-          MentionBee KI-Sichtbarkeits-Audit mit konkretem Massnahmenplan · Einmalig · Kein Abo
-        </p>
-        <h1 className="font-heading text-3xl font-bold tracking-tight text-mention-dark sm:text-4xl lg:text-5xl">
+        <p className="text-sm font-medium text-mention-gray sm:text-base">KI-Sichtbarkeits-Audit</p>
+        <h1 className="mt-3 font-heading text-[1.75rem] font-bold leading-tight tracking-tight text-mention-dark text-balance sm:mt-4 sm:text-4xl lg:text-5xl">
           Das musst du ändern, damit KI dein Unternehmen empfiehlt.
         </h1>
-        <p className="mt-6 text-lg leading-relaxed text-mention-gray sm:text-xl">
-          Erfahre, bei welchen Kundenfragen deine Konkurrenz auftaucht, wo dein Unternehmen fehlt und
-          welche Verbesserungen du zuerst angehen solltest.
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-mention-gray sm:mt-5 sm:text-lg">
+          MentionBee zeigt dir, bei welchen Kundenfragen deine Konkurrenz auftaucht und wo dein
+          Unternehmen fehlt. Du erhältst eine Analyse deiner Website und deines Online-Auftritts – mit
+          10 konkreten Massnahmen, nach Priorität geordnet.
         </p>
       </header>
 
@@ -72,9 +71,7 @@ export default async function ReportPage() {
           <aside className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-zinc-100 sm:p-8">
             <h2 className="font-heading text-xl font-semibold text-mention-dark">Jetzt bestellen</h2>
             <ReportPriceBadges variant="aside" />
-            <p className="mt-2 text-sm text-mention-gray">
-              Einmalig · Kein Abo · Innerhalb von 24 Stunden
-            </p>
+            <p className="mt-2 text-sm text-mention-gray">Einmalig · Kein Abo</p>
             <hr className="my-6 border-zinc-200" />
             <PaidReportForm />
             <p className="mt-6 text-xs leading-relaxed text-mention-gray">

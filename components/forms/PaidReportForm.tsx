@@ -120,8 +120,8 @@ export function PaidReportForm() {
         {isLoading
           ? "Wird vorbereitet..."
           : pricingLoading || !pricing.deepDivePriceFormatted
-            ? "Jetzt bestellen →"
-            : `Jetzt für ${pricing.deepDivePriceFormatted} bestellen →`}
+            ? "Audit bestellen"
+            : `Audit bestellen · ${pricing.deepDivePriceFormatted}`}
       </button>
 
       {error ? (
