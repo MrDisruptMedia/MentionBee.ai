@@ -7,6 +7,10 @@ import { CheckCircle } from "lucide-react";
 import { trackFreeReportSubmit } from "@/lib/analytics/data-layer";
 
 const FREE_REPORT_API = "https://ai-visibility-report-tau.vercel.app/api/free-report-request";
+const FREE_REPORT_START_API = "https://ai-visibility-report-tau.vercel.app/api/free-report-start";
+
+/** PIN wird später zwischen Angaben und Fokus eingefügt. Die Anzeige folgt der Länge. */
+const FREE_REPORT_STEPS = ["angaben", "fokus"] as const;
 
 export function FreeReportForm() {
   const [firstName, setFirstName] = useState("");
@@ -19,6 +23,10 @@ export function FreeReportForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
+  const [step, setStep] = useState<(typeof FREE_REPORT_STEPS)[number]>("angaben");
+  const [reportId, setReportId] = useState("");
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [focus, setFocus] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -40,13 +48,39 @@ export function FreeReportForm() {
         }),
       });
 
-      const data = (await res.json()) as { success?: boolean; error?: string };
+      const data = (await res.json()) as { success?: boolean; error?: string; reportId?: string; suggestions?: string[] };
 
-      if (!res.ok || !data.success) {
+      if (!res.ok || !data.success || !data.reportId) {
         setError(typeof data.error === "string" ? data.error : "Etwas ist schiefgelaufen. Bitte versuche es erneut.");
         return;
       }
 
+      setReportId(data.reportId);
+      setSuggestions(Array.isArray(data.suggestions) ? data.suggestions.filter((item) => typeof item === "string") : []);
+      setFocus("");
+      setStep("fokus");
+    } catch {
+      setError("Netzwerkfehler. Bitte prüfe deine Verbindung und versuche es erneut.");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  async function handleStart(e: React.FormEvent) {
+    e.preventDefault();
+    setError("");
+    setIsLoading(true);
+    try {
+      const res = await fetch(FREE_REPORT_START_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reportId, focus: focus.trim() }),
+      });
+      const data = (await res.json()) as { success?: boolean; error?: string };
+      if (!res.ok || !data.success) {
+        setError(typeof data.error === "string" ? data.error : "Der Check konnte nicht gestartet werden.");
+        return;
+      }
       trackFreeReportSubmit({ website: website.trim() });
       setSuccess(true);
     } catch {
@@ -55,6 +89,8 @@ export function FreeReportForm() {
       setIsLoading(false);
     }
   }
+
+  const stepNumber = FREE_REPORT_STEPS.indexOf(step) + 1;
 
   return (
     <div className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-zinc-100">
@@ -76,9 +112,66 @@ export function FreeReportForm() {
             Weiteren Report anfordern
           </button>
         </div>
+      ) : step === "fokus" ? (
+        <>
+          <p className="text-sm font-medium text-mention-gray">Schritt {stepNumber} von {FREE_REPORT_STEPS.length}</p>
+          <h2 className="mt-2 font-heading text-xl font-semibold text-mention-dark">
+            Wofür sollen KIs dich empfehlen?
+          </h2>
+          <form onSubmit={handleStart} className="mt-6 flex flex-col gap-4">
+            {suggestions.length > 0 ? (
+              <div className="flex flex-col gap-2">
+                {suggestions.map((suggestion) => {
+                  const selected = focus.trim().toLowerCase() === suggestion.toLowerCase();
+                  return (
+                    <button
+                      key={suggestion}
+                      type="button"
+                      onClick={() => setFocus(suggestion)}
+                      className={
+                        selected
+                          ? "rounded-xl border border-primary bg-primary/10 px-4 py-2.5 text-left text-sm font-medium text-mention-dark"
+                          : "rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-left text-sm text-mention-dark hover:border-primary/40"
+                      }
+                    >
+                      {suggestion}
+                    </button>
+                  );
+                })}
+              </div>
+            ) : null}
+            <div>
+              <label htmlFor="focus" className="text-sm font-medium text-mention-dark">
+                {suggestions.length > 0 ? "Oder selbst eintragen" : "Angebot"}
+              </label>
+              <input
+                id="focus"
+                name="focus"
+                type="text"
+                required={suggestions.length === 0}
+                value={focus}
+                onChange={(e) => setFocus(e.target.value)}
+                className="mt-1.5 w-full rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-mention-dark outline-none ring-zinc-200 transition focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={isLoading || focus.trim().length < 2}
+              className="mt-2 w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark disabled:pointer-events-none disabled:opacity-60"
+            >
+              {isLoading ? "Check startet..." : "Check starten"}
+            </button>
+            {error ? (
+              <p className="text-center text-sm font-medium text-red-600" role="alert">
+                {error}
+              </p>
+            ) : null}
+          </form>
+        </>
       ) : (
         <>
-          <h2 className="font-heading text-xl font-semibold text-mention-dark">Report anfordern</h2>
+          <p className="text-sm font-medium text-mention-gray">Schritt {stepNumber} von {FREE_REPORT_STEPS.length}</p>
+          <h2 className="mt-2 font-heading text-xl font-semibold text-mention-dark">Report anfordern</h2>
 
           <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
             <div>
@@ -201,7 +294,7 @@ export function FreeReportForm() {
             </label>
 
             <p className="text-xs leading-relaxed text-mention-gray">
-              Mit dem Absenden akzeptierst du unsere{" "}
+              Mit Weiter akzeptierst du unsere{" "}
               <Link href="/agb" className="font-medium text-mention-dark underline underline-offset-2">
                 AGB
               </Link>{" "}
@@ -217,7 +310,7 @@ export function FreeReportForm() {
               disabled={isLoading || !queryLanguage || !targetMarket}
               className="mt-2 w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-gray-900 shadow-md transition-all duration-200 hover:scale-105 hover:shadow-md hover:bg-primary-dark disabled:pointer-events-none disabled:opacity-60"
             >
-              {isLoading ? "Wird analysiert..." : "Kostenlosen Report anfordern →"}
+              {isLoading ? "Wird gelesen..." : "Weiter"}
             </button>
 
             {error ? (
