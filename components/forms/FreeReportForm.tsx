@@ -27,6 +27,8 @@ export function FreeReportForm() {
   const [reportId, setReportId] = useState("");
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [focus, setFocus] = useState("");
+  const [place, setPlace] = useState("");
+  const [normalizedOffer, setNormalizedOffer] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -48,7 +50,13 @@ export function FreeReportForm() {
         }),
       });
 
-      const data = (await res.json()) as { success?: boolean; error?: string; reportId?: string; suggestions?: string[] };
+      const data = (await res.json()) as {
+        success?: boolean;
+        error?: string;
+        reportId?: string;
+        suggestions?: string[];
+        suggestedPlace?: string | null;
+      };
 
       if (!res.ok || !data.success || !data.reportId) {
         setError(typeof data.error === "string" ? data.error : "Etwas ist schiefgelaufen. Bitte versuche es erneut.");
@@ -58,6 +66,8 @@ export function FreeReportForm() {
       setReportId(data.reportId);
       setSuggestions(Array.isArray(data.suggestions) ? data.suggestions.filter((item) => typeof item === "string") : []);
       setFocus("");
+      setPlace(typeof data.suggestedPlace === "string" ? data.suggestedPlace : "");
+      setNormalizedOffer(null);
       setStep("fokus");
     } catch {
       setError("Netzwerkfehler. Bitte prüfe deine Verbindung und versuche es erneut.");
@@ -74,9 +84,19 @@ export function FreeReportForm() {
       const res = await fetch(FREE_REPORT_START_API, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ reportId, focus: focus.trim() }),
+        body: JSON.stringify({
+          reportId,
+          focus: focus.trim(),
+          place: place.trim(),
+          confirmNormalized: normalizedOffer !== null && focus.trim() === normalizedOffer,
+        }),
       });
-      const data = (await res.json()) as { success?: boolean; error?: string };
+      const data = (await res.json()) as { success?: boolean; error?: string; needsConfirmation?: boolean; normalizedFocus?: string };
+      if (data.needsConfirmation && typeof data.normalizedFocus === "string") {
+        setNormalizedOffer(data.normalizedFocus);
+        setFocus(data.normalizedFocus);
+        return;
+      }
       if (!res.ok || !data.success) {
         setError(typeof data.error === "string" ? data.error : "Der Check konnte nicht gestartet werden.");
         return;
@@ -127,7 +147,10 @@ export function FreeReportForm() {
                     <button
                       key={suggestion}
                       type="button"
-                      onClick={() => setFocus(suggestion)}
+                      onClick={() => {
+                        setFocus(suggestion);
+                        setNormalizedOffer(null);
+                      }}
                       className={
                         selected
                           ? "rounded-xl border border-primary bg-primary/10 px-4 py-2.5 text-left text-sm font-medium text-mention-dark"
@@ -150,9 +173,41 @@ export function FreeReportForm() {
                 type="text"
                 required={suggestions.length === 0}
                 value={focus}
-                onChange={(e) => setFocus(e.target.value)}
+                onChange={(e) => {
+                  setFocus(e.target.value);
+                  if (normalizedOffer && e.target.value.trim() !== normalizedOffer) setNormalizedOffer(null);
+                }}
                 className="mt-1.5 w-full rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-mention-dark outline-none ring-zinc-200 transition focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
               />
+            </div>
+            {normalizedOffer ? (
+              <p className="rounded-xl bg-amber-50 px-4 py-3 text-sm text-mention-dark">
+                Für die Messung verwenden wir «{normalizedOffer}». Prüfe die Formulierung und starte dann den Check.
+              </p>
+            ) : null}
+            <div>
+              <p className="text-sm font-medium text-mention-dark">Wo möchtest du empfohlen werden?</p>
+              <p className="mt-1 text-sm text-mention-gray">
+                {targetMarket === "DE" ? "Deutschland" : targetMarket === "AT" ? "Österreich" : targetMarket === "INTL" ? "International" : "Schweiz"}
+              </p>
+              <label htmlFor="place" className="mt-3 block text-sm font-medium text-mention-dark">
+                Stadt oder Region
+              </label>
+              <input
+                id="place"
+                name="place"
+                type="text"
+                value={place}
+                onChange={(e) => setPlace(e.target.value)}
+                className="mt-1.5 w-full rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-mention-dark outline-none ring-zinc-200 transition focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
+              />
+              <p className="mt-1.5 text-sm text-mention-gray">
+                {targetMarket === "DE"
+                  ? "Lass das Feld leer, wenn du in ganz Deutschland Kunden gewinnen möchtest."
+                  : targetMarket === "AT"
+                    ? "Lass das Feld leer, wenn du in ganz Österreich Kunden gewinnen möchtest."
+                    : "Lass das Feld leer, wenn du in der ganzen Schweiz Kunden gewinnen möchtest."}
+              </p>
             </div>
             <button
               type="submit"
