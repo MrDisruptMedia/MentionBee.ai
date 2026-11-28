@@ -33,6 +33,27 @@ export function OrderCompleteForm() {
 
   const prefillUrl = resolvePrefillWebsiteUrl(searchParams);
   const prefillEmail = searchParams.get("email") ?? "";
+  const stripeSessionId = searchParams.get("session_id") ?? "";
+
+  useEffect(() => {
+    const email = prefillEmail.trim();
+    if (!email || !stripeSessionId) return;
+    let cancelled = false;
+    void fetch(`/api/paid-audit/gate?email=${encodeURIComponent(email)}`)
+      .then((response) => response.json())
+      .then((body: { allowed?: boolean }) => {
+        if (cancelled || body.allowed !== true) return;
+        const next = new URL("https://app.mentionbee.ai/audit");
+        next.searchParams.set("session_id", stripeSessionId);
+        next.searchParams.set("email", email);
+        if (prefillUrl) next.searchParams.set("website_url", prefillUrl);
+        window.location.replace(next.toString());
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [prefillEmail, prefillUrl, stripeSessionId]);
 
   const [url, setUrl] = useState(prefillUrl);
   const [email, setEmail] = useState(prefillEmail);
