@@ -29,6 +29,7 @@ async function resolveCheckoutPricing(fallback: {
 
 export function PaidReportForm() {
   const { pricing, loading: pricingLoading } = usePublicPricing();
+  const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -43,7 +44,7 @@ export function PaidReportForm() {
       const res = await fetch("/api/create-checkout-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), url: website.trim() }),
+        body: JSON.stringify({ email: email.trim(), url: website.trim(), firstName: firstName.trim() }),
       });
 
       if (!res.ok) {
@@ -78,6 +79,21 @@ export function PaidReportForm() {
 
   return (
     <form onSubmit={handleSubmit} className="mt-0 flex flex-col gap-3">
+      <div>
+        <label htmlFor="paid-first-name" className="text-sm font-medium text-mention-dark">
+          Vorname <span className="text-red-600">*</span>
+        </label>
+        <input
+          id="paid-first-name"
+          name="firstName"
+          type="text"
+          autoComplete="given-name"
+          required
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-4 py-2 text-mention-dark outline-none ring-zinc-200 transition focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
+        />
+      </div>
       <div>
         <label htmlFor="paid-email" className="text-sm font-medium text-mention-dark">
           E-Mail <span className="text-red-600">*</span>

@@ -1,16 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 
 import { trackFreeReportSubmit } from "@/lib/analytics/data-layer";
 
 const FREE_REPORT_API = "https://ai-visibility-report-tau.vercel.app/api/free-report-request";
+const FREE_REPORT_PIN_API = "https://ai-visibility-report-tau.vercel.app/api/free-report-pin";
+const FREE_REPORT_FOCUS_API = "https://ai-visibility-report-tau.vercel.app/api/free-report-focus";
 const FREE_REPORT_START_API = "https://ai-visibility-report-tau.vercel.app/api/free-report-start";
+const FREE_REPORT_RESULT = "https://app.mentionbee.ai/report";
 
-/** PIN wird später zwischen Angaben und Fokus eingefügt. Die Anzeige folgt der Länge. */
-const FREE_REPORT_STEPS = ["angaben", "fokus"] as const;
+const FREE_REPORT_STEPS = ["angaben", "pin", "fokus"] as const;
 
 export function FreeReportForm() {
   const [firstName, setFirstName] = useState("");
@@ -25,6 +27,8 @@ export function FreeReportForm() {
   const [success, setSuccess] = useState(false);
   const [step, setStep] = useState<(typeof FREE_REPORT_STEPS)[number]>("angaben");
   const [reportId, setReportId] = useState("");
+  const [pin, setPin] = useState("");
+  const [resendIn, setResendIn] = useState(0);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [focus, setFocus] = useState("");
   const [place, setPlace] = useState("");
@@ -64,16 +68,69 @@ export function FreeReportForm() {
       }
 
       setReportId(data.reportId);
-      setSuggestions(Array.isArray(data.suggestions) ? data.suggestions.filter((item) => typeof item === "string") : []);
-      setFocus("");
-      setPlace(typeof data.suggestedPlace === "string" ? data.suggestedPlace : "");
-      setNormalizedOffer(null);
-      setStep("fokus");
+      setPin("");
+      setResendIn(60);
+      setStep("pin");
     } catch {
       setError("Netzwerkfehler. Bitte prüfe deine Verbindung und versuche es erneut.");
     } finally {
       setIsLoading(false);
     }
+  }
+
+  async function handlePin(e: React.FormEvent) {
+    e.preventDefault();
+    setError("");
+    setIsLoading(true);
+    try {
+      const res = await fetch(FREE_REPORT_PIN_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reportId, code: pin }),
+      });
+      const data = (await res.json()) as { success?: boolean; error?: string };
+      if (!res.ok || !data.success) {
+        setError(typeof data.error === "string" ? data.error : "Der Code stimmt nicht.");
+        return;
+      }
+      setStep("fokus");
+      setFocus("");
+      setSuggestions([]);
+      window.setTimeout(() => void loadFocus(), 300);
+    } catch {
+      setError("Netzwerkfehler. Bitte prüfe deine Verbindung und versuche es erneut.");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  async function loadFocus() {
+    if (!reportId) return;
+    try {
+      const res = await fetch(`${FREE_REPORT_FOCUS_API}?reportId=${encodeURIComponent(reportId)}`, { cache: "no-store" });
+      const data = (await res.json()) as { suggestions?: string[]; suggestedPlace?: string | null; ready?: boolean };
+      if (Array.isArray(data.suggestions)) setSuggestions(data.suggestions.filter((item) => typeof item === "string"));
+      if (typeof data.suggestedPlace === "string") setPlace(data.suggestedPlace);
+      if (!data.ready) window.setTimeout(() => void loadFocus(), 2000);
+    } catch {
+      window.setTimeout(() => void loadFocus(), 2000);
+    }
+  }
+
+  async function resendPin() {
+    if (resendIn > 0) return;
+    setError("");
+    const res = await fetch(FREE_REPORT_PIN_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ reportId, resend: true }),
+    });
+    const data = (await res.json()) as { success?: boolean; error?: string };
+    if (!res.ok || !data.success) {
+      setError(typeof data.error === "string" ? data.error : "Der Code konnte nicht erneut gesendet werden.");
+      return;
+    }
+    setResendIn(60);
   }
 
   async function handleStart(e: React.FormEvent) {
@@ -102,13 +159,19 @@ export function FreeReportForm() {
         return;
       }
       trackFreeReportSubmit({ website: website.trim() });
-      setSuccess(true);
+      window.location.href = `${FREE_REPORT_RESULT}/${reportId}`;
     } catch {
       setError("Netzwerkfehler. Bitte prüfe deine Verbindung und versuche es erneut.");
     } finally {
       setIsLoading(false);
     }
   }
+
+  useEffect(() => {
+    if (resendIn <= 0) return;
+    const timer = window.setTimeout(() => setResendIn((value) => Math.max(0, value - 1)), 1000);
+    return () => window.clearTimeout(timer);
+  }, [resendIn]);
 
   const stepNumber = FREE_REPORT_STEPS.indexOf(step) + 1;
 
@@ -132,6 +195,43 @@ export function FreeReportForm() {
             Weiteren Report anfordern
           </button>
         </div>
+      ) : step === "pin" ? (
+        <>
+          <p className="text-sm font-medium text-mention-gray">Schritt {stepNumber} von {FREE_REPORT_STEPS.length}</p>
+          <h2 className="mt-2 font-heading text-xl font-semibold text-mention-dark">Code aus der E-Mail</h2>
+          <p className="mt-2 text-sm text-mention-gray">Wir bereiten inzwischen die Vorschläge für dein Angebot vor.</p>
+          <form onSubmit={handlePin} className="mt-6 flex flex-col gap-4">
+            <label htmlFor="pin" className="text-sm font-medium text-mention-dark">
+              Sechsstelliger Code
+            </label>
+            <input
+              id="pin"
+              name="pin"
+              inputMode="numeric"
+              autoComplete="one-time-code"
+              required
+              value={pin}
+              onChange={(e) => setPin(e.target.value)}
+              className="w-full rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-mention-dark outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
+            />
+            <button
+              type="submit"
+              disabled={isLoading || pin.replace(/\D/g, "").length !== 6}
+              className="w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-gray-900 disabled:opacity-60"
+            >
+              {isLoading ? "Prüft..." : "Weiter"}
+            </button>
+            <button
+              type="button"
+              disabled={resendIn > 0}
+              onClick={() => void resendPin()}
+              className="text-sm text-mention-gray underline disabled:no-underline disabled:opacity-60"
+            >
+              {resendIn > 0 ? `Code erneut senden in ${resendIn}s` : "Code erneut senden"}
+            </button>
+            {error ? <p className="text-center text-sm font-medium text-red-600" role="alert">{error}</p> : null}
+          </form>
+        </>
       ) : step === "fokus" ? (
         <>
           <p className="text-sm font-medium text-mention-gray">Schritt {stepNumber} von {FREE_REPORT_STEPS.length}</p>
@@ -191,7 +291,7 @@ export function FreeReportForm() {
                 {targetMarket === "DE" ? "Deutschland" : targetMarket === "AT" ? "Österreich" : targetMarket === "INTL" ? "International" : "Schweiz"}
               </p>
               <label htmlFor="place" className="mt-3 block text-sm font-medium text-mention-dark">
-                Stadt oder Region
+                Suchgebiet
               </label>
               <input
                 id="place"
@@ -202,11 +302,7 @@ export function FreeReportForm() {
                 className="mt-1.5 w-full rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-mention-dark outline-none ring-zinc-200 transition focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
               />
               <p className="mt-1.5 text-sm text-mention-gray">
-                {targetMarket === "DE"
-                  ? "Lass das Feld leer, wenn du in ganz Deutschland Kunden gewinnen möchtest."
-                  : targetMarket === "AT"
-                    ? "Lass das Feld leer, wenn du in ganz Österreich Kunden gewinnen möchtest."
-                    : "Lass das Feld leer, wenn du in der ganzen Schweiz Kunden gewinnen möchtest."}
+                Dieses Suchgebiet steht in jeder Frage. Du kannst es anpassen.
               </p>
             </div>
             <button
